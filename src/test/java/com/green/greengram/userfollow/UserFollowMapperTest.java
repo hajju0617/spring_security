@@ -24,14 +24,39 @@ class UserFollowMapperTest {
     @Autowired
     private UserFollowMapper mapper;
 
+
+
+    final int RECORD_COUNT = 12;
     @Test
     @DisplayName("유저 팔로우 insert 테스트")
     void insUserFollow() {
-        UserFollowReq p = new UserFollowReq(10, 20);
-        int affectedRows = mapper.insUserFollow(p);
+        UserFollowReq p1 = new UserFollowReq(0,0);
+        List<UserFollowEntity> list1 = mapper.selUserFollowForTest(p1);
+
+        UserFollowReq p2 = new UserFollowReq(4, 5);
+        int affectedRows = mapper.insUserFollow(p2);
         Assertions.assertEquals(1, affectedRows);
 //        assertEquals(1, affectedRows);        // static import 이므로 이렇게 쓸 수 도 있다
         System.out.println("result : " + affectedRows);
+
+        List<UserFollowEntity> list2 = mapper.selUserFollowForTest(p1);
+        int recordCountAfterFirstInsert = list2.size();
+        assertEquals(1, recordCountAfterFirstInsert - list1.size(), "1. 실제 INSERT 되지 않음!");
+
+        List<UserFollowEntity> list3 = mapper.selUserFollowForTest(p2);
+        assertEquals(1, list3.size(), "p2 값이 제대로 insert 되지 않음");
+
+        assertEquals(p2.getFromUserId(), list3.get(0).getFromUserId());
+        assertEquals(p2.getToUserId(), list3.get(0).getToUserId());
+
+        UserFollowReq p3 = new UserFollowReq(5, 1);
+        int affectedRows2 = mapper.insUserFollow(p3);
+        Assertions.assertEquals(1, affectedRows2);
+        List<UserFollowEntity> list4 = mapper.selUserFollowForTest(p1);
+        assertEquals(1, list4.size() - list2.size(), "2. 실제 insert 되지 않음");
+
+        List<UserFollowEntity> list5 = mapper.selUserFollowForTest(p3);
+        assertEquals(1, list5.size(), "p3값이 제대로 insert 되지 않음");
     }
 
     @Test
