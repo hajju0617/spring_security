@@ -1,0 +1,45 @@
+spring:
+  application:
+    name: GreengramVer3
+  datasource:
+    driver-class-name: net.sf.log4jdbc.sql.jdbcapi.DriverSpy
+    url: jdbc:log4jdbc:mariadb://localhost:3306/greengram2024_v3tdd    # 데이터 베이스 이름
+    username: root
+    password: green502
+
+  servlet:
+    multipart:
+      max-file-size: 30MB
+      max-request-size: 50MB
+
+mybatis:
+  mapper-locations: mappers/**/*.xml     # resources 아래에 xml 담긴 (mappers) 폴더이름
+
+springdoc:
+  api-docs:
+    version: openapi_3_1
+  swagger-ui: # swagger UI 설정
+    path: /swagger    # localhost:8080/swagger 로 접속할 수 있게 설정  (redirect)
+    operations-sorter: method   # alpha (default) : url 기준 정렬, method : http - method 기준 정렬
+    default-model-expand-depth: 10
+    default-models-expand-depth: 10
+    display-request-duration: true   #try it out 을 했을때 request duration(처리 소요시간)을 추가로 찍어줌
+  cache:
+    disabled: true
+
+file:
+  directory: D:/2024-1/download/greengram_ver3tdd/       #    절대 주소값 저장
+
+---     # 파일안에서 분리 해줌 (위쪽은 프로필 설정 x)
+spring:
+  config:
+    activate:
+      on-profile: tdd
+  datasource:
+    url: jdbc:log4jdbc:mariadb://localhost:3306/greengram2024_v3tdd_test
+  sql:
+    init:
+      mode: always    # tdd 프로필을 쓸때 매번 data.sql, schema.sql 을 실행 하겠다는 의미
+                      # edit configurations -> profile active 칸에 프로필 이름 입력 하면 됨
+
+

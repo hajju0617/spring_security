@@ -1,0 +1,637 @@
+[2024-05-23 09:49:55 [32mINFO [0;39m restartedMain] [com.green.greengram.GreengramVer3TddApplication] [36mStarting GreengramVer3Application using Java 17.0.10 with PID 5756 (D:\2024-1\Backend\GreengramVer3\build\classes\java\main started by Administrator in D:\2024-1\Backend\GreengramVer3)[0;39m
+[2024-05-23 09:49:55 [32mINFO [0;39m restartedMain] [com.green.greengram.GreengramVer3TddApplication] [36mNo active profile set, falling back to 1 default profile: "default"[0;39m
+[2024-05-23 09:49:55 [32mINFO [0;39m restartedMain] [org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor] [36mDevtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable[0;39m
+[2024-05-23 09:49:55 [32mINFO [0;39m restartedMain] [org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor] [36mFor additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'[0;39m
+[2024-05-23 09:49:57 [32mINFO [0;39m restartedMain] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [36mTomcat initialized with port 8080 (http)[0;39m
+[2024-05-23 09:49:57 [32mINFO [0;39m restartedMain] [org.apache.coyote.http11.Http11NioProtocol] [36mInitializing ProtocolHandler ["http-nio-8080"][0;39m
+[2024-05-23 09:49:57 [32mINFO [0;39m restartedMain] [org.apache.catalina.core.StandardService] [36mStarting service [Tomcat][0;39m
+[2024-05-23 09:49:57 [32mINFO [0;39m restartedMain] [org.apache.catalina.core.StandardEngine] [36mStarting Servlet engine: [Apache Tomcat/10.1.20][0;39m
+[2024-05-23 09:49:57 [32mINFO [0;39m restartedMain] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] [36mInitializing Spring embedded WebApplicationContext[0;39m
+[2024-05-23 09:49:57 [32mINFO [0;39m restartedMain] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] [36mRoot WebApplicationContext: initialization completed in 1457 ms[0;39m
+[2024-05-23 09:49:57 [32mINFO [0;39m restartedMain] [org.springframework.boot.autoconfigure.web.servlet.WelcomePageHandlerMapping] [36mAdding welcome page: class path resource [static/index.html][0;39m
+[2024-05-23 09:49:58 [32mINFO [0;39m restartedMain] [org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer] [36mLiveReload server is running on port 35729[0;39m
+[2024-05-23 09:49:58 [32mINFO [0;39m restartedMain] [org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver] [36mExposing 1 endpoint(s) beneath base path '/actuator'[0;39m
+[2024-05-23 09:49:58 [32mINFO [0;39m restartedMain] [org.apache.coyote.http11.Http11NioProtocol] [36mStarting ProtocolHandler ["http-nio-8080"][0;39m
+[2024-05-23 09:49:58 [32mINFO [0;39m restartedMain] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [36mTomcat started on port 8080 (http) with context path ''[0;39m
+[2024-05-23 09:49:58 [32mINFO [0;39m restartedMain] [com.green.greengram.GreengramVer3TddApplication] [36mStarted GreengramVer3Application in 2.75 seconds (process running for 3.175)[0;39m
+[2024-05-23 09:49:58 [32mINFO [0;39m http-nio-8080-exec-1] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] [36mInitializing Spring DispatcherServlet 'dispatcherServlet'[0;39m
+[2024-05-23 09:49:58 [32mINFO [0;39m http-nio-8080-exec-1] [org.springframework.web.servlet.DispatcherServlet] [36mInitializing Servlet 'dispatcherServlet'[0;39m
+[2024-05-23 09:49:58 [32mINFO [0;39m http-nio-8080-exec-1] [org.springframework.web.servlet.DispatcherServlet] [36mCompleted initialization in 1 ms[0;39m
+[2024-05-23 09:49:58 [32mINFO [0;39m RMI TCP Connection(5)-192.168.0.166] [com.zaxxer.hikari.HikariDataSource] [36mHikariPool-1 - Starting...[0;39m
+[2024-05-23 09:49:58 [32mINFO [0;39m RMI TCP Connection(5)-192.168.0.166] [com.zaxxer.hikari.pool.HikariPool] [36mHikariPool-1 - Added connection net.sf.log4jdbc.sql.jdbcapi.ConnectionSpy@675cfbe9[0;39m
+[2024-05-23 09:49:58 [32mINFO [0;39m RMI TCP Connection(5)-192.168.0.166] [com.zaxxer.hikari.HikariDataSource] [36mHikariPool-1 - Start completed.[0;39m
+[2024-05-23 09:49:58 [32mDEBUG[0;39m http-nio-8080-exec-3] [jdbc.sqltiming] [36m com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+2. SELECT A.feed_id AS feedId, A.contents, A.location, A.created_at AS createdAt
+        , B.user_id AS writerId, B.nm AS writerNm, B.pic AS writerPic
+        , IF(C.feed_id IS NULL, 0, 1) AS isFav
+        FROM feed A
+        JOIN user B
+        ON A.writer_id = B.user_id
+        LEFT JOIN feed_favorite C         
+        ON A.feed_id = C.feed_id
+        AND C.user_id = 66
+
+        ORDER BY A.feed_id DESC
+        LIMIT 0, 20;
+ {executed in 1 msec}[0;39m
+[2024-05-23 09:49:58 [32mINFO [0;39m http-nio-8080-exec-3] [jdbc.resultsettable] [36m
+|--------|---------|---------|--------------------|--------|-------|-----------------------------------------|------|
+|feed_id |contents |location |created_at          |user_id |nm     |pic                                      |isfav |
+|--------|---------|---------|--------------------|--------|-------|-----------------------------------------|------|
+|55      |춘식이      |춘식이      |2024-05-22 14:43:10 |66      |5월21일  |28bfba96-587b-4c0a-8e3d-dc1a473350ca.jpg |0     |
+|54      |고양이      |고양이      |2024-05-22 14:41:27 |66      |5월21일  |28bfba96-587b-4c0a-8e3d-dc1a473350ca.jpg |1     |
+|53      |춘식이      |춘식이      |2024-05-21 12:08:42 |66      |5월21일  |28bfba96-587b-4c0a-8e3d-dc1a473350ca.jpg |1     |
+|52      |dd       |dd       |2024-05-21 12:02:04 |66      |5월21일  |28bfba96-587b-4c0a-8e3d-dc1a473350ca.jpg |0     |
+|51      |젖닌       |젖닌       |2024-05-21 11:25:18 |66      |5월21일  |28bfba96-587b-4c0a-8e3d-dc1a473350ca.jpg |1     |
+|50      |고양이      |고양이      |2024-05-21 11:21:53 |66      |5월21일  |28bfba96-587b-4c0a-8e3d-dc1a473350ca.jpg |1     |
+|49      |춘식이      |춘식이      |2024-05-21 11:21:35 |66      |5월21일  |28bfba96-587b-4c0a-8e3d-dc1a473350ca.jpg |1     |
+|48      |aa       |aa       |2024-05-20 12:57:01 |61      |5월20일2 |111fad30-256c-484b-aea3-bca8e3f434aa.jpg |0     |
+|47      |sfda     |dsf      |2024-05-20 12:42:26 |63      |5월20일3 |fdbabf84-693f-4476-a1bd-94a8ed2136e9.gif |0     |
+|46      |dsfsfda  |dfds     |2024-05-20 12:31:29 |63      |5월20일3 |fdbabf84-693f-4476-a1bd-94a8ed2136e9.gif |1     |
+|45      |ee       |ee       |2024-05-20 12:31:16 |63      |5월20일3 |fdbabf84-693f-4476-a1bd-94a8ed2136e9.gif |1     |
+|44      |ㅇㅁㄴㄹㅇ    |ㄴㅇㄹ      |2024-05-20 12:28:30 |62      |5월20일  |81695b24-7863-407c-8f40-ca0a3be511ed.jpg |0     |
+|43      |ㅇㅇ       |ㅇㅇ       |2024-05-20 12:28:00 |62      |5월20일  |81695b24-7863-407c-8f40-ca0a3be511ed.jpg |0     |
+|42      |ㅇㅇㅇㅇ     |ㅇㅇㅇㅇ     |2024-05-20 12:23:26 |62      |5월20일  |81695b24-7863-407c-8f40-ca0a3be511ed.jpg |0     |
+|41      |dd       |dd       |2024-05-20 10:35:07 |62      |5월20일  |81695b24-7863-407c-8f40-ca0a3be511ed.jpg |0     |
+|40      |d        |d        |2024-05-20 10:34:01 |61      |5월20일2 |111fad30-256c-484b-aea3-bca8e3f434aa.jpg |0     |
+|10      |고양이      |가        |2024-05-07 15:25:45 |23      |홍길동    |363403f9-8d51-4a5c-a891-abaf8b317910.jpg |0     |
+|9       |안녕하세요    |         |2024-05-07 15:18:45 |23      |홍길동    |363403f9-8d51-4a5c-a891-abaf8b317910.jpg |0     |
+|8       |가나다      |대구       |2024-05-07 15:18:25 |23      |홍길동    |363403f9-8d51-4a5c-a891-abaf8b317910.jpg |0     |
+|7       |가나다라     |다나가      |2024-05-07 14:21:04 |23      |홍길동    |363403f9-8d51-4a5c-a891-abaf8b317910.jpg |0     |
+|--------|---------|---------|--------------------|--------|-------|-----------------------------------------|------|
+[0;39m
+[2024-05-23 09:49:58 [32mINFO [0;39m http-nio-8080-exec-3] [com.green.greengram.feed.FeedServiceImpl] [36mlist : [FeedGetRes(feedId=55, writerId=66, contents=춘식이, location=춘식이, createdAt=2024-05-22 14:43:10, writerNm=5월21일, writerPic=28bfba96-587b-4c0a-8e3d-dc1a473350ca.jpg, isFav=0, pics=null, comments=null, isMoreComment=0), FeedGetRes(feedId=54, writerId=66, contents=고양이, location=고양이, createdAt=2024-05-22 14:41:27, writerNm=5월21일, writerPic=28bfba96-587b-4c0a-8e3d-dc1a473350ca.jpg, isFav=1, pics=null, comments=null, isMoreComment=0), FeedGetRes(feedId=53, writerId=66, contents=춘식이, location=춘식이, createdAt=2024-05-21 12:08:42, writerNm=5월21일, writerPic=28bfba96-587b-4c0a-8e3d-dc1a473350ca.jpg, isFav=1, pics=null, comments=null, isMoreComment=0), FeedGetRes(feedId=52, writerId=66, contents=dd, location=dd, createdAt=2024-05-21 12:02:04, writerNm=5월21일, writerPic=28bfba96-587b-4c0a-8e3d-dc1a473350ca.jpg, isFav=0, pics=null, comments=null, isMoreComment=0), FeedGetRes(feedId=51, writerId=66, contents=젖닌, location=젖닌, createdAt=2024-05-21 11:25:18, writerNm=5월21일, writerPic=28bfba96-587b-4c0a-8e3d-dc1a473350ca.jpg, isFav=1, pics=null, comments=null, isMoreComment=0), FeedGetRes(feedId=50, writerId=66, contents=고양이, location=고양이, createdAt=2024-05-21 11:21:53, writerNm=5월21일, writerPic=28bfba96-587b-4c0a-8e3d-dc1a473350ca.jpg, isFav=1, pics=null, comments=null, isMoreComment=0), FeedGetRes(feedId=49, writerId=66, contents=춘식이, location=춘식이, createdAt=2024-05-21 11:21:35, writerNm=5월21일, writerPic=28bfba96-587b-4c0a-8e3d-dc1a473350ca.jpg, isFav=1, pics=null, comments=null, isMoreComment=0), FeedGetRes(feedId=48, writerId=61, contents=aa, location=aa, createdAt=2024-05-20 12:57:01, writerNm=5월20일2, writerPic=111fad30-256c-484b-aea3-bca8e3f434aa.jpg, isFav=0, pics=null, comments=null, isMoreComment=0), FeedGetRes(feedId=47, writerId=63, contents=sfda, location=dsf, createdAt=2024-05-20 12:42:26, writerNm=5월20일3, writerPic=fdbabf84-693f-4476-a1bd-94a8ed2136e9.gif, isFav=0, pics=null, comments=null, isMoreComment=0), FeedGetRes(feedId=46, writerId=63, contents=dsfsfda, location=dfds, createdAt=2024-05-20 12:31:29, writerNm=5월20일3, writerPic=fdbabf84-693f-4476-a1bd-94a8ed2136e9.gif, isFav=1, pics=null, comments=null, isMoreComment=0), FeedGetRes(feedId=45, writerId=63, contents=ee, location=ee, createdAt=2024-05-20 12:31:16, writerNm=5월20일3, writerPic=fdbabf84-693f-4476-a1bd-94a8ed2136e9.gif, isFav=1, pics=null, comments=null, isMoreComment=0), FeedGetRes(feedId=44, writerId=62, contents=ㅇㅁㄴㄹㅇ, location=ㄴㅇㄹ, createdAt=2024-05-20 12:28:30, writerNm=5월20일, writerPic=81695b24-7863-407c-8f40-ca0a3be511ed.jpg, isFav=0, pics=null, comments=null, isMoreComment=0), FeedGetRes(feedId=43, writerId=62, contents=ㅇㅇ, location=ㅇㅇ, createdAt=2024-05-20 12:28:00, writerNm=5월20일, writerPic=81695b24-7863-407c-8f40-ca0a3be511ed.jpg, isFav=0, pics=null, comments=null, isMoreComment=0), FeedGetRes(feedId=42, writerId=62, contents=ㅇㅇㅇㅇ, location=ㅇㅇㅇㅇ, createdAt=2024-05-20 12:23:26, writerNm=5월20일, writerPic=81695b24-7863-407c-8f40-ca0a3be511ed.jpg, isFav=0, pics=null, comments=null, isMoreComment=0), FeedGetRes(feedId=41, writerId=62, contents=dd, location=dd, createdAt=2024-05-20 10:35:07, writerNm=5월20일, writerPic=81695b24-7863-407c-8f40-ca0a3be511ed.jpg, isFav=0, pics=null, comments=null, isMoreComment=0), FeedGetRes(feedId=40, writerId=61, contents=d, location=d, createdAt=2024-05-20 10:34:01, writerNm=5월20일2, writerPic=111fad30-256c-484b-aea3-bca8e3f434aa.jpg, isFav=0, pics=null, comments=null, isMoreComment=0), FeedGetRes(feedId=10, writerId=23, contents=고양이, location=가, createdAt=2024-05-07 15:25:45, writerNm=홍길동, writerPic=363403f9-8d51-4a5c-a891-abaf8b317910.jpg, isFav=0, pics=null, comments=null, isMoreComment=0), FeedGetRes(feedId=9, writerId=23, contents=안녕하세요, location=, createdAt=2024-05-07 15:18:45, writerNm=홍길동, writerPic=363403f9-8d51-4a5c-a891-abaf8b317910.jpg, isFav=0, pics=null, comments=null, isMoreComment=0), FeedGetRes(feedId=8, writerId=23, contents=가나다, location=대구, createdAt=2024-05-07 15:18:25, writerNm=홍길동, writerPic=363403f9-8d51-4a5c-a891-abaf8b317910.jpg, isFav=0, pics=null, comments=null, isMoreComment=0), FeedGetRes(feedId=7, writerId=23, contents=가나다라, location=다나가, createdAt=2024-05-07 14:21:04, writerNm=홍길동, writerPic=363403f9-8d51-4a5c-a891-abaf8b317910.jpg, isFav=0, pics=null, comments=null, isMoreComment=0)][0;39m
+[2024-05-23 09:49:58 [32mDEBUG[0;39m http-nio-8080-exec-3] [jdbc.sqltiming] [36m com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+2. SELECT pic
+        FROM feed_pics
+        WHERE feed_id = 55
+ {executed in 0 msec}[0;39m
+[2024-05-23 09:49:58 [32mINFO [0;39m http-nio-8080-exec-3] [jdbc.resultsettable] [36m
+|-----------------------------------------|
+|pic                                      |
+|-----------------------------------------|
+|28cc4568-b414-42fa-96ad-63ee12aa340e.gif |
+|-----------------------------------------|
+[0;39m
+[2024-05-23 09:49:58 [32mDEBUG[0;39m http-nio-8080-exec-3] [jdbc.sqltiming] [36m com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+2. SELECT A.feed_comment_id AS feedCommentId, A.comment, A.created_at AS createdAt
+        , B.user_id AS writerId, B.nm AS writerNm, B.pic AS writerPic
+        FROM feed_comment A
+        INNER JOIN user B
+        ON A.user_id = B.user_id
+        WHERE A.feed_id = 55
+        LIMIT 4
+ {executed in 1 msec}[0;39m
+[2024-05-23 09:49:58 [32mINFO [0;39m http-nio-8080-exec-3] [jdbc.resultsettable] [36m
+|----------------|--------|--------------------|--------|------|-----------------------------------------|
+|feed_comment_id |comment |created_at          |user_id |nm    |pic                                      |
+|----------------|--------|--------------------|--------|------|-----------------------------------------|
+|62              |춘식이1    |2024-05-22 14:43:16 |66      |5월21일 |28bfba96-587b-4c0a-8e3d-dc1a473350ca.jpg |
+|63              |춘식이2    |2024-05-22 14:43:17 |66      |5월21일 |28bfba96-587b-4c0a-8e3d-dc1a473350ca.jpg |
+|64              |춘식이3    |2024-05-22 14:43:18 |66      |5월21일 |28bfba96-587b-4c0a-8e3d-dc1a473350ca.jpg |
+|65              |춘식이4    |2024-05-22 14:43:19 |66      |5월21일 |28bfba96-587b-4c0a-8e3d-dc1a473350ca.jpg |
+|----------------|--------|--------------------|--------|------|-----------------------------------------|
+[0;39m
+[2024-05-23 09:49:58 [32mDEBUG[0;39m http-nio-8080-exec-3] [jdbc.sqltiming] [36m com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+2. SELECT pic
+        FROM feed_pics
+        WHERE feed_id = 54
+ {executed in 0 msec}[0;39m
+[2024-05-23 09:49:58 [32mINFO [0;39m http-nio-8080-exec-3] [jdbc.resultsettable] [36m
+|-----------------------------------------|
+|pic                                      |
+|-----------------------------------------|
+|fd3858d8-a41a-421f-88cc-eff5613f93af.gif |
+|-----------------------------------------|
+[0;39m
+[2024-05-23 09:49:58 [32mDEBUG[0;39m http-nio-8080-exec-3] [jdbc.sqltiming] [36m com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+2. SELECT A.feed_comment_id AS feedCommentId, A.comment, A.created_at AS createdAt
+        , B.user_id AS writerId, B.nm AS writerNm, B.pic AS writerPic
+        FROM feed_comment A
+        INNER JOIN user B
+        ON A.user_id = B.user_id
+        WHERE A.feed_id = 54
+        LIMIT 4
+ {executed in 0 msec}[0;39m
+[2024-05-23 09:49:58 [32mINFO [0;39m http-nio-8080-exec-3] [jdbc.resultsettable] [36m
+|----------------|--------|--------------------|--------|------|-----------------------------------------|
+|feed_comment_id |comment |created_at          |user_id |nm    |pic                                      |
+|----------------|--------|--------------------|--------|------|-----------------------------------------|
+|58              |고양이1    |2024-05-22 14:42:18 |66      |5월21일 |28bfba96-587b-4c0a-8e3d-dc1a473350ca.jpg |
+|59              |고양이2    |2024-05-22 14:42:19 |66      |5월21일 |28bfba96-587b-4c0a-8e3d-dc1a473350ca.jpg |
+|60              |고양이3    |2024-05-22 14:42:23 |66      |5월21일 |28bfba96-587b-4c0a-8e3d-dc1a473350ca.jpg |
+|61              |고양이4    |2024-05-22 14:42:24 |66      |5월21일 |28bfba96-587b-4c0a-8e3d-dc1a473350ca.jpg |
+|----------------|--------|--------------------|--------|------|-----------------------------------------|
+[0;39m
+[2024-05-23 09:49:58 [32mDEBUG[0;39m http-nio-8080-exec-3] [jdbc.sqltiming] [36m com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+2. SELECT pic
+        FROM feed_pics
+        WHERE feed_id = 53
+ {executed in 0 msec}[0;39m
+[2024-05-23 09:49:58 [32mINFO [0;39m http-nio-8080-exec-3] [jdbc.resultsettable] [36m
+|-----------------------------------------|
+|pic                                      |
+|-----------------------------------------|
+|8dd09cef-07c7-4412-be20-c5edb9a34a2e.gif |
+|-----------------------------------------|
+[0;39m
+[2024-05-23 09:49:58 [32mDEBUG[0;39m http-nio-8080-exec-3] [jdbc.sqltiming] [36m com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+2. SELECT A.feed_comment_id AS feedCommentId, A.comment, A.created_at AS createdAt
+        , B.user_id AS writerId, B.nm AS writerNm, B.pic AS writerPic
+        FROM feed_comment A
+        INNER JOIN user B
+        ON A.user_id = B.user_id
+        WHERE A.feed_id = 53
+        LIMIT 4
+ {executed in 1 msec}[0;39m
+[2024-05-23 09:49:58 [32mINFO [0;39m http-nio-8080-exec-3] [jdbc.resultsettable] [36m
+|----------------|--------|-----------|--------|---|----|
+|feed_comment_id |comment |created_at |user_id |nm |pic |
+|----------------|--------|-----------|--------|---|----|
+|----------------|--------|-----------|--------|---|----|
+[0;39m
+[2024-05-23 09:49:58 [32mDEBUG[0;39m http-nio-8080-exec-3] [jdbc.sqltiming] [36m com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+2. SELECT pic
+        FROM feed_pics
+        WHERE feed_id = 52
+ {executed in 0 msec}[0;39m
+[2024-05-23 09:49:58 [32mINFO [0;39m http-nio-8080-exec-3] [jdbc.resultsettable] [36m
+|-----------------------------------------|
+|pic                                      |
+|-----------------------------------------|
+|e8ef45c2-2dbe-47a2-b31a-ea4c5d936b7e.gif |
+|-----------------------------------------|
+[0;39m
+[2024-05-23 09:49:58 [32mDEBUG[0;39m http-nio-8080-exec-3] [jdbc.sqltiming] [36m com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+2. SELECT A.feed_comment_id AS feedCommentId, A.comment, A.created_at AS createdAt
+        , B.user_id AS writerId, B.nm AS writerNm, B.pic AS writerPic
+        FROM feed_comment A
+        INNER JOIN user B
+        ON A.user_id = B.user_id
+        WHERE A.feed_id = 52
+        LIMIT 4
+ {executed in 0 msec}[0;39m
+[2024-05-23 09:49:58 [32mINFO [0;39m http-nio-8080-exec-3] [jdbc.resultsettable] [36m
+|----------------|--------|-----------|--------|---|----|
+|feed_comment_id |comment |created_at |user_id |nm |pic |
+|----------------|--------|-----------|--------|---|----|
+|----------------|--------|-----------|--------|---|----|
+[0;39m
+[2024-05-23 09:49:58 [32mDEBUG[0;39m http-nio-8080-exec-3] [jdbc.sqltiming] [36m com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+2. SELECT pic
+        FROM feed_pics
+        WHERE feed_id = 51
+ {executed in 1 msec}[0;39m
+[2024-05-23 09:49:58 [32mINFO [0;39m http-nio-8080-exec-3] [jdbc.resultsettable] [36m
+|-----------------------------------------|
+|pic                                      |
+|-----------------------------------------|
+|e24a4cd4-113c-41ec-addb-569974e92acc.gif |
+|-----------------------------------------|
+[0;39m
+[2024-05-23 09:49:58 [32mDEBUG[0;39m http-nio-8080-exec-3] [jdbc.sqltiming] [36m com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+2. SELECT A.feed_comment_id AS feedCommentId, A.comment, A.created_at AS createdAt
+        , B.user_id AS writerId, B.nm AS writerNm, B.pic AS writerPic
+        FROM feed_comment A
+        INNER JOIN user B
+        ON A.user_id = B.user_id
+        WHERE A.feed_id = 51
+        LIMIT 4
+ {executed in 0 msec}[0;39m
+[2024-05-23 09:49:58 [32mINFO [0;39m http-nio-8080-exec-3] [jdbc.resultsettable] [36m
+|----------------|--------|-----------|--------|---|----|
+|feed_comment_id |comment |created_at |user_id |nm |pic |
+|----------------|--------|-----------|--------|---|----|
+|----------------|--------|-----------|--------|---|----|
+[0;39m
+[2024-05-23 09:49:58 [32mDEBUG[0;39m http-nio-8080-exec-3] [jdbc.sqltiming] [36m com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+2. SELECT pic
+        FROM feed_pics
+        WHERE feed_id = 50
+ {executed in 0 msec}[0;39m
+[2024-05-23 09:49:58 [32mINFO [0;39m http-nio-8080-exec-3] [jdbc.resultsettable] [36m
+|-----------------------------------------|
+|pic                                      |
+|-----------------------------------------|
+|4a3399f3-c168-4f63-8176-327adcec4cbc.gif |
+|-----------------------------------------|
+[0;39m
+[2024-05-23 09:49:58 [32mDEBUG[0;39m http-nio-8080-exec-3] [jdbc.sqltiming] [36m com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+2. SELECT A.feed_comment_id AS feedCommentId, A.comment, A.created_at AS createdAt
+        , B.user_id AS writerId, B.nm AS writerNm, B.pic AS writerPic
+        FROM feed_comment A
+        INNER JOIN user B
+        ON A.user_id = B.user_id
+        WHERE A.feed_id = 50
+        LIMIT 4
+ {executed in 1 msec}[0;39m
+[2024-05-23 09:49:58 [32mINFO [0;39m http-nio-8080-exec-3] [jdbc.resultsettable] [36m
+|----------------|--------|-----------|--------|---|----|
+|feed_comment_id |comment |created_at |user_id |nm |pic |
+|----------------|--------|-----------|--------|---|----|
+|----------------|--------|-----------|--------|---|----|
+[0;39m
+[2024-05-23 09:49:58 [32mDEBUG[0;39m http-nio-8080-exec-3] [jdbc.sqltiming] [36m com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+2. SELECT pic
+        FROM feed_pics
+        WHERE feed_id = 49
+ {executed in 0 msec}[0;39m
+[2024-05-23 09:49:58 [32mINFO [0;39m http-nio-8080-exec-3] [jdbc.resultsettable] [36m
+|-----------------------------------------|
+|pic                                      |
+|-----------------------------------------|
+|536f00b9-f73c-4fbd-9f41-af147670cefc.gif |
+|-----------------------------------------|
+[0;39m
+[2024-05-23 09:49:58 [32mDEBUG[0;39m http-nio-8080-exec-3] [jdbc.sqltiming] [36m com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+2. SELECT A.feed_comment_id AS feedCommentId, A.comment, A.created_at AS createdAt
+        , B.user_id AS writerId, B.nm AS writerNm, B.pic AS writerPic
+        FROM feed_comment A
+        INNER JOIN user B
+        ON A.user_id = B.user_id
+        WHERE A.feed_id = 49
+        LIMIT 4
+ {executed in 0 msec}[0;39m
+[2024-05-23 09:49:58 [32mINFO [0;39m http-nio-8080-exec-3] [jdbc.resultsettable] [36m
+|----------------|--------|-----------|--------|---|----|
+|feed_comment_id |comment |created_at |user_id |nm |pic |
+|----------------|--------|-----------|--------|---|----|
+|----------------|--------|-----------|--------|---|----|
+[0;39m
+[2024-05-23 09:49:58 [32mDEBUG[0;39m http-nio-8080-exec-3] [jdbc.sqltiming] [36m com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+2. SELECT pic
+        FROM feed_pics
+        WHERE feed_id = 48
+ {executed in 0 msec}[0;39m
+[2024-05-23 09:49:58 [32mINFO [0;39m http-nio-8080-exec-3] [jdbc.resultsettable] [36m
+|-----------------------------------------|
+|pic                                      |
+|-----------------------------------------|
+|066e70a5-22ac-4832-a0f0-8bbd28e2f29d.jpg |
+|-----------------------------------------|
+[0;39m
+[2024-05-23 09:49:58 [32mDEBUG[0;39m http-nio-8080-exec-3] [jdbc.sqltiming] [36m com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+2. SELECT A.feed_comment_id AS feedCommentId, A.comment, A.created_at AS createdAt
+        , B.user_id AS writerId, B.nm AS writerNm, B.pic AS writerPic
+        FROM feed_comment A
+        INNER JOIN user B
+        ON A.user_id = B.user_id
+        WHERE A.feed_id = 48
+        LIMIT 4
+ {executed in 1 msec}[0;39m
+[2024-05-23 09:49:58 [32mINFO [0;39m http-nio-8080-exec-3] [jdbc.resultsettable] [36m
+|----------------|--------|-----------|--------|---|----|
+|feed_comment_id |comment |created_at |user_id |nm |pic |
+|----------------|--------|-----------|--------|---|----|
+|----------------|--------|-----------|--------|---|----|
+[0;39m
+[2024-05-23 09:49:58 [32mDEBUG[0;39m http-nio-8080-exec-3] [jdbc.sqltiming] [36m com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+2. SELECT pic
+        FROM feed_pics
+        WHERE feed_id = 47
+ {executed in 0 msec}[0;39m
+[2024-05-23 09:49:58 [32mINFO [0;39m http-nio-8080-exec-3] [jdbc.resultsettable] [36m
+|-----------------------------------------|
+|pic                                      |
+|-----------------------------------------|
+|61fa1b4f-3162-498d-b6c8-4410c966ce3e.jpg |
+|-----------------------------------------|
+[0;39m
+[2024-05-23 09:49:58 [32mDEBUG[0;39m http-nio-8080-exec-3] [jdbc.sqltiming] [36m com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+2. SELECT A.feed_comment_id AS feedCommentId, A.comment, A.created_at AS createdAt
+        , B.user_id AS writerId, B.nm AS writerNm, B.pic AS writerPic
+        FROM feed_comment A
+        INNER JOIN user B
+        ON A.user_id = B.user_id
+        WHERE A.feed_id = 47
+        LIMIT 4
+ {executed in 0 msec}[0;39m
+[2024-05-23 09:49:58 [32mINFO [0;39m http-nio-8080-exec-3] [jdbc.resultsettable] [36m
+|----------------|--------|-----------|--------|---|----|
+|feed_comment_id |comment |created_at |user_id |nm |pic |
+|----------------|--------|-----------|--------|---|----|
+|----------------|--------|-----------|--------|---|----|
+[0;39m
+[2024-05-23 09:49:58 [32mDEBUG[0;39m http-nio-8080-exec-3] [jdbc.sqltiming] [36m com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+2. SELECT pic
+        FROM feed_pics
+        WHERE feed_id = 46
+ {executed in 0 msec}[0;39m
+[2024-05-23 09:49:58 [32mINFO [0;39m http-nio-8080-exec-3] [jdbc.resultsettable] [36m
+|-----------------------------------------|
+|pic                                      |
+|-----------------------------------------|
+|e5d5e50f-bfe3-480d-8ceb-2a0fb2bb4840.jpg |
+|-----------------------------------------|
+[0;39m
+[2024-05-23 09:49:58 [32mDEBUG[0;39m http-nio-8080-exec-3] [jdbc.sqltiming] [36m com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+2. SELECT A.feed_comment_id AS feedCommentId, A.comment, A.created_at AS createdAt
+        , B.user_id AS writerId, B.nm AS writerNm, B.pic AS writerPic
+        FROM feed_comment A
+        INNER JOIN user B
+        ON A.user_id = B.user_id
+        WHERE A.feed_id = 46
+        LIMIT 4
+ {executed in 0 msec}[0;39m
+[2024-05-23 09:49:58 [32mINFO [0;39m http-nio-8080-exec-3] [jdbc.resultsettable] [36m
+|----------------|--------|-----------|--------|---|----|
+|feed_comment_id |comment |created_at |user_id |nm |pic |
+|----------------|--------|-----------|--------|---|----|
+|----------------|--------|-----------|--------|---|----|
+[0;39m
+[2024-05-23 09:49:58 [32mDEBUG[0;39m http-nio-8080-exec-3] [jdbc.sqltiming] [36m com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+2. SELECT pic
+        FROM feed_pics
+        WHERE feed_id = 45
+ {executed in 0 msec}[0;39m
+[2024-05-23 09:49:58 [32mINFO [0;39m http-nio-8080-exec-3] [jdbc.resultsettable] [36m
+|-----------------------------------------|
+|pic                                      |
+|-----------------------------------------|
+|f0fbe345-5a6b-41b9-adf8-f977372fabae.gif |
+|8379aa43-c7cb-45ac-8973-4a86d0de8cac.jpg |
+|1fedc3dc-e42d-4ec6-9f39-e9dd19cf7422.jpg |
+|-----------------------------------------|
+[0;39m
+[2024-05-23 09:49:58 [32mDEBUG[0;39m http-nio-8080-exec-3] [jdbc.sqltiming] [36m com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+2. SELECT A.feed_comment_id AS feedCommentId, A.comment, A.created_at AS createdAt
+        , B.user_id AS writerId, B.nm AS writerNm, B.pic AS writerPic
+        FROM feed_comment A
+        INNER JOIN user B
+        ON A.user_id = B.user_id
+        WHERE A.feed_id = 45
+        LIMIT 4
+ {executed in 0 msec}[0;39m
+[2024-05-23 09:49:58 [32mINFO [0;39m http-nio-8080-exec-3] [jdbc.resultsettable] [36m
+|----------------|--------|-----------|--------|---|----|
+|feed_comment_id |comment |created_at |user_id |nm |pic |
+|----------------|--------|-----------|--------|---|----|
+|----------------|--------|-----------|--------|---|----|
+[0;39m
+[2024-05-23 09:49:58 [32mDEBUG[0;39m http-nio-8080-exec-3] [jdbc.sqltiming] [36m com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+2. SELECT pic
+        FROM feed_pics
+        WHERE feed_id = 44
+ {executed in 0 msec}[0;39m
+[2024-05-23 09:49:58 [32mINFO [0;39m http-nio-8080-exec-3] [jdbc.resultsettable] [36m
+|-----------------------------------------|
+|pic                                      |
+|-----------------------------------------|
+|09100d1c-1601-432a-b3db-5adcd3761dca.jpg |
+|-----------------------------------------|
+[0;39m
+[2024-05-23 09:49:58 [32mDEBUG[0;39m http-nio-8080-exec-3] [jdbc.sqltiming] [36m com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+2. SELECT A.feed_comment_id AS feedCommentId, A.comment, A.created_at AS createdAt
+        , B.user_id AS writerId, B.nm AS writerNm, B.pic AS writerPic
+        FROM feed_comment A
+        INNER JOIN user B
+        ON A.user_id = B.user_id
+        WHERE A.feed_id = 44
+        LIMIT 4
+ {executed in 0 msec}[0;39m
+[2024-05-23 09:49:58 [32mINFO [0;39m http-nio-8080-exec-3] [jdbc.resultsettable] [36m
+|----------------|--------|-----------|--------|---|----|
+|feed_comment_id |comment |created_at |user_id |nm |pic |
+|----------------|--------|-----------|--------|---|----|
+|----------------|--------|-----------|--------|---|----|
+[0;39m
+[2024-05-23 09:49:58 [32mDEBUG[0;39m http-nio-8080-exec-3] [jdbc.sqltiming] [36m com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+2. SELECT pic
+        FROM feed_pics
+        WHERE feed_id = 43
+ {executed in 0 msec}[0;39m
+[2024-05-23 09:49:58 [32mINFO [0;39m http-nio-8080-exec-3] [jdbc.resultsettable] [36m
+|-----------------------------------------|
+|pic                                      |
+|-----------------------------------------|
+|b9f5c2a5-6e1e-4b86-99e0-409d844dffa9.jpg |
+|-----------------------------------------|
+[0;39m
+[2024-05-23 09:49:58 [32mDEBUG[0;39m http-nio-8080-exec-3] [jdbc.sqltiming] [36m com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+2. SELECT A.feed_comment_id AS feedCommentId, A.comment, A.created_at AS createdAt
+        , B.user_id AS writerId, B.nm AS writerNm, B.pic AS writerPic
+        FROM feed_comment A
+        INNER JOIN user B
+        ON A.user_id = B.user_id
+        WHERE A.feed_id = 43
+        LIMIT 4
+ {executed in 0 msec}[0;39m
+[2024-05-23 09:49:58 [32mINFO [0;39m http-nio-8080-exec-3] [jdbc.resultsettable] [36m
+|----------------|--------|-----------|--------|---|----|
+|feed_comment_id |comment |created_at |user_id |nm |pic |
+|----------------|--------|-----------|--------|---|----|
+|----------------|--------|-----------|--------|---|----|
+[0;39m
+[2024-05-23 09:49:58 [32mDEBUG[0;39m http-nio-8080-exec-3] [jdbc.sqltiming] [36m com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+2. SELECT pic
+        FROM feed_pics
+        WHERE feed_id = 42
+ {executed in 0 msec}[0;39m
+[2024-05-23 09:49:58 [32mINFO [0;39m http-nio-8080-exec-3] [jdbc.resultsettable] [36m
+|-----------------------------------------|
+|pic                                      |
+|-----------------------------------------|
+|a49a7fb6-11ee-4f33-86c4-cb5e3b28c5d9.jpg |
+|66a410ef-2271-40fe-9a8d-49e9684294c2.jpg |
+|bdc2c6a3-ef5a-4db8-84f8-d39ee6fdb69d.jpg |
+|89d6fe9d-df1d-4ad6-8b55-246b4ef1f253.png |
+|-----------------------------------------|
+[0;39m
+[2024-05-23 09:49:58 [32mDEBUG[0;39m http-nio-8080-exec-3] [jdbc.sqltiming] [36m com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+2. SELECT A.feed_comment_id AS feedCommentId, A.comment, A.created_at AS createdAt
+        , B.user_id AS writerId, B.nm AS writerNm, B.pic AS writerPic
+        FROM feed_comment A
+        INNER JOIN user B
+        ON A.user_id = B.user_id
+        WHERE A.feed_id = 42
+        LIMIT 4
+ {executed in 0 msec}[0;39m
+[2024-05-23 09:49:58 [32mINFO [0;39m http-nio-8080-exec-3] [jdbc.resultsettable] [36m
+|----------------|--------|-----------|--------|---|----|
+|feed_comment_id |comment |created_at |user_id |nm |pic |
+|----------------|--------|-----------|--------|---|----|
+|----------------|--------|-----------|--------|---|----|
+[0;39m
+[2024-05-23 09:49:58 [32mDEBUG[0;39m http-nio-8080-exec-3] [jdbc.sqltiming] [36m com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+2. SELECT pic
+        FROM feed_pics
+        WHERE feed_id = 41
+ {executed in 0 msec}[0;39m
+[2024-05-23 09:49:58 [32mINFO [0;39m http-nio-8080-exec-3] [jdbc.resultsettable] [36m
+|-----------------------------------------|
+|pic                                      |
+|-----------------------------------------|
+|7546a520-e307-4a0d-ac4a-7e79c20f9346.jpg |
+|71cbbed1-67e2-4290-bbb9-7f9298d4c77e.jpg |
+|d84b7722-f27a-4836-9ca1-22cf19c0712f.jpg |
+|-----------------------------------------|
+[0;39m
+[2024-05-23 09:49:58 [32mDEBUG[0;39m http-nio-8080-exec-3] [jdbc.sqltiming] [36m com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+2. SELECT A.feed_comment_id AS feedCommentId, A.comment, A.created_at AS createdAt
+        , B.user_id AS writerId, B.nm AS writerNm, B.pic AS writerPic
+        FROM feed_comment A
+        INNER JOIN user B
+        ON A.user_id = B.user_id
+        WHERE A.feed_id = 41
+        LIMIT 4
+ {executed in 0 msec}[0;39m
+[2024-05-23 09:49:58 [32mINFO [0;39m http-nio-8080-exec-3] [jdbc.resultsettable] [36m
+|----------------|--------|-----------|--------|---|----|
+|feed_comment_id |comment |created_at |user_id |nm |pic |
+|----------------|--------|-----------|--------|---|----|
+|----------------|--------|-----------|--------|---|----|
+[0;39m
+[2024-05-23 09:49:58 [32mDEBUG[0;39m http-nio-8080-exec-3] [jdbc.sqltiming] [36m com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+2. SELECT pic
+        FROM feed_pics
+        WHERE feed_id = 40
+ {executed in 0 msec}[0;39m
+[2024-05-23 09:49:58 [32mINFO [0;39m http-nio-8080-exec-3] [jdbc.resultsettable] [36m
+|-----------------------------------------|
+|pic                                      |
+|-----------------------------------------|
+|f722248d-3e12-4d3d-b80a-403619b19889.jpg |
+|5774b156-8d7d-49fd-92e9-bf75ed0bebc9.jpg |
+|-----------------------------------------|
+[0;39m
+[2024-05-23 09:49:58 [32mDEBUG[0;39m http-nio-8080-exec-3] [jdbc.sqltiming] [36m com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+2. SELECT A.feed_comment_id AS feedCommentId, A.comment, A.created_at AS createdAt
+        , B.user_id AS writerId, B.nm AS writerNm, B.pic AS writerPic
+        FROM feed_comment A
+        INNER JOIN user B
+        ON A.user_id = B.user_id
+        WHERE A.feed_id = 40
+        LIMIT 4
+ {executed in 0 msec}[0;39m
+[2024-05-23 09:49:58 [32mINFO [0;39m http-nio-8080-exec-3] [jdbc.resultsettable] [36m
+|----------------|--------|--------------------|--------|-------|-----------------------------------------|
+|feed_comment_id |comment |created_at          |user_id |nm     |pic                                      |
+|----------------|--------|--------------------|--------|-------|-----------------------------------------|
+|54              |d       |2024-05-20 10:34:04 |61      |5월20일2 |111fad30-256c-484b-aea3-bca8e3f434aa.jpg |
+|55              |dd      |2024-05-20 10:34:05 |61      |5월20일2 |111fad30-256c-484b-aea3-bca8e3f434aa.jpg |
+|56              |ddd     |2024-05-20 10:34:07 |61      |5월20일2 |111fad30-256c-484b-aea3-bca8e3f434aa.jpg |
+|57              |dddd    |2024-05-20 10:34:09 |61      |5월20일2 |111fad30-256c-484b-aea3-bca8e3f434aa.jpg |
+|----------------|--------|--------------------|--------|-------|-----------------------------------------|
+[0;39m
+[2024-05-23 09:49:58 [32mDEBUG[0;39m http-nio-8080-exec-3] [jdbc.sqltiming] [36m com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+2. SELECT pic
+        FROM feed_pics
+        WHERE feed_id = 10
+ {executed in 0 msec}[0;39m
+[2024-05-23 09:49:58 [32mINFO [0;39m http-nio-8080-exec-3] [jdbc.resultsettable] [36m
+|-----------------------------------------|
+|pic                                      |
+|-----------------------------------------|
+|0697e778-af49-4f7f-b149-6304a9e8ba9b.gif |
+|-----------------------------------------|
+[0;39m
+[2024-05-23 09:49:58 [32mDEBUG[0;39m http-nio-8080-exec-3] [jdbc.sqltiming] [36m com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+2. SELECT A.feed_comment_id AS feedCommentId, A.comment, A.created_at AS createdAt
+        , B.user_id AS writerId, B.nm AS writerNm, B.pic AS writerPic
+        FROM feed_comment A
+        INNER JOIN user B
+        ON A.user_id = B.user_id
+        WHERE A.feed_id = 10
+        LIMIT 4
+ {executed in 1 msec}[0;39m
+[2024-05-23 09:49:58 [32mINFO [0;39m http-nio-8080-exec-3] [jdbc.resultsettable] [36m
+|----------------|--------|-----------|--------|---|----|
+|feed_comment_id |comment |created_at |user_id |nm |pic |
+|----------------|--------|-----------|--------|---|----|
+|----------------|--------|-----------|--------|---|----|
+[0;39m
+[2024-05-23 09:49:58 [32mDEBUG[0;39m http-nio-8080-exec-3] [jdbc.sqltiming] [36m com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+2. SELECT pic
+        FROM feed_pics
+        WHERE feed_id = 9
+ {executed in 0 msec}[0;39m
+[2024-05-23 09:49:58 [32mINFO [0;39m http-nio-8080-exec-3] [jdbc.resultsettable] [36m
+|-----------------------------------------|
+|pic                                      |
+|-----------------------------------------|
+|4d721b39-fbac-405d-8e99-4aa1bd20af9d.jpg |
+|f2ed5f0d-6100-4c93-84af-e1ee08c5c91f.jpg |
+|7d675ef7-fc5e-4459-b585-971798a29329.jpg |
+|1d29327e-0600-456e-83de-c6448efc70b1.jpg |
+|ed5e7e89-c413-46d2-b4dc-c4a64ee6ed23.jpg |
+|a33d3160-e04b-443f-9d0b-844501fecd1e.png |
+|-----------------------------------------|
+[0;39m
+[2024-05-23 09:49:58 [32mDEBUG[0;39m http-nio-8080-exec-3] [jdbc.sqltiming] [36m com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+2. SELECT A.feed_comment_id AS feedCommentId, A.comment, A.created_at AS createdAt
+        , B.user_id AS writerId, B.nm AS writerNm, B.pic AS writerPic
+        FROM feed_comment A
+        INNER JOIN user B
+        ON A.user_id = B.user_id
+        WHERE A.feed_id = 9
+        LIMIT 4
+ {executed in 0 msec}[0;39m
+[2024-05-23 09:49:58 [32mINFO [0;39m http-nio-8080-exec-3] [jdbc.resultsettable] [36m
+|----------------|--------|-----------|--------|---|----|
+|feed_comment_id |comment |created_at |user_id |nm |pic |
+|----------------|--------|-----------|--------|---|----|
+|----------------|--------|-----------|--------|---|----|
+[0;39m
+[2024-05-23 09:49:58 [32mDEBUG[0;39m http-nio-8080-exec-3] [jdbc.sqltiming] [36m com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+2. SELECT pic
+        FROM feed_pics
+        WHERE feed_id = 8
+ {executed in 0 msec}[0;39m
+[2024-05-23 09:49:58 [32mINFO [0;39m http-nio-8080-exec-3] [jdbc.resultsettable] [36m
+|-----------------------------------------|
+|pic                                      |
+|-----------------------------------------|
+|caa81415-2236-4b73-8077-da9318f94aac.jpg |
+|ae5dc0aa-870e-49b3-85d1-76c9fc43fabe.jpg |
+|c2d28937-75e6-460d-a717-50640d5c8308.jpg |
+|-----------------------------------------|
+[0;39m
+[2024-05-23 09:49:58 [32mDEBUG[0;39m http-nio-8080-exec-3] [jdbc.sqltiming] [36m com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+2. SELECT A.feed_comment_id AS feedCommentId, A.comment, A.created_at AS createdAt
+        , B.user_id AS writerId, B.nm AS writerNm, B.pic AS writerPic
+        FROM feed_comment A
+        INNER JOIN user B
+        ON A.user_id = B.user_id
+        WHERE A.feed_id = 8
+        LIMIT 4
+ {executed in 0 msec}[0;39m
+[2024-05-23 09:49:58 [32mINFO [0;39m http-nio-8080-exec-3] [jdbc.resultsettable] [36m
+|----------------|--------|-----------|--------|---|----|
+|feed_comment_id |comment |created_at |user_id |nm |pic |
+|----------------|--------|-----------|--------|---|----|
+|----------------|--------|-----------|--------|---|----|
+[0;39m
+[2024-05-23 09:49:58 [32mDEBUG[0;39m http-nio-8080-exec-3] [jdbc.sqltiming] [36m com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+2. SELECT pic
+        FROM feed_pics
+        WHERE feed_id = 7
+ {executed in 0 msec}[0;39m
+[2024-05-23 09:49:58 [32mINFO [0;39m http-nio-8080-exec-3] [jdbc.resultsettable] [36m
+|-----------------------------------------|
+|pic                                      |
+|-----------------------------------------|
+|adebddf0-4037-47c8-ab1a-1eed049f6ce8.gif |
+|1a590031-a6ae-46c2-8a2a-fffc08477cd8.jpg |
+|-----------------------------------------|
+[0;39m
+[2024-05-23 09:49:58 [32mDEBUG[0;39m http-nio-8080-exec-3] [jdbc.sqltiming] [36m com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+2. SELECT A.feed_comment_id AS feedCommentId, A.comment, A.created_at AS createdAt
+        , B.user_id AS writerId, B.nm AS writerNm, B.pic AS writerPic
+        FROM feed_comment A
+        INNER JOIN user B
+        ON A.user_id = B.user_id
+        WHERE A.feed_id = 7
+        LIMIT 4
+ {executed in 1 msec}[0;39m
+[2024-05-23 09:49:58 [32mINFO [0;39m http-nio-8080-exec-3] [jdbc.resultsettable] [36m
+|----------------|--------|-----------|--------|---|----|
+|feed_comment_id |comment |created_at |user_id |nm |pic |
+|----------------|--------|-----------|--------|---|----|
+|----------------|--------|-----------|--------|---|----|
+[0;39m
+[2024-05-23 09:49:58 [32mINFO [0;39m http-nio-8080-exec-3] [com.green.greengram.feed.FeedServiceImpl] [36mlist : [FeedGetRes(feedId=55, writerId=66, contents=춘식이, location=춘식이, createdAt=2024-05-22 14:43:10, writerNm=5월21일, writerPic=28bfba96-587b-4c0a-8e3d-dc1a473350ca.jpg, isFav=0, pics=[28cc4568-b414-42fa-96ad-63ee12aa340e.gif], comments=[FeedCommentGetRes(feedCommentId=62, comment=춘식이1, createdAt=2024-05-22 14:43:16, writerId=66, writerNm=5월21일, writerPic=28bfba96-587b-4c0a-8e3d-dc1a473350ca.jpg), FeedCommentGetRes(feedCommentId=63, comment=춘식이2, createdAt=2024-05-22 14:43:17, writerId=66, writerNm=5월21일, writerPic=28bfba96-587b-4c0a-8e3d-dc1a473350ca.jpg), FeedCommentGetRes(feedCommentId=64, comment=춘식이3, createdAt=2024-05-22 14:43:18, writerId=66, writerNm=5월21일, writerPic=28bfba96-587b-4c0a-8e3d-dc1a473350ca.jpg)], isMoreComment=1), FeedGetRes(feedId=54, writerId=66, contents=고양이, location=고양이, createdAt=2024-05-22 14:41:27, writerNm=5월21일, writerPic=28bfba96-587b-4c0a-8e3d-dc1a473350ca.jpg, isFav=1, pics=[fd3858d8-a41a-421f-88cc-eff5613f93af.gif], comments=[FeedCommentGetRes(feedCommentId=58, comment=고양이1, createdAt=2024-05-22 14:42:18, writerId=66, writerNm=5월21일, writerPic=28bfba96-587b-4c0a-8e3d-dc1a473350ca.jpg), FeedCommentGetRes(feedCommentId=59, comment=고양이2, createdAt=2024-05-22 14:42:19, writerId=66, writerNm=5월21일, writerPic=28bfba96-587b-4c0a-8e3d-dc1a473350ca.jpg), FeedCommentGetRes(feedCommentId=60, comment=고양이3, createdAt=2024-05-22 14:42:23, writerId=66, writerNm=5월21일, writerPic=28bfba96-587b-4c0a-8e3d-dc1a473350ca.jpg)], isMoreComment=1), FeedGetRes(feedId=53, writerId=66, contents=춘식이, location=춘식이, createdAt=2024-05-21 12:08:42, writerNm=5월21일, writerPic=28bfba96-587b-4c0a-8e3d-dc1a473350ca.jpg, isFav=1, pics=[8dd09cef-07c7-4412-be20-c5edb9a34a2e.gif], comments=[], isMoreComment=0), FeedGetRes(feedId=52, writerId=66, contents=dd, location=dd, createdAt=2024-05-21 12:02:04, writerNm=5월21일, writerPic=28bfba96-587b-4c0a-8e3d-dc1a473350ca.jpg, isFav=0, pics=[e8ef45c2-2dbe-47a2-b31a-ea4c5d936b7e.gif], comments=[], isMoreComment=0), FeedGetRes(feedId=51, writerId=66, contents=젖닌, location=젖닌, createdAt=2024-05-21 11:25:18, writerNm=5월21일, writerPic=28bfba96-587b-4c0a-8e3d-dc1a473350ca.jpg, isFav=1, pics=[e24a4cd4-113c-41ec-addb-569974e92acc.gif], comments=[], isMoreComment=0), FeedGetRes(feedId=50, writerId=66, contents=고양이, location=고양이, createdAt=2024-05-21 11:21:53, writerNm=5월21일, writerPic=28bfba96-587b-4c0a-8e3d-dc1a473350ca.jpg, isFav=1, pics=[4a3399f3-c168-4f63-8176-327adcec4cbc.gif], comments=[], isMoreComment=0), FeedGetRes(feedId=49, writerId=66, contents=춘식이, location=춘식이, createdAt=2024-05-21 11:21:35, writerNm=5월21일, writerPic=28bfba96-587b-4c0a-8e3d-dc1a473350ca.jpg, isFav=1, pics=[536f00b9-f73c-4fbd-9f41-af147670cefc.gif], comments=[], isMoreComment=0), FeedGetRes(feedId=48, writerId=61, contents=aa, location=aa, createdAt=2024-05-20 12:57:01, writerNm=5월20일2, writerPic=111fad30-256c-484b-aea3-bca8e3f434aa.jpg, isFav=0, pics=[066e70a5-22ac-4832-a0f0-8bbd28e2f29d.jpg], comments=[], isMoreComment=0), FeedGetRes(feedId=47, writerId=63, contents=sfda, location=dsf, createdAt=2024-05-20 12:42:26, writerNm=5월20일3, writerPic=fdbabf84-693f-4476-a1bd-94a8ed2136e9.gif, isFav=0, pics=[61fa1b4f-3162-498d-b6c8-4410c966ce3e.jpg], comments=[], isMoreComment=0), FeedGetRes(feedId=46, writerId=63, contents=dsfsfda, location=dfds, createdAt=2024-05-20 12:31:29, writerNm=5월20일3, writerPic=fdbabf84-693f-4476-a1bd-94a8ed2136e9.gif, isFav=1, pics=[e5d5e50f-bfe3-480d-8ceb-2a0fb2bb4840.jpg], comments=[], isMoreComment=0), FeedGetRes(feedId=45, writerId=63, contents=ee, location=ee, createdAt=2024-05-20 12:31:16, writerNm=5월20일3, writerPic=fdbabf84-693f-4476-a1bd-94a8ed2136e9.gif, isFav=1, pics=[f0fbe345-5a6b-41b9-adf8-f977372fabae.gif, 8379aa43-c7cb-45ac-8973-4a86d0de8cac.jpg, 1fedc3dc-e42d-4ec6-9f39-e9dd19cf7422.jpg], comments=[], isMoreComment=0), FeedGetRes(feedId=44, writerId=62, contents=ㅇㅁㄴㄹㅇ, location=ㄴㅇㄹ, createdAt=2024-05-20 12:28:30, writerNm=5월20일, writerPic=81695b24-7863-407c-8f40-ca0a3be511ed.jpg, isFav=0, pics=[09100d1c-1601-432a-b3db-5adcd3761dca.jpg], comments=[], isMoreComment=0), FeedGetRes(feedId=43, writerId=62, contents=ㅇㅇ, location=ㅇㅇ, createdAt=2024-05-20 12:28:00, writerNm=5월20일, writerPic=81695b24-7863-407c-8f40-ca0a3be511ed.jpg, isFav=0, pics=[b9f5c2a5-6e1e-4b86-99e0-409d844dffa9.jpg], comments=[], isMoreComment=0), FeedGetRes(feedId=42, writerId=62, contents=ㅇㅇㅇㅇ, location=ㅇㅇㅇㅇ, createdAt=2024-05-20 12:23:26, writerNm=5월20일, writerPic=81695b24-7863-407c-8f40-ca0a3be511ed.jpg, isFav=0, pics=[a49a7fb6-11ee-4f33-86c4-cb5e3b28c5d9.jpg, 66a410ef-2271-40fe-9a8d-49e9684294c2.jpg, bdc2c6a3-ef5a-4db8-84f8-d39ee6fdb69d.jpg, 89d6fe9d-df1d-4ad6-8b55-246b4ef1f253.png], comments=[], isMoreComment=0), FeedGetRes(feedId=41, writerId=62, contents=dd, location=dd, createdAt=2024-05-20 10:35:07, writerNm=5월20일, writerPic=81695b24-7863-407c-8f40-ca0a3be511ed.jpg, isFav=0, pics=[7546a520-e307-4a0d-ac4a-7e79c20f9346.jpg, 71cbbed1-67e2-4290-bbb9-7f9298d4c77e.jpg, d84b7722-f27a-4836-9ca1-22cf19c0712f.jpg], comments=[], isMoreComment=0), FeedGetRes(feedId=40, writerId=61, contents=d, location=d, createdAt=2024-05-20 10:34:01, writerNm=5월20일2, writerPic=111fad30-256c-484b-aea3-bca8e3f434aa.jpg, isFav=0, pics=[f722248d-3e12-4d3d-b80a-403619b19889.jpg, 5774b156-8d7d-49fd-92e9-bf75ed0bebc9.jpg], comments=[FeedCommentGetRes(feedCommentId=54, comment=d, createdAt=2024-05-20 10:34:04, writerId=61, writerNm=5월20일2, writerPic=111fad30-256c-484b-aea3-bca8e3f434aa.jpg), FeedCommentGetRes(feedCommentId=55, comment=dd, createdAt=2024-05-20 10:34:05, writerId=61, writerNm=5월20일2, writerPic=111fad30-256c-484b-aea3-bca8e3f434aa.jpg), FeedCommentGetRes(feedCommentId=56, comment=ddd, createdAt=2024-05-20 10:34:07, writerId=61, writerNm=5월20일2, writerPic=111fad30-256c-484b-aea3-bca8e3f434aa.jpg)], isMoreComment=1), FeedGetRes(feedId=10, writerId=23, contents=고양이, location=가, createdAt=2024-05-07 15:25:45, writerNm=홍길동, writerPic=363403f9-8d51-4a5c-a891-abaf8b317910.jpg, isFav=0, pics=[0697e778-af49-4f7f-b149-6304a9e8ba9b.gif], comments=[], isMoreComment=0), FeedGetRes(feedId=9, writerId=23, contents=안녕하세요, location=, createdAt=2024-05-07 15:18:45, writerNm=홍길동, writerPic=363403f9-8d51-4a5c-a891-abaf8b317910.jpg, isFav=0, pics=[4d721b39-fbac-405d-8e99-4aa1bd20af9d.jpg, f2ed5f0d-6100-4c93-84af-e1ee08c5c91f.jpg, 7d675ef7-fc5e-4459-b585-971798a29329.jpg, 1d29327e-0600-456e-83de-c6448efc70b1.jpg, ed5e7e89-c413-46d2-b4dc-c4a64ee6ed23.jpg, a33d3160-e04b-443f-9d0b-844501fecd1e.png], comments=[], isMoreComment=0), FeedGetRes(feedId=8, writerId=23, contents=가나다, location=대구, createdAt=2024-05-07 15:18:25, writerNm=홍길동, writerPic=363403f9-8d51-4a5c-a891-abaf8b317910.jpg, isFav=0, pics=[caa81415-2236-4b73-8077-da9318f94aac.jpg, ae5dc0aa-870e-49b3-85d1-76c9fc43fabe.jpg, c2d28937-75e6-460d-a717-50640d5c8308.jpg], comments=[], isMoreComment=0), FeedGetRes(feedId=7, writerId=23, contents=가나다라, location=다나가, createdAt=2024-05-07 14:21:04, writerNm=홍길동, writerPic=363403f9-8d51-4a5c-a891-abaf8b317910.jpg, isFav=0, pics=[adebddf0-4037-47c8-ab1a-1eed049f6ce8.gif, 1a590031-a6ae-46c2-8a2a-fffc08477cd8.jpg], comments=[], isMoreComment=0)][0;39m
+[2024-05-23 09:50:03 [33mWARN [0;39m http-nio-8080-exec-4] [org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver] [36mResolved [org.springframework.web.multipart.support.MissingServletRequestPartException: Required part 'pics' is not present.][0;39m
+[2024-05-23 09:50:04 [33mWARN [0;39m http-nio-8080-exec-1] [org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver] [36mResolved [org.springframework.web.multipart.support.MissingServletRequestPartException: Required part 'pics' is not present.][0;39m
+[2024-05-23 09:50:05 [33mWARN [0;39m http-nio-8080-exec-8] [org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver] [36mResolved [org.springframework.web.multipart.support.MissingServletRequestPartException: Required part 'pics' is not present.][0;39m
+[2024-05-23 10:32:06 [32mINFO [0;39m SpringApplicationShutdownHook] [com.zaxxer.hikari.HikariDataSource] [36mHikariPool-1 - Shutdown initiated...[0;39m
+[2024-05-23 10:32:06 [32mINFO [0;39m SpringApplicationShutdownHook] [com.zaxxer.hikari.HikariDataSource] [36mHikariPool-1 - Shutdown completed.[0;39m

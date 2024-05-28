@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.green.greengram.userfollow.UserFollowMapper">        <!-- user 인터페이스 주소명.인터페이스 파일명 -->
+    <insert id="insUserFollow">
+        INSERT INTO user_follow
+        SET from_user_id = #{fromUserId}
+            , to_user_id = #{toUserId}
+    </insert>
+
+    <delete id="delUserFollow">
+        DELETE FROM user_follow
+        WHERE from_user_id = #{fromUserId}
+            AND to_user_id = #{toUserId}
+    </delete>
+
+    <select id="selUserFollowForTest">
+        SELECT from_user_id AS fromUserId
+        , to_user_id AS toUserId
+        , created_at AS createdAt
+        FROM user_follow
+        <where>
+            <if test=" fromUserId > 0 ">
+                from_user_id = #{fromUserId}
+            </if>
+            <if test=" toUserId > 0 ">
+                AND to_user_id = #{toUserId}
+            </if>
+        </where>
+        ORDER BY from_user_id, to_user_id
+    </select>
+<!-- 둘 다 0 일 경우 : SELECT * FROM user_follow 만 실행 -->
+<!-- fromUserId 만 0보다 컸다면 : SELECT * FROM user_follow WHERE from_user_id = 값                만 실행 -->
+<!-- toUserId 만 0보다 컸다면 : SELECT * FROM user_follow WHERE to_user_id = 값                    만 실행 -->
+<!-- 둘 다 0보다 클 경우 :  SELECT * FROM user_follow WHERE from_user_id = 값 AND to_user_id = 값      실행 -->
+
+
+</mapper>
