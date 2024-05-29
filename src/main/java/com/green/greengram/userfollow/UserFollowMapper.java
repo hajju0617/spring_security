@@ -12,5 +12,5 @@ public interface UserFollowMapper {
 
     int delUserFollow(UserFollowReq p);
 
-    List<UserFollowEntity> selUserFollowForTest(UserFollowReq p);
+    List<UserFollowEntity> selUserFollowListForTest(UserFollowReq p);
 }

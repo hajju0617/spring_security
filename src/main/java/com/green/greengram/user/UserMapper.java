@@ -3,6 +3,8 @@ package com.green.greengram.user;
 import com.green.greengram.user.model.*;
 import org.apache.ibatis.annotations.Mapper;
 
+import java.util.List;
+
 @Mapper
 public interface UserMapper {
     int postUser(SignUpPostReq p);
@@ -14,5 +16,7 @@ public interface UserMapper {
     UserInfoGetRes selProfileUserInfo(UserInfoGetReq p);
 
     int updProfilePic(UserProfilePatchReq p);
+
+    List<User> selTest(long userId);
 
 }

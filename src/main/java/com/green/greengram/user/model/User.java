@@ -1,8 +1,11 @@
 package com.green.greengram.user.model;
 
-import lombok.Data;
+import lombok.*;
 
-@Data
+@Getter
+@AllArgsConstructor
+@ToString
+@EqualsAndHashCode
 public class User {
     private long userId;
     private String uid;
