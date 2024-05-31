@@ -12,7 +12,7 @@ import java.util.List;
 @Service
 @Slf4j
 @RequiredArgsConstructor
-public class FeedCommentServiceImpl {
+public class FeedCommentServiceImpl implements FeedCommentService {
     private final FeedCommentMapper mapper;
 
     public long postFeedComment(FeedCommentPostReq p) {
