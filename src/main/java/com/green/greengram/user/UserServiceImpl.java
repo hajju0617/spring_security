@@ -12,7 +12,7 @@ import org.springframework.web.multipart.MultipartFile;
 @Slf4j
 @RequiredArgsConstructor
 @Service
-public class UserServiceImpl {
+public class UserServiceImpl implements UserService{
     private final UserMapper mapper;
     private final CustomFileUtils customFileUtils;
 
@@ -104,7 +104,7 @@ public class UserServiceImpl {
             customFileUtils.transferTo(p.getPic(), filePath);   // public void transferTo(MultipartFile mf, String target) throws Exception
                                                                 // 예외를 던지고 있으므로 예외처리를 해줘야 레드라인이 생기지 않는다.
         } catch (Exception e) {
-            throw new RuntimeException(e);
+            throw new RuntimeException("프로필 사진 수정 실패");
         }
         return fileNm;
     }

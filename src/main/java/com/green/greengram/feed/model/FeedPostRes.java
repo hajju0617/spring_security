@@ -7,6 +7,7 @@ import java.util.*;
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
+@EqualsAndHashCode
 public class FeedPostRes {
     private long feedId;
     private List<String> pics;
