@@ -1,220 +1,474 @@
-[2024-05-31 10:47:40 INFO  Test worker] [com.green.greengram.user.UserServiceTest] Starting UserServiceTest using Java 17.0.10 with PID 11544 (started by Administrator in D:\2024-1\Backend\GreengramVer3TDD)
-[2024-05-31 10:47:40 INFO  Test worker] [com.green.greengram.user.UserServiceTest] No active profile set, falling back to 1 default profile: "default"
-[2024-05-31 10:47:42 INFO  Test worker] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Starting...
-[2024-05-31 10:47:42 INFO  Test worker] [com.zaxxer.hikari.pool.HikariPool] HikariPool-1 - Added connection net.sf.log4jdbc.sql.jdbcapi.ConnectionSpy@7d4da729
-[2024-05-31 10:47:42 INFO  Test worker] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Start completed.
-[2024-05-31 10:47:42 INFO  Test worker] [org.springframework.boot.autoconfigure.web.servlet.WelcomePageHandlerMapping] Adding welcome page: class path resource [static/index.html]
-[2024-05-31 10:47:43 INFO  Test worker] [org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver] Exposing 1 endpoint(s) beneath base path '/actuator'
-[2024-05-31 10:47:43 INFO  Test worker] [com.green.greengram.user.UserServiceTest] Started UserServiceTest in 3.005 seconds (process running for 3.908)
-[2024-05-31 10:47:43 WARN  Test worker] [org.springframework.test.context.TestContextManager] Caught exception while allowing TestExecutionListener [org.springframework.test.context.support.DependencyInjectionTestExecutionListener] to prepare test instance [com.green.greengram.user.UserServiceTest@811d8d6]
-org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'com.green.greengram.user.UserServiceTest': Unsatisfied dependency expressed through field 'service': No qualifying bean of type 'com.green.greengram.user.UserService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:787)
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:767)
-	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:145)
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:508)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1419)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireBeanProperties(AbstractAutowireCapableBeanFactory.java:398)
-	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:143)
-	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:98)
-	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:260)
-	at org.springframework.test.context.junit.jupiter.SpringExtension.postProcessTestInstance(SpringExtension.java:163)
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$10(ClassBasedTestDescriptor.java:378)
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.executeAndMaskThrowable(ClassBasedTestDescriptor.java:383)
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$11(ClassBasedTestDescriptor.java:378)
-	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
-	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179)
-	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1625)
-	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
-	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
-	at java.base/java.util.stream.StreamSpliterators$WrappingSpliterator.forEachRemaining(StreamSpliterators.java:310)
-	at java.base/java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:735)
-	at java.base/java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:734)
-	at java.base/java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:762)
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.invokeTestInstancePostProcessors(ClassBasedTestDescriptor.java:377)
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$instantiateAndPostProcessTestInstance$6(ClassBasedTestDescriptor.java:290)
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.instantiateAndPostProcessTestInstance(ClassBasedTestDescriptor.java:289)
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$4(ClassBasedTestDescriptor.java:279)
-	at java.base/java.util.Optional.orElseGet(Optional.java:364)
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$5(ClassBasedTestDescriptor.java:278)
-	at org.junit.jupiter.engine.execution.TestInstancesProvider.getTestInstances(TestInstancesProvider.java:31)
-	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$prepare$0(TestMethodTestDescriptor.java:106)
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
-	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:105)
-	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:69)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$prepare$2(NodeTestTask.java:123)
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.prepare(NodeTestTask.java:123)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:90)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
-	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
-	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
-	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35)
-	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
-	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54)
-	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:198)
-	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:169)
-	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:93)
-	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:58)
-	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:141)
-	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:57)
-	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:103)
-	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:85)
-	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:47)
-	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.processAllTestClasses(JUnitPlatformTestClassProcessor.java:119)
-	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.access$000(JUnitPlatformTestClassProcessor.java:94)
-	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor.stop(JUnitPlatformTestClassProcessor.java:89)
-	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.stop(SuiteTestClassProcessor.java:62)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
-	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
-	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
-	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:94)
-	at jdk.proxy1/jdk.proxy1.$Proxy2.stop(Unknown Source)
-	at org.gradle.api.internal.tasks.testing.worker.TestWorker$3.run(TestWorker.java:193)
-	at org.gradle.api.internal.tasks.testing.worker.TestWorker.executeAndMaintainThreadName(TestWorker.java:129)
-	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:100)
-	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:60)
-	at org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56)
-	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:113)
-	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:65)
-	at worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
-	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
-Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.green.greengram.user.UserService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoMatchingBeanFound(DefaultListableBeanFactory.java:1880)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1406)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1353)
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:784)
-	... 91 common frames omitted
-[2024-05-31 10:47:43 INFO  SpringApplicationShutdownHook] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Shutdown initiated...
-[2024-05-31 10:47:43 INFO  SpringApplicationShutdownHook] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Shutdown completed.
-[2024-05-31 10:50:51 INFO  Test worker] [com.green.greengram.user.UserServiceTest] Starting UserServiceTest using Java 17.0.10 with PID 4976 (started by Administrator in D:\2024-1\Backend\GreengramVer3TDD)
-[2024-05-31 10:50:51 INFO  Test worker] [com.green.greengram.user.UserServiceTest] No active profile set, falling back to 1 default profile: "default"
-[2024-05-31 10:50:53 INFO  Test worker] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Starting...
-[2024-05-31 10:50:53 INFO  Test worker] [com.zaxxer.hikari.pool.HikariPool] HikariPool-1 - Added connection net.sf.log4jdbc.sql.jdbcapi.ConnectionSpy@4b7e4d14
-[2024-05-31 10:50:53 INFO  Test worker] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Start completed.
-[2024-05-31 10:50:53 INFO  Test worker] [org.springframework.boot.autoconfigure.web.servlet.WelcomePageHandlerMapping] Adding welcome page: class path resource [static/index.html]
-[2024-05-31 10:50:54 INFO  Test worker] [org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver] Exposing 1 endpoint(s) beneath base path '/actuator'
-[2024-05-31 10:50:54 INFO  Test worker] [com.green.greengram.user.UserServiceTest] Started UserServiceTest in 2.77 seconds (process running for 3.625)
-[2024-05-31 10:50:54 WARN  Test worker] [org.springframework.test.context.TestContextManager] Caught exception while allowing TestExecutionListener [org.springframework.test.context.support.DependencyInjectionTestExecutionListener] to prepare test instance [com.green.greengram.user.UserServiceTest@6dcc7696]
-org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'com.green.greengram.user.UserServiceTest': Unsatisfied dependency expressed through field 'service': No qualifying bean of type 'com.green.greengram.user.UserService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:787)
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:767)
-	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:145)
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:508)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1419)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireBeanProperties(AbstractAutowireCapableBeanFactory.java:398)
-	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:143)
-	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:98)
-	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:260)
-	at org.springframework.test.context.junit.jupiter.SpringExtension.postProcessTestInstance(SpringExtension.java:163)
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$10(ClassBasedTestDescriptor.java:378)
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.executeAndMaskThrowable(ClassBasedTestDescriptor.java:383)
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$11(ClassBasedTestDescriptor.java:378)
-	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
-	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179)
-	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1625)
-	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
-	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
-	at java.base/java.util.stream.StreamSpliterators$WrappingSpliterator.forEachRemaining(StreamSpliterators.java:310)
-	at java.base/java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:735)
-	at java.base/java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:734)
-	at java.base/java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:762)
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.invokeTestInstancePostProcessors(ClassBasedTestDescriptor.java:377)
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$instantiateAndPostProcessTestInstance$6(ClassBasedTestDescriptor.java:290)
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.instantiateAndPostProcessTestInstance(ClassBasedTestDescriptor.java:289)
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$4(ClassBasedTestDescriptor.java:279)
-	at java.base/java.util.Optional.orElseGet(Optional.java:364)
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$5(ClassBasedTestDescriptor.java:278)
-	at org.junit.jupiter.engine.execution.TestInstancesProvider.getTestInstances(TestInstancesProvider.java:31)
-	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$prepare$0(TestMethodTestDescriptor.java:106)
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
-	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:105)
-	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:69)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$prepare$2(NodeTestTask.java:123)
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.prepare(NodeTestTask.java:123)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:90)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
-	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
-	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
-	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35)
-	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
-	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54)
-	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:198)
-	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:169)
-	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:93)
-	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:58)
-	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:141)
-	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:57)
-	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:103)
-	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:85)
-	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:47)
-	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.processAllTestClasses(JUnitPlatformTestClassProcessor.java:119)
-	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.access$000(JUnitPlatformTestClassProcessor.java:94)
-	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor.stop(JUnitPlatformTestClassProcessor.java:89)
-	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.stop(SuiteTestClassProcessor.java:62)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
-	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
-	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
-	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:94)
-	at jdk.proxy1/jdk.proxy1.$Proxy2.stop(Unknown Source)
-	at org.gradle.api.internal.tasks.testing.worker.TestWorker$3.run(TestWorker.java:193)
-	at org.gradle.api.internal.tasks.testing.worker.TestWorker.executeAndMaintainThreadName(TestWorker.java:129)
-	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:100)
-	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:60)
-	at org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56)
-	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:113)
-	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:65)
-	at worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
-	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
-Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.green.greengram.user.UserService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoMatchingBeanFound(DefaultListableBeanFactory.java:1880)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1406)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1353)
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:784)
-	... 91 common frames omitted
-[2024-05-31 10:50:54 INFO  SpringApplicationShutdownHook] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Shutdown initiated...
-[2024-05-31 10:50:54 INFO  SpringApplicationShutdownHook] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Shutdown completed.
+[2024-06-05 11:33:12 [32mINFO [0;39m restartedMain] [com.green.greengram.GreengramVer3TddApplication] [36mStarting GreengramVer3TddApplication using Java 17.0.10 with PID 10328 (D:\2024-1\Backend\GreengramVer3TDD\build\classes\java\main started by Administrator in D:\2024-1\Backend\GreengramVer3TDD)[0;39m
+[2024-06-05 11:33:12 [32mINFO [0;39m restartedMain] [com.green.greengram.GreengramVer3TddApplication] [36mThe following 1 profile is active: "tdd"[0;39m
+[2024-06-05 11:33:13 [32mINFO [0;39m restartedMain] [org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor] [36mDevtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable[0;39m
+[2024-06-05 11:33:13 [32mINFO [0;39m restartedMain] [org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor] [36mFor additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'[0;39m
+[2024-06-05 11:33:13 [32mINFO [0;39m restartedMain] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [36mTomcat initialized with port 8080 (http)[0;39m
+[2024-06-05 11:33:13 [32mINFO [0;39m restartedMain] [org.apache.coyote.http11.Http11NioProtocol] [36mInitializing ProtocolHandler ["http-nio-8080"][0;39m
+[2024-06-05 11:33:13 [32mINFO [0;39m restartedMain] [org.apache.catalina.core.StandardService] [36mStarting service [Tomcat][0;39m
+[2024-06-05 11:33:13 [32mINFO [0;39m restartedMain] [org.apache.catalina.core.StandardEngine] [36mStarting Servlet engine: [Apache Tomcat/10.1.20][0;39m
+[2024-06-05 11:33:13 [32mINFO [0;39m restartedMain] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] [36mInitializing Spring embedded WebApplicationContext[0;39m
+[2024-06-05 11:33:13 [32mINFO [0;39m restartedMain] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] [36mRoot WebApplicationContext: initialization completed in 953 ms[0;39m
+[2024-06-05 11:33:14 [32mINFO [0;39m restartedMain] [com.zaxxer.hikari.HikariDataSource] [36mHikariPool-1 - Starting...[0;39m
+[2024-06-05 11:33:14 [32mINFO [0;39m restartedMain] [com.zaxxer.hikari.pool.HikariPool] [36mHikariPool-1 - Added connection net.sf.log4jdbc.sql.jdbcapi.ConnectionSpy@4f1062c[0;39m
+[2024-06-05 11:33:14 [32mINFO [0;39m restartedMain] [com.zaxxer.hikari.HikariDataSource] [36mHikariPool-1 - Start completed.[0;39m
+[2024-06-05 11:33:14 [32mDEBUG[0;39m restartedMain] [jdbc.sqltiming] [36m com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
+1. CREATE TABLE IF NOT EXISTS `user` ( `user_id` bigint(20) NOT NULL AUTO_INCREMENT, `uid` varchar(20) NOT NULL, `upw` varchar(100) NOT NULL, `nm` varchar(20) NOT NULL, `pic` varchar(100) DEFAULT NULL, `created_at` datetime NOT NULL DEFAULT current_timestamp(), `updated_at` datetime DEFAULT NULL ON UPDATE current_timestamp(), PRIMARY KEY (`user_id`), UNIQUE KEY `uid` (`uid`) )
+ {executed in 1 msec}[0;39m
+[2024-06-05 11:33:14 [32mDEBUG[0;39m restartedMain] [jdbc.sqltiming] [36m com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
+1. TRUNCATE TABLE user
+ {executed in 7 msec}[0;39m
+[2024-06-05 11:33:14 [32mDEBUG[0;39m restartedMain] [jdbc.sqltiming] [36m com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
+1. CREATE TABLE IF NOT EXISTS `user_follow` ( `from_user_id` bigint(20) NOT NULL, `to_user_id` bigint(20) NOT NULL, `created_at` datetime NOT NULL DEFAULT current_timestamp(), PRIMARY KEY (`from_user_id`,`to_user_id`) )
+ {executed in 1 msec}[0;39m
+[2024-06-05 11:33:14 [32mDEBUG[0;39m restartedMain] [jdbc.sqltiming] [36m com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
+1. TRUNCATE TABLE user_follow
+ {executed in 5 msec}[0;39m
+[2024-06-05 11:33:14 [32mDEBUG[0;39m restartedMain] [jdbc.sqltiming] [36m com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
+1. CREATE TABLE IF NOT EXISTS `feed` ( `feed_id` bigint(20) NOT NULL AUTO_INCREMENT, `writer_id` bigint(20) NOT NULL, `contents` varchar(1000) DEFAULT NULL, `location` varchar(30) DEFAULT NULL, `created_at` datetime NOT NULL DEFAULT current_timestamp(), `updated_at` datetime DEFAULT NULL ON UPDATE current_timestamp(), PRIMARY KEY (`feed_id`) )
+ {executed in 1 msec}[0;39m
+[2024-06-05 11:33:14 [32mDEBUG[0;39m restartedMain] [jdbc.sqltiming] [36m com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
+1. TRUNCATE TABLE feed
+ {executed in 5 msec}[0;39m
+[2024-06-05 11:33:14 [32mDEBUG[0;39m restartedMain] [jdbc.sqltiming] [36m com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
+1. CREATE TABLE IF NOT EXISTS `feed_comment` ( `feed_comment_id` bigint(20) NOT NULL AUTO_INCREMENT, `feed_id` bigint(20) NOT NULL, `user_id` bigint(20) NOT NULL, `COMMENT` varchar(1000) NOT NULL, `created_at` datetime NOT NULL DEFAULT current_timestamp(), `updated_at` datetime DEFAULT NULL ON UPDATE current_timestamp(), PRIMARY KEY (`feed_comment_id`) )
+ {executed in 0 msec}[0;39m
+[2024-06-05 11:33:14 [32mDEBUG[0;39m restartedMain] [jdbc.sqltiming] [36m com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
+1. TRUNCATE TABLE feed_comment
+ {executed in 7 msec}[0;39m
+[2024-06-05 11:33:14 [32mDEBUG[0;39m restartedMain] [jdbc.sqltiming] [36m com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
+1. CREATE TABLE IF NOT EXISTS `feed_favorite` ( `feed_id` bigint(20) NOT NULL, `user_id` bigint(20) NOT NULL, `created_at` datetime NOT NULL DEFAULT current_timestamp(), PRIMARY KEY (`feed_id`,`user_id`) USING BTREE )
+ {executed in 0 msec}[0;39m
+[2024-06-05 11:33:14 [32mDEBUG[0;39m restartedMain] [jdbc.sqltiming] [36m com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
+1. TRUNCATE TABLE feed_favorite
+ {executed in 5 msec}[0;39m
+[2024-06-05 11:33:14 [32mDEBUG[0;39m restartedMain] [jdbc.sqltiming] [36m com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
+1. CREATE TABLE IF NOT EXISTS `feed_pics` ( `feed_pic_id` bigint(20) NOT NULL AUTO_INCREMENT, `feed_id` bigint(20) NOT NULL, `pic` varchar(50) NOT NULL, `created_at` datetime NOT NULL DEFAULT current_timestamp(), PRIMARY KEY (`feed_pic_id`) USING BTREE )
+ {executed in 1 msec}[0;39m
+[2024-06-05 11:33:14 [32mDEBUG[0;39m restartedMain] [jdbc.sqltiming] [36m com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
+1. TRUNCATE TABLE feed_pics
+ {executed in 5 msec}[0;39m
+[2024-06-05 11:33:14 [32mDEBUG[0;39m restartedMain] [jdbc.sqltiming] [36m com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
+1. INSERT INTO `user` (`user_id`, `uid`, `upw`, `nm`, `pic`, `created_at`, `updated_at`) VALUES (1, '사용자1', '$2a$10$ZniS9vUxLxwm/PyDyHd6DuKI8KbkQwqddPGVskiBJsu3VD1zW8WXm', '홍길동', '363403f9-8d51-4a5c-a891-abaf8b317910.jpg', '2024-05-03 14:35:08', NULL), (2, '사용자2', '$2a$10$qsItixp0DK/47.E5Fdh.oOk4YSu/zfnIS4jMjWiVtWFRSkQMg7wcy', '5월20일2', '111fad30-256c-484b-aea3-bca8e3f434aa.jpg', '2024-05-20 10:34:56', '2024-05-20 14:48:07'), (3, '사용자3', '$2a$10$CiBlbjaB/h/j583SUMw6BOLjd3On4Az6A7McHo2etRFWD0S.lorGK', '5월20일', '81695b24-7863-407c-8f40-ca0a3be511ed.jpg', '2024-05-20 10:33:48', '2024-05-20 14:48:09'), (4, '사용자4', '$2a$10$C3bd.tBbywD30PtjpXewieNCXoK9.nPgXtGg0wmY3ubPM.jVjTvMK', '5월20일3', 'fdbabf84-693f-4476-a1bd-94a8ed2136e9.gif', '2024-05-20 12:31:01', NULL), (5, '사용자5', '$2a$10$QO9guQRofPBqIUFqFtvHHejgRDs6xRxjNfI5CoODz6OzZmlR6vDhe', '', '4c0c086d-480a-453e-a527-4d445403544a.jpg', '2024-05-20 12:42:16', NULL), (6, '사용자6', '5월16일', '5월16일', '5월16일', '2024-05-20 14:36:02', NULL), (7, '사용자7', '$2a$10$mzp5gIhp8N5Kj5rRA05h9O9TaBvoIBHibcwbjm9XyWkSrDo6nYhM.', '5월21일', '28bfba96-587b-4c0a-8e3d-dc1a473350ca.jpg', '2024-05-21 11:21:10', '2024-05-22 15:39:45'), (8, '사용자8', '$2a$10$lZzlyFmUfFbjy.l.WtGXUeml0B0Sq/FMPCYo5GN7Rgrnc0VHR8.06', '5월23일', '6e02655c-86fb-405f-b7e5-35bbb9ab64a2.jpg', '2024-05-23 10:45:24', '2024-05-23 11:48:11')
+ {executed in 0 msec}[0;39m
+[2024-06-05 11:33:14 [32mDEBUG[0;39m restartedMain] [jdbc.sqltiming] [36m com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
+1. INSERT INTO `feed` (`feed_id`, `writer_id`, `contents`, `location`, `created_at`, `updated_at`) VALUES (1, 1, '내용1', '장소1', '2024-05-07 11:16:33', NULL), (2, 2, '내용2', '장소2', '2024-05-07 14:20:25', NULL), (3, 3, '내용3', '장소3', '2024-05-07 14:20:40', NULL), (4, 4, '내용4', '장소4', '2024-05-07 14:21:04', NULL), (5, 5, '내용5', '장소5', '2024-05-07 15:18:25', NULL), (6, 6, '내용6', '장소6', '2024-05-07 15:18:45', NULL), (7, 7, '내용7', '장소7', '2024-05-07 15:25:45', NULL), (8, 8, '내용8', '장소8', '2024-05-20 10:34:01', NULL), (9, 9, '내용9', '장소9', '2024-05-20 10:35:07', NULL), (10, 10, '내용10', '장소10', '2024-05-20 12:23:26', NULL), (11, 11, '내용11', '장소11', '2024-05-20 12:28:00', NULL), (12, 12, '내용12', '장소12', '2024-05-20 12:28:30', NULL), (13, 13, '내용13', '장소13', '2024-05-20 12:31:16', NULL), (14, 14, '내용14', '장소14', '2024-05-20 12:31:29', NULL), (15, 15, '내용15', '장소15', '2024-05-20 12:42:26', NULL), (16, 16, '내용16', '장소16', '2024-05-20 12:57:01', NULL), (17, 17, '내용17', '장소17', '2024-05-21 11:21:35', NULL), (18, 18, '내용18', '장소18', '2024-05-21 11:21:53', NULL), (19, 19, '내용19', '장소19', '2024-05-21 11:25:18', NULL), (20, 20, '내용20', '장소20', '2024-05-21 12:02:04', NULL), (21, 21, '내용21', '장소21', '2024-05-21 12:08:42', NULL), (22, 22, '내용22', '장소22', '2024-05-22 14:41:27', NULL), (23, 23, '내용23', '장소23', '2024-05-22 14:43:10', NULL), (24, 24, '내용24', '장소24', '2024-05-23 13:13:41', NULL), (25, 25, '내용25', '장소25', '2024-05-23 16:54:43', NULL)
+ {executed in 3 msec}[0;39m
+[2024-06-05 11:33:14 [32mDEBUG[0;39m restartedMain] [jdbc.sqltiming] [36m com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
+1. INSERT INTO `feed_comment` (`feed_comment_id`, `feed_id`, `user_id`, `COMMENT`, `created_at`, `updated_at`) VALUES (1, 11, 1, '댓글내용1', '2024-05-20 10:34:04', NULL), (2, 12, 2, '댓글내용2', '2024-05-20 10:34:05', NULL), (3, 13, 3, '댓글내용3', '2024-05-20 10:34:07', NULL), (4, 14, 4, '댓글내용4', '2024-05-20 10:34:09', NULL), (5, 15, 5, '댓글내용5', '2024-05-22 14:42:18', NULL), (6, 16, 6, '댓글내용6', '2024-05-22 14:42:19', NULL), (7, 17, 1, '댓글내용7', '2024-05-22 14:42:23', NULL), (8, 18, 2, '댓글내용8', '2024-05-22 14:42:24', NULL), (9, 19, 3, '댓글내용9', '2024-05-22 14:43:16', NULL), (10, 20, 4, '댓글내용10', '2024-05-22 14:43:17', NULL), (11, 21, 5, '댓글내용11', '2024-05-22 14:43:18', NULL), (12, 22, 6, '댓글내용12', '2024-05-22 14:43:19', NULL)
+ {executed in 2 msec}[0;39m
+[2024-06-05 11:33:14 [32mDEBUG[0;39m restartedMain] [jdbc.sqltiming] [36m com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
+1. INSERT INTO `feed_favorite` (`feed_id`, `user_id`, `created_at`) VALUES (5, 1, '2024-05-20 12:57:04'), (6, 2, '2024-05-20 12:42:27'), (7, 3, '2024-05-20 12:42:37'), (8, 4, '2024-05-20 12:57:03'), (9, 5, '2024-05-21 11:24:43'), (10, 1, '2024-05-21 11:24:45'), (11, 2, '2024-05-21 11:25:28'), (12, 3, '2024-05-21 12:08:47'), (13, 4, '2024-05-23 16:56:46'), (14, 5, '2024-05-24 15:49:08')
+ {executed in 1 msec}[0;39m
+[2024-06-05 11:33:14 [32mDEBUG[0;39m restartedMain] [jdbc.sqltiming] [36m com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
+1. INSERT INTO `feed_pics` (`feed_pic_id`, `feed_id`, `pic`, `created_at`) VALUES (2, 1, '74e663f3-c442-4dfa-acd5-d17d40bf1c95.jpg', '2024-05-07 11:16:46'), (3, 1, '27998cd5-7f48-4eab-ae4e-7a70dc66da1b.jpeg', '2024-05-07 11:16:46'), (4, 5, '876ba65a-7791-4617-b679-a6c0879d09a9.hwp', '2024-05-07 14:20:25'), (5, 6, 'ce7ef9ea-3b8c-4ce9-9d2a-23070d586501.gif', '2024-05-07 14:20:40'), (6, 7, 'adebddf0-4037-47c8-ab1a-1eed049f6ce8.gif', '2024-05-07 14:21:04'), (9, 8, 'ae5dc0aa-870e-49b3-85d1-76c9fc43fabe.jpg', '2024-05-07 15:18:25'), (10, 8, 'c2d28937-75e6-460d-a717-50640d5c8308.jpg', '2024-05-07 15:18:25'), (11, 9, '4d721b39-fbac-405d-8e99-4aa1bd20af9d.jpg', '2024-05-07 15:18:45'), (12, 9, 'f2ed5f0d-6100-4c93-84af-e1ee08c5c91f.jpg', '2024-05-07 15:18:45'), (13, 9, '7d675ef7-fc5e-4459-b585-971798a29329.jpg', '2024-05-07 15:18:45'), (14, 9, '1d29327e-0600-456e-83de-c6448efc70b1.jpg', '2024-05-07 15:18:45'), (15, 9, 'ed5e7e89-c413-46d2-b4dc-c4a64ee6ed23.jpg', '2024-05-07 15:18:45'), (16, 9, 'a33d3160-e04b-443f-9d0b-844501fecd1e.png', '2024-05-07 15:18:45'), (17, 10, '0697e778-af49-4f7f-b149-6304a9e8ba9b.gif', '2024-05-07 15:25:45'), (36, 40, 'f722248d-3e12-4d3d-b80a-403619b19889.jpg', '2024-05-20 10:34:01'), (37, 40, '5774b156-8d7d-49fd-92e9-bf75ed0bebc9.jpg', '2024-05-20 10:34:01'), (38, 41, '7546a520-e307-4a0d-ac4a-7e79c20f9346.jpg', '2024-05-20 10:35:07'), (39, 41, '71cbbed1-67e2-4290-bbb9-7f9298d4c77e.jpg', '2024-05-20 10:35:07'), (54, 50, '4a3399f3-c168-4f63-8176-327adcec4cbc.gif', '2024-05-21 11:21:53'), (55, 51, 'e24a4cd4-113c-41ec-addb-569974e92acc.gif', '2024-05-21 11:25:18'), (56, 52, 'e8ef45c2-2dbe-47a2-b31a-ea4c5d936b7e.gif', '2024-05-21 12:02:04'), (57, 53, '8dd09cef-07c7-4412-be20-c5edb9a34a2e.gif', '2024-05-21 12:08:42')
+ {executed in 1 msec}[0;39m
+[2024-06-05 11:33:14 [32mDEBUG[0;39m restartedMain] [jdbc.sqltiming] [36m com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
+1. INSERT INTO `user_follow` (`from_user_id`, `to_user_id`, `created_at`) VALUES (1, 2, '2024-05-20 16:49:53'), (1, 3, '2024-05-20 16:49:53'), (1, 4, '2024-05-20 16:49:53'), (1, 5, '2024-05-20 16:49:53'), (2, 1, '2024-05-20 16:49:53'), (2, 3, '2024-05-20 16:49:53'), (2, 4, '2024-05-20 16:49:53'), (2, 5, '2024-05-20 16:49:53'), (3, 1, '2024-05-20 16:49:53'), (3, 2, '2024-05-20 16:49:53'), (3, 4, '2024-05-20 16:49:53'), (3, 5, '2024-05-20 16:49:53')
+ {executed in 1 msec}[0;39m
+[2024-06-05 11:33:14 [32mINFO [0;39m restartedMain] [org.springframework.boot.autoconfigure.web.servlet.WelcomePageHandlerMapping] [36mAdding welcome page: class path resource [static/index.html][0;39m
+[2024-06-05 11:33:14 [32mINFO [0;39m restartedMain] [org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer] [36mLiveReload server is running on port 35729[0;39m
+[2024-06-05 11:33:14 [32mINFO [0;39m restartedMain] [org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver] [36mExposing 1 endpoint(s) beneath base path '/actuator'[0;39m
+[2024-06-05 11:33:14 [32mINFO [0;39m restartedMain] [org.apache.coyote.http11.Http11NioProtocol] [36mStarting ProtocolHandler ["http-nio-8080"][0;39m
+[2024-06-05 11:33:14 [32mINFO [0;39m restartedMain] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [36mTomcat started on port 8080 (http) with context path ''[0;39m
+[2024-06-05 11:33:14 [32mINFO [0;39m restartedMain] [com.green.greengram.GreengramVer3TddApplication] [36mStarted GreengramVer3TddApplication in 2.129 seconds (process running for 2.484)[0;39m
+[2024-06-05 11:33:15 [32mINFO [0;39m RMI TCP Connection(1)-192.168.0.166] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] [36mInitializing Spring DispatcherServlet 'dispatcherServlet'[0;39m
+[2024-06-05 11:33:15 [32mINFO [0;39m RMI TCP Connection(1)-192.168.0.166] [org.springframework.web.servlet.DispatcherServlet] [36mInitializing Servlet 'dispatcherServlet'[0;39m
+[2024-06-05 11:33:15 [32mINFO [0;39m RMI TCP Connection(1)-192.168.0.166] [org.springframework.web.servlet.DispatcherServlet] [36mCompleted initialization in 1 ms[0;39m
+[2024-06-05 11:33:21 [32mDEBUG[0;39m http-nio-8080-exec-3] [jdbc.sqltiming] [36m com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT A.feed_id AS feedId, A.contents, A.location, A.created_at AS createdAt
+        , B.user_id AS writerId, B.nm AS writerNm, B.pic AS writerPic
+        , IF(C.feed_id IS NULL, 0, 1) AS isFav
+        FROM feed A
+        JOIN user B
+        ON A.writer_id = B.user_id
+        LEFT JOIN feed_favorite C         
+        ON A.feed_id = C.feed_id
+        AND C.user_id = 63
+
+        ORDER BY A.feed_id DESC
+        LIMIT 0, 20;
+ {executed in 1 msec}[0;39m
+[2024-06-05 11:33:21 [32mINFO [0;39m http-nio-8080-exec-3] [jdbc.resultsettable] [36m
+|--------|---------|---------|--------------------|--------|-------|-----------------------------------------|------|
+|feed_id |contents |location |created_at          |user_id |nm     |pic                                      |isfav |
+|--------|---------|---------|--------------------|--------|-------|-----------------------------------------|------|
+|8       |내용8      |장소8      |2024-05-20 10:34:01 |8       |5월23일  |6e02655c-86fb-405f-b7e5-35bbb9ab64a2.jpg |0     |
+|7       |내용7      |장소7      |2024-05-07 15:25:45 |7       |5월21일  |28bfba96-587b-4c0a-8e3d-dc1a473350ca.jpg |0     |
+|6       |내용6      |장소6      |2024-05-07 15:18:45 |6       |5월16일  |5월16일                                    |0     |
+|5       |내용5      |장소5      |2024-05-07 15:18:25 |5       |       |4c0c086d-480a-453e-a527-4d445403544a.jpg |0     |
+|4       |내용4      |장소4      |2024-05-07 14:21:04 |4       |5월20일3 |fdbabf84-693f-4476-a1bd-94a8ed2136e9.gif |0     |
+|3       |내용3      |장소3      |2024-05-07 14:20:40 |3       |5월20일  |81695b24-7863-407c-8f40-ca0a3be511ed.jpg |0     |
+|2       |내용2      |장소2      |2024-05-07 14:20:25 |2       |5월20일2 |111fad30-256c-484b-aea3-bca8e3f434aa.jpg |0     |
+|1       |내용1      |장소1      |2024-05-07 11:16:33 |1       |홍길동    |363403f9-8d51-4a5c-a891-abaf8b317910.jpg |0     |
+|--------|---------|---------|--------------------|--------|-------|-----------------------------------------|------|
+[0;39m
+[2024-06-05 11:33:21 [32mINFO [0;39m http-nio-8080-exec-3] [com.green.greengram.feed.FeedServiceImpl] [36mlist : [FeedGetRes(feedId=8, writerId=8, contents=내용8, location=장소8, createdAt=2024-05-20 10:34:01, writerNm=5월23일, writerPic=6e02655c-86fb-405f-b7e5-35bbb9ab64a2.jpg, isFav=0, pics=null, comments=null, isMoreComment=0), FeedGetRes(feedId=7, writerId=7, contents=내용7, location=장소7, createdAt=2024-05-07 15:25:45, writerNm=5월21일, writerPic=28bfba96-587b-4c0a-8e3d-dc1a473350ca.jpg, isFav=0, pics=null, comments=null, isMoreComment=0), FeedGetRes(feedId=6, writerId=6, contents=내용6, location=장소6, createdAt=2024-05-07 15:18:45, writerNm=5월16일, writerPic=5월16일, isFav=0, pics=null, comments=null, isMoreComment=0), FeedGetRes(feedId=5, writerId=5, contents=내용5, location=장소5, createdAt=2024-05-07 15:18:25, writerNm=, writerPic=4c0c086d-480a-453e-a527-4d445403544a.jpg, isFav=0, pics=null, comments=null, isMoreComment=0), FeedGetRes(feedId=4, writerId=4, contents=내용4, location=장소4, createdAt=2024-05-07 14:21:04, writerNm=5월20일3, writerPic=fdbabf84-693f-4476-a1bd-94a8ed2136e9.gif, isFav=0, pics=null, comments=null, isMoreComment=0), FeedGetRes(feedId=3, writerId=3, contents=내용3, location=장소3, createdAt=2024-05-07 14:20:40, writerNm=5월20일, writerPic=81695b24-7863-407c-8f40-ca0a3be511ed.jpg, isFav=0, pics=null, comments=null, isMoreComment=0), FeedGetRes(feedId=2, writerId=2, contents=내용2, location=장소2, createdAt=2024-05-07 14:20:25, writerNm=5월20일2, writerPic=111fad30-256c-484b-aea3-bca8e3f434aa.jpg, isFav=0, pics=null, comments=null, isMoreComment=0), FeedGetRes(feedId=1, writerId=1, contents=내용1, location=장소1, createdAt=2024-05-07 11:16:33, writerNm=홍길동, writerPic=363403f9-8d51-4a5c-a891-abaf8b317910.jpg, isFav=0, pics=null, comments=null, isMoreComment=0)][0;39m
+[2024-06-05 11:33:21 [32mDEBUG[0;39m http-nio-8080-exec-3] [jdbc.sqltiming] [36m com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT pic
+        FROM feed_pics
+        WHERE feed_id = 8
+ {executed in 0 msec}[0;39m
+[2024-06-05 11:33:21 [32mINFO [0;39m http-nio-8080-exec-3] [jdbc.resultsettable] [36m
+|-----------------------------------------|
+|pic                                      |
+|-----------------------------------------|
+|ae5dc0aa-870e-49b3-85d1-76c9fc43fabe.jpg |
+|c2d28937-75e6-460d-a717-50640d5c8308.jpg |
+|-----------------------------------------|
+[0;39m
+[2024-06-05 11:33:21 [32mDEBUG[0;39m http-nio-8080-exec-3] [jdbc.sqltiming] [36m com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT A.feed_comment_id AS feedCommentId, A.comment, A.created_at AS createdAt
+        , B.user_id AS writerId, B.nm AS writerNm, B.pic AS writerPic
+        FROM feed_comment A
+        INNER JOIN user B
+        ON A.user_id = B.user_id
+        WHERE A.feed_id = 8
+        LIMIT 4
+ {executed in 1 msec}[0;39m
+[2024-06-05 11:33:21 [32mINFO [0;39m http-nio-8080-exec-3] [jdbc.resultsettable] [36m
+|----------------|--------|-----------|--------|---|----|
+|feed_comment_id |comment |created_at |user_id |nm |pic |
+|----------------|--------|-----------|--------|---|----|
+|----------------|--------|-----------|--------|---|----|
+[0;39m
+[2024-06-05 11:33:21 [32mDEBUG[0;39m http-nio-8080-exec-3] [jdbc.sqltiming] [36m com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT pic
+        FROM feed_pics
+        WHERE feed_id = 7
+ {executed in 1 msec}[0;39m
+[2024-06-05 11:33:21 [32mINFO [0;39m http-nio-8080-exec-3] [jdbc.resultsettable] [36m
+|-----------------------------------------|
+|pic                                      |
+|-----------------------------------------|
+|adebddf0-4037-47c8-ab1a-1eed049f6ce8.gif |
+|-----------------------------------------|
+[0;39m
+[2024-06-05 11:33:21 [32mDEBUG[0;39m http-nio-8080-exec-3] [jdbc.sqltiming] [36m com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT A.feed_comment_id AS feedCommentId, A.comment, A.created_at AS createdAt
+        , B.user_id AS writerId, B.nm AS writerNm, B.pic AS writerPic
+        FROM feed_comment A
+        INNER JOIN user B
+        ON A.user_id = B.user_id
+        WHERE A.feed_id = 7
+        LIMIT 4
+ {executed in 0 msec}[0;39m
+[2024-06-05 11:33:21 [32mINFO [0;39m http-nio-8080-exec-3] [jdbc.resultsettable] [36m
+|----------------|--------|-----------|--------|---|----|
+|feed_comment_id |comment |created_at |user_id |nm |pic |
+|----------------|--------|-----------|--------|---|----|
+|----------------|--------|-----------|--------|---|----|
+[0;39m
+[2024-06-05 11:33:21 [32mDEBUG[0;39m http-nio-8080-exec-3] [jdbc.sqltiming] [36m com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT pic
+        FROM feed_pics
+        WHERE feed_id = 6
+ {executed in 0 msec}[0;39m
+[2024-06-05 11:33:21 [32mINFO [0;39m http-nio-8080-exec-3] [jdbc.resultsettable] [36m
+|-----------------------------------------|
+|pic                                      |
+|-----------------------------------------|
+|ce7ef9ea-3b8c-4ce9-9d2a-23070d586501.gif |
+|-----------------------------------------|
+[0;39m
+[2024-06-05 11:33:21 [32mDEBUG[0;39m http-nio-8080-exec-3] [jdbc.sqltiming] [36m com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT A.feed_comment_id AS feedCommentId, A.comment, A.created_at AS createdAt
+        , B.user_id AS writerId, B.nm AS writerNm, B.pic AS writerPic
+        FROM feed_comment A
+        INNER JOIN user B
+        ON A.user_id = B.user_id
+        WHERE A.feed_id = 6
+        LIMIT 4
+ {executed in 1 msec}[0;39m
+[2024-06-05 11:33:21 [32mINFO [0;39m http-nio-8080-exec-3] [jdbc.resultsettable] [36m
+|----------------|--------|-----------|--------|---|----|
+|feed_comment_id |comment |created_at |user_id |nm |pic |
+|----------------|--------|-----------|--------|---|----|
+|----------------|--------|-----------|--------|---|----|
+[0;39m
+[2024-06-05 11:33:21 [32mDEBUG[0;39m http-nio-8080-exec-3] [jdbc.sqltiming] [36m com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT pic
+        FROM feed_pics
+        WHERE feed_id = 5
+ {executed in 0 msec}[0;39m
+[2024-06-05 11:33:21 [32mINFO [0;39m http-nio-8080-exec-3] [jdbc.resultsettable] [36m
+|-----------------------------------------|
+|pic                                      |
+|-----------------------------------------|
+|876ba65a-7791-4617-b679-a6c0879d09a9.hwp |
+|-----------------------------------------|
+[0;39m
+[2024-06-05 11:33:21 [32mDEBUG[0;39m http-nio-8080-exec-3] [jdbc.sqltiming] [36m com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT A.feed_comment_id AS feedCommentId, A.comment, A.created_at AS createdAt
+        , B.user_id AS writerId, B.nm AS writerNm, B.pic AS writerPic
+        FROM feed_comment A
+        INNER JOIN user B
+        ON A.user_id = B.user_id
+        WHERE A.feed_id = 5
+        LIMIT 4
+ {executed in 0 msec}[0;39m
+[2024-06-05 11:33:21 [32mINFO [0;39m http-nio-8080-exec-3] [jdbc.resultsettable] [36m
+|----------------|--------|-----------|--------|---|----|
+|feed_comment_id |comment |created_at |user_id |nm |pic |
+|----------------|--------|-----------|--------|---|----|
+|----------------|--------|-----------|--------|---|----|
+[0;39m
+[2024-06-05 11:33:21 [32mDEBUG[0;39m http-nio-8080-exec-3] [jdbc.sqltiming] [36m com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT pic
+        FROM feed_pics
+        WHERE feed_id = 4
+ {executed in 1 msec}[0;39m
+[2024-06-05 11:33:21 [32mINFO [0;39m http-nio-8080-exec-3] [jdbc.resultsettable] [36m
+|----|
+|pic |
+|----|
+|----|
+[0;39m
+[2024-06-05 11:33:21 [32mDEBUG[0;39m http-nio-8080-exec-3] [jdbc.sqltiming] [36m com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT A.feed_comment_id AS feedCommentId, A.comment, A.created_at AS createdAt
+        , B.user_id AS writerId, B.nm AS writerNm, B.pic AS writerPic
+        FROM feed_comment A
+        INNER JOIN user B
+        ON A.user_id = B.user_id
+        WHERE A.feed_id = 4
+        LIMIT 4
+ {executed in 0 msec}[0;39m
+[2024-06-05 11:33:21 [32mINFO [0;39m http-nio-8080-exec-3] [jdbc.resultsettable] [36m
+|----------------|--------|-----------|--------|---|----|
+|feed_comment_id |comment |created_at |user_id |nm |pic |
+|----------------|--------|-----------|--------|---|----|
+|----------------|--------|-----------|--------|---|----|
+[0;39m
+[2024-06-05 11:33:21 [32mDEBUG[0;39m http-nio-8080-exec-3] [jdbc.sqltiming] [36m com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT pic
+        FROM feed_pics
+        WHERE feed_id = 3
+ {executed in 0 msec}[0;39m
+[2024-06-05 11:33:21 [32mINFO [0;39m http-nio-8080-exec-3] [jdbc.resultsettable] [36m
+|----|
+|pic |
+|----|
+|----|
+[0;39m
+[2024-06-05 11:33:21 [32mDEBUG[0;39m http-nio-8080-exec-3] [jdbc.sqltiming] [36m com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT A.feed_comment_id AS feedCommentId, A.comment, A.created_at AS createdAt
+        , B.user_id AS writerId, B.nm AS writerNm, B.pic AS writerPic
+        FROM feed_comment A
+        INNER JOIN user B
+        ON A.user_id = B.user_id
+        WHERE A.feed_id = 3
+        LIMIT 4
+ {executed in 0 msec}[0;39m
+[2024-06-05 11:33:21 [32mINFO [0;39m http-nio-8080-exec-3] [jdbc.resultsettable] [36m
+|----------------|--------|-----------|--------|---|----|
+|feed_comment_id |comment |created_at |user_id |nm |pic |
+|----------------|--------|-----------|--------|---|----|
+|----------------|--------|-----------|--------|---|----|
+[0;39m
+[2024-06-05 11:33:21 [32mDEBUG[0;39m http-nio-8080-exec-3] [jdbc.sqltiming] [36m com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT pic
+        FROM feed_pics
+        WHERE feed_id = 2
+ {executed in 0 msec}[0;39m
+[2024-06-05 11:33:21 [32mINFO [0;39m http-nio-8080-exec-3] [jdbc.resultsettable] [36m
+|----|
+|pic |
+|----|
+|----|
+[0;39m
+[2024-06-05 11:33:21 [32mDEBUG[0;39m http-nio-8080-exec-3] [jdbc.sqltiming] [36m com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT A.feed_comment_id AS feedCommentId, A.comment, A.created_at AS createdAt
+        , B.user_id AS writerId, B.nm AS writerNm, B.pic AS writerPic
+        FROM feed_comment A
+        INNER JOIN user B
+        ON A.user_id = B.user_id
+        WHERE A.feed_id = 2
+        LIMIT 4
+ {executed in 1 msec}[0;39m
+[2024-06-05 11:33:21 [32mINFO [0;39m http-nio-8080-exec-3] [jdbc.resultsettable] [36m
+|----------------|--------|-----------|--------|---|----|
+|feed_comment_id |comment |created_at |user_id |nm |pic |
+|----------------|--------|-----------|--------|---|----|
+|----------------|--------|-----------|--------|---|----|
+[0;39m
+[2024-06-05 11:33:21 [32mDEBUG[0;39m http-nio-8080-exec-3] [jdbc.sqltiming] [36m com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT pic
+        FROM feed_pics
+        WHERE feed_id = 1
+ {executed in 0 msec}[0;39m
+[2024-06-05 11:33:21 [32mINFO [0;39m http-nio-8080-exec-3] [jdbc.resultsettable] [36m
+|------------------------------------------|
+|pic                                       |
+|------------------------------------------|
+|74e663f3-c442-4dfa-acd5-d17d40bf1c95.jpg  |
+|27998cd5-7f48-4eab-ae4e-7a70dc66da1b.jpeg |
+|------------------------------------------|
+[0;39m
+[2024-06-05 11:33:21 [32mDEBUG[0;39m http-nio-8080-exec-3] [jdbc.sqltiming] [36m com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT A.feed_comment_id AS feedCommentId, A.comment, A.created_at AS createdAt
+        , B.user_id AS writerId, B.nm AS writerNm, B.pic AS writerPic
+        FROM feed_comment A
+        INNER JOIN user B
+        ON A.user_id = B.user_id
+        WHERE A.feed_id = 1
+        LIMIT 4
+ {executed in 0 msec}[0;39m
+[2024-06-05 11:33:21 [32mINFO [0;39m http-nio-8080-exec-3] [jdbc.resultsettable] [36m
+|----------------|--------|-----------|--------|---|----|
+|feed_comment_id |comment |created_at |user_id |nm |pic |
+|----------------|--------|-----------|--------|---|----|
+|----------------|--------|-----------|--------|---|----|
+[0;39m
+[2024-06-05 11:33:21 [32mINFO [0;39m http-nio-8080-exec-3] [com.green.greengram.feed.FeedServiceImpl] [36mlist : [FeedGetRes(feedId=8, writerId=8, contents=내용8, location=장소8, createdAt=2024-05-20 10:34:01, writerNm=5월23일, writerPic=6e02655c-86fb-405f-b7e5-35bbb9ab64a2.jpg, isFav=0, pics=[ae5dc0aa-870e-49b3-85d1-76c9fc43fabe.jpg, c2d28937-75e6-460d-a717-50640d5c8308.jpg], comments=[], isMoreComment=0), FeedGetRes(feedId=7, writerId=7, contents=내용7, location=장소7, createdAt=2024-05-07 15:25:45, writerNm=5월21일, writerPic=28bfba96-587b-4c0a-8e3d-dc1a473350ca.jpg, isFav=0, pics=[adebddf0-4037-47c8-ab1a-1eed049f6ce8.gif], comments=[], isMoreComment=0), FeedGetRes(feedId=6, writerId=6, contents=내용6, location=장소6, createdAt=2024-05-07 15:18:45, writerNm=5월16일, writerPic=5월16일, isFav=0, pics=[ce7ef9ea-3b8c-4ce9-9d2a-23070d586501.gif], comments=[], isMoreComment=0), FeedGetRes(feedId=5, writerId=5, contents=내용5, location=장소5, createdAt=2024-05-07 15:18:25, writerNm=, writerPic=4c0c086d-480a-453e-a527-4d445403544a.jpg, isFav=0, pics=[876ba65a-7791-4617-b679-a6c0879d09a9.hwp], comments=[], isMoreComment=0), FeedGetRes(feedId=4, writerId=4, contents=내용4, location=장소4, createdAt=2024-05-07 14:21:04, writerNm=5월20일3, writerPic=fdbabf84-693f-4476-a1bd-94a8ed2136e9.gif, isFav=0, pics=[], comments=[], isMoreComment=0), FeedGetRes(feedId=3, writerId=3, contents=내용3, location=장소3, createdAt=2024-05-07 14:20:40, writerNm=5월20일, writerPic=81695b24-7863-407c-8f40-ca0a3be511ed.jpg, isFav=0, pics=[], comments=[], isMoreComment=0), FeedGetRes(feedId=2, writerId=2, contents=내용2, location=장소2, createdAt=2024-05-07 14:20:25, writerNm=5월20일2, writerPic=111fad30-256c-484b-aea3-bca8e3f434aa.jpg, isFav=0, pics=[], comments=[], isMoreComment=0), FeedGetRes(feedId=1, writerId=1, contents=내용1, location=장소1, createdAt=2024-05-07 11:16:33, writerNm=홍길동, writerPic=363403f9-8d51-4a5c-a891-abaf8b317910.jpg, isFav=0, pics=[74e663f3-c442-4dfa-acd5-d17d40bf1c95.jpg, 27998cd5-7f48-4eab-ae4e-7a70dc66da1b.jpeg], comments=[], isMoreComment=0)][0;39m
+[2024-06-05 11:33:23 [32mINFO [0;39m http-nio-8080-exec-3] [org.springdoc.api.AbstractOpenApiResource] [36mInit duration for springdoc-openapi is: 220 ms[0;39m
+[2024-06-05 11:33:49 [32mDEBUG[0;39m http-nio-8080-exec-10] [jdbc.sqltiming] [36m com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT A.feed_id AS feedId, A.contents, A.location, A.created_at AS createdAt
+        , B.user_id AS writerId, B.nm AS writerNm, B.pic AS writerPic
+        , IF(C.feed_id IS NULL, 0, 1) AS isFav
+        FROM feed A
+        JOIN user B
+        ON A.writer_id = B.user_id
+        LEFT JOIN feed_favorite C         
+        ON A.feed_id = C.feed_id
+        AND C.user_id = 1
+
+            WHERE A.writer_id = 1
+
+        ORDER BY A.feed_id DESC
+        LIMIT 40, 10;
+ {executed in 0 msec}[0;39m
+[2024-06-05 11:33:49 [32mINFO [0;39m http-nio-8080-exec-10] [jdbc.resultsettable] [36m
+|--------|---------|---------|-----------|--------|---|----|------|
+|feed_id |contents |location |created_at |user_id |nm |pic |isfav |
+|--------|---------|---------|-----------|--------|---|----|------|
+|--------|---------|---------|-----------|--------|---|----|------|
+[0;39m
+[2024-06-05 11:33:49 [32mINFO [0;39m http-nio-8080-exec-10] [com.green.greengram.feed.FeedServiceImpl] [36mlist : [][0;39m
+[2024-06-05 11:33:49 [32mINFO [0;39m http-nio-8080-exec-10] [com.green.greengram.feed.FeedServiceImpl] [36mlist : [][0;39m
+[2024-06-05 11:34:04 [32mDEBUG[0;39m http-nio-8080-exec-9] [jdbc.sqltiming] [36m com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT A.feed_id AS feedId, A.contents, A.location, A.created_at AS createdAt
+        , B.user_id AS writerId, B.nm AS writerNm, B.pic AS writerPic
+        , IF(C.feed_id IS NULL, 0, 1) AS isFav
+        FROM feed A
+        JOIN user B
+        ON A.writer_id = B.user_id
+        LEFT JOIN feed_favorite C         
+        ON A.feed_id = C.feed_id
+        AND C.user_id = 1
+
+            WHERE A.writer_id = 2
+
+        ORDER BY A.feed_id DESC
+        LIMIT 40, 10;
+ {executed in 1 msec}[0;39m
+[2024-06-05 11:34:04 [32mINFO [0;39m http-nio-8080-exec-9] [jdbc.resultsettable] [36m
+|--------|---------|---------|-----------|--------|---|----|------|
+|feed_id |contents |location |created_at |user_id |nm |pic |isfav |
+|--------|---------|---------|-----------|--------|---|----|------|
+|--------|---------|---------|-----------|--------|---|----|------|
+[0;39m
+[2024-06-05 11:34:04 [32mINFO [0;39m http-nio-8080-exec-9] [com.green.greengram.feed.FeedServiceImpl] [36mlist : [][0;39m
+[2024-06-05 11:34:04 [32mINFO [0;39m http-nio-8080-exec-9] [com.green.greengram.feed.FeedServiceImpl] [36mlist : [][0;39m
+[2024-06-05 11:34:09 [32mDEBUG[0;39m http-nio-8080-exec-2] [jdbc.sqltiming] [36m com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT A.feed_id AS feedId, A.contents, A.location, A.created_at AS createdAt
+        , B.user_id AS writerId, B.nm AS writerNm, B.pic AS writerPic
+        , IF(C.feed_id IS NULL, 0, 1) AS isFav
+        FROM feed A
+        JOIN user B
+        ON A.writer_id = B.user_id
+        LEFT JOIN feed_favorite C         
+        ON A.feed_id = C.feed_id
+        AND C.user_id = 1
+
+            WHERE A.writer_id = 2
+
+        ORDER BY A.feed_id DESC
+        LIMIT 0, 10;
+ {executed in 1 msec}[0;39m
+[2024-06-05 11:34:09 [32mINFO [0;39m http-nio-8080-exec-2] [jdbc.resultsettable] [36m
+|--------|---------|---------|--------------------|--------|-------|-----------------------------------------|------|
+|feed_id |contents |location |created_at          |user_id |nm     |pic                                      |isfav |
+|--------|---------|---------|--------------------|--------|-------|-----------------------------------------|------|
+|2       |내용2      |장소2      |2024-05-07 14:20:25 |2       |5월20일2 |111fad30-256c-484b-aea3-bca8e3f434aa.jpg |0     |
+|--------|---------|---------|--------------------|--------|-------|-----------------------------------------|------|
+[0;39m
+[2024-06-05 11:34:09 [32mINFO [0;39m http-nio-8080-exec-2] [com.green.greengram.feed.FeedServiceImpl] [36mlist : [FeedGetRes(feedId=2, writerId=2, contents=내용2, location=장소2, createdAt=2024-05-07 14:20:25, writerNm=5월20일2, writerPic=111fad30-256c-484b-aea3-bca8e3f434aa.jpg, isFav=0, pics=null, comments=null, isMoreComment=0)][0;39m
+[2024-06-05 11:34:09 [32mDEBUG[0;39m http-nio-8080-exec-2] [jdbc.sqltiming] [36m com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT pic
+        FROM feed_pics
+        WHERE feed_id = 2
+ {executed in 0 msec}[0;39m
+[2024-06-05 11:34:09 [32mINFO [0;39m http-nio-8080-exec-2] [jdbc.resultsettable] [36m
+|----|
+|pic |
+|----|
+|----|
+[0;39m
+[2024-06-05 11:34:09 [32mDEBUG[0;39m http-nio-8080-exec-2] [jdbc.sqltiming] [36m com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT A.feed_comment_id AS feedCommentId, A.comment, A.created_at AS createdAt
+        , B.user_id AS writerId, B.nm AS writerNm, B.pic AS writerPic
+        FROM feed_comment A
+        INNER JOIN user B
+        ON A.user_id = B.user_id
+        WHERE A.feed_id = 2
+        LIMIT 4
+ {executed in 0 msec}[0;39m
+[2024-06-05 11:34:09 [32mINFO [0;39m http-nio-8080-exec-2] [jdbc.resultsettable] [36m
+|----------------|--------|-----------|--------|---|----|
+|feed_comment_id |comment |created_at |user_id |nm |pic |
+|----------------|--------|-----------|--------|---|----|
+|----------------|--------|-----------|--------|---|----|
+[0;39m
+[2024-06-05 11:34:09 [32mINFO [0;39m http-nio-8080-exec-2] [com.green.greengram.feed.FeedServiceImpl] [36mlist : [FeedGetRes(feedId=2, writerId=2, contents=내용2, location=장소2, createdAt=2024-05-07 14:20:25, writerNm=5월20일2, writerPic=111fad30-256c-484b-aea3-bca8e3f434aa.jpg, isFav=0, pics=[], comments=[], isMoreComment=0)][0;39m
+[2024-06-05 11:34:25 [32mDEBUG[0;39m http-nio-8080-exec-8] [jdbc.sqltiming] [36m com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT A.feed_id AS feedId, A.contents, A.location, A.created_at AS createdAt
+        , B.user_id AS writerId, B.nm AS writerNm, B.pic AS writerPic
+        , IF(C.feed_id IS NULL, 0, 1) AS isFav
+        FROM feed A
+        JOIN user B
+        ON A.writer_id = B.user_id
+        LEFT JOIN feed_favorite C         
+        ON A.feed_id = C.feed_id
+        AND C.user_id = 1
+
+            WHERE A.writer_id = 2
+
+        ORDER BY A.feed_id DESC
+        LIMIT 0, 10;
+ {executed in 0 msec}[0;39m
+[2024-06-05 11:34:25 [32mINFO [0;39m http-nio-8080-exec-8] [jdbc.resultsettable] [36m
+|--------|---------|---------|--------------------|--------|-------|-----------------------------------------|------|
+|feed_id |contents |location |created_at          |user_id |nm     |pic                                      |isfav |
+|--------|---------|---------|--------------------|--------|-------|-----------------------------------------|------|
+|2       |내용2      |장소2      |2024-05-07 14:20:25 |2       |5월20일2 |111fad30-256c-484b-aea3-bca8e3f434aa.jpg |0     |
+|--------|---------|---------|--------------------|--------|-------|-----------------------------------------|------|
+[0;39m
+[2024-06-05 11:34:25 [32mINFO [0;39m http-nio-8080-exec-8] [com.green.greengram.feed.FeedServiceImpl] [36mlist : [FeedGetRes(feedId=2, writerId=2, contents=내용2, location=장소2, createdAt=2024-05-07 14:20:25, writerNm=5월20일2, writerPic=111fad30-256c-484b-aea3-bca8e3f434aa.jpg, isFav=0, pics=null, comments=null, isMoreComment=0)][0;39m
+[2024-06-05 11:34:25 [32mDEBUG[0;39m http-nio-8080-exec-8] [jdbc.sqltiming] [36m com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT pic
+        FROM feed_pics
+        WHERE feed_id = 2
+ {executed in 0 msec}[0;39m
+[2024-06-05 11:34:25 [32mINFO [0;39m http-nio-8080-exec-8] [jdbc.resultsettable] [36m
+|----|
+|pic |
+|----|
+|----|
+[0;39m
+[2024-06-05 11:34:25 [32mDEBUG[0;39m http-nio-8080-exec-8] [jdbc.sqltiming] [36m com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT A.feed_comment_id AS feedCommentId, A.comment, A.created_at AS createdAt
+        , B.user_id AS writerId, B.nm AS writerNm, B.pic AS writerPic
+        FROM feed_comment A
+        INNER JOIN user B
+        ON A.user_id = B.user_id
+        WHERE A.feed_id = 2
+        LIMIT 4
+ {executed in 0 msec}[0;39m
+[2024-06-05 11:34:25 [32mINFO [0;39m http-nio-8080-exec-8] [jdbc.resultsettable] [36m
+|----------------|--------|-----------|--------|---|----|
+|feed_comment_id |comment |created_at |user_id |nm |pic |
+|----------------|--------|-----------|--------|---|----|
+|----------------|--------|-----------|--------|---|----|
+[0;39m
+[2024-06-05 11:34:25 [32mINFO [0;39m http-nio-8080-exec-8] [com.green.greengram.feed.FeedServiceImpl] [36mlist : [FeedGetRes(feedId=2, writerId=2, contents=내용2, location=장소2, createdAt=2024-05-07 14:20:25, writerNm=5월20일2, writerPic=111fad30-256c-484b-aea3-bca8e3f434aa.jpg, isFav=0, pics=[], comments=[], isMoreComment=0)][0;39m
+[2024-06-05 11:40:41 [32mINFO [0;39m SpringApplicationShutdownHook] [com.zaxxer.hikari.HikariDataSource] [36mHikariPool-1 - Shutdown initiated...[0;39m
+[2024-06-05 11:40:41 [32mINFO [0;39m SpringApplicationShutdownHook] [com.zaxxer.hikari.HikariDataSource] [36mHikariPool-1 - Shutdown completed.[0;39m
