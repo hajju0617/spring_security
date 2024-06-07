@@ -20,7 +20,7 @@ import java.util.List;
 @RequiredArgsConstructor
 @RequestMapping("/api/feed")
 public class FeedControllerImpl {
-    private final FeedServiceImpl service;
+    private final FeedService service;
 
     @PostMapping
     @Operation(summary = "Feed 등록", description = "")

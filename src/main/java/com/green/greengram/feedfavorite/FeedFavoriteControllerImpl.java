@@ -13,8 +13,8 @@ import org.springframework.web.bind.annotation.*;
 @RequiredArgsConstructor
 @Slf4j
 @RequestMapping("/api/feed/favorite")
-public class FeedFavoriteControllerImpl {
-    private final FeedFavoriteServiceImpl service;
+public class FeedFavoriteControllerImpl implements FeedFavoriteController{
+    private final FeedFavoriteService service;
 
     @GetMapping
     @Operation(summary = "좋아요", description = "toggle 처리")

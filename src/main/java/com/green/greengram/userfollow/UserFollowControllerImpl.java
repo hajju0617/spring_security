@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 @RequestMapping("api/user/follow")
 public class UserFollowControllerImpl implements UserFollowController {
-    private final UserFollowServiceImpl service;
+    private final UserFollowService service;
 
     @PostMapping
     public ResultDto<Integer> postUserFollow(@RequestBody UserFollowReq p) {

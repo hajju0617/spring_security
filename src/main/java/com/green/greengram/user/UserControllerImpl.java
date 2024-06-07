@@ -17,7 +17,7 @@ import org.springframework.web.multipart.MultipartFile;
 @Tag(name = "유저 컨트롤러", description = "유저 CRUD sign-in, sign-out")
 @RequestMapping("/api/user")
 public class UserControllerImpl {
-    private final UserServiceImpl service;
+    private final UserService service;
 
     @PostMapping("sign-up")
     @Operation(summary = "회원가입", description = "프로필 사진은 필수가 아님.")
