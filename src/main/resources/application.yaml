@@ -30,7 +30,7 @@ springdoc:
 file:
   directory: D:/2024-1/download/greengram_ver3tdd/       #    절대 주소값 저장
 
----     # 파일안에서 분리 해줌 (위쪽은 프로필 설정 x)
+---   #  --- : 파일안에서 분리 해줌 (위쪽은 프로필 설정 x)
 spring:
   config:
     activate:
@@ -41,5 +41,26 @@ spring:
     init:
       mode: always    # tdd 프로필을 쓸때 매번 data.sql, schema.sql 을 실행 하겠다는 의미
                       # edit configurations -> profile active 칸에 프로필 이름 입력 하면 됨
+
+---
+
+spring:
+  config:
+    activate:
+      on-profile: prod
+  datasource:
+    url: jdbc:log4jdbc:mariadb://192.168.0.144:3306/db_odd_first_4
+    username: odd_first_4
+    password: cell
+file:
+  directory: /home/download   # 혹시나 파일 업로드가 있다면
+
+                              # 설정 완료 -> 우측 상단 코끼리 -> Tasks -> build -> bootJar 실행
+                              # -> 좌측 파일 탐색기에 주황build -> ilbs -> jar파일
+
+  # jar 파일 경로 복사 -> cmd -> cd 경로값(엔터) -> D:(엔터) -> java -jar jar파일명  --spring.profiles.active=prod(엔터)
+
+  # 다른 작업할때는 상단 실행버튼 좌측 화살표 클릭 -> Edit Configurations -> active profiles 값 수정
+
 
 
