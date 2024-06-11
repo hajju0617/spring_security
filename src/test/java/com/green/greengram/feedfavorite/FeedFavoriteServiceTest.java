@@ -26,12 +26,10 @@ class FeedFavoriteServiceTest {
     @Test
     void toggleFavorite() {
         // given - when - then
-        FeedFavoriteToggleReq p1 = new FeedFavoriteToggleReq(); // return 0을 원함
-        p1.setFeedId(1);
-        p1.setUserId(2);
-        FeedFavoriteToggleReq p2 = new FeedFavoriteToggleReq(); // return 1을 원함
-        p2.setFeedId(10);
-        p2.setUserId(20);
+        FeedFavoriteToggleReq p1 = new FeedFavoriteToggleReq(1, 2); // return 0을 원함
+
+        FeedFavoriteToggleReq p2 = new FeedFavoriteToggleReq(10, 20); // return 1을 원함
+
 
         given(mapper.delFeedFavorite(p1)).willReturn(0);
         given(mapper.delFeedFavorite(p2)).willReturn(1);

@@ -25,7 +25,7 @@ class FeedFavoriteMapperTest {
 
     @Test
     void selFeedFavoriteForTest() {
-        FeedFavoriteToggleReq entireParam = new FeedFavoriteToggleReq();
+        FeedFavoriteToggleReq entireParam = new FeedFavoriteToggleReq(5, 1);
         List<FeedFavoriteEntity> entireList = mapper.selFeedFavoriteForTest(entireParam);
 
         assertEquals(10, entireList.size(), "전체 레코드 가져오는 부분");
