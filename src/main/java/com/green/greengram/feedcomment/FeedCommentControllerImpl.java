@@ -16,7 +16,7 @@ import java.util.List;
 @RequiredArgsConstructor
 @RestController
 @RequestMapping("api/feed/comment")
-public class FeedCommentControllerImpl {
+public class FeedCommentControllerImpl implements FeedCommentController {
     private final FeedCommentService service;
 
     @PostMapping
@@ -49,7 +49,7 @@ public class FeedCommentControllerImpl {
 
         return ResultDto.<Integer>builder()
                 .statusCode(HttpStatus.OK)
-                .resultMsg(result == 0 ? "댓글 삭제를 할 수 없습니다." : "댓글을 삭제하였습니다.")
+                .resultMsg("삭제되었습니다.")
                 .resultData(result)
                 .build();
     }
