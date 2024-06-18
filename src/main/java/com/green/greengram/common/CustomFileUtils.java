@@ -8,7 +8,7 @@ import org.springframework.web.multipart.MultipartFile;
 import java.io.File;
 import java.util.UUID;
 
-@Component
+@Component  // 빈 등록
 @Getter
 public class CustomFileUtils {
     @Value("${file.directory}")

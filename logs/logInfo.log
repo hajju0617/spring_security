@@ -1,777 +1,85 @@
-[2024-06-13 09:39:51 INFO  Test worker] [com.green.greengram.feedcomment.FeedCommentControllerTest] Starting FeedCommentControllerTest using Java 17.0.10 with PID 10740 (started by Administrator in D:\2024-1\Backend\GreengramVer3TDD)
-[2024-06-13 09:39:51 INFO  Test worker] [com.green.greengram.feedcomment.FeedCommentControllerTest] No active profile set, falling back to 1 default profile: "default"
-[2024-06-13 09:39:52 INFO  Test worker] [org.springframework.boot.autoconfigure.web.servlet.WelcomePageHandlerMapping] Adding welcome page: class path resource [static/index.html]
-[2024-06-13 09:39:52 INFO  Test worker] [org.springframework.boot.test.mock.web.SpringBootMockServletContext] Initializing Spring TestDispatcherServlet ''
-[2024-06-13 09:39:52 INFO  Test worker] [org.springframework.test.web.servlet.TestDispatcherServlet] Initializing Servlet ''
-[2024-06-13 09:39:52 INFO  Test worker] [org.springframework.test.web.servlet.TestDispatcherServlet] Completed initialization in 1 ms
-[2024-06-13 09:39:52 INFO  Test worker] [com.green.greengram.feedcomment.FeedCommentControllerTest] Started FeedCommentControllerTest in 1.902 seconds (process running for 2.776)
-[2024-06-13 09:39:57 INFO  Test worker] [com.green.greengram.feedcomment.FeedCommentControllerTest] Starting FeedCommentControllerTest using Java 17.0.10 with PID 3820 (started by Administrator in D:\2024-1\Backend\GreengramVer3TDD)
-[2024-06-13 09:39:57 INFO  Test worker] [com.green.greengram.feedcomment.FeedCommentControllerTest] No active profile set, falling back to 1 default profile: "default"
-[2024-06-13 09:39:58 INFO  Test worker] [org.springframework.boot.autoconfigure.web.servlet.WelcomePageHandlerMapping] Adding welcome page: class path resource [static/index.html]
-[2024-06-13 09:39:58 INFO  Test worker] [org.springframework.boot.test.mock.web.SpringBootMockServletContext] Initializing Spring TestDispatcherServlet ''
-[2024-06-13 09:39:58 INFO  Test worker] [org.springframework.test.web.servlet.TestDispatcherServlet] Initializing Servlet ''
-[2024-06-13 09:39:58 INFO  Test worker] [org.springframework.test.web.servlet.TestDispatcherServlet] Completed initialization in 1 ms
-[2024-06-13 09:39:58 INFO  Test worker] [com.green.greengram.feedcomment.FeedCommentControllerTest] Started FeedCommentControllerTest in 1.629 seconds (process running for 2.423)
-[2024-06-13 09:41:33 INFO  Test worker] [com.green.greengram.feedcomment.FeedCommentControllerTest] Starting FeedCommentControllerTest using Java 17.0.10 with PID 10328 (started by Administrator in D:\2024-1\Backend\GreengramVer3TDD)
-[2024-06-13 09:41:33 INFO  Test worker] [com.green.greengram.feedcomment.FeedCommentControllerTest] No active profile set, falling back to 1 default profile: "default"
-[2024-06-13 09:41:34 INFO  Test worker] [org.springframework.boot.autoconfigure.web.servlet.WelcomePageHandlerMapping] Adding welcome page: class path resource [static/index.html]
-[2024-06-13 09:41:34 INFO  Test worker] [org.springframework.boot.test.mock.web.SpringBootMockServletContext] Initializing Spring TestDispatcherServlet ''
-[2024-06-13 09:41:34 INFO  Test worker] [org.springframework.test.web.servlet.TestDispatcherServlet] Initializing Servlet ''
-[2024-06-13 09:41:34 INFO  Test worker] [org.springframework.test.web.servlet.TestDispatcherServlet] Completed initialization in 1 ms
-[2024-06-13 09:41:34 INFO  Test worker] [com.green.greengram.feedcomment.FeedCommentControllerTest] Started FeedCommentControllerTest in 1.623 seconds (process running for 2.398)
-[2024-06-13 10:20:12 INFO  Test worker] [com.green.greengram.userfollow.UserFollowIntegrationTest] Starting UserFollowIntegrationTest using Java 17.0.10 with PID 13360 (started by Administrator in D:\2024-1\Backend\GreengramVer3TDD)
-[2024-06-13 10:20:12 INFO  Test worker] [com.green.greengram.userfollow.UserFollowIntegrationTest] No active profile set, falling back to 1 default profile: "default"
-[2024-06-13 10:20:13 INFO  Test worker] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] Tomcat initialized with port 0 (http)
-[2024-06-13 10:20:13 INFO  Test worker] [org.apache.coyote.http11.Http11NioProtocol] Initializing ProtocolHandler ["http-nio-auto-1"]
-[2024-06-13 10:20:13 INFO  Test worker] [org.apache.catalina.core.StandardService] Starting service [Tomcat]
-[2024-06-13 10:20:13 INFO  Test worker] [org.apache.catalina.core.StandardEngine] Starting Servlet engine: [Apache Tomcat/10.1.20]
-[2024-06-13 10:20:13 INFO  Test worker] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] Initializing Spring embedded WebApplicationContext
-[2024-06-13 10:20:13 INFO  Test worker] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] Root WebApplicationContext: initialization completed in 1239 ms
-[2024-06-13 10:20:13 INFO  Test worker] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Starting...
-[2024-06-13 10:20:13 INFO  Test worker] [com.zaxxer.hikari.pool.HikariPool] HikariPool-1 - Added connection net.sf.log4jdbc.sql.jdbcapi.ConnectionSpy@149b53fa
-[2024-06-13 10:20:13 INFO  Test worker] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Start completed.
-[2024-06-13 10:20:13 INFO  Test worker] [org.springframework.boot.autoconfigure.web.servlet.WelcomePageHandlerMapping] Adding welcome page: class path resource [static/index.html]
-[2024-06-13 10:20:14 INFO  Test worker] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] Initializing Spring TestDispatcherServlet ''
-[2024-06-13 10:20:14 INFO  Test worker] [org.springframework.test.web.servlet.TestDispatcherServlet] Initializing Servlet ''
-[2024-06-13 10:20:14 INFO  Test worker] [org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver] Exposing 1 endpoint(s) beneath base path '/actuator'
-[2024-06-13 10:20:14 INFO  Test worker] [org.springframework.test.web.servlet.TestDispatcherServlet] Completed initialization in 15 ms
-[2024-06-13 10:20:14 INFO  Test worker] [org.apache.coyote.http11.Http11NioProtocol] Starting ProtocolHandler ["http-nio-auto-1"]
-[2024-06-13 10:20:14 INFO  Test worker] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] Tomcat started on port 51175 (http) with context path ''
-[2024-06-13 10:20:14 INFO  Test worker] [com.green.greengram.userfollow.UserFollowIntegrationTest] Started UserFollowIntegrationTest in 2.579 seconds (process running for 3.433)
-[2024-06-13 10:20:15 DEBUG Test worker] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
-1. INSERT INTO user_follow
-        SET from_user_id = 4
-            , to_user_id = 1
- {executed in 6 msec}
-[2024-06-13 10:20:15 INFO  SpringApplicationShutdownHook] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Shutdown initiated...
-[2024-06-13 10:20:15 INFO  SpringApplicationShutdownHook] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Shutdown completed.
-[2024-06-13 10:42:10 INFO  Test worker] [com.green.greengram.userfollow.UserFollowIntegrationTest] Starting UserFollowIntegrationTest using Java 17.0.10 with PID 9736 (started by Administrator in D:\2024-1\Backend\GreengramVer3TDD)
-[2024-06-13 10:42:10 INFO  Test worker] [com.green.greengram.userfollow.UserFollowIntegrationTest] The following 1 profile is active: "tdd"
-[2024-06-13 10:42:11 INFO  Test worker] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] Tomcat initialized with port 0 (http)
-[2024-06-13 10:42:11 INFO  Test worker] [org.apache.coyote.http11.Http11NioProtocol] Initializing ProtocolHandler ["http-nio-auto-1"]
-[2024-06-13 10:42:11 INFO  Test worker] [org.apache.catalina.core.StandardService] Starting service [Tomcat]
-[2024-06-13 10:42:11 INFO  Test worker] [org.apache.catalina.core.StandardEngine] Starting Servlet engine: [Apache Tomcat/10.1.20]
-[2024-06-13 10:42:11 INFO  Test worker] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] Initializing Spring embedded WebApplicationContext
-[2024-06-13 10:42:11 INFO  Test worker] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] Root WebApplicationContext: initialization completed in 1102 ms
-[2024-06-13 10:42:11 INFO  Test worker] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Starting...
-[2024-06-13 10:42:11 INFO  Test worker] [com.zaxxer.hikari.pool.HikariPool] HikariPool-1 - Added connection net.sf.log4jdbc.sql.jdbcapi.ConnectionSpy@6d7865d6
-[2024-06-13 10:42:11 INFO  Test worker] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Start completed.
-[2024-06-13 10:42:11 DEBUG Test worker] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
+[2024-06-18 10:19:20 [32mINFO [0;39m restartedMain] [com.green.greengram.GreengramApplication] [36mStarting GreengramApplication using Java 17.0.10 with PID 6904 (D:\2024-1\Backend\GreengramSecurity\build\classes\java\main started by Administrator in D:\2024-1\Backend\GreengramSecurity)[0;39m
+[2024-06-18 10:19:20 [32mINFO [0;39m restartedMain] [com.green.greengram.GreengramApplication] [36mThe following 1 profile is active: "tdd"[0;39m
+[2024-06-18 10:19:20 [32mINFO [0;39m restartedMain] [org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor] [36mDevtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable[0;39m
+[2024-06-18 10:19:20 [32mINFO [0;39m restartedMain] [org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor] [36mFor additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'[0;39m
+[2024-06-18 10:19:21 [32mINFO [0;39m restartedMain] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [36mTomcat initialized with port 8080 (http)[0;39m
+[2024-06-18 10:19:21 [32mINFO [0;39m restartedMain] [org.apache.coyote.http11.Http11NioProtocol] [36mInitializing ProtocolHandler ["http-nio-8080"][0;39m
+[2024-06-18 10:19:21 [32mINFO [0;39m restartedMain] [org.apache.catalina.core.StandardService] [36mStarting service [Tomcat][0;39m
+[2024-06-18 10:19:21 [32mINFO [0;39m restartedMain] [org.apache.catalina.core.StandardEngine] [36mStarting Servlet engine: [Apache Tomcat/10.1.20][0;39m
+[2024-06-18 10:19:21 [32mINFO [0;39m restartedMain] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] [36mInitializing Spring embedded WebApplicationContext[0;39m
+[2024-06-18 10:19:21 [32mINFO [0;39m restartedMain] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] [36mRoot WebApplicationContext: initialization completed in 1145 ms[0;39m
+[2024-06-18 10:19:21 [32mINFO [0;39m restartedMain] [com.zaxxer.hikari.HikariDataSource] [36mHikariPool-1 - Starting...[0;39m
+[2024-06-18 10:19:22 [32mINFO [0;39m restartedMain] [com.zaxxer.hikari.pool.HikariPool] [36mHikariPool-1 - Added connection net.sf.log4jdbc.sql.jdbcapi.ConnectionSpy@7986c0f0[0;39m
+[2024-06-18 10:19:22 [32mINFO [0;39m restartedMain] [com.zaxxer.hikari.HikariDataSource] [36mHikariPool-1 - Start completed.[0;39m
+[2024-06-18 10:19:22 [32mDEBUG[0;39m restartedMain] [jdbc.sqltiming] [36m com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
 1. CREATE TABLE IF NOT EXISTS `user` ( `user_id` bigint(20) NOT NULL AUTO_INCREMENT, `uid` varchar(20) NOT NULL, `upw` varchar(100) NOT NULL, `nm` varchar(20) NOT NULL, `pic` varchar(100) DEFAULT NULL, `created_at` datetime NOT NULL DEFAULT current_timestamp(), `updated_at` datetime DEFAULT NULL ON UPDATE current_timestamp(), PRIMARY KEY (`user_id`), UNIQUE KEY `uid` (`uid`) )
- {executed in 1 msec}
-[2024-06-13 10:42:11 DEBUG Test worker] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
+ {executed in 2 msec}[0;39m
+[2024-06-18 10:19:22 [32mDEBUG[0;39m restartedMain] [jdbc.sqltiming] [36m com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
 1. TRUNCATE TABLE user
- {executed in 6 msec}
-[2024-06-13 10:42:11 DEBUG Test worker] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
+ {executed in 7 msec}[0;39m
+[2024-06-18 10:19:22 [32mDEBUG[0;39m restartedMain] [jdbc.sqltiming] [36m com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
 1. CREATE TABLE IF NOT EXISTS `user_follow` ( `from_user_id` bigint(20) NOT NULL, `to_user_id` bigint(20) NOT NULL, `created_at` datetime NOT NULL DEFAULT current_timestamp(), PRIMARY KEY (`from_user_id`,`to_user_id`) )
- {executed in 0 msec}
-[2024-06-13 10:42:11 DEBUG Test worker] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
+ {executed in 1 msec}[0;39m
+[2024-06-18 10:19:22 [32mDEBUG[0;39m restartedMain] [jdbc.sqltiming] [36m com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
 1. TRUNCATE TABLE user_follow
- {executed in 5 msec}
-[2024-06-13 10:42:11 DEBUG Test worker] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
+ {executed in 5 msec}[0;39m
+[2024-06-18 10:19:22 [32mDEBUG[0;39m restartedMain] [jdbc.sqltiming] [36m com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
 1. CREATE TABLE IF NOT EXISTS `feed` ( `feed_id` bigint(20) NOT NULL AUTO_INCREMENT, `writer_id` bigint(20) NOT NULL, `contents` varchar(1000) DEFAULT NULL, `location` varchar(30) DEFAULT NULL, `created_at` datetime NOT NULL DEFAULT current_timestamp(), `updated_at` datetime DEFAULT NULL ON UPDATE current_timestamp(), PRIMARY KEY (`feed_id`) )
- {executed in 1 msec}
-[2024-06-13 10:42:11 DEBUG Test worker] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
+ {executed in 0 msec}[0;39m
+[2024-06-18 10:19:22 [32mDEBUG[0;39m restartedMain] [jdbc.sqltiming] [36m com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
 1. TRUNCATE TABLE feed
- {executed in 6 msec}
-[2024-06-13 10:42:11 DEBUG Test worker] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
+ {executed in 4 msec}[0;39m
+[2024-06-18 10:19:22 [32mDEBUG[0;39m restartedMain] [jdbc.sqltiming] [36m com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
 1. CREATE TABLE IF NOT EXISTS `feed_comment` ( `feed_comment_id` bigint(20) NOT NULL AUTO_INCREMENT, `feed_id` bigint(20) NOT NULL, `user_id` bigint(20) NOT NULL, `COMMENT` varchar(1000) NOT NULL, `created_at` datetime NOT NULL DEFAULT current_timestamp(), `updated_at` datetime DEFAULT NULL ON UPDATE current_timestamp(), PRIMARY KEY (`feed_comment_id`) )
- {executed in 1 msec}
-[2024-06-13 10:42:11 DEBUG Test worker] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
+ {executed in 0 msec}[0;39m
+[2024-06-18 10:19:22 [32mDEBUG[0;39m restartedMain] [jdbc.sqltiming] [36m com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
 1. TRUNCATE TABLE feed_comment
- {executed in 5 msec}
-[2024-06-13 10:42:12 DEBUG Test worker] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
+ {executed in 6 msec}[0;39m
+[2024-06-18 10:19:22 [32mDEBUG[0;39m restartedMain] [jdbc.sqltiming] [36m com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
 1. CREATE TABLE IF NOT EXISTS `feed_favorite` ( `feed_id` bigint(20) NOT NULL, `user_id` bigint(20) NOT NULL, `created_at` datetime NOT NULL DEFAULT current_timestamp(), PRIMARY KEY (`feed_id`,`user_id`) USING BTREE )
- {executed in 1 msec}
-[2024-06-13 10:42:12 DEBUG Test worker] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
+ {executed in 0 msec}[0;39m
+[2024-06-18 10:19:22 [32mDEBUG[0;39m restartedMain] [jdbc.sqltiming] [36m com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
 1. TRUNCATE TABLE feed_favorite
- {executed in 5 msec}
-[2024-06-13 10:42:12 DEBUG Test worker] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
+ {executed in 5 msec}[0;39m
+[2024-06-18 10:19:22 [32mDEBUG[0;39m restartedMain] [jdbc.sqltiming] [36m com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
 1. CREATE TABLE IF NOT EXISTS `feed_pics` ( `feed_pic_id` bigint(20) NOT NULL AUTO_INCREMENT, `feed_id` bigint(20) NOT NULL, `pic` varchar(50) NOT NULL, `created_at` datetime NOT NULL DEFAULT current_timestamp(), PRIMARY KEY (`feed_pic_id`) USING BTREE )
- {executed in 1 msec}
-[2024-06-13 10:42:12 DEBUG Test worker] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
+ {executed in 1 msec}[0;39m
+[2024-06-18 10:19:22 [32mDEBUG[0;39m restartedMain] [jdbc.sqltiming] [36m com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
 1. TRUNCATE TABLE feed_pics
- {executed in 5 msec}
-[2024-06-13 10:42:12 DEBUG Test worker] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
+ {executed in 5 msec}[0;39m
+[2024-06-18 10:19:22 [32mDEBUG[0;39m restartedMain] [jdbc.sqltiming] [36m com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
 1. INSERT INTO `user` (`user_id`, `uid`, `upw`, `nm`, `pic`, `created_at`, `updated_at`) VALUES (1, '사용자1', '$2a$10$ZniS9vUxLxwm/PyDyHd6DuKI8KbkQwqddPGVskiBJsu3VD1zW8WXm', '홍길동', '363403f9-8d51-4a5c-a891-abaf8b317910.jpg', '2024-05-03 14:35:08', NULL), (2, '사용자2', '$2a$10$qsItixp0DK/47.E5Fdh.oOk4YSu/zfnIS4jMjWiVtWFRSkQMg7wcy', '5월20일2', '111fad30-256c-484b-aea3-bca8e3f434aa.jpg', '2024-05-20 10:34:56', '2024-05-20 14:48:07'), (3, '사용자3', '$2a$10$CiBlbjaB/h/j583SUMw6BOLjd3On4Az6A7McHo2etRFWD0S.lorGK', '5월20일', '81695b24-7863-407c-8f40-ca0a3be511ed.jpg', '2024-05-20 10:33:48', '2024-05-20 14:48:09'), (4, '사용자4', '$2a$10$C3bd.tBbywD30PtjpXewieNCXoK9.nPgXtGg0wmY3ubPM.jVjTvMK', '5월20일3', 'fdbabf84-693f-4476-a1bd-94a8ed2136e9.gif', '2024-05-20 12:31:01', NULL), (5, '사용자5', '$2a$10$QO9guQRofPBqIUFqFtvHHejgRDs6xRxjNfI5CoODz6OzZmlR6vDhe', '', '4c0c086d-480a-453e-a527-4d445403544a.jpg', '2024-05-20 12:42:16', NULL), (6, '사용자6', '5월16일', '5월16일', '5월16일', '2024-05-20 14:36:02', NULL), (7, '사용자7', '$2a$10$mzp5gIhp8N5Kj5rRA05h9O9TaBvoIBHibcwbjm9XyWkSrDo6nYhM.', '5월21일', '28bfba96-587b-4c0a-8e3d-dc1a473350ca.jpg', '2024-05-21 11:21:10', '2024-05-22 15:39:45'), (8, '사용자8', '$2a$10$lZzlyFmUfFbjy.l.WtGXUeml0B0Sq/FMPCYo5GN7Rgrnc0VHR8.06', '5월23일', '6e02655c-86fb-405f-b7e5-35bbb9ab64a2.jpg', '2024-05-23 10:45:24', '2024-05-23 11:48:11')
- {executed in 2 msec}
-[2024-06-13 10:42:12 DEBUG Test worker] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
+ {executed in 8 msec}[0;39m
+[2024-06-18 10:19:22 [32mDEBUG[0;39m restartedMain] [jdbc.sqltiming] [36m com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
 1. INSERT INTO `feed` (`feed_id`, `writer_id`, `contents`, `location`, `created_at`, `updated_at`) VALUES (1, 1, '내용1', '장소1', '2024-05-07 11:16:33', NULL), (2, 2, '내용2', '장소2', '2024-05-07 14:20:25', NULL), (3, 3, '내용3', '장소3', '2024-05-07 14:20:40', NULL), (4, 4, '내용4', '장소4', '2024-05-07 14:21:04', NULL), (5, 5, '내용5', '장소5', '2024-05-07 15:18:25', NULL), (6, 6, '내용6', '장소6', '2024-05-07 15:18:45', NULL), (7, 7, '내용7', '장소7', '2024-05-07 15:25:45', NULL), (8, 8, '내용8', '장소8', '2024-05-20 10:34:01', NULL), (9, 9, '내용9', '장소9', '2024-05-20 10:35:07', NULL), (10, 10, '내용10', '장소10', '2024-05-20 12:23:26', NULL), (11, 11, '내용11', '장소11', '2024-05-20 12:28:00', NULL), (12, 12, '내용12', '장소12', '2024-05-20 12:28:30', NULL), (13, 13, '내용13', '장소13', '2024-05-20 12:31:16', NULL), (14, 14, '내용14', '장소14', '2024-05-20 12:31:29', NULL), (15, 15, '내용15', '장소15', '2024-05-20 12:42:26', NULL), (16, 16, '내용16', '장소16', '2024-05-20 12:57:01', NULL), (17, 17, '내용17', '장소17', '2024-05-21 11:21:35', NULL), (18, 18, '내용18', '장소18', '2024-05-21 11:21:53', NULL), (19, 19, '내용19', '장소19', '2024-05-21 11:25:18', NULL), (20, 20, '내용20', '장소20', '2024-05-21 12:02:04', NULL), (21, 21, '내용21', '장소21', '2024-05-21 12:08:42', NULL), (22, 22, '내용22', '장소22', '2024-05-22 14:41:27', NULL), (23, 23, '내용23', '장소23', '2024-05-22 14:43:10', NULL), (24, 24, '내용24', '장소24', '2024-05-23 13:13:41', NULL), (25, 25, '내용25', '장소25', '2024-05-23 16:54:43', NULL)
- {executed in 2 msec}
-[2024-06-13 10:42:12 DEBUG Test worker] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
+ {executed in 2 msec}[0;39m
+[2024-06-18 10:19:22 [32mDEBUG[0;39m restartedMain] [jdbc.sqltiming] [36m com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
 1. INSERT INTO `feed_comment` (`feed_comment_id`, `feed_id`, `user_id`, `COMMENT`, `created_at`, `updated_at`) VALUES (1, 11, 1, '댓글내용1', '2024-05-20 10:34:04', NULL), (2, 12, 2, '댓글내용2', '2024-05-20 10:34:05', NULL), (3, 13, 3, '댓글내용3', '2024-05-20 10:34:07', NULL), (4, 14, 4, '댓글내용4', '2024-05-20 10:34:09', NULL), (5, 15, 5, '댓글내용5', '2024-05-22 14:42:18', NULL), (6, 16, 6, '댓글내용6', '2024-05-22 14:42:19', NULL), (7, 17, 1, '댓글내용7', '2024-05-22 14:42:23', NULL), (8, 18, 2, '댓글내용8', '2024-05-22 14:42:24', NULL), (9, 19, 3, '댓글내용9', '2024-05-22 14:43:16', NULL), (10, 20, 4, '댓글내용10', '2024-05-22 14:43:17', NULL), (11, 21, 5, '댓글내용11', '2024-05-22 14:43:18', NULL), (12, 22, 6, '댓글내용12', '2024-05-22 14:43:19', NULL)
- {executed in 2 msec}
-[2024-06-13 10:42:12 DEBUG Test worker] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
+ {executed in 1 msec}[0;39m
+[2024-06-18 10:19:22 [32mDEBUG[0;39m restartedMain] [jdbc.sqltiming] [36m com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
 1. INSERT INTO `feed_favorite` (`feed_id`, `user_id`, `created_at`) VALUES (5, 1, '2024-05-20 12:57:04'), (6, 2, '2024-05-20 12:42:27'), (7, 3, '2024-05-20 12:42:37'), (8, 4, '2024-05-20 12:57:03'), (9, 5, '2024-05-21 11:24:43'), (10, 1, '2024-05-21 11:24:45'), (11, 2, '2024-05-21 11:25:28'), (12, 3, '2024-05-21 12:08:47'), (13, 4, '2024-05-23 16:56:46'), (14, 5, '2024-05-24 15:49:08')
- {executed in 2 msec}
-[2024-06-13 10:42:12 DEBUG Test worker] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
+ {executed in 2 msec}[0;39m
+[2024-06-18 10:19:22 [32mDEBUG[0;39m restartedMain] [jdbc.sqltiming] [36m com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
 1. INSERT INTO `feed_pics` (`feed_pic_id`, `feed_id`, `pic`, `created_at`) VALUES (2, 1, '74e663f3-c442-4dfa-acd5-d17d40bf1c95.jpg', '2024-05-07 11:16:46'), (3, 1, '27998cd5-7f48-4eab-ae4e-7a70dc66da1b.jpeg', '2024-05-07 11:16:46'), (4, 5, '876ba65a-7791-4617-b679-a6c0879d09a9.hwp', '2024-05-07 14:20:25'), (5, 6, 'ce7ef9ea-3b8c-4ce9-9d2a-23070d586501.gif', '2024-05-07 14:20:40'), (6, 7, 'adebddf0-4037-47c8-ab1a-1eed049f6ce8.gif', '2024-05-07 14:21:04'), (9, 8, 'ae5dc0aa-870e-49b3-85d1-76c9fc43fabe.jpg', '2024-05-07 15:18:25'), (10, 8, 'c2d28937-75e6-460d-a717-50640d5c8308.jpg', '2024-05-07 15:18:25'), (11, 9, '4d721b39-fbac-405d-8e99-4aa1bd20af9d.jpg', '2024-05-07 15:18:45'), (12, 9, 'f2ed5f0d-6100-4c93-84af-e1ee08c5c91f.jpg', '2024-05-07 15:18:45'), (13, 9, '7d675ef7-fc5e-4459-b585-971798a29329.jpg', '2024-05-07 15:18:45'), (14, 9, '1d29327e-0600-456e-83de-c6448efc70b1.jpg', '2024-05-07 15:18:45'), (15, 9, 'ed5e7e89-c413-46d2-b4dc-c4a64ee6ed23.jpg', '2024-05-07 15:18:45'), (16, 9, 'a33d3160-e04b-443f-9d0b-844501fecd1e.png', '2024-05-07 15:18:45'), (17, 10, '0697e778-af49-4f7f-b149-6304a9e8ba9b.gif', '2024-05-07 15:25:45'), (36, 40, 'f722248d-3e12-4d3d-b80a-403619b19889.jpg', '2024-05-20 10:34:01'), (37, 40, '5774b156-8d7d-49fd-92e9-bf75ed0bebc9.jpg', '2024-05-20 10:34:01'), (38, 41, '7546a520-e307-4a0d-ac4a-7e79c20f9346.jpg', '2024-05-20 10:35:07'), (39, 41, '71cbbed1-67e2-4290-bbb9-7f9298d4c77e.jpg', '2024-05-20 10:35:07'), (54, 50, '4a3399f3-c168-4f63-8176-327adcec4cbc.gif', '2024-05-21 11:21:53'), (55, 51, 'e24a4cd4-113c-41ec-addb-569974e92acc.gif', '2024-05-21 11:25:18'), (56, 52, 'e8ef45c2-2dbe-47a2-b31a-ea4c5d936b7e.gif', '2024-05-21 12:02:04'), (57, 53, '8dd09cef-07c7-4412-be20-c5edb9a34a2e.gif', '2024-05-21 12:08:42')
- {executed in 2 msec}
-[2024-06-13 10:42:12 DEBUG Test worker] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
+ {executed in 2 msec}[0;39m
+[2024-06-18 10:19:22 [32mDEBUG[0;39m restartedMain] [jdbc.sqltiming] [36m com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
 1. INSERT INTO `user_follow` (`from_user_id`, `to_user_id`, `created_at`) VALUES (1, 2, '2024-05-20 16:49:53'), (1, 3, '2024-05-20 16:49:53'), (1, 4, '2024-05-20 16:49:53'), (1, 5, '2024-05-20 16:49:53'), (2, 1, '2024-05-20 16:49:53'), (2, 3, '2024-05-20 16:49:53'), (2, 4, '2024-05-20 16:49:53'), (2, 5, '2024-05-20 16:49:53'), (3, 1, '2024-05-20 16:49:53'), (3, 2, '2024-05-20 16:49:53'), (3, 4, '2024-05-20 16:49:53'), (3, 5, '2024-05-20 16:49:53')
- {executed in 1 msec}
-[2024-06-13 10:42:12 INFO  Test worker] [org.springframework.boot.autoconfigure.web.servlet.WelcomePageHandlerMapping] Adding welcome page: class path resource [static/index.html]
-[2024-06-13 10:42:12 INFO  Test worker] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] Initializing Spring TestDispatcherServlet ''
-[2024-06-13 10:42:12 INFO  Test worker] [org.springframework.test.web.servlet.TestDispatcherServlet] Initializing Servlet ''
-[2024-06-13 10:42:12 INFO  Test worker] [org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver] Exposing 1 endpoint(s) beneath base path '/actuator'
-[2024-06-13 10:42:12 INFO  Test worker] [org.springframework.test.web.servlet.TestDispatcherServlet] Completed initialization in 20 ms
-[2024-06-13 10:42:12 INFO  Test worker] [org.apache.coyote.http11.Http11NioProtocol] Starting ProtocolHandler ["http-nio-auto-1"]
-[2024-06-13 10:42:12 INFO  Test worker] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] Tomcat started on port 51634 (http) with context path ''
-[2024-06-13 10:42:12 INFO  Test worker] [com.green.greengram.userfollow.UserFollowIntegrationTest] Started UserFollowIntegrationTest in 2.524 seconds (process running for 3.393)
-[2024-06-13 10:42:13 DEBUG Test worker] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
-1. INSERT INTO user_follow
-        SET from_user_id = 4
-            , to_user_id = 1
- {executed in 0 msec}
-[2024-06-13 10:42:13 INFO  SpringApplicationShutdownHook] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Shutdown initiated...
-[2024-06-13 10:42:13 INFO  SpringApplicationShutdownHook] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Shutdown completed.
-[2024-06-13 10:43:54 INFO  Test worker] [com.green.greengram.userfollow.UserFollowIntegrationTest] Starting UserFollowIntegrationTest using Java 17.0.10 with PID 13604 (started by Administrator in D:\2024-1\Backend\GreengramVer3TDD)
-[2024-06-13 10:43:54 INFO  Test worker] [com.green.greengram.userfollow.UserFollowIntegrationTest] The following 1 profile is active: "tdd"
-[2024-06-13 10:43:55 INFO  Test worker] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] Tomcat initialized with port 0 (http)
-[2024-06-13 10:43:55 INFO  Test worker] [org.apache.coyote.http11.Http11NioProtocol] Initializing ProtocolHandler ["http-nio-auto-1"]
-[2024-06-13 10:43:55 INFO  Test worker] [org.apache.catalina.core.StandardService] Starting service [Tomcat]
-[2024-06-13 10:43:55 INFO  Test worker] [org.apache.catalina.core.StandardEngine] Starting Servlet engine: [Apache Tomcat/10.1.20]
-[2024-06-13 10:43:55 INFO  Test worker] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] Initializing Spring embedded WebApplicationContext
-[2024-06-13 10:43:55 INFO  Test worker] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] Root WebApplicationContext: initialization completed in 1130 ms
-[2024-06-13 10:43:55 INFO  Test worker] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Starting...
-[2024-06-13 10:43:55 INFO  Test worker] [com.zaxxer.hikari.pool.HikariPool] HikariPool-1 - Added connection net.sf.log4jdbc.sql.jdbcapi.ConnectionSpy@2c1a8529
-[2024-06-13 10:43:55 INFO  Test worker] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Start completed.
-[2024-06-13 10:43:55 DEBUG Test worker] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
-1. CREATE TABLE IF NOT EXISTS `user` ( `user_id` bigint(20) NOT NULL AUTO_INCREMENT, `uid` varchar(20) NOT NULL, `upw` varchar(100) NOT NULL, `nm` varchar(20) NOT NULL, `pic` varchar(100) DEFAULT NULL, `created_at` datetime NOT NULL DEFAULT current_timestamp(), `updated_at` datetime DEFAULT NULL ON UPDATE current_timestamp(), PRIMARY KEY (`user_id`), UNIQUE KEY `uid` (`uid`) )
- {executed in 1 msec}
-[2024-06-13 10:43:55 DEBUG Test worker] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
-1. TRUNCATE TABLE user
- {executed in 7 msec}
-[2024-06-13 10:43:55 DEBUG Test worker] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
-1. CREATE TABLE IF NOT EXISTS `user_follow` ( `from_user_id` bigint(20) NOT NULL, `to_user_id` bigint(20) NOT NULL, `created_at` datetime NOT NULL DEFAULT current_timestamp(), PRIMARY KEY (`from_user_id`,`to_user_id`) )
- {executed in 0 msec}
-[2024-06-13 10:43:55 DEBUG Test worker] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
-1. TRUNCATE TABLE user_follow
- {executed in 5 msec}
-[2024-06-13 10:43:55 DEBUG Test worker] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
-1. CREATE TABLE IF NOT EXISTS `feed` ( `feed_id` bigint(20) NOT NULL AUTO_INCREMENT, `writer_id` bigint(20) NOT NULL, `contents` varchar(1000) DEFAULT NULL, `location` varchar(30) DEFAULT NULL, `created_at` datetime NOT NULL DEFAULT current_timestamp(), `updated_at` datetime DEFAULT NULL ON UPDATE current_timestamp(), PRIMARY KEY (`feed_id`) )
- {executed in 1 msec}
-[2024-06-13 10:43:55 DEBUG Test worker] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
-1. TRUNCATE TABLE feed
- {executed in 5 msec}
-[2024-06-13 10:43:55 DEBUG Test worker] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
-1. CREATE TABLE IF NOT EXISTS `feed_comment` ( `feed_comment_id` bigint(20) NOT NULL AUTO_INCREMENT, `feed_id` bigint(20) NOT NULL, `user_id` bigint(20) NOT NULL, `COMMENT` varchar(1000) NOT NULL, `created_at` datetime NOT NULL DEFAULT current_timestamp(), `updated_at` datetime DEFAULT NULL ON UPDATE current_timestamp(), PRIMARY KEY (`feed_comment_id`) )
- {executed in 0 msec}
-[2024-06-13 10:43:55 DEBUG Test worker] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
-1. TRUNCATE TABLE feed_comment
- {executed in 6 msec}
-[2024-06-13 10:43:55 DEBUG Test worker] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
-1. CREATE TABLE IF NOT EXISTS `feed_favorite` ( `feed_id` bigint(20) NOT NULL, `user_id` bigint(20) NOT NULL, `created_at` datetime NOT NULL DEFAULT current_timestamp(), PRIMARY KEY (`feed_id`,`user_id`) USING BTREE )
- {executed in 0 msec}
-[2024-06-13 10:43:55 DEBUG Test worker] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
-1. TRUNCATE TABLE feed_favorite
- {executed in 6 msec}
-[2024-06-13 10:43:55 DEBUG Test worker] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
-1. CREATE TABLE IF NOT EXISTS `feed_pics` ( `feed_pic_id` bigint(20) NOT NULL AUTO_INCREMENT, `feed_id` bigint(20) NOT NULL, `pic` varchar(50) NOT NULL, `created_at` datetime NOT NULL DEFAULT current_timestamp(), PRIMARY KEY (`feed_pic_id`) USING BTREE )
- {executed in 0 msec}
-[2024-06-13 10:43:55 DEBUG Test worker] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
-1. TRUNCATE TABLE feed_pics
- {executed in 6 msec}
-[2024-06-13 10:43:55 DEBUG Test worker] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
-1. INSERT INTO `user` (`user_id`, `uid`, `upw`, `nm`, `pic`, `created_at`, `updated_at`) VALUES (1, '사용자1', '$2a$10$ZniS9vUxLxwm/PyDyHd6DuKI8KbkQwqddPGVskiBJsu3VD1zW8WXm', '홍길동', '363403f9-8d51-4a5c-a891-abaf8b317910.jpg', '2024-05-03 14:35:08', NULL), (2, '사용자2', '$2a$10$qsItixp0DK/47.E5Fdh.oOk4YSu/zfnIS4jMjWiVtWFRSkQMg7wcy', '5월20일2', '111fad30-256c-484b-aea3-bca8e3f434aa.jpg', '2024-05-20 10:34:56', '2024-05-20 14:48:07'), (3, '사용자3', '$2a$10$CiBlbjaB/h/j583SUMw6BOLjd3On4Az6A7McHo2etRFWD0S.lorGK', '5월20일', '81695b24-7863-407c-8f40-ca0a3be511ed.jpg', '2024-05-20 10:33:48', '2024-05-20 14:48:09'), (4, '사용자4', '$2a$10$C3bd.tBbywD30PtjpXewieNCXoK9.nPgXtGg0wmY3ubPM.jVjTvMK', '5월20일3', 'fdbabf84-693f-4476-a1bd-94a8ed2136e9.gif', '2024-05-20 12:31:01', NULL), (5, '사용자5', '$2a$10$QO9guQRofPBqIUFqFtvHHejgRDs6xRxjNfI5CoODz6OzZmlR6vDhe', '', '4c0c086d-480a-453e-a527-4d445403544a.jpg', '2024-05-20 12:42:16', NULL), (6, '사용자6', '5월16일', '5월16일', '5월16일', '2024-05-20 14:36:02', NULL), (7, '사용자7', '$2a$10$mzp5gIhp8N5Kj5rRA05h9O9TaBvoIBHibcwbjm9XyWkSrDo6nYhM.', '5월21일', '28bfba96-587b-4c0a-8e3d-dc1a473350ca.jpg', '2024-05-21 11:21:10', '2024-05-22 15:39:45'), (8, '사용자8', '$2a$10$lZzlyFmUfFbjy.l.WtGXUeml0B0Sq/FMPCYo5GN7Rgrnc0VHR8.06', '5월23일', '6e02655c-86fb-405f-b7e5-35bbb9ab64a2.jpg', '2024-05-23 10:45:24', '2024-05-23 11:48:11')
- {executed in 1 msec}
-[2024-06-13 10:43:55 DEBUG Test worker] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
-1. INSERT INTO `feed` (`feed_id`, `writer_id`, `contents`, `location`, `created_at`, `updated_at`) VALUES (1, 1, '내용1', '장소1', '2024-05-07 11:16:33', NULL), (2, 2, '내용2', '장소2', '2024-05-07 14:20:25', NULL), (3, 3, '내용3', '장소3', '2024-05-07 14:20:40', NULL), (4, 4, '내용4', '장소4', '2024-05-07 14:21:04', NULL), (5, 5, '내용5', '장소5', '2024-05-07 15:18:25', NULL), (6, 6, '내용6', '장소6', '2024-05-07 15:18:45', NULL), (7, 7, '내용7', '장소7', '2024-05-07 15:25:45', NULL), (8, 8, '내용8', '장소8', '2024-05-20 10:34:01', NULL), (9, 9, '내용9', '장소9', '2024-05-20 10:35:07', NULL), (10, 10, '내용10', '장소10', '2024-05-20 12:23:26', NULL), (11, 11, '내용11', '장소11', '2024-05-20 12:28:00', NULL), (12, 12, '내용12', '장소12', '2024-05-20 12:28:30', NULL), (13, 13, '내용13', '장소13', '2024-05-20 12:31:16', NULL), (14, 14, '내용14', '장소14', '2024-05-20 12:31:29', NULL), (15, 15, '내용15', '장소15', '2024-05-20 12:42:26', NULL), (16, 16, '내용16', '장소16', '2024-05-20 12:57:01', NULL), (17, 17, '내용17', '장소17', '2024-05-21 11:21:35', NULL), (18, 18, '내용18', '장소18', '2024-05-21 11:21:53', NULL), (19, 19, '내용19', '장소19', '2024-05-21 11:25:18', NULL), (20, 20, '내용20', '장소20', '2024-05-21 12:02:04', NULL), (21, 21, '내용21', '장소21', '2024-05-21 12:08:42', NULL), (22, 22, '내용22', '장소22', '2024-05-22 14:41:27', NULL), (23, 23, '내용23', '장소23', '2024-05-22 14:43:10', NULL), (24, 24, '내용24', '장소24', '2024-05-23 13:13:41', NULL), (25, 25, '내용25', '장소25', '2024-05-23 16:54:43', NULL)
- {executed in 2 msec}
-[2024-06-13 10:43:55 DEBUG Test worker] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
-1. INSERT INTO `feed_comment` (`feed_comment_id`, `feed_id`, `user_id`, `COMMENT`, `created_at`, `updated_at`) VALUES (1, 11, 1, '댓글내용1', '2024-05-20 10:34:04', NULL), (2, 12, 2, '댓글내용2', '2024-05-20 10:34:05', NULL), (3, 13, 3, '댓글내용3', '2024-05-20 10:34:07', NULL), (4, 14, 4, '댓글내용4', '2024-05-20 10:34:09', NULL), (5, 15, 5, '댓글내용5', '2024-05-22 14:42:18', NULL), (6, 16, 6, '댓글내용6', '2024-05-22 14:42:19', NULL), (7, 17, 1, '댓글내용7', '2024-05-22 14:42:23', NULL), (8, 18, 2, '댓글내용8', '2024-05-22 14:42:24', NULL), (9, 19, 3, '댓글내용9', '2024-05-22 14:43:16', NULL), (10, 20, 4, '댓글내용10', '2024-05-22 14:43:17', NULL), (11, 21, 5, '댓글내용11', '2024-05-22 14:43:18', NULL), (12, 22, 6, '댓글내용12', '2024-05-22 14:43:19', NULL)
- {executed in 4 msec}
-[2024-06-13 10:43:55 DEBUG Test worker] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
-1. INSERT INTO `feed_favorite` (`feed_id`, `user_id`, `created_at`) VALUES (5, 1, '2024-05-20 12:57:04'), (6, 2, '2024-05-20 12:42:27'), (7, 3, '2024-05-20 12:42:37'), (8, 4, '2024-05-20 12:57:03'), (9, 5, '2024-05-21 11:24:43'), (10, 1, '2024-05-21 11:24:45'), (11, 2, '2024-05-21 11:25:28'), (12, 3, '2024-05-21 12:08:47'), (13, 4, '2024-05-23 16:56:46'), (14, 5, '2024-05-24 15:49:08')
- {executed in 2 msec}
-[2024-06-13 10:43:55 DEBUG Test worker] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
-1. INSERT INTO `feed_pics` (`feed_pic_id`, `feed_id`, `pic`, `created_at`) VALUES (2, 1, '74e663f3-c442-4dfa-acd5-d17d40bf1c95.jpg', '2024-05-07 11:16:46'), (3, 1, '27998cd5-7f48-4eab-ae4e-7a70dc66da1b.jpeg', '2024-05-07 11:16:46'), (4, 5, '876ba65a-7791-4617-b679-a6c0879d09a9.hwp', '2024-05-07 14:20:25'), (5, 6, 'ce7ef9ea-3b8c-4ce9-9d2a-23070d586501.gif', '2024-05-07 14:20:40'), (6, 7, 'adebddf0-4037-47c8-ab1a-1eed049f6ce8.gif', '2024-05-07 14:21:04'), (9, 8, 'ae5dc0aa-870e-49b3-85d1-76c9fc43fabe.jpg', '2024-05-07 15:18:25'), (10, 8, 'c2d28937-75e6-460d-a717-50640d5c8308.jpg', '2024-05-07 15:18:25'), (11, 9, '4d721b39-fbac-405d-8e99-4aa1bd20af9d.jpg', '2024-05-07 15:18:45'), (12, 9, 'f2ed5f0d-6100-4c93-84af-e1ee08c5c91f.jpg', '2024-05-07 15:18:45'), (13, 9, '7d675ef7-fc5e-4459-b585-971798a29329.jpg', '2024-05-07 15:18:45'), (14, 9, '1d29327e-0600-456e-83de-c6448efc70b1.jpg', '2024-05-07 15:18:45'), (15, 9, 'ed5e7e89-c413-46d2-b4dc-c4a64ee6ed23.jpg', '2024-05-07 15:18:45'), (16, 9, 'a33d3160-e04b-443f-9d0b-844501fecd1e.png', '2024-05-07 15:18:45'), (17, 10, '0697e778-af49-4f7f-b149-6304a9e8ba9b.gif', '2024-05-07 15:25:45'), (36, 40, 'f722248d-3e12-4d3d-b80a-403619b19889.jpg', '2024-05-20 10:34:01'), (37, 40, '5774b156-8d7d-49fd-92e9-bf75ed0bebc9.jpg', '2024-05-20 10:34:01'), (38, 41, '7546a520-e307-4a0d-ac4a-7e79c20f9346.jpg', '2024-05-20 10:35:07'), (39, 41, '71cbbed1-67e2-4290-bbb9-7f9298d4c77e.jpg', '2024-05-20 10:35:07'), (54, 50, '4a3399f3-c168-4f63-8176-327adcec4cbc.gif', '2024-05-21 11:21:53'), (55, 51, 'e24a4cd4-113c-41ec-addb-569974e92acc.gif', '2024-05-21 11:25:18'), (56, 52, 'e8ef45c2-2dbe-47a2-b31a-ea4c5d936b7e.gif', '2024-05-21 12:02:04'), (57, 53, '8dd09cef-07c7-4412-be20-c5edb9a34a2e.gif', '2024-05-21 12:08:42')
- {executed in 2 msec}
-[2024-06-13 10:43:55 DEBUG Test worker] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
-1. INSERT INTO `user_follow` (`from_user_id`, `to_user_id`, `created_at`) VALUES (1, 2, '2024-05-20 16:49:53'), (1, 3, '2024-05-20 16:49:53'), (1, 4, '2024-05-20 16:49:53'), (1, 5, '2024-05-20 16:49:53'), (2, 1, '2024-05-20 16:49:53'), (2, 3, '2024-05-20 16:49:53'), (2, 4, '2024-05-20 16:49:53'), (2, 5, '2024-05-20 16:49:53'), (3, 1, '2024-05-20 16:49:53'), (3, 2, '2024-05-20 16:49:53'), (3, 4, '2024-05-20 16:49:53'), (3, 5, '2024-05-20 16:49:53')
- {executed in 2 msec}
-[2024-06-13 10:43:55 INFO  Test worker] [org.springframework.boot.autoconfigure.web.servlet.WelcomePageHandlerMapping] Adding welcome page: class path resource [static/index.html]
-[2024-06-13 10:43:56 INFO  Test worker] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] Initializing Spring TestDispatcherServlet ''
-[2024-06-13 10:43:56 INFO  Test worker] [org.springframework.test.web.servlet.TestDispatcherServlet] Initializing Servlet ''
-[2024-06-13 10:43:56 INFO  Test worker] [org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver] Exposing 1 endpoint(s) beneath base path '/actuator'
-[2024-06-13 10:43:56 INFO  Test worker] [org.springframework.test.web.servlet.TestDispatcherServlet] Completed initialization in 14 ms
-[2024-06-13 10:43:56 INFO  Test worker] [org.apache.coyote.http11.Http11NioProtocol] Starting ProtocolHandler ["http-nio-auto-1"]
-[2024-06-13 10:43:56 INFO  Test worker] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] Tomcat started on port 51657 (http) with context path ''
-[2024-06-13 10:43:56 INFO  Test worker] [com.green.greengram.userfollow.UserFollowIntegrationTest] Started UserFollowIntegrationTest in 2.477 seconds (process running for 3.279)
-[2024-06-13 10:43:57 DEBUG Test worker] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
-1. INSERT INTO user_follow
-        SET from_user_id = 4
-            , to_user_id = 1
- {executed in 0 msec}
-[2024-06-13 10:43:57 INFO  SpringApplicationShutdownHook] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Shutdown initiated...
-[2024-06-13 10:43:57 INFO  SpringApplicationShutdownHook] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Shutdown completed.
-[2024-06-13 11:09:18 INFO  Test worker] [com.green.greengram.userfollow.UserFollowIntegrationTest] Starting UserFollowIntegrationTest using Java 17.0.10 with PID 11468 (started by Administrator in D:\2024-1\Backend\GreengramVer3TDD)
-[2024-06-13 11:09:18 INFO  Test worker] [com.green.greengram.userfollow.UserFollowIntegrationTest] The following 1 profile is active: "tdd"
-[2024-06-13 11:09:19 INFO  Test worker] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] Tomcat initialized with port 0 (http)
-[2024-06-13 11:09:19 INFO  Test worker] [org.apache.coyote.http11.Http11NioProtocol] Initializing ProtocolHandler ["http-nio-auto-1"]
-[2024-06-13 11:09:19 INFO  Test worker] [org.apache.catalina.core.StandardService] Starting service [Tomcat]
-[2024-06-13 11:09:19 INFO  Test worker] [org.apache.catalina.core.StandardEngine] Starting Servlet engine: [Apache Tomcat/10.1.20]
-[2024-06-13 11:09:19 INFO  Test worker] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] Initializing Spring embedded WebApplicationContext
-[2024-06-13 11:09:19 INFO  Test worker] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] Root WebApplicationContext: initialization completed in 1122 ms
-[2024-06-13 11:09:19 INFO  Test worker] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Starting...
-[2024-06-13 11:09:20 INFO  Test worker] [com.zaxxer.hikari.pool.HikariPool] HikariPool-1 - Added connection net.sf.log4jdbc.sql.jdbcapi.ConnectionSpy@6475e778
-[2024-06-13 11:09:20 INFO  Test worker] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Start completed.
-[2024-06-13 11:09:20 DEBUG Test worker] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
-1. CREATE TABLE IF NOT EXISTS `user` ( `user_id` bigint(20) NOT NULL AUTO_INCREMENT, `uid` varchar(20) NOT NULL, `upw` varchar(100) NOT NULL, `nm` varchar(20) NOT NULL, `pic` varchar(100) DEFAULT NULL, `created_at` datetime NOT NULL DEFAULT current_timestamp(), `updated_at` datetime DEFAULT NULL ON UPDATE current_timestamp(), PRIMARY KEY (`user_id`), UNIQUE KEY `uid` (`uid`) )
- {executed in 0 msec}
-[2024-06-13 11:09:20 DEBUG Test worker] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
-1. TRUNCATE TABLE user
- {executed in 6 msec}
-[2024-06-13 11:09:20 DEBUG Test worker] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
-1. CREATE TABLE IF NOT EXISTS `user_follow` ( `from_user_id` bigint(20) NOT NULL, `to_user_id` bigint(20) NOT NULL, `created_at` datetime NOT NULL DEFAULT current_timestamp(), PRIMARY KEY (`from_user_id`,`to_user_id`) )
- {executed in 0 msec}
-[2024-06-13 11:09:20 DEBUG Test worker] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
-1. TRUNCATE TABLE user_follow
- {executed in 5 msec}
-[2024-06-13 11:09:20 DEBUG Test worker] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
-1. CREATE TABLE IF NOT EXISTS `feed` ( `feed_id` bigint(20) NOT NULL AUTO_INCREMENT, `writer_id` bigint(20) NOT NULL, `contents` varchar(1000) DEFAULT NULL, `location` varchar(30) DEFAULT NULL, `created_at` datetime NOT NULL DEFAULT current_timestamp(), `updated_at` datetime DEFAULT NULL ON UPDATE current_timestamp(), PRIMARY KEY (`feed_id`) )
- {executed in 0 msec}
-[2024-06-13 11:09:20 DEBUG Test worker] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
-1. TRUNCATE TABLE feed
- {executed in 5 msec}
-[2024-06-13 11:09:20 DEBUG Test worker] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
-1. CREATE TABLE IF NOT EXISTS `feed_comment` ( `feed_comment_id` bigint(20) NOT NULL AUTO_INCREMENT, `feed_id` bigint(20) NOT NULL, `user_id` bigint(20) NOT NULL, `COMMENT` varchar(1000) NOT NULL, `created_at` datetime NOT NULL DEFAULT current_timestamp(), `updated_at` datetime DEFAULT NULL ON UPDATE current_timestamp(), PRIMARY KEY (`feed_comment_id`) )
- {executed in 0 msec}
-[2024-06-13 11:09:20 DEBUG Test worker] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
-1. TRUNCATE TABLE feed_comment
- {executed in 5 msec}
-[2024-06-13 11:09:20 DEBUG Test worker] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
-1. CREATE TABLE IF NOT EXISTS `feed_favorite` ( `feed_id` bigint(20) NOT NULL, `user_id` bigint(20) NOT NULL, `created_at` datetime NOT NULL DEFAULT current_timestamp(), PRIMARY KEY (`feed_id`,`user_id`) USING BTREE )
- {executed in 0 msec}
-[2024-06-13 11:09:20 DEBUG Test worker] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
-1. TRUNCATE TABLE feed_favorite
- {executed in 5 msec}
-[2024-06-13 11:09:20 DEBUG Test worker] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
-1. CREATE TABLE IF NOT EXISTS `feed_pics` ( `feed_pic_id` bigint(20) NOT NULL AUTO_INCREMENT, `feed_id` bigint(20) NOT NULL, `pic` varchar(50) NOT NULL, `created_at` datetime NOT NULL DEFAULT current_timestamp(), PRIMARY KEY (`feed_pic_id`) USING BTREE )
- {executed in 0 msec}
-[2024-06-13 11:09:20 DEBUG Test worker] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
-1. TRUNCATE TABLE feed_pics
- {executed in 6 msec}
-[2024-06-13 11:09:20 DEBUG Test worker] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
-1. INSERT INTO `user` (`user_id`, `uid`, `upw`, `nm`, `pic`, `created_at`, `updated_at`) VALUES (1, '사용자1', '$2a$10$ZniS9vUxLxwm/PyDyHd6DuKI8KbkQwqddPGVskiBJsu3VD1zW8WXm', '홍길동', '363403f9-8d51-4a5c-a891-abaf8b317910.jpg', '2024-05-03 14:35:08', NULL), (2, '사용자2', '$2a$10$qsItixp0DK/47.E5Fdh.oOk4YSu/zfnIS4jMjWiVtWFRSkQMg7wcy', '5월20일2', '111fad30-256c-484b-aea3-bca8e3f434aa.jpg', '2024-05-20 10:34:56', '2024-05-20 14:48:07'), (3, '사용자3', '$2a$10$CiBlbjaB/h/j583SUMw6BOLjd3On4Az6A7McHo2etRFWD0S.lorGK', '5월20일', '81695b24-7863-407c-8f40-ca0a3be511ed.jpg', '2024-05-20 10:33:48', '2024-05-20 14:48:09'), (4, '사용자4', '$2a$10$C3bd.tBbywD30PtjpXewieNCXoK9.nPgXtGg0wmY3ubPM.jVjTvMK', '5월20일3', 'fdbabf84-693f-4476-a1bd-94a8ed2136e9.gif', '2024-05-20 12:31:01', NULL), (5, '사용자5', '$2a$10$QO9guQRofPBqIUFqFtvHHejgRDs6xRxjNfI5CoODz6OzZmlR6vDhe', '', '4c0c086d-480a-453e-a527-4d445403544a.jpg', '2024-05-20 12:42:16', NULL), (6, '사용자6', '5월16일', '5월16일', '5월16일', '2024-05-20 14:36:02', NULL), (7, '사용자7', '$2a$10$mzp5gIhp8N5Kj5rRA05h9O9TaBvoIBHibcwbjm9XyWkSrDo6nYhM.', '5월21일', '28bfba96-587b-4c0a-8e3d-dc1a473350ca.jpg', '2024-05-21 11:21:10', '2024-05-22 15:39:45'), (8, '사용자8', '$2a$10$lZzlyFmUfFbjy.l.WtGXUeml0B0Sq/FMPCYo5GN7Rgrnc0VHR8.06', '5월23일', '6e02655c-86fb-405f-b7e5-35bbb9ab64a2.jpg', '2024-05-23 10:45:24', '2024-05-23 11:48:11')
- {executed in 2 msec}
-[2024-06-13 11:09:20 DEBUG Test worker] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
-1. INSERT INTO `feed` (`feed_id`, `writer_id`, `contents`, `location`, `created_at`, `updated_at`) VALUES (1, 1, '내용1', '장소1', '2024-05-07 11:16:33', NULL), (2, 2, '내용2', '장소2', '2024-05-07 14:20:25', NULL), (3, 3, '내용3', '장소3', '2024-05-07 14:20:40', NULL), (4, 4, '내용4', '장소4', '2024-05-07 14:21:04', NULL), (5, 5, '내용5', '장소5', '2024-05-07 15:18:25', NULL), (6, 6, '내용6', '장소6', '2024-05-07 15:18:45', NULL), (7, 7, '내용7', '장소7', '2024-05-07 15:25:45', NULL), (8, 8, '내용8', '장소8', '2024-05-20 10:34:01', NULL), (9, 9, '내용9', '장소9', '2024-05-20 10:35:07', NULL), (10, 10, '내용10', '장소10', '2024-05-20 12:23:26', NULL), (11, 11, '내용11', '장소11', '2024-05-20 12:28:00', NULL), (12, 12, '내용12', '장소12', '2024-05-20 12:28:30', NULL), (13, 13, '내용13', '장소13', '2024-05-20 12:31:16', NULL), (14, 14, '내용14', '장소14', '2024-05-20 12:31:29', NULL), (15, 15, '내용15', '장소15', '2024-05-20 12:42:26', NULL), (16, 16, '내용16', '장소16', '2024-05-20 12:57:01', NULL), (17, 17, '내용17', '장소17', '2024-05-21 11:21:35', NULL), (18, 18, '내용18', '장소18', '2024-05-21 11:21:53', NULL), (19, 19, '내용19', '장소19', '2024-05-21 11:25:18', NULL), (20, 20, '내용20', '장소20', '2024-05-21 12:02:04', NULL), (21, 21, '내용21', '장소21', '2024-05-21 12:08:42', NULL), (22, 22, '내용22', '장소22', '2024-05-22 14:41:27', NULL), (23, 23, '내용23', '장소23', '2024-05-22 14:43:10', NULL), (24, 24, '내용24', '장소24', '2024-05-23 13:13:41', NULL), (25, 25, '내용25', '장소25', '2024-05-23 16:54:43', NULL)
- {executed in 2 msec}
-[2024-06-13 11:09:20 DEBUG Test worker] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
-1. INSERT INTO `feed_comment` (`feed_comment_id`, `feed_id`, `user_id`, `COMMENT`, `created_at`, `updated_at`) VALUES (1, 11, 1, '댓글내용1', '2024-05-20 10:34:04', NULL), (2, 12, 2, '댓글내용2', '2024-05-20 10:34:05', NULL), (3, 13, 3, '댓글내용3', '2024-05-20 10:34:07', NULL), (4, 14, 4, '댓글내용4', '2024-05-20 10:34:09', NULL), (5, 15, 5, '댓글내용5', '2024-05-22 14:42:18', NULL), (6, 16, 6, '댓글내용6', '2024-05-22 14:42:19', NULL), (7, 17, 1, '댓글내용7', '2024-05-22 14:42:23', NULL), (8, 18, 2, '댓글내용8', '2024-05-22 14:42:24', NULL), (9, 19, 3, '댓글내용9', '2024-05-22 14:43:16', NULL), (10, 20, 4, '댓글내용10', '2024-05-22 14:43:17', NULL), (11, 21, 5, '댓글내용11', '2024-05-22 14:43:18', NULL), (12, 22, 6, '댓글내용12', '2024-05-22 14:43:19', NULL)
- {executed in 2 msec}
-[2024-06-13 11:09:20 DEBUG Test worker] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
-1. INSERT INTO `feed_favorite` (`feed_id`, `user_id`, `created_at`) VALUES (5, 1, '2024-05-20 12:57:04'), (6, 2, '2024-05-20 12:42:27'), (7, 3, '2024-05-20 12:42:37'), (8, 4, '2024-05-20 12:57:03'), (9, 5, '2024-05-21 11:24:43'), (10, 1, '2024-05-21 11:24:45'), (11, 2, '2024-05-21 11:25:28'), (12, 3, '2024-05-21 12:08:47'), (13, 4, '2024-05-23 16:56:46'), (14, 5, '2024-05-24 15:49:08')
- {executed in 2 msec}
-[2024-06-13 11:09:20 DEBUG Test worker] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
-1. INSERT INTO `feed_pics` (`feed_pic_id`, `feed_id`, `pic`, `created_at`) VALUES (2, 1, '74e663f3-c442-4dfa-acd5-d17d40bf1c95.jpg', '2024-05-07 11:16:46'), (3, 1, '27998cd5-7f48-4eab-ae4e-7a70dc66da1b.jpeg', '2024-05-07 11:16:46'), (4, 5, '876ba65a-7791-4617-b679-a6c0879d09a9.hwp', '2024-05-07 14:20:25'), (5, 6, 'ce7ef9ea-3b8c-4ce9-9d2a-23070d586501.gif', '2024-05-07 14:20:40'), (6, 7, 'adebddf0-4037-47c8-ab1a-1eed049f6ce8.gif', '2024-05-07 14:21:04'), (9, 8, 'ae5dc0aa-870e-49b3-85d1-76c9fc43fabe.jpg', '2024-05-07 15:18:25'), (10, 8, 'c2d28937-75e6-460d-a717-50640d5c8308.jpg', '2024-05-07 15:18:25'), (11, 9, '4d721b39-fbac-405d-8e99-4aa1bd20af9d.jpg', '2024-05-07 15:18:45'), (12, 9, 'f2ed5f0d-6100-4c93-84af-e1ee08c5c91f.jpg', '2024-05-07 15:18:45'), (13, 9, '7d675ef7-fc5e-4459-b585-971798a29329.jpg', '2024-05-07 15:18:45'), (14, 9, '1d29327e-0600-456e-83de-c6448efc70b1.jpg', '2024-05-07 15:18:45'), (15, 9, 'ed5e7e89-c413-46d2-b4dc-c4a64ee6ed23.jpg', '2024-05-07 15:18:45'), (16, 9, 'a33d3160-e04b-443f-9d0b-844501fecd1e.png', '2024-05-07 15:18:45'), (17, 10, '0697e778-af49-4f7f-b149-6304a9e8ba9b.gif', '2024-05-07 15:25:45'), (36, 40, 'f722248d-3e12-4d3d-b80a-403619b19889.jpg', '2024-05-20 10:34:01'), (37, 40, '5774b156-8d7d-49fd-92e9-bf75ed0bebc9.jpg', '2024-05-20 10:34:01'), (38, 41, '7546a520-e307-4a0d-ac4a-7e79c20f9346.jpg', '2024-05-20 10:35:07'), (39, 41, '71cbbed1-67e2-4290-bbb9-7f9298d4c77e.jpg', '2024-05-20 10:35:07'), (54, 50, '4a3399f3-c168-4f63-8176-327adcec4cbc.gif', '2024-05-21 11:21:53'), (55, 51, 'e24a4cd4-113c-41ec-addb-569974e92acc.gif', '2024-05-21 11:25:18'), (56, 52, 'e8ef45c2-2dbe-47a2-b31a-ea4c5d936b7e.gif', '2024-05-21 12:02:04'), (57, 53, '8dd09cef-07c7-4412-be20-c5edb9a34a2e.gif', '2024-05-21 12:08:42')
- {executed in 2 msec}
-[2024-06-13 11:09:20 DEBUG Test worker] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
-1. INSERT INTO `user_follow` (`from_user_id`, `to_user_id`, `created_at`) VALUES (1, 2, '2024-05-20 16:49:53'), (1, 3, '2024-05-20 16:49:53'), (1, 4, '2024-05-20 16:49:53'), (1, 5, '2024-05-20 16:49:53'), (2, 1, '2024-05-20 16:49:53'), (2, 3, '2024-05-20 16:49:53'), (2, 4, '2024-05-20 16:49:53'), (2, 5, '2024-05-20 16:49:53'), (3, 1, '2024-05-20 16:49:53'), (3, 2, '2024-05-20 16:49:53'), (3, 4, '2024-05-20 16:49:53'), (3, 5, '2024-05-20 16:49:53')
- {executed in 1 msec}
-[2024-06-13 11:09:20 INFO  Test worker] [org.springframework.boot.autoconfigure.web.servlet.WelcomePageHandlerMapping] Adding welcome page: class path resource [static/index.html]
-[2024-06-13 11:09:20 INFO  Test worker] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] Initializing Spring TestDispatcherServlet ''
-[2024-06-13 11:09:20 INFO  Test worker] [org.springframework.test.web.servlet.TestDispatcherServlet] Initializing Servlet ''
-[2024-06-13 11:09:20 INFO  Test worker] [org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver] Exposing 1 endpoint(s) beneath base path '/actuator'
-[2024-06-13 11:09:20 INFO  Test worker] [org.springframework.test.web.servlet.TestDispatcherServlet] Completed initialization in 15 ms
-[2024-06-13 11:09:20 INFO  Test worker] [org.apache.coyote.http11.Http11NioProtocol] Starting ProtocolHandler ["http-nio-auto-1"]
-[2024-06-13 11:09:20 INFO  Test worker] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] Tomcat started on port 52630 (http) with context path ''
-[2024-06-13 11:09:20 INFO  Test worker] [com.green.greengram.userfollow.UserFollowIntegrationTest] Started UserFollowIntegrationTest in 2.476 seconds (process running for 3.33)
-[2024-06-13 11:09:21 DEBUG Test worker] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
-1. DELETE FROM user_follow
-        WHERE from_user_id = 3
-            AND to_user_id = 5
- {executed in 2 msec}
-[2024-06-13 11:09:21 INFO  SpringApplicationShutdownHook] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Shutdown initiated...
-[2024-06-13 11:09:21 INFO  SpringApplicationShutdownHook] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Shutdown completed.
-[2024-06-13 12:19:00 INFO  Test worker] [com.green.greengram.feedfavorite.FeedFavoriteIntegrationTest] Starting FeedFavoriteIntegrationTest using Java 17.0.10 with PID 10196 (started by Administrator in D:\2024-1\Backend\GreengramVer3TDD)
-[2024-06-13 12:19:00 INFO  Test worker] [com.green.greengram.feedfavorite.FeedFavoriteIntegrationTest] The following 1 profile is active: "tdd"
-[2024-06-13 12:19:01 INFO  Test worker] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] Tomcat initialized with port 0 (http)
-[2024-06-13 12:19:01 INFO  Test worker] [org.apache.coyote.http11.Http11NioProtocol] Initializing ProtocolHandler ["http-nio-auto-1"]
-[2024-06-13 12:19:01 INFO  Test worker] [org.apache.catalina.core.StandardService] Starting service [Tomcat]
-[2024-06-13 12:19:01 INFO  Test worker] [org.apache.catalina.core.StandardEngine] Starting Servlet engine: [Apache Tomcat/10.1.20]
-[2024-06-13 12:19:01 INFO  Test worker] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] Initializing Spring embedded WebApplicationContext
-[2024-06-13 12:19:01 INFO  Test worker] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] Root WebApplicationContext: initialization completed in 1132 ms
-[2024-06-13 12:19:01 INFO  Test worker] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Starting...
-[2024-06-13 12:19:01 INFO  Test worker] [com.zaxxer.hikari.pool.HikariPool] HikariPool-1 - Added connection net.sf.log4jdbc.sql.jdbcapi.ConnectionSpy@76e00bdb
-[2024-06-13 12:19:01 INFO  Test worker] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Start completed.
-[2024-06-13 12:19:01 DEBUG Test worker] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
-1. CREATE TABLE IF NOT EXISTS `user` ( `user_id` bigint(20) NOT NULL AUTO_INCREMENT, `uid` varchar(20) NOT NULL, `upw` varchar(100) NOT NULL, `nm` varchar(20) NOT NULL, `pic` varchar(100) DEFAULT NULL, `created_at` datetime NOT NULL DEFAULT current_timestamp(), `updated_at` datetime DEFAULT NULL ON UPDATE current_timestamp(), PRIMARY KEY (`user_id`), UNIQUE KEY `uid` (`uid`) )
- {executed in 0 msec}
-[2024-06-13 12:19:01 DEBUG Test worker] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
-1. TRUNCATE TABLE user
- {executed in 11 msec}
-[2024-06-13 12:19:01 DEBUG Test worker] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
-1. CREATE TABLE IF NOT EXISTS `user_follow` ( `from_user_id` bigint(20) NOT NULL, `to_user_id` bigint(20) NOT NULL, `created_at` datetime NOT NULL DEFAULT current_timestamp(), PRIMARY KEY (`from_user_id`,`to_user_id`) )
- {executed in 0 msec}
-[2024-06-13 12:19:01 DEBUG Test worker] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
-1. TRUNCATE TABLE user_follow
- {executed in 5 msec}
-[2024-06-13 12:19:01 DEBUG Test worker] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
-1. CREATE TABLE IF NOT EXISTS `feed` ( `feed_id` bigint(20) NOT NULL AUTO_INCREMENT, `writer_id` bigint(20) NOT NULL, `contents` varchar(1000) DEFAULT NULL, `location` varchar(30) DEFAULT NULL, `created_at` datetime NOT NULL DEFAULT current_timestamp(), `updated_at` datetime DEFAULT NULL ON UPDATE current_timestamp(), PRIMARY KEY (`feed_id`) )
- {executed in 0 msec}
-[2024-06-13 12:19:01 DEBUG Test worker] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
-1. TRUNCATE TABLE feed
- {executed in 5 msec}
-[2024-06-13 12:19:01 DEBUG Test worker] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
-1. CREATE TABLE IF NOT EXISTS `feed_comment` ( `feed_comment_id` bigint(20) NOT NULL AUTO_INCREMENT, `feed_id` bigint(20) NOT NULL, `user_id` bigint(20) NOT NULL, `COMMENT` varchar(1000) NOT NULL, `created_at` datetime NOT NULL DEFAULT current_timestamp(), `updated_at` datetime DEFAULT NULL ON UPDATE current_timestamp(), PRIMARY KEY (`feed_comment_id`) )
- {executed in 0 msec}
-[2024-06-13 12:19:01 DEBUG Test worker] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
-1. TRUNCATE TABLE feed_comment
- {executed in 4 msec}
-[2024-06-13 12:19:01 DEBUG Test worker] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
-1. CREATE TABLE IF NOT EXISTS `feed_favorite` ( `feed_id` bigint(20) NOT NULL, `user_id` bigint(20) NOT NULL, `created_at` datetime NOT NULL DEFAULT current_timestamp(), PRIMARY KEY (`feed_id`,`user_id`) USING BTREE )
- {executed in 0 msec}
-[2024-06-13 12:19:01 DEBUG Test worker] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
-1. TRUNCATE TABLE feed_favorite
- {executed in 5 msec}
-[2024-06-13 12:19:01 DEBUG Test worker] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
-1. CREATE TABLE IF NOT EXISTS `feed_pics` ( `feed_pic_id` bigint(20) NOT NULL AUTO_INCREMENT, `feed_id` bigint(20) NOT NULL, `pic` varchar(50) NOT NULL, `created_at` datetime NOT NULL DEFAULT current_timestamp(), PRIMARY KEY (`feed_pic_id`) USING BTREE )
- {executed in 0 msec}
-[2024-06-13 12:19:01 DEBUG Test worker] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
-1. TRUNCATE TABLE feed_pics
- {executed in 5 msec}
-[2024-06-13 12:19:01 DEBUG Test worker] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
-1. INSERT INTO `user` (`user_id`, `uid`, `upw`, `nm`, `pic`, `created_at`, `updated_at`) VALUES (1, '사용자1', '$2a$10$ZniS9vUxLxwm/PyDyHd6DuKI8KbkQwqddPGVskiBJsu3VD1zW8WXm', '홍길동', '363403f9-8d51-4a5c-a891-abaf8b317910.jpg', '2024-05-03 14:35:08', NULL), (2, '사용자2', '$2a$10$qsItixp0DK/47.E5Fdh.oOk4YSu/zfnIS4jMjWiVtWFRSkQMg7wcy', '5월20일2', '111fad30-256c-484b-aea3-bca8e3f434aa.jpg', '2024-05-20 10:34:56', '2024-05-20 14:48:07'), (3, '사용자3', '$2a$10$CiBlbjaB/h/j583SUMw6BOLjd3On4Az6A7McHo2etRFWD0S.lorGK', '5월20일', '81695b24-7863-407c-8f40-ca0a3be511ed.jpg', '2024-05-20 10:33:48', '2024-05-20 14:48:09'), (4, '사용자4', '$2a$10$C3bd.tBbywD30PtjpXewieNCXoK9.nPgXtGg0wmY3ubPM.jVjTvMK', '5월20일3', 'fdbabf84-693f-4476-a1bd-94a8ed2136e9.gif', '2024-05-20 12:31:01', NULL), (5, '사용자5', '$2a$10$QO9guQRofPBqIUFqFtvHHejgRDs6xRxjNfI5CoODz6OzZmlR6vDhe', '', '4c0c086d-480a-453e-a527-4d445403544a.jpg', '2024-05-20 12:42:16', NULL), (6, '사용자6', '5월16일', '5월16일', '5월16일', '2024-05-20 14:36:02', NULL), (7, '사용자7', '$2a$10$mzp5gIhp8N5Kj5rRA05h9O9TaBvoIBHibcwbjm9XyWkSrDo6nYhM.', '5월21일', '28bfba96-587b-4c0a-8e3d-dc1a473350ca.jpg', '2024-05-21 11:21:10', '2024-05-22 15:39:45'), (8, '사용자8', '$2a$10$lZzlyFmUfFbjy.l.WtGXUeml0B0Sq/FMPCYo5GN7Rgrnc0VHR8.06', '5월23일', '6e02655c-86fb-405f-b7e5-35bbb9ab64a2.jpg', '2024-05-23 10:45:24', '2024-05-23 11:48:11')
- {executed in 1 msec}
-[2024-06-13 12:19:01 DEBUG Test worker] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
-1. INSERT INTO `feed` (`feed_id`, `writer_id`, `contents`, `location`, `created_at`, `updated_at`) VALUES (1, 1, '내용1', '장소1', '2024-05-07 11:16:33', NULL), (2, 2, '내용2', '장소2', '2024-05-07 14:20:25', NULL), (3, 3, '내용3', '장소3', '2024-05-07 14:20:40', NULL), (4, 4, '내용4', '장소4', '2024-05-07 14:21:04', NULL), (5, 5, '내용5', '장소5', '2024-05-07 15:18:25', NULL), (6, 6, '내용6', '장소6', '2024-05-07 15:18:45', NULL), (7, 7, '내용7', '장소7', '2024-05-07 15:25:45', NULL), (8, 8, '내용8', '장소8', '2024-05-20 10:34:01', NULL), (9, 9, '내용9', '장소9', '2024-05-20 10:35:07', NULL), (10, 10, '내용10', '장소10', '2024-05-20 12:23:26', NULL), (11, 11, '내용11', '장소11', '2024-05-20 12:28:00', NULL), (12, 12, '내용12', '장소12', '2024-05-20 12:28:30', NULL), (13, 13, '내용13', '장소13', '2024-05-20 12:31:16', NULL), (14, 14, '내용14', '장소14', '2024-05-20 12:31:29', NULL), (15, 15, '내용15', '장소15', '2024-05-20 12:42:26', NULL), (16, 16, '내용16', '장소16', '2024-05-20 12:57:01', NULL), (17, 17, '내용17', '장소17', '2024-05-21 11:21:35', NULL), (18, 18, '내용18', '장소18', '2024-05-21 11:21:53', NULL), (19, 19, '내용19', '장소19', '2024-05-21 11:25:18', NULL), (20, 20, '내용20', '장소20', '2024-05-21 12:02:04', NULL), (21, 21, '내용21', '장소21', '2024-05-21 12:08:42', NULL), (22, 22, '내용22', '장소22', '2024-05-22 14:41:27', NULL), (23, 23, '내용23', '장소23', '2024-05-22 14:43:10', NULL), (24, 24, '내용24', '장소24', '2024-05-23 13:13:41', NULL), (25, 25, '내용25', '장소25', '2024-05-23 16:54:43', NULL)
- {executed in 2 msec}
-[2024-06-13 12:19:01 DEBUG Test worker] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
-1. INSERT INTO `feed_comment` (`feed_comment_id`, `feed_id`, `user_id`, `COMMENT`, `created_at`, `updated_at`) VALUES (1, 11, 1, '댓글내용1', '2024-05-20 10:34:04', NULL), (2, 12, 2, '댓글내용2', '2024-05-20 10:34:05', NULL), (3, 13, 3, '댓글내용3', '2024-05-20 10:34:07', NULL), (4, 14, 4, '댓글내용4', '2024-05-20 10:34:09', NULL), (5, 15, 5, '댓글내용5', '2024-05-22 14:42:18', NULL), (6, 16, 6, '댓글내용6', '2024-05-22 14:42:19', NULL), (7, 17, 1, '댓글내용7', '2024-05-22 14:42:23', NULL), (8, 18, 2, '댓글내용8', '2024-05-22 14:42:24', NULL), (9, 19, 3, '댓글내용9', '2024-05-22 14:43:16', NULL), (10, 20, 4, '댓글내용10', '2024-05-22 14:43:17', NULL), (11, 21, 5, '댓글내용11', '2024-05-22 14:43:18', NULL), (12, 22, 6, '댓글내용12', '2024-05-22 14:43:19', NULL)
- {executed in 1 msec}
-[2024-06-13 12:19:01 DEBUG Test worker] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
-1. INSERT INTO `feed_favorite` (`feed_id`, `user_id`, `created_at`) VALUES (5, 1, '2024-05-20 12:57:04'), (6, 2, '2024-05-20 12:42:27'), (7, 3, '2024-05-20 12:42:37'), (8, 4, '2024-05-20 12:57:03'), (9, 5, '2024-05-21 11:24:43'), (10, 1, '2024-05-21 11:24:45'), (11, 2, '2024-05-21 11:25:28'), (12, 3, '2024-05-21 12:08:47'), (13, 4, '2024-05-23 16:56:46'), (14, 5, '2024-05-24 15:49:08')
- {executed in 2 msec}
-[2024-06-13 12:19:01 DEBUG Test worker] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
-1. INSERT INTO `feed_pics` (`feed_pic_id`, `feed_id`, `pic`, `created_at`) VALUES (2, 1, '74e663f3-c442-4dfa-acd5-d17d40bf1c95.jpg', '2024-05-07 11:16:46'), (3, 1, '27998cd5-7f48-4eab-ae4e-7a70dc66da1b.jpeg', '2024-05-07 11:16:46'), (4, 5, '876ba65a-7791-4617-b679-a6c0879d09a9.hwp', '2024-05-07 14:20:25'), (5, 6, 'ce7ef9ea-3b8c-4ce9-9d2a-23070d586501.gif', '2024-05-07 14:20:40'), (6, 7, 'adebddf0-4037-47c8-ab1a-1eed049f6ce8.gif', '2024-05-07 14:21:04'), (9, 8, 'ae5dc0aa-870e-49b3-85d1-76c9fc43fabe.jpg', '2024-05-07 15:18:25'), (10, 8, 'c2d28937-75e6-460d-a717-50640d5c8308.jpg', '2024-05-07 15:18:25'), (11, 9, '4d721b39-fbac-405d-8e99-4aa1bd20af9d.jpg', '2024-05-07 15:18:45'), (12, 9, 'f2ed5f0d-6100-4c93-84af-e1ee08c5c91f.jpg', '2024-05-07 15:18:45'), (13, 9, '7d675ef7-fc5e-4459-b585-971798a29329.jpg', '2024-05-07 15:18:45'), (14, 9, '1d29327e-0600-456e-83de-c6448efc70b1.jpg', '2024-05-07 15:18:45'), (15, 9, 'ed5e7e89-c413-46d2-b4dc-c4a64ee6ed23.jpg', '2024-05-07 15:18:45'), (16, 9, 'a33d3160-e04b-443f-9d0b-844501fecd1e.png', '2024-05-07 15:18:45'), (17, 10, '0697e778-af49-4f7f-b149-6304a9e8ba9b.gif', '2024-05-07 15:25:45'), (36, 40, 'f722248d-3e12-4d3d-b80a-403619b19889.jpg', '2024-05-20 10:34:01'), (37, 40, '5774b156-8d7d-49fd-92e9-bf75ed0bebc9.jpg', '2024-05-20 10:34:01'), (38, 41, '7546a520-e307-4a0d-ac4a-7e79c20f9346.jpg', '2024-05-20 10:35:07'), (39, 41, '71cbbed1-67e2-4290-bbb9-7f9298d4c77e.jpg', '2024-05-20 10:35:07'), (54, 50, '4a3399f3-c168-4f63-8176-327adcec4cbc.gif', '2024-05-21 11:21:53'), (55, 51, 'e24a4cd4-113c-41ec-addb-569974e92acc.gif', '2024-05-21 11:25:18'), (56, 52, 'e8ef45c2-2dbe-47a2-b31a-ea4c5d936b7e.gif', '2024-05-21 12:02:04'), (57, 53, '8dd09cef-07c7-4412-be20-c5edb9a34a2e.gif', '2024-05-21 12:08:42')
- {executed in 2 msec}
-[2024-06-13 12:19:01 DEBUG Test worker] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
-1. INSERT INTO `user_follow` (`from_user_id`, `to_user_id`, `created_at`) VALUES (1, 2, '2024-05-20 16:49:53'), (1, 3, '2024-05-20 16:49:53'), (1, 4, '2024-05-20 16:49:53'), (1, 5, '2024-05-20 16:49:53'), (2, 1, '2024-05-20 16:49:53'), (2, 3, '2024-05-20 16:49:53'), (2, 4, '2024-05-20 16:49:53'), (2, 5, '2024-05-20 16:49:53'), (3, 1, '2024-05-20 16:49:53'), (3, 2, '2024-05-20 16:49:53'), (3, 4, '2024-05-20 16:49:53'), (3, 5, '2024-05-20 16:49:53')
- {executed in 2 msec}
-[2024-06-13 12:19:02 INFO  Test worker] [org.springframework.boot.autoconfigure.web.servlet.WelcomePageHandlerMapping] Adding welcome page: class path resource [static/index.html]
-[2024-06-13 12:19:02 INFO  Test worker] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] Initializing Spring TestDispatcherServlet ''
-[2024-06-13 12:19:02 INFO  Test worker] [org.springframework.test.web.servlet.TestDispatcherServlet] Initializing Servlet ''
-[2024-06-13 12:19:02 INFO  Test worker] [org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver] Exposing 1 endpoint(s) beneath base path '/actuator'
-[2024-06-13 12:19:02 INFO  Test worker] [org.springframework.test.web.servlet.TestDispatcherServlet] Completed initialization in 17 ms
-[2024-06-13 12:19:02 INFO  Test worker] [org.apache.coyote.http11.Http11NioProtocol] Starting ProtocolHandler ["http-nio-auto-1"]
-[2024-06-13 12:19:02 INFO  Test worker] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] Tomcat started on port 53685 (http) with context path ''
-[2024-06-13 12:19:02 INFO  Test worker] [com.green.greengram.feedfavorite.FeedFavoriteIntegrationTest] Started FeedFavoriteIntegrationTest in 2.48 seconds (process running for 3.369)
-[2024-06-13 12:19:03 DEBUG Test worker] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
-1. DELETE FROM feed_favorite
-        WHERE feed_id = 5
-        AND user_id = 1
- {executed in 0 msec}
-[2024-06-13 12:19:03 INFO  SpringApplicationShutdownHook] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Shutdown initiated...
-[2024-06-13 12:19:03 INFO  SpringApplicationShutdownHook] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Shutdown completed.
-[2024-06-13 12:19:27 INFO  Test worker] [com.green.greengram.feedfavorite.FeedFavoriteIntegrationTest] Starting FeedFavoriteIntegrationTest using Java 17.0.10 with PID 10096 (started by Administrator in D:\2024-1\Backend\GreengramVer3TDD)
-[2024-06-13 12:19:27 INFO  Test worker] [com.green.greengram.feedfavorite.FeedFavoriteIntegrationTest] The following 1 profile is active: "tdd"
-[2024-06-13 12:19:28 INFO  Test worker] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] Tomcat initialized with port 0 (http)
-[2024-06-13 12:19:28 INFO  Test worker] [org.apache.coyote.http11.Http11NioProtocol] Initializing ProtocolHandler ["http-nio-auto-1"]
-[2024-06-13 12:19:28 INFO  Test worker] [org.apache.catalina.core.StandardService] Starting service [Tomcat]
-[2024-06-13 12:19:28 INFO  Test worker] [org.apache.catalina.core.StandardEngine] Starting Servlet engine: [Apache Tomcat/10.1.20]
-[2024-06-13 12:19:28 INFO  Test worker] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] Initializing Spring embedded WebApplicationContext
-[2024-06-13 12:19:28 INFO  Test worker] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] Root WebApplicationContext: initialization completed in 1102 ms
-[2024-06-13 12:19:28 INFO  Test worker] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Starting...
-[2024-06-13 12:19:28 INFO  Test worker] [com.zaxxer.hikari.pool.HikariPool] HikariPool-1 - Added connection net.sf.log4jdbc.sql.jdbcapi.ConnectionSpy@538e74fc
-[2024-06-13 12:19:28 INFO  Test worker] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Start completed.
-[2024-06-13 12:19:28 DEBUG Test worker] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
-1. CREATE TABLE IF NOT EXISTS `user` ( `user_id` bigint(20) NOT NULL AUTO_INCREMENT, `uid` varchar(20) NOT NULL, `upw` varchar(100) NOT NULL, `nm` varchar(20) NOT NULL, `pic` varchar(100) DEFAULT NULL, `created_at` datetime NOT NULL DEFAULT current_timestamp(), `updated_at` datetime DEFAULT NULL ON UPDATE current_timestamp(), PRIMARY KEY (`user_id`), UNIQUE KEY `uid` (`uid`) )
- {executed in 1 msec}
-[2024-06-13 12:19:28 DEBUG Test worker] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
-1. TRUNCATE TABLE user
- {executed in 11 msec}
-[2024-06-13 12:19:28 DEBUG Test worker] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
-1. CREATE TABLE IF NOT EXISTS `user_follow` ( `from_user_id` bigint(20) NOT NULL, `to_user_id` bigint(20) NOT NULL, `created_at` datetime NOT NULL DEFAULT current_timestamp(), PRIMARY KEY (`from_user_id`,`to_user_id`) )
- {executed in 1 msec}
-[2024-06-13 12:19:28 DEBUG Test worker] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
-1. TRUNCATE TABLE user_follow
- {executed in 5 msec}
-[2024-06-13 12:19:28 DEBUG Test worker] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
-1. CREATE TABLE IF NOT EXISTS `feed` ( `feed_id` bigint(20) NOT NULL AUTO_INCREMENT, `writer_id` bigint(20) NOT NULL, `contents` varchar(1000) DEFAULT NULL, `location` varchar(30) DEFAULT NULL, `created_at` datetime NOT NULL DEFAULT current_timestamp(), `updated_at` datetime DEFAULT NULL ON UPDATE current_timestamp(), PRIMARY KEY (`feed_id`) )
- {executed in 1 msec}
-[2024-06-13 12:19:28 DEBUG Test worker] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
-1. TRUNCATE TABLE feed
- {executed in 6 msec}
-[2024-06-13 12:19:28 DEBUG Test worker] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
-1. CREATE TABLE IF NOT EXISTS `feed_comment` ( `feed_comment_id` bigint(20) NOT NULL AUTO_INCREMENT, `feed_id` bigint(20) NOT NULL, `user_id` bigint(20) NOT NULL, `COMMENT` varchar(1000) NOT NULL, `created_at` datetime NOT NULL DEFAULT current_timestamp(), `updated_at` datetime DEFAULT NULL ON UPDATE current_timestamp(), PRIMARY KEY (`feed_comment_id`) )
- {executed in 0 msec}
-[2024-06-13 12:19:28 DEBUG Test worker] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
-1. TRUNCATE TABLE feed_comment
- {executed in 6 msec}
-[2024-06-13 12:19:28 DEBUG Test worker] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
-1. CREATE TABLE IF NOT EXISTS `feed_favorite` ( `feed_id` bigint(20) NOT NULL, `user_id` bigint(20) NOT NULL, `created_at` datetime NOT NULL DEFAULT current_timestamp(), PRIMARY KEY (`feed_id`,`user_id`) USING BTREE )
- {executed in 1 msec}
-[2024-06-13 12:19:28 DEBUG Test worker] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
-1. TRUNCATE TABLE feed_favorite
- {executed in 5 msec}
-[2024-06-13 12:19:28 DEBUG Test worker] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
-1. CREATE TABLE IF NOT EXISTS `feed_pics` ( `feed_pic_id` bigint(20) NOT NULL AUTO_INCREMENT, `feed_id` bigint(20) NOT NULL, `pic` varchar(50) NOT NULL, `created_at` datetime NOT NULL DEFAULT current_timestamp(), PRIMARY KEY (`feed_pic_id`) USING BTREE )
- {executed in 0 msec}
-[2024-06-13 12:19:28 DEBUG Test worker] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
-1. TRUNCATE TABLE feed_pics
- {executed in 5 msec}
-[2024-06-13 12:19:28 DEBUG Test worker] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
-1. INSERT INTO `user` (`user_id`, `uid`, `upw`, `nm`, `pic`, `created_at`, `updated_at`) VALUES (1, '사용자1', '$2a$10$ZniS9vUxLxwm/PyDyHd6DuKI8KbkQwqddPGVskiBJsu3VD1zW8WXm', '홍길동', '363403f9-8d51-4a5c-a891-abaf8b317910.jpg', '2024-05-03 14:35:08', NULL), (2, '사용자2', '$2a$10$qsItixp0DK/47.E5Fdh.oOk4YSu/zfnIS4jMjWiVtWFRSkQMg7wcy', '5월20일2', '111fad30-256c-484b-aea3-bca8e3f434aa.jpg', '2024-05-20 10:34:56', '2024-05-20 14:48:07'), (3, '사용자3', '$2a$10$CiBlbjaB/h/j583SUMw6BOLjd3On4Az6A7McHo2etRFWD0S.lorGK', '5월20일', '81695b24-7863-407c-8f40-ca0a3be511ed.jpg', '2024-05-20 10:33:48', '2024-05-20 14:48:09'), (4, '사용자4', '$2a$10$C3bd.tBbywD30PtjpXewieNCXoK9.nPgXtGg0wmY3ubPM.jVjTvMK', '5월20일3', 'fdbabf84-693f-4476-a1bd-94a8ed2136e9.gif', '2024-05-20 12:31:01', NULL), (5, '사용자5', '$2a$10$QO9guQRofPBqIUFqFtvHHejgRDs6xRxjNfI5CoODz6OzZmlR6vDhe', '', '4c0c086d-480a-453e-a527-4d445403544a.jpg', '2024-05-20 12:42:16', NULL), (6, '사용자6', '5월16일', '5월16일', '5월16일', '2024-05-20 14:36:02', NULL), (7, '사용자7', '$2a$10$mzp5gIhp8N5Kj5rRA05h9O9TaBvoIBHibcwbjm9XyWkSrDo6nYhM.', '5월21일', '28bfba96-587b-4c0a-8e3d-dc1a473350ca.jpg', '2024-05-21 11:21:10', '2024-05-22 15:39:45'), (8, '사용자8', '$2a$10$lZzlyFmUfFbjy.l.WtGXUeml0B0Sq/FMPCYo5GN7Rgrnc0VHR8.06', '5월23일', '6e02655c-86fb-405f-b7e5-35bbb9ab64a2.jpg', '2024-05-23 10:45:24', '2024-05-23 11:48:11')
- {executed in 2 msec}
-[2024-06-13 12:19:28 DEBUG Test worker] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
-1. INSERT INTO `feed` (`feed_id`, `writer_id`, `contents`, `location`, `created_at`, `updated_at`) VALUES (1, 1, '내용1', '장소1', '2024-05-07 11:16:33', NULL), (2, 2, '내용2', '장소2', '2024-05-07 14:20:25', NULL), (3, 3, '내용3', '장소3', '2024-05-07 14:20:40', NULL), (4, 4, '내용4', '장소4', '2024-05-07 14:21:04', NULL), (5, 5, '내용5', '장소5', '2024-05-07 15:18:25', NULL), (6, 6, '내용6', '장소6', '2024-05-07 15:18:45', NULL), (7, 7, '내용7', '장소7', '2024-05-07 15:25:45', NULL), (8, 8, '내용8', '장소8', '2024-05-20 10:34:01', NULL), (9, 9, '내용9', '장소9', '2024-05-20 10:35:07', NULL), (10, 10, '내용10', '장소10', '2024-05-20 12:23:26', NULL), (11, 11, '내용11', '장소11', '2024-05-20 12:28:00', NULL), (12, 12, '내용12', '장소12', '2024-05-20 12:28:30', NULL), (13, 13, '내용13', '장소13', '2024-05-20 12:31:16', NULL), (14, 14, '내용14', '장소14', '2024-05-20 12:31:29', NULL), (15, 15, '내용15', '장소15', '2024-05-20 12:42:26', NULL), (16, 16, '내용16', '장소16', '2024-05-20 12:57:01', NULL), (17, 17, '내용17', '장소17', '2024-05-21 11:21:35', NULL), (18, 18, '내용18', '장소18', '2024-05-21 11:21:53', NULL), (19, 19, '내용19', '장소19', '2024-05-21 11:25:18', NULL), (20, 20, '내용20', '장소20', '2024-05-21 12:02:04', NULL), (21, 21, '내용21', '장소21', '2024-05-21 12:08:42', NULL), (22, 22, '내용22', '장소22', '2024-05-22 14:41:27', NULL), (23, 23, '내용23', '장소23', '2024-05-22 14:43:10', NULL), (24, 24, '내용24', '장소24', '2024-05-23 13:13:41', NULL), (25, 25, '내용25', '장소25', '2024-05-23 16:54:43', NULL)
- {executed in 1 msec}
-[2024-06-13 12:19:28 DEBUG Test worker] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
-1. INSERT INTO `feed_comment` (`feed_comment_id`, `feed_id`, `user_id`, `COMMENT`, `created_at`, `updated_at`) VALUES (1, 11, 1, '댓글내용1', '2024-05-20 10:34:04', NULL), (2, 12, 2, '댓글내용2', '2024-05-20 10:34:05', NULL), (3, 13, 3, '댓글내용3', '2024-05-20 10:34:07', NULL), (4, 14, 4, '댓글내용4', '2024-05-20 10:34:09', NULL), (5, 15, 5, '댓글내용5', '2024-05-22 14:42:18', NULL), (6, 16, 6, '댓글내용6', '2024-05-22 14:42:19', NULL), (7, 17, 1, '댓글내용7', '2024-05-22 14:42:23', NULL), (8, 18, 2, '댓글내용8', '2024-05-22 14:42:24', NULL), (9, 19, 3, '댓글내용9', '2024-05-22 14:43:16', NULL), (10, 20, 4, '댓글내용10', '2024-05-22 14:43:17', NULL), (11, 21, 5, '댓글내용11', '2024-05-22 14:43:18', NULL), (12, 22, 6, '댓글내용12', '2024-05-22 14:43:19', NULL)
- {executed in 2 msec}
-[2024-06-13 12:19:28 DEBUG Test worker] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
-1. INSERT INTO `feed_favorite` (`feed_id`, `user_id`, `created_at`) VALUES (5, 1, '2024-05-20 12:57:04'), (6, 2, '2024-05-20 12:42:27'), (7, 3, '2024-05-20 12:42:37'), (8, 4, '2024-05-20 12:57:03'), (9, 5, '2024-05-21 11:24:43'), (10, 1, '2024-05-21 11:24:45'), (11, 2, '2024-05-21 11:25:28'), (12, 3, '2024-05-21 12:08:47'), (13, 4, '2024-05-23 16:56:46'), (14, 5, '2024-05-24 15:49:08')
- {executed in 2 msec}
-[2024-06-13 12:19:28 DEBUG Test worker] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
-1. INSERT INTO `feed_pics` (`feed_pic_id`, `feed_id`, `pic`, `created_at`) VALUES (2, 1, '74e663f3-c442-4dfa-acd5-d17d40bf1c95.jpg', '2024-05-07 11:16:46'), (3, 1, '27998cd5-7f48-4eab-ae4e-7a70dc66da1b.jpeg', '2024-05-07 11:16:46'), (4, 5, '876ba65a-7791-4617-b679-a6c0879d09a9.hwp', '2024-05-07 14:20:25'), (5, 6, 'ce7ef9ea-3b8c-4ce9-9d2a-23070d586501.gif', '2024-05-07 14:20:40'), (6, 7, 'adebddf0-4037-47c8-ab1a-1eed049f6ce8.gif', '2024-05-07 14:21:04'), (9, 8, 'ae5dc0aa-870e-49b3-85d1-76c9fc43fabe.jpg', '2024-05-07 15:18:25'), (10, 8, 'c2d28937-75e6-460d-a717-50640d5c8308.jpg', '2024-05-07 15:18:25'), (11, 9, '4d721b39-fbac-405d-8e99-4aa1bd20af9d.jpg', '2024-05-07 15:18:45'), (12, 9, 'f2ed5f0d-6100-4c93-84af-e1ee08c5c91f.jpg', '2024-05-07 15:18:45'), (13, 9, '7d675ef7-fc5e-4459-b585-971798a29329.jpg', '2024-05-07 15:18:45'), (14, 9, '1d29327e-0600-456e-83de-c6448efc70b1.jpg', '2024-05-07 15:18:45'), (15, 9, 'ed5e7e89-c413-46d2-b4dc-c4a64ee6ed23.jpg', '2024-05-07 15:18:45'), (16, 9, 'a33d3160-e04b-443f-9d0b-844501fecd1e.png', '2024-05-07 15:18:45'), (17, 10, '0697e778-af49-4f7f-b149-6304a9e8ba9b.gif', '2024-05-07 15:25:45'), (36, 40, 'f722248d-3e12-4d3d-b80a-403619b19889.jpg', '2024-05-20 10:34:01'), (37, 40, '5774b156-8d7d-49fd-92e9-bf75ed0bebc9.jpg', '2024-05-20 10:34:01'), (38, 41, '7546a520-e307-4a0d-ac4a-7e79c20f9346.jpg', '2024-05-20 10:35:07'), (39, 41, '71cbbed1-67e2-4290-bbb9-7f9298d4c77e.jpg', '2024-05-20 10:35:07'), (54, 50, '4a3399f3-c168-4f63-8176-327adcec4cbc.gif', '2024-05-21 11:21:53'), (55, 51, 'e24a4cd4-113c-41ec-addb-569974e92acc.gif', '2024-05-21 11:25:18'), (56, 52, 'e8ef45c2-2dbe-47a2-b31a-ea4c5d936b7e.gif', '2024-05-21 12:02:04'), (57, 53, '8dd09cef-07c7-4412-be20-c5edb9a34a2e.gif', '2024-05-21 12:08:42')
- {executed in 1 msec}
-[2024-06-13 12:19:28 DEBUG Test worker] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
-1. INSERT INTO `user_follow` (`from_user_id`, `to_user_id`, `created_at`) VALUES (1, 2, '2024-05-20 16:49:53'), (1, 3, '2024-05-20 16:49:53'), (1, 4, '2024-05-20 16:49:53'), (1, 5, '2024-05-20 16:49:53'), (2, 1, '2024-05-20 16:49:53'), (2, 3, '2024-05-20 16:49:53'), (2, 4, '2024-05-20 16:49:53'), (2, 5, '2024-05-20 16:49:53'), (3, 1, '2024-05-20 16:49:53'), (3, 2, '2024-05-20 16:49:53'), (3, 4, '2024-05-20 16:49:53'), (3, 5, '2024-05-20 16:49:53')
- {executed in 2 msec}
-[2024-06-13 12:19:29 INFO  Test worker] [org.springframework.boot.autoconfigure.web.servlet.WelcomePageHandlerMapping] Adding welcome page: class path resource [static/index.html]
-[2024-06-13 12:19:29 INFO  Test worker] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] Initializing Spring TestDispatcherServlet ''
-[2024-06-13 12:19:29 INFO  Test worker] [org.springframework.test.web.servlet.TestDispatcherServlet] Initializing Servlet ''
-[2024-06-13 12:19:29 INFO  Test worker] [org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver] Exposing 1 endpoint(s) beneath base path '/actuator'
-[2024-06-13 12:19:29 INFO  Test worker] [org.springframework.test.web.servlet.TestDispatcherServlet] Completed initialization in 14 ms
-[2024-06-13 12:19:29 INFO  Test worker] [org.apache.coyote.http11.Http11NioProtocol] Starting ProtocolHandler ["http-nio-auto-1"]
-[2024-06-13 12:19:29 INFO  Test worker] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] Tomcat started on port 53705 (http) with context path ''
-[2024-06-13 12:19:29 INFO  Test worker] [com.green.greengram.feedfavorite.FeedFavoriteIntegrationTest] Started FeedFavoriteIntegrationTest in 2.412 seconds (process running for 3.276)
-[2024-06-13 12:19:30 DEBUG Test worker] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
-1. DELETE FROM feed_favorite
-        WHERE feed_id = 20
-        AND user_id = 1
- {executed in 0 msec}
-[2024-06-13 12:19:30 DEBUG Test worker] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
-1. INSERT INTO feed_favorite
-        SET feed_id = 20
-        , user_id = 1
- {executed in 0 msec}
-[2024-06-13 12:19:30 INFO  SpringApplicationShutdownHook] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Shutdown initiated...
-[2024-06-13 12:19:30 INFO  SpringApplicationShutdownHook] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Shutdown completed.
-[2024-06-13 12:20:10 INFO  Test worker] [com.green.greengram.feedfavorite.FeedFavoriteIntegrationTest] Starting FeedFavoriteIntegrationTest using Java 17.0.10 with PID 10512 (started by Administrator in D:\2024-1\Backend\GreengramVer3TDD)
-[2024-06-13 12:20:10 INFO  Test worker] [com.green.greengram.feedfavorite.FeedFavoriteIntegrationTest] The following 1 profile is active: "tdd"
-[2024-06-13 12:20:12 INFO  Test worker] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] Tomcat initialized with port 0 (http)
-[2024-06-13 12:20:12 INFO  Test worker] [org.apache.coyote.http11.Http11NioProtocol] Initializing ProtocolHandler ["http-nio-auto-1"]
-[2024-06-13 12:20:12 INFO  Test worker] [org.apache.catalina.core.StandardService] Starting service [Tomcat]
-[2024-06-13 12:20:12 INFO  Test worker] [org.apache.catalina.core.StandardEngine] Starting Servlet engine: [Apache Tomcat/10.1.20]
-[2024-06-13 12:20:12 INFO  Test worker] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] Initializing Spring embedded WebApplicationContext
-[2024-06-13 12:20:12 INFO  Test worker] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] Root WebApplicationContext: initialization completed in 1149 ms
-[2024-06-13 12:20:12 INFO  Test worker] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Starting...
-[2024-06-13 12:20:12 INFO  Test worker] [com.zaxxer.hikari.pool.HikariPool] HikariPool-1 - Added connection net.sf.log4jdbc.sql.jdbcapi.ConnectionSpy@538e74fc
-[2024-06-13 12:20:12 INFO  Test worker] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Start completed.
-[2024-06-13 12:20:12 DEBUG Test worker] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
-1. CREATE TABLE IF NOT EXISTS `user` ( `user_id` bigint(20) NOT NULL AUTO_INCREMENT, `uid` varchar(20) NOT NULL, `upw` varchar(100) NOT NULL, `nm` varchar(20) NOT NULL, `pic` varchar(100) DEFAULT NULL, `created_at` datetime NOT NULL DEFAULT current_timestamp(), `updated_at` datetime DEFAULT NULL ON UPDATE current_timestamp(), PRIMARY KEY (`user_id`), UNIQUE KEY `uid` (`uid`) )
- {executed in 0 msec}
-[2024-06-13 12:20:12 DEBUG Test worker] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
-1. TRUNCATE TABLE user
- {executed in 10 msec}
-[2024-06-13 12:20:12 DEBUG Test worker] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
-1. CREATE TABLE IF NOT EXISTS `user_follow` ( `from_user_id` bigint(20) NOT NULL, `to_user_id` bigint(20) NOT NULL, `created_at` datetime NOT NULL DEFAULT current_timestamp(), PRIMARY KEY (`from_user_id`,`to_user_id`) )
- {executed in 0 msec}
-[2024-06-13 12:20:12 DEBUG Test worker] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
-1. TRUNCATE TABLE user_follow
- {executed in 6 msec}
-[2024-06-13 12:20:12 DEBUG Test worker] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
-1. CREATE TABLE IF NOT EXISTS `feed` ( `feed_id` bigint(20) NOT NULL AUTO_INCREMENT, `writer_id` bigint(20) NOT NULL, `contents` varchar(1000) DEFAULT NULL, `location` varchar(30) DEFAULT NULL, `created_at` datetime NOT NULL DEFAULT current_timestamp(), `updated_at` datetime DEFAULT NULL ON UPDATE current_timestamp(), PRIMARY KEY (`feed_id`) )
- {executed in 0 msec}
-[2024-06-13 12:20:12 DEBUG Test worker] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
-1. TRUNCATE TABLE feed
- {executed in 5 msec}
-[2024-06-13 12:20:12 DEBUG Test worker] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
-1. CREATE TABLE IF NOT EXISTS `feed_comment` ( `feed_comment_id` bigint(20) NOT NULL AUTO_INCREMENT, `feed_id` bigint(20) NOT NULL, `user_id` bigint(20) NOT NULL, `COMMENT` varchar(1000) NOT NULL, `created_at` datetime NOT NULL DEFAULT current_timestamp(), `updated_at` datetime DEFAULT NULL ON UPDATE current_timestamp(), PRIMARY KEY (`feed_comment_id`) )
- {executed in 0 msec}
-[2024-06-13 12:20:12 DEBUG Test worker] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
-1. TRUNCATE TABLE feed_comment
- {executed in 5 msec}
-[2024-06-13 12:20:12 DEBUG Test worker] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
-1. CREATE TABLE IF NOT EXISTS `feed_favorite` ( `feed_id` bigint(20) NOT NULL, `user_id` bigint(20) NOT NULL, `created_at` datetime NOT NULL DEFAULT current_timestamp(), PRIMARY KEY (`feed_id`,`user_id`) USING BTREE )
- {executed in 0 msec}
-[2024-06-13 12:20:12 DEBUG Test worker] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
-1. TRUNCATE TABLE feed_favorite
- {executed in 5 msec}
-[2024-06-13 12:20:12 DEBUG Test worker] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
-1. CREATE TABLE IF NOT EXISTS `feed_pics` ( `feed_pic_id` bigint(20) NOT NULL AUTO_INCREMENT, `feed_id` bigint(20) NOT NULL, `pic` varchar(50) NOT NULL, `created_at` datetime NOT NULL DEFAULT current_timestamp(), PRIMARY KEY (`feed_pic_id`) USING BTREE )
- {executed in 1 msec}
-[2024-06-13 12:20:12 DEBUG Test worker] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
-1. TRUNCATE TABLE feed_pics
- {executed in 5 msec}
-[2024-06-13 12:20:12 DEBUG Test worker] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
-1. INSERT INTO `user` (`user_id`, `uid`, `upw`, `nm`, `pic`, `created_at`, `updated_at`) VALUES (1, '사용자1', '$2a$10$ZniS9vUxLxwm/PyDyHd6DuKI8KbkQwqddPGVskiBJsu3VD1zW8WXm', '홍길동', '363403f9-8d51-4a5c-a891-abaf8b317910.jpg', '2024-05-03 14:35:08', NULL), (2, '사용자2', '$2a$10$qsItixp0DK/47.E5Fdh.oOk4YSu/zfnIS4jMjWiVtWFRSkQMg7wcy', '5월20일2', '111fad30-256c-484b-aea3-bca8e3f434aa.jpg', '2024-05-20 10:34:56', '2024-05-20 14:48:07'), (3, '사용자3', '$2a$10$CiBlbjaB/h/j583SUMw6BOLjd3On4Az6A7McHo2etRFWD0S.lorGK', '5월20일', '81695b24-7863-407c-8f40-ca0a3be511ed.jpg', '2024-05-20 10:33:48', '2024-05-20 14:48:09'), (4, '사용자4', '$2a$10$C3bd.tBbywD30PtjpXewieNCXoK9.nPgXtGg0wmY3ubPM.jVjTvMK', '5월20일3', 'fdbabf84-693f-4476-a1bd-94a8ed2136e9.gif', '2024-05-20 12:31:01', NULL), (5, '사용자5', '$2a$10$QO9guQRofPBqIUFqFtvHHejgRDs6xRxjNfI5CoODz6OzZmlR6vDhe', '', '4c0c086d-480a-453e-a527-4d445403544a.jpg', '2024-05-20 12:42:16', NULL), (6, '사용자6', '5월16일', '5월16일', '5월16일', '2024-05-20 14:36:02', NULL), (7, '사용자7', '$2a$10$mzp5gIhp8N5Kj5rRA05h9O9TaBvoIBHibcwbjm9XyWkSrDo6nYhM.', '5월21일', '28bfba96-587b-4c0a-8e3d-dc1a473350ca.jpg', '2024-05-21 11:21:10', '2024-05-22 15:39:45'), (8, '사용자8', '$2a$10$lZzlyFmUfFbjy.l.WtGXUeml0B0Sq/FMPCYo5GN7Rgrnc0VHR8.06', '5월23일', '6e02655c-86fb-405f-b7e5-35bbb9ab64a2.jpg', '2024-05-23 10:45:24', '2024-05-23 11:48:11')
- {executed in 1 msec}
-[2024-06-13 12:20:12 DEBUG Test worker] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
-1. INSERT INTO `feed` (`feed_id`, `writer_id`, `contents`, `location`, `created_at`, `updated_at`) VALUES (1, 1, '내용1', '장소1', '2024-05-07 11:16:33', NULL), (2, 2, '내용2', '장소2', '2024-05-07 14:20:25', NULL), (3, 3, '내용3', '장소3', '2024-05-07 14:20:40', NULL), (4, 4, '내용4', '장소4', '2024-05-07 14:21:04', NULL), (5, 5, '내용5', '장소5', '2024-05-07 15:18:25', NULL), (6, 6, '내용6', '장소6', '2024-05-07 15:18:45', NULL), (7, 7, '내용7', '장소7', '2024-05-07 15:25:45', NULL), (8, 8, '내용8', '장소8', '2024-05-20 10:34:01', NULL), (9, 9, '내용9', '장소9', '2024-05-20 10:35:07', NULL), (10, 10, '내용10', '장소10', '2024-05-20 12:23:26', NULL), (11, 11, '내용11', '장소11', '2024-05-20 12:28:00', NULL), (12, 12, '내용12', '장소12', '2024-05-20 12:28:30', NULL), (13, 13, '내용13', '장소13', '2024-05-20 12:31:16', NULL), (14, 14, '내용14', '장소14', '2024-05-20 12:31:29', NULL), (15, 15, '내용15', '장소15', '2024-05-20 12:42:26', NULL), (16, 16, '내용16', '장소16', '2024-05-20 12:57:01', NULL), (17, 17, '내용17', '장소17', '2024-05-21 11:21:35', NULL), (18, 18, '내용18', '장소18', '2024-05-21 11:21:53', NULL), (19, 19, '내용19', '장소19', '2024-05-21 11:25:18', NULL), (20, 20, '내용20', '장소20', '2024-05-21 12:02:04', NULL), (21, 21, '내용21', '장소21', '2024-05-21 12:08:42', NULL), (22, 22, '내용22', '장소22', '2024-05-22 14:41:27', NULL), (23, 23, '내용23', '장소23', '2024-05-22 14:43:10', NULL), (24, 24, '내용24', '장소24', '2024-05-23 13:13:41', NULL), (25, 25, '내용25', '장소25', '2024-05-23 16:54:43', NULL)
- {executed in 2 msec}
-[2024-06-13 12:20:12 DEBUG Test worker] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
-1. INSERT INTO `feed_comment` (`feed_comment_id`, `feed_id`, `user_id`, `COMMENT`, `created_at`, `updated_at`) VALUES (1, 11, 1, '댓글내용1', '2024-05-20 10:34:04', NULL), (2, 12, 2, '댓글내용2', '2024-05-20 10:34:05', NULL), (3, 13, 3, '댓글내용3', '2024-05-20 10:34:07', NULL), (4, 14, 4, '댓글내용4', '2024-05-20 10:34:09', NULL), (5, 15, 5, '댓글내용5', '2024-05-22 14:42:18', NULL), (6, 16, 6, '댓글내용6', '2024-05-22 14:42:19', NULL), (7, 17, 1, '댓글내용7', '2024-05-22 14:42:23', NULL), (8, 18, 2, '댓글내용8', '2024-05-22 14:42:24', NULL), (9, 19, 3, '댓글내용9', '2024-05-22 14:43:16', NULL), (10, 20, 4, '댓글내용10', '2024-05-22 14:43:17', NULL), (11, 21, 5, '댓글내용11', '2024-05-22 14:43:18', NULL), (12, 22, 6, '댓글내용12', '2024-05-22 14:43:19', NULL)
- {executed in 1 msec}
-[2024-06-13 12:20:12 DEBUG Test worker] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
-1. INSERT INTO `feed_favorite` (`feed_id`, `user_id`, `created_at`) VALUES (5, 1, '2024-05-20 12:57:04'), (6, 2, '2024-05-20 12:42:27'), (7, 3, '2024-05-20 12:42:37'), (8, 4, '2024-05-20 12:57:03'), (9, 5, '2024-05-21 11:24:43'), (10, 1, '2024-05-21 11:24:45'), (11, 2, '2024-05-21 11:25:28'), (12, 3, '2024-05-21 12:08:47'), (13, 4, '2024-05-23 16:56:46'), (14, 5, '2024-05-24 15:49:08')
- {executed in 3 msec}
-[2024-06-13 12:20:12 DEBUG Test worker] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
-1. INSERT INTO `feed_pics` (`feed_pic_id`, `feed_id`, `pic`, `created_at`) VALUES (2, 1, '74e663f3-c442-4dfa-acd5-d17d40bf1c95.jpg', '2024-05-07 11:16:46'), (3, 1, '27998cd5-7f48-4eab-ae4e-7a70dc66da1b.jpeg', '2024-05-07 11:16:46'), (4, 5, '876ba65a-7791-4617-b679-a6c0879d09a9.hwp', '2024-05-07 14:20:25'), (5, 6, 'ce7ef9ea-3b8c-4ce9-9d2a-23070d586501.gif', '2024-05-07 14:20:40'), (6, 7, 'adebddf0-4037-47c8-ab1a-1eed049f6ce8.gif', '2024-05-07 14:21:04'), (9, 8, 'ae5dc0aa-870e-49b3-85d1-76c9fc43fabe.jpg', '2024-05-07 15:18:25'), (10, 8, 'c2d28937-75e6-460d-a717-50640d5c8308.jpg', '2024-05-07 15:18:25'), (11, 9, '4d721b39-fbac-405d-8e99-4aa1bd20af9d.jpg', '2024-05-07 15:18:45'), (12, 9, 'f2ed5f0d-6100-4c93-84af-e1ee08c5c91f.jpg', '2024-05-07 15:18:45'), (13, 9, '7d675ef7-fc5e-4459-b585-971798a29329.jpg', '2024-05-07 15:18:45'), (14, 9, '1d29327e-0600-456e-83de-c6448efc70b1.jpg', '2024-05-07 15:18:45'), (15, 9, 'ed5e7e89-c413-46d2-b4dc-c4a64ee6ed23.jpg', '2024-05-07 15:18:45'), (16, 9, 'a33d3160-e04b-443f-9d0b-844501fecd1e.png', '2024-05-07 15:18:45'), (17, 10, '0697e778-af49-4f7f-b149-6304a9e8ba9b.gif', '2024-05-07 15:25:45'), (36, 40, 'f722248d-3e12-4d3d-b80a-403619b19889.jpg', '2024-05-20 10:34:01'), (37, 40, '5774b156-8d7d-49fd-92e9-bf75ed0bebc9.jpg', '2024-05-20 10:34:01'), (38, 41, '7546a520-e307-4a0d-ac4a-7e79c20f9346.jpg', '2024-05-20 10:35:07'), (39, 41, '71cbbed1-67e2-4290-bbb9-7f9298d4c77e.jpg', '2024-05-20 10:35:07'), (54, 50, '4a3399f3-c168-4f63-8176-327adcec4cbc.gif', '2024-05-21 11:21:53'), (55, 51, 'e24a4cd4-113c-41ec-addb-569974e92acc.gif', '2024-05-21 11:25:18'), (56, 52, 'e8ef45c2-2dbe-47a2-b31a-ea4c5d936b7e.gif', '2024-05-21 12:02:04'), (57, 53, '8dd09cef-07c7-4412-be20-c5edb9a34a2e.gif', '2024-05-21 12:08:42')
- {executed in 3 msec}
-[2024-06-13 12:20:12 DEBUG Test worker] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
-1. INSERT INTO `user_follow` (`from_user_id`, `to_user_id`, `created_at`) VALUES (1, 2, '2024-05-20 16:49:53'), (1, 3, '2024-05-20 16:49:53'), (1, 4, '2024-05-20 16:49:53'), (1, 5, '2024-05-20 16:49:53'), (2, 1, '2024-05-20 16:49:53'), (2, 3, '2024-05-20 16:49:53'), (2, 4, '2024-05-20 16:49:53'), (2, 5, '2024-05-20 16:49:53'), (3, 1, '2024-05-20 16:49:53'), (3, 2, '2024-05-20 16:49:53'), (3, 4, '2024-05-20 16:49:53'), (3, 5, '2024-05-20 16:49:53')
- {executed in 2 msec}
-[2024-06-13 12:20:12 INFO  Test worker] [org.springframework.boot.autoconfigure.web.servlet.WelcomePageHandlerMapping] Adding welcome page: class path resource [static/index.html]
-[2024-06-13 12:20:13 INFO  Test worker] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] Initializing Spring TestDispatcherServlet ''
-[2024-06-13 12:20:13 INFO  Test worker] [org.springframework.test.web.servlet.TestDispatcherServlet] Initializing Servlet ''
-[2024-06-13 12:20:13 INFO  Test worker] [org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver] Exposing 1 endpoint(s) beneath base path '/actuator'
-[2024-06-13 12:20:13 INFO  Test worker] [org.springframework.test.web.servlet.TestDispatcherServlet] Completed initialization in 13 ms
-[2024-06-13 12:20:13 INFO  Test worker] [org.apache.coyote.http11.Http11NioProtocol] Starting ProtocolHandler ["http-nio-auto-1"]
-[2024-06-13 12:20:13 INFO  Test worker] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] Tomcat started on port 53724 (http) with context path ''
-[2024-06-13 12:20:13 INFO  Test worker] [com.green.greengram.feedfavorite.FeedFavoriteIntegrationTest] Started FeedFavoriteIntegrationTest in 2.555 seconds (process running for 3.422)
-[2024-06-13 12:20:13 DEBUG Test worker] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
-1. DELETE FROM feed_favorite
-        WHERE feed_id = 5
-        AND user_id = 1
- {executed in 1 msec}
-[2024-06-13 12:20:14 INFO  SpringApplicationShutdownHook] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Shutdown initiated...
-[2024-06-13 12:20:14 INFO  SpringApplicationShutdownHook] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Shutdown completed.
-[2024-06-13 12:20:56 INFO  Test worker] [com.green.greengram.feedfavorite.FeedFavoriteIntegrationTest] Starting FeedFavoriteIntegrationTest using Java 17.0.10 with PID 12900 (started by Administrator in D:\2024-1\Backend\GreengramVer3TDD)
-[2024-06-13 12:20:56 INFO  Test worker] [com.green.greengram.feedfavorite.FeedFavoriteIntegrationTest] The following 1 profile is active: "tdd"
-[2024-06-13 12:20:57 INFO  Test worker] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] Tomcat initialized with port 0 (http)
-[2024-06-13 12:20:57 INFO  Test worker] [org.apache.coyote.http11.Http11NioProtocol] Initializing ProtocolHandler ["http-nio-auto-1"]
-[2024-06-13 12:20:57 INFO  Test worker] [org.apache.catalina.core.StandardService] Starting service [Tomcat]
-[2024-06-13 12:20:57 INFO  Test worker] [org.apache.catalina.core.StandardEngine] Starting Servlet engine: [Apache Tomcat/10.1.20]
-[2024-06-13 12:20:57 INFO  Test worker] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] Initializing Spring embedded WebApplicationContext
-[2024-06-13 12:20:57 INFO  Test worker] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] Root WebApplicationContext: initialization completed in 1178 ms
-[2024-06-13 12:20:57 INFO  Test worker] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Starting...
-[2024-06-13 12:20:57 INFO  Test worker] [com.zaxxer.hikari.pool.HikariPool] HikariPool-1 - Added connection net.sf.log4jdbc.sql.jdbcapi.ConnectionSpy@6475e778
-[2024-06-13 12:20:57 INFO  Test worker] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Start completed.
-[2024-06-13 12:20:57 DEBUG Test worker] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
-1. CREATE TABLE IF NOT EXISTS `user` ( `user_id` bigint(20) NOT NULL AUTO_INCREMENT, `uid` varchar(20) NOT NULL, `upw` varchar(100) NOT NULL, `nm` varchar(20) NOT NULL, `pic` varchar(100) DEFAULT NULL, `created_at` datetime NOT NULL DEFAULT current_timestamp(), `updated_at` datetime DEFAULT NULL ON UPDATE current_timestamp(), PRIMARY KEY (`user_id`), UNIQUE KEY `uid` (`uid`) )
- {executed in 0 msec}
-[2024-06-13 12:20:57 DEBUG Test worker] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
-1. TRUNCATE TABLE user
- {executed in 7 msec}
-[2024-06-13 12:20:57 DEBUG Test worker] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
-1. CREATE TABLE IF NOT EXISTS `user_follow` ( `from_user_id` bigint(20) NOT NULL, `to_user_id` bigint(20) NOT NULL, `created_at` datetime NOT NULL DEFAULT current_timestamp(), PRIMARY KEY (`from_user_id`,`to_user_id`) )
- {executed in 1 msec}
-[2024-06-13 12:20:57 DEBUG Test worker] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
-1. TRUNCATE TABLE user_follow
- {executed in 5 msec}
-[2024-06-13 12:20:57 DEBUG Test worker] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
-1. CREATE TABLE IF NOT EXISTS `feed` ( `feed_id` bigint(20) NOT NULL AUTO_INCREMENT, `writer_id` bigint(20) NOT NULL, `contents` varchar(1000) DEFAULT NULL, `location` varchar(30) DEFAULT NULL, `created_at` datetime NOT NULL DEFAULT current_timestamp(), `updated_at` datetime DEFAULT NULL ON UPDATE current_timestamp(), PRIMARY KEY (`feed_id`) )
- {executed in 1 msec}
-[2024-06-13 12:20:57 DEBUG Test worker] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
-1. TRUNCATE TABLE feed
- {executed in 6 msec}
-[2024-06-13 12:20:57 DEBUG Test worker] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
-1. CREATE TABLE IF NOT EXISTS `feed_comment` ( `feed_comment_id` bigint(20) NOT NULL AUTO_INCREMENT, `feed_id` bigint(20) NOT NULL, `user_id` bigint(20) NOT NULL, `COMMENT` varchar(1000) NOT NULL, `created_at` datetime NOT NULL DEFAULT current_timestamp(), `updated_at` datetime DEFAULT NULL ON UPDATE current_timestamp(), PRIMARY KEY (`feed_comment_id`) )
- {executed in 0 msec}
-[2024-06-13 12:20:57 DEBUG Test worker] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
-1. TRUNCATE TABLE feed_comment
- {executed in 5 msec}
-[2024-06-13 12:20:57 DEBUG Test worker] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
-1. CREATE TABLE IF NOT EXISTS `feed_favorite` ( `feed_id` bigint(20) NOT NULL, `user_id` bigint(20) NOT NULL, `created_at` datetime NOT NULL DEFAULT current_timestamp(), PRIMARY KEY (`feed_id`,`user_id`) USING BTREE )
- {executed in 0 msec}
-[2024-06-13 12:20:57 DEBUG Test worker] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
-1. TRUNCATE TABLE feed_favorite
- {executed in 6 msec}
-[2024-06-13 12:20:57 DEBUG Test worker] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
-1. CREATE TABLE IF NOT EXISTS `feed_pics` ( `feed_pic_id` bigint(20) NOT NULL AUTO_INCREMENT, `feed_id` bigint(20) NOT NULL, `pic` varchar(50) NOT NULL, `created_at` datetime NOT NULL DEFAULT current_timestamp(), PRIMARY KEY (`feed_pic_id`) USING BTREE )
- {executed in 0 msec}
-[2024-06-13 12:20:57 DEBUG Test worker] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
-1. TRUNCATE TABLE feed_pics
- {executed in 5 msec}
-[2024-06-13 12:20:57 DEBUG Test worker] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
-1. INSERT INTO `user` (`user_id`, `uid`, `upw`, `nm`, `pic`, `created_at`, `updated_at`) VALUES (1, '사용자1', '$2a$10$ZniS9vUxLxwm/PyDyHd6DuKI8KbkQwqddPGVskiBJsu3VD1zW8WXm', '홍길동', '363403f9-8d51-4a5c-a891-abaf8b317910.jpg', '2024-05-03 14:35:08', NULL), (2, '사용자2', '$2a$10$qsItixp0DK/47.E5Fdh.oOk4YSu/zfnIS4jMjWiVtWFRSkQMg7wcy', '5월20일2', '111fad30-256c-484b-aea3-bca8e3f434aa.jpg', '2024-05-20 10:34:56', '2024-05-20 14:48:07'), (3, '사용자3', '$2a$10$CiBlbjaB/h/j583SUMw6BOLjd3On4Az6A7McHo2etRFWD0S.lorGK', '5월20일', '81695b24-7863-407c-8f40-ca0a3be511ed.jpg', '2024-05-20 10:33:48', '2024-05-20 14:48:09'), (4, '사용자4', '$2a$10$C3bd.tBbywD30PtjpXewieNCXoK9.nPgXtGg0wmY3ubPM.jVjTvMK', '5월20일3', 'fdbabf84-693f-4476-a1bd-94a8ed2136e9.gif', '2024-05-20 12:31:01', NULL), (5, '사용자5', '$2a$10$QO9guQRofPBqIUFqFtvHHejgRDs6xRxjNfI5CoODz6OzZmlR6vDhe', '', '4c0c086d-480a-453e-a527-4d445403544a.jpg', '2024-05-20 12:42:16', NULL), (6, '사용자6', '5월16일', '5월16일', '5월16일', '2024-05-20 14:36:02', NULL), (7, '사용자7', '$2a$10$mzp5gIhp8N5Kj5rRA05h9O9TaBvoIBHibcwbjm9XyWkSrDo6nYhM.', '5월21일', '28bfba96-587b-4c0a-8e3d-dc1a473350ca.jpg', '2024-05-21 11:21:10', '2024-05-22 15:39:45'), (8, '사용자8', '$2a$10$lZzlyFmUfFbjy.l.WtGXUeml0B0Sq/FMPCYo5GN7Rgrnc0VHR8.06', '5월23일', '6e02655c-86fb-405f-b7e5-35bbb9ab64a2.jpg', '2024-05-23 10:45:24', '2024-05-23 11:48:11')
- {executed in 0 msec}
-[2024-06-13 12:20:57 DEBUG Test worker] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
-1. INSERT INTO `feed` (`feed_id`, `writer_id`, `contents`, `location`, `created_at`, `updated_at`) VALUES (1, 1, '내용1', '장소1', '2024-05-07 11:16:33', NULL), (2, 2, '내용2', '장소2', '2024-05-07 14:20:25', NULL), (3, 3, '내용3', '장소3', '2024-05-07 14:20:40', NULL), (4, 4, '내용4', '장소4', '2024-05-07 14:21:04', NULL), (5, 5, '내용5', '장소5', '2024-05-07 15:18:25', NULL), (6, 6, '내용6', '장소6', '2024-05-07 15:18:45', NULL), (7, 7, '내용7', '장소7', '2024-05-07 15:25:45', NULL), (8, 8, '내용8', '장소8', '2024-05-20 10:34:01', NULL), (9, 9, '내용9', '장소9', '2024-05-20 10:35:07', NULL), (10, 10, '내용10', '장소10', '2024-05-20 12:23:26', NULL), (11, 11, '내용11', '장소11', '2024-05-20 12:28:00', NULL), (12, 12, '내용12', '장소12', '2024-05-20 12:28:30', NULL), (13, 13, '내용13', '장소13', '2024-05-20 12:31:16', NULL), (14, 14, '내용14', '장소14', '2024-05-20 12:31:29', NULL), (15, 15, '내용15', '장소15', '2024-05-20 12:42:26', NULL), (16, 16, '내용16', '장소16', '2024-05-20 12:57:01', NULL), (17, 17, '내용17', '장소17', '2024-05-21 11:21:35', NULL), (18, 18, '내용18', '장소18', '2024-05-21 11:21:53', NULL), (19, 19, '내용19', '장소19', '2024-05-21 11:25:18', NULL), (20, 20, '내용20', '장소20', '2024-05-21 12:02:04', NULL), (21, 21, '내용21', '장소21', '2024-05-21 12:08:42', NULL), (22, 22, '내용22', '장소22', '2024-05-22 14:41:27', NULL), (23, 23, '내용23', '장소23', '2024-05-22 14:43:10', NULL), (24, 24, '내용24', '장소24', '2024-05-23 13:13:41', NULL), (25, 25, '내용25', '장소25', '2024-05-23 16:54:43', NULL)
- {executed in 3 msec}
-[2024-06-13 12:20:57 DEBUG Test worker] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
-1. INSERT INTO `feed_comment` (`feed_comment_id`, `feed_id`, `user_id`, `COMMENT`, `created_at`, `updated_at`) VALUES (1, 11, 1, '댓글내용1', '2024-05-20 10:34:04', NULL), (2, 12, 2, '댓글내용2', '2024-05-20 10:34:05', NULL), (3, 13, 3, '댓글내용3', '2024-05-20 10:34:07', NULL), (4, 14, 4, '댓글내용4', '2024-05-20 10:34:09', NULL), (5, 15, 5, '댓글내용5', '2024-05-22 14:42:18', NULL), (6, 16, 6, '댓글내용6', '2024-05-22 14:42:19', NULL), (7, 17, 1, '댓글내용7', '2024-05-22 14:42:23', NULL), (8, 18, 2, '댓글내용8', '2024-05-22 14:42:24', NULL), (9, 19, 3, '댓글내용9', '2024-05-22 14:43:16', NULL), (10, 20, 4, '댓글내용10', '2024-05-22 14:43:17', NULL), (11, 21, 5, '댓글내용11', '2024-05-22 14:43:18', NULL), (12, 22, 6, '댓글내용12', '2024-05-22 14:43:19', NULL)
- {executed in 2 msec}
-[2024-06-13 12:20:57 DEBUG Test worker] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
-1. INSERT INTO `feed_favorite` (`feed_id`, `user_id`, `created_at`) VALUES (5, 1, '2024-05-20 12:57:04'), (6, 2, '2024-05-20 12:42:27'), (7, 3, '2024-05-20 12:42:37'), (8, 4, '2024-05-20 12:57:03'), (9, 5, '2024-05-21 11:24:43'), (10, 1, '2024-05-21 11:24:45'), (11, 2, '2024-05-21 11:25:28'), (12, 3, '2024-05-21 12:08:47'), (13, 4, '2024-05-23 16:56:46'), (14, 5, '2024-05-24 15:49:08')
- {executed in 1 msec}
-[2024-06-13 12:20:57 DEBUG Test worker] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
-1. INSERT INTO `feed_pics` (`feed_pic_id`, `feed_id`, `pic`, `created_at`) VALUES (2, 1, '74e663f3-c442-4dfa-acd5-d17d40bf1c95.jpg', '2024-05-07 11:16:46'), (3, 1, '27998cd5-7f48-4eab-ae4e-7a70dc66da1b.jpeg', '2024-05-07 11:16:46'), (4, 5, '876ba65a-7791-4617-b679-a6c0879d09a9.hwp', '2024-05-07 14:20:25'), (5, 6, 'ce7ef9ea-3b8c-4ce9-9d2a-23070d586501.gif', '2024-05-07 14:20:40'), (6, 7, 'adebddf0-4037-47c8-ab1a-1eed049f6ce8.gif', '2024-05-07 14:21:04'), (9, 8, 'ae5dc0aa-870e-49b3-85d1-76c9fc43fabe.jpg', '2024-05-07 15:18:25'), (10, 8, 'c2d28937-75e6-460d-a717-50640d5c8308.jpg', '2024-05-07 15:18:25'), (11, 9, '4d721b39-fbac-405d-8e99-4aa1bd20af9d.jpg', '2024-05-07 15:18:45'), (12, 9, 'f2ed5f0d-6100-4c93-84af-e1ee08c5c91f.jpg', '2024-05-07 15:18:45'), (13, 9, '7d675ef7-fc5e-4459-b585-971798a29329.jpg', '2024-05-07 15:18:45'), (14, 9, '1d29327e-0600-456e-83de-c6448efc70b1.jpg', '2024-05-07 15:18:45'), (15, 9, 'ed5e7e89-c413-46d2-b4dc-c4a64ee6ed23.jpg', '2024-05-07 15:18:45'), (16, 9, 'a33d3160-e04b-443f-9d0b-844501fecd1e.png', '2024-05-07 15:18:45'), (17, 10, '0697e778-af49-4f7f-b149-6304a9e8ba9b.gif', '2024-05-07 15:25:45'), (36, 40, 'f722248d-3e12-4d3d-b80a-403619b19889.jpg', '2024-05-20 10:34:01'), (37, 40, '5774b156-8d7d-49fd-92e9-bf75ed0bebc9.jpg', '2024-05-20 10:34:01'), (38, 41, '7546a520-e307-4a0d-ac4a-7e79c20f9346.jpg', '2024-05-20 10:35:07'), (39, 41, '71cbbed1-67e2-4290-bbb9-7f9298d4c77e.jpg', '2024-05-20 10:35:07'), (54, 50, '4a3399f3-c168-4f63-8176-327adcec4cbc.gif', '2024-05-21 11:21:53'), (55, 51, 'e24a4cd4-113c-41ec-addb-569974e92acc.gif', '2024-05-21 11:25:18'), (56, 52, 'e8ef45c2-2dbe-47a2-b31a-ea4c5d936b7e.gif', '2024-05-21 12:02:04'), (57, 53, '8dd09cef-07c7-4412-be20-c5edb9a34a2e.gif', '2024-05-21 12:08:42')
- {executed in 1 msec}
-[2024-06-13 12:20:57 DEBUG Test worker] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
-1. INSERT INTO `user_follow` (`from_user_id`, `to_user_id`, `created_at`) VALUES (1, 2, '2024-05-20 16:49:53'), (1, 3, '2024-05-20 16:49:53'), (1, 4, '2024-05-20 16:49:53'), (1, 5, '2024-05-20 16:49:53'), (2, 1, '2024-05-20 16:49:53'), (2, 3, '2024-05-20 16:49:53'), (2, 4, '2024-05-20 16:49:53'), (2, 5, '2024-05-20 16:49:53'), (3, 1, '2024-05-20 16:49:53'), (3, 2, '2024-05-20 16:49:53'), (3, 4, '2024-05-20 16:49:53'), (3, 5, '2024-05-20 16:49:53')
- {executed in 2 msec}
-[2024-06-13 12:20:57 INFO  Test worker] [org.springframework.boot.autoconfigure.web.servlet.WelcomePageHandlerMapping] Adding welcome page: class path resource [static/index.html]
-[2024-06-13 12:20:58 INFO  Test worker] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] Initializing Spring TestDispatcherServlet ''
-[2024-06-13 12:20:58 INFO  Test worker] [org.springframework.test.web.servlet.TestDispatcherServlet] Initializing Servlet ''
-[2024-06-13 12:20:58 INFO  Test worker] [org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver] Exposing 1 endpoint(s) beneath base path '/actuator'
-[2024-06-13 12:20:58 INFO  Test worker] [org.springframework.test.web.servlet.TestDispatcherServlet] Completed initialization in 12 ms
-[2024-06-13 12:20:58 INFO  Test worker] [org.apache.coyote.http11.Http11NioProtocol] Starting ProtocolHandler ["http-nio-auto-1"]
-[2024-06-13 12:20:58 INFO  Test worker] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] Tomcat started on port 53744 (http) with context path ''
-[2024-06-13 12:20:58 INFO  Test worker] [com.green.greengram.feedfavorite.FeedFavoriteIntegrationTest] Started FeedFavoriteIntegrationTest in 2.524 seconds (process running for 3.378)
-[2024-06-13 12:20:59 DEBUG Test worker] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
-1. DELETE FROM feed_favorite
-        WHERE feed_id = 5
-        AND user_id = 1
- {executed in 0 msec}
-[2024-06-13 12:20:59 INFO  SpringApplicationShutdownHook] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Shutdown initiated...
-[2024-06-13 12:20:59 INFO  SpringApplicationShutdownHook] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Shutdown completed.
-[2024-06-13 12:21:55 INFO  Test worker] [com.green.greengram.feedfavorite.FeedFavoriteIntegrationTest] Starting FeedFavoriteIntegrationTest using Java 17.0.10 with PID 3720 (started by Administrator in D:\2024-1\Backend\GreengramVer3TDD)
-[2024-06-13 12:21:55 INFO  Test worker] [com.green.greengram.feedfavorite.FeedFavoriteIntegrationTest] The following 1 profile is active: "tdd"
-[2024-06-13 12:21:56 INFO  Test worker] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] Tomcat initialized with port 0 (http)
-[2024-06-13 12:21:57 INFO  Test worker] [org.apache.coyote.http11.Http11NioProtocol] Initializing ProtocolHandler ["http-nio-auto-1"]
-[2024-06-13 12:21:57 INFO  Test worker] [org.apache.catalina.core.StandardService] Starting service [Tomcat]
-[2024-06-13 12:21:57 INFO  Test worker] [org.apache.catalina.core.StandardEngine] Starting Servlet engine: [Apache Tomcat/10.1.20]
-[2024-06-13 12:21:57 INFO  Test worker] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] Initializing Spring embedded WebApplicationContext
-[2024-06-13 12:21:57 INFO  Test worker] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] Root WebApplicationContext: initialization completed in 1142 ms
-[2024-06-13 12:21:57 INFO  Test worker] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Starting...
-[2024-06-13 12:21:57 INFO  Test worker] [com.zaxxer.hikari.pool.HikariPool] HikariPool-1 - Added connection net.sf.log4jdbc.sql.jdbcapi.ConnectionSpy@343d1d25
-[2024-06-13 12:21:57 INFO  Test worker] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Start completed.
-[2024-06-13 12:21:57 DEBUG Test worker] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
-1. CREATE TABLE IF NOT EXISTS `user` ( `user_id` bigint(20) NOT NULL AUTO_INCREMENT, `uid` varchar(20) NOT NULL, `upw` varchar(100) NOT NULL, `nm` varchar(20) NOT NULL, `pic` varchar(100) DEFAULT NULL, `created_at` datetime NOT NULL DEFAULT current_timestamp(), `updated_at` datetime DEFAULT NULL ON UPDATE current_timestamp(), PRIMARY KEY (`user_id`), UNIQUE KEY `uid` (`uid`) )
- {executed in 0 msec}
-[2024-06-13 12:21:57 DEBUG Test worker] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
-1. TRUNCATE TABLE user
- {executed in 11 msec}
-[2024-06-13 12:21:57 DEBUG Test worker] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
-1. CREATE TABLE IF NOT EXISTS `user_follow` ( `from_user_id` bigint(20) NOT NULL, `to_user_id` bigint(20) NOT NULL, `created_at` datetime NOT NULL DEFAULT current_timestamp(), PRIMARY KEY (`from_user_id`,`to_user_id`) )
- {executed in 1 msec}
-[2024-06-13 12:21:57 DEBUG Test worker] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
-1. TRUNCATE TABLE user_follow
- {executed in 5 msec}
-[2024-06-13 12:21:57 DEBUG Test worker] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
-1. CREATE TABLE IF NOT EXISTS `feed` ( `feed_id` bigint(20) NOT NULL AUTO_INCREMENT, `writer_id` bigint(20) NOT NULL, `contents` varchar(1000) DEFAULT NULL, `location` varchar(30) DEFAULT NULL, `created_at` datetime NOT NULL DEFAULT current_timestamp(), `updated_at` datetime DEFAULT NULL ON UPDATE current_timestamp(), PRIMARY KEY (`feed_id`) )
- {executed in 0 msec}
-[2024-06-13 12:21:57 DEBUG Test worker] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
-1. TRUNCATE TABLE feed
- {executed in 6 msec}
-[2024-06-13 12:21:57 DEBUG Test worker] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
-1. CREATE TABLE IF NOT EXISTS `feed_comment` ( `feed_comment_id` bigint(20) NOT NULL AUTO_INCREMENT, `feed_id` bigint(20) NOT NULL, `user_id` bigint(20) NOT NULL, `COMMENT` varchar(1000) NOT NULL, `created_at` datetime NOT NULL DEFAULT current_timestamp(), `updated_at` datetime DEFAULT NULL ON UPDATE current_timestamp(), PRIMARY KEY (`feed_comment_id`) )
- {executed in 0 msec}
-[2024-06-13 12:21:57 DEBUG Test worker] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
-1. TRUNCATE TABLE feed_comment
- {executed in 5 msec}
-[2024-06-13 12:21:57 DEBUG Test worker] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
-1. CREATE TABLE IF NOT EXISTS `feed_favorite` ( `feed_id` bigint(20) NOT NULL, `user_id` bigint(20) NOT NULL, `created_at` datetime NOT NULL DEFAULT current_timestamp(), PRIMARY KEY (`feed_id`,`user_id`) USING BTREE )
- {executed in 0 msec}
-[2024-06-13 12:21:57 DEBUG Test worker] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
-1. TRUNCATE TABLE feed_favorite
- {executed in 6 msec}
-[2024-06-13 12:21:57 DEBUG Test worker] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
-1. CREATE TABLE IF NOT EXISTS `feed_pics` ( `feed_pic_id` bigint(20) NOT NULL AUTO_INCREMENT, `feed_id` bigint(20) NOT NULL, `pic` varchar(50) NOT NULL, `created_at` datetime NOT NULL DEFAULT current_timestamp(), PRIMARY KEY (`feed_pic_id`) USING BTREE )
- {executed in 0 msec}
-[2024-06-13 12:21:57 DEBUG Test worker] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
-1. TRUNCATE TABLE feed_pics
- {executed in 5 msec}
-[2024-06-13 12:21:57 DEBUG Test worker] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
-1. INSERT INTO `user` (`user_id`, `uid`, `upw`, `nm`, `pic`, `created_at`, `updated_at`) VALUES (1, '사용자1', '$2a$10$ZniS9vUxLxwm/PyDyHd6DuKI8KbkQwqddPGVskiBJsu3VD1zW8WXm', '홍길동', '363403f9-8d51-4a5c-a891-abaf8b317910.jpg', '2024-05-03 14:35:08', NULL), (2, '사용자2', '$2a$10$qsItixp0DK/47.E5Fdh.oOk4YSu/zfnIS4jMjWiVtWFRSkQMg7wcy', '5월20일2', '111fad30-256c-484b-aea3-bca8e3f434aa.jpg', '2024-05-20 10:34:56', '2024-05-20 14:48:07'), (3, '사용자3', '$2a$10$CiBlbjaB/h/j583SUMw6BOLjd3On4Az6A7McHo2etRFWD0S.lorGK', '5월20일', '81695b24-7863-407c-8f40-ca0a3be511ed.jpg', '2024-05-20 10:33:48', '2024-05-20 14:48:09'), (4, '사용자4', '$2a$10$C3bd.tBbywD30PtjpXewieNCXoK9.nPgXtGg0wmY3ubPM.jVjTvMK', '5월20일3', 'fdbabf84-693f-4476-a1bd-94a8ed2136e9.gif', '2024-05-20 12:31:01', NULL), (5, '사용자5', '$2a$10$QO9guQRofPBqIUFqFtvHHejgRDs6xRxjNfI5CoODz6OzZmlR6vDhe', '', '4c0c086d-480a-453e-a527-4d445403544a.jpg', '2024-05-20 12:42:16', NULL), (6, '사용자6', '5월16일', '5월16일', '5월16일', '2024-05-20 14:36:02', NULL), (7, '사용자7', '$2a$10$mzp5gIhp8N5Kj5rRA05h9O9TaBvoIBHibcwbjm9XyWkSrDo6nYhM.', '5월21일', '28bfba96-587b-4c0a-8e3d-dc1a473350ca.jpg', '2024-05-21 11:21:10', '2024-05-22 15:39:45'), (8, '사용자8', '$2a$10$lZzlyFmUfFbjy.l.WtGXUeml0B0Sq/FMPCYo5GN7Rgrnc0VHR8.06', '5월23일', '6e02655c-86fb-405f-b7e5-35bbb9ab64a2.jpg', '2024-05-23 10:45:24', '2024-05-23 11:48:11')
- {executed in 2 msec}
-[2024-06-13 12:21:57 DEBUG Test worker] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
-1. INSERT INTO `feed` (`feed_id`, `writer_id`, `contents`, `location`, `created_at`, `updated_at`) VALUES (1, 1, '내용1', '장소1', '2024-05-07 11:16:33', NULL), (2, 2, '내용2', '장소2', '2024-05-07 14:20:25', NULL), (3, 3, '내용3', '장소3', '2024-05-07 14:20:40', NULL), (4, 4, '내용4', '장소4', '2024-05-07 14:21:04', NULL), (5, 5, '내용5', '장소5', '2024-05-07 15:18:25', NULL), (6, 6, '내용6', '장소6', '2024-05-07 15:18:45', NULL), (7, 7, '내용7', '장소7', '2024-05-07 15:25:45', NULL), (8, 8, '내용8', '장소8', '2024-05-20 10:34:01', NULL), (9, 9, '내용9', '장소9', '2024-05-20 10:35:07', NULL), (10, 10, '내용10', '장소10', '2024-05-20 12:23:26', NULL), (11, 11, '내용11', '장소11', '2024-05-20 12:28:00', NULL), (12, 12, '내용12', '장소12', '2024-05-20 12:28:30', NULL), (13, 13, '내용13', '장소13', '2024-05-20 12:31:16', NULL), (14, 14, '내용14', '장소14', '2024-05-20 12:31:29', NULL), (15, 15, '내용15', '장소15', '2024-05-20 12:42:26', NULL), (16, 16, '내용16', '장소16', '2024-05-20 12:57:01', NULL), (17, 17, '내용17', '장소17', '2024-05-21 11:21:35', NULL), (18, 18, '내용18', '장소18', '2024-05-21 11:21:53', NULL), (19, 19, '내용19', '장소19', '2024-05-21 11:25:18', NULL), (20, 20, '내용20', '장소20', '2024-05-21 12:02:04', NULL), (21, 21, '내용21', '장소21', '2024-05-21 12:08:42', NULL), (22, 22, '내용22', '장소22', '2024-05-22 14:41:27', NULL), (23, 23, '내용23', '장소23', '2024-05-22 14:43:10', NULL), (24, 24, '내용24', '장소24', '2024-05-23 13:13:41', NULL), (25, 25, '내용25', '장소25', '2024-05-23 16:54:43', NULL)
- {executed in 2 msec}
-[2024-06-13 12:21:57 DEBUG Test worker] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
-1. INSERT INTO `feed_comment` (`feed_comment_id`, `feed_id`, `user_id`, `COMMENT`, `created_at`, `updated_at`) VALUES (1, 11, 1, '댓글내용1', '2024-05-20 10:34:04', NULL), (2, 12, 2, '댓글내용2', '2024-05-20 10:34:05', NULL), (3, 13, 3, '댓글내용3', '2024-05-20 10:34:07', NULL), (4, 14, 4, '댓글내용4', '2024-05-20 10:34:09', NULL), (5, 15, 5, '댓글내용5', '2024-05-22 14:42:18', NULL), (6, 16, 6, '댓글내용6', '2024-05-22 14:42:19', NULL), (7, 17, 1, '댓글내용7', '2024-05-22 14:42:23', NULL), (8, 18, 2, '댓글내용8', '2024-05-22 14:42:24', NULL), (9, 19, 3, '댓글내용9', '2024-05-22 14:43:16', NULL), (10, 20, 4, '댓글내용10', '2024-05-22 14:43:17', NULL), (11, 21, 5, '댓글내용11', '2024-05-22 14:43:18', NULL), (12, 22, 6, '댓글내용12', '2024-05-22 14:43:19', NULL)
- {executed in 1 msec}
-[2024-06-13 12:21:57 DEBUG Test worker] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
-1. INSERT INTO `feed_favorite` (`feed_id`, `user_id`, `created_at`) VALUES (5, 1, '2024-05-20 12:57:04'), (6, 2, '2024-05-20 12:42:27'), (7, 3, '2024-05-20 12:42:37'), (8, 4, '2024-05-20 12:57:03'), (9, 5, '2024-05-21 11:24:43'), (10, 1, '2024-05-21 11:24:45'), (11, 2, '2024-05-21 11:25:28'), (12, 3, '2024-05-21 12:08:47'), (13, 4, '2024-05-23 16:56:46'), (14, 5, '2024-05-24 15:49:08')
- {executed in 2 msec}
-[2024-06-13 12:21:57 DEBUG Test worker] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
-1. INSERT INTO `feed_pics` (`feed_pic_id`, `feed_id`, `pic`, `created_at`) VALUES (2, 1, '74e663f3-c442-4dfa-acd5-d17d40bf1c95.jpg', '2024-05-07 11:16:46'), (3, 1, '27998cd5-7f48-4eab-ae4e-7a70dc66da1b.jpeg', '2024-05-07 11:16:46'), (4, 5, '876ba65a-7791-4617-b679-a6c0879d09a9.hwp', '2024-05-07 14:20:25'), (5, 6, 'ce7ef9ea-3b8c-4ce9-9d2a-23070d586501.gif', '2024-05-07 14:20:40'), (6, 7, 'adebddf0-4037-47c8-ab1a-1eed049f6ce8.gif', '2024-05-07 14:21:04'), (9, 8, 'ae5dc0aa-870e-49b3-85d1-76c9fc43fabe.jpg', '2024-05-07 15:18:25'), (10, 8, 'c2d28937-75e6-460d-a717-50640d5c8308.jpg', '2024-05-07 15:18:25'), (11, 9, '4d721b39-fbac-405d-8e99-4aa1bd20af9d.jpg', '2024-05-07 15:18:45'), (12, 9, 'f2ed5f0d-6100-4c93-84af-e1ee08c5c91f.jpg', '2024-05-07 15:18:45'), (13, 9, '7d675ef7-fc5e-4459-b585-971798a29329.jpg', '2024-05-07 15:18:45'), (14, 9, '1d29327e-0600-456e-83de-c6448efc70b1.jpg', '2024-05-07 15:18:45'), (15, 9, 'ed5e7e89-c413-46d2-b4dc-c4a64ee6ed23.jpg', '2024-05-07 15:18:45'), (16, 9, 'a33d3160-e04b-443f-9d0b-844501fecd1e.png', '2024-05-07 15:18:45'), (17, 10, '0697e778-af49-4f7f-b149-6304a9e8ba9b.gif', '2024-05-07 15:25:45'), (36, 40, 'f722248d-3e12-4d3d-b80a-403619b19889.jpg', '2024-05-20 10:34:01'), (37, 40, '5774b156-8d7d-49fd-92e9-bf75ed0bebc9.jpg', '2024-05-20 10:34:01'), (38, 41, '7546a520-e307-4a0d-ac4a-7e79c20f9346.jpg', '2024-05-20 10:35:07'), (39, 41, '71cbbed1-67e2-4290-bbb9-7f9298d4c77e.jpg', '2024-05-20 10:35:07'), (54, 50, '4a3399f3-c168-4f63-8176-327adcec4cbc.gif', '2024-05-21 11:21:53'), (55, 51, 'e24a4cd4-113c-41ec-addb-569974e92acc.gif', '2024-05-21 11:25:18'), (56, 52, 'e8ef45c2-2dbe-47a2-b31a-ea4c5d936b7e.gif', '2024-05-21 12:02:04'), (57, 53, '8dd09cef-07c7-4412-be20-c5edb9a34a2e.gif', '2024-05-21 12:08:42')
- {executed in 2 msec}
-[2024-06-13 12:21:57 DEBUG Test worker] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
-1. INSERT INTO `user_follow` (`from_user_id`, `to_user_id`, `created_at`) VALUES (1, 2, '2024-05-20 16:49:53'), (1, 3, '2024-05-20 16:49:53'), (1, 4, '2024-05-20 16:49:53'), (1, 5, '2024-05-20 16:49:53'), (2, 1, '2024-05-20 16:49:53'), (2, 3, '2024-05-20 16:49:53'), (2, 4, '2024-05-20 16:49:53'), (2, 5, '2024-05-20 16:49:53'), (3, 1, '2024-05-20 16:49:53'), (3, 2, '2024-05-20 16:49:53'), (3, 4, '2024-05-20 16:49:53'), (3, 5, '2024-05-20 16:49:53')
- {executed in 3 msec}
-[2024-06-13 12:21:57 INFO  Test worker] [org.springframework.boot.autoconfigure.web.servlet.WelcomePageHandlerMapping] Adding welcome page: class path resource [static/index.html]
-[2024-06-13 12:21:58 INFO  Test worker] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] Initializing Spring TestDispatcherServlet ''
-[2024-06-13 12:21:58 INFO  Test worker] [org.springframework.test.web.servlet.TestDispatcherServlet] Initializing Servlet ''
-[2024-06-13 12:21:58 INFO  Test worker] [org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver] Exposing 1 endpoint(s) beneath base path '/actuator'
-[2024-06-13 12:21:58 INFO  Test worker] [org.springframework.test.web.servlet.TestDispatcherServlet] Completed initialization in 15 ms
-[2024-06-13 12:21:58 INFO  Test worker] [org.apache.coyote.http11.Http11NioProtocol] Starting ProtocolHandler ["http-nio-auto-1"]
-[2024-06-13 12:21:58 INFO  Test worker] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] Tomcat started on port 53769 (http) with context path ''
-[2024-06-13 12:21:58 INFO  Test worker] [com.green.greengram.feedfavorite.FeedFavoriteIntegrationTest] Started FeedFavoriteIntegrationTest in 2.514 seconds (process running for 3.338)
-[2024-06-13 12:21:58 DEBUG Test worker] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
-1. DELETE FROM feed_favorite
-        WHERE feed_id = 5
-        AND user_id = 1
- {executed in 0 msec}
-[2024-06-13 12:21:58 INFO  SpringApplicationShutdownHook] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Shutdown initiated...
-[2024-06-13 12:21:58 INFO  SpringApplicationShutdownHook] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Shutdown completed.
-[2024-06-13 12:22:13 INFO  Test worker] [com.green.greengram.feedfavorite.FeedFavoriteIntegrationTest] Starting FeedFavoriteIntegrationTest using Java 17.0.10 with PID 9956 (started by Administrator in D:\2024-1\Backend\GreengramVer3TDD)
-[2024-06-13 12:22:13 INFO  Test worker] [com.green.greengram.feedfavorite.FeedFavoriteIntegrationTest] The following 1 profile is active: "tdd"
-[2024-06-13 12:22:14 INFO  Test worker] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] Tomcat initialized with port 0 (http)
-[2024-06-13 12:22:14 INFO  Test worker] [org.apache.coyote.http11.Http11NioProtocol] Initializing ProtocolHandler ["http-nio-auto-1"]
-[2024-06-13 12:22:14 INFO  Test worker] [org.apache.catalina.core.StandardService] Starting service [Tomcat]
-[2024-06-13 12:22:14 INFO  Test worker] [org.apache.catalina.core.StandardEngine] Starting Servlet engine: [Apache Tomcat/10.1.20]
-[2024-06-13 12:22:14 INFO  Test worker] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] Initializing Spring embedded WebApplicationContext
-[2024-06-13 12:22:14 INFO  Test worker] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] Root WebApplicationContext: initialization completed in 1190 ms
-[2024-06-13 12:22:14 INFO  Test worker] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Starting...
-[2024-06-13 12:22:14 INFO  Test worker] [com.zaxxer.hikari.pool.HikariPool] HikariPool-1 - Added connection net.sf.log4jdbc.sql.jdbcapi.ConnectionSpy@762da62b
-[2024-06-13 12:22:14 INFO  Test worker] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Start completed.
-[2024-06-13 12:22:14 DEBUG Test worker] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
-1. CREATE TABLE IF NOT EXISTS `user` ( `user_id` bigint(20) NOT NULL AUTO_INCREMENT, `uid` varchar(20) NOT NULL, `upw` varchar(100) NOT NULL, `nm` varchar(20) NOT NULL, `pic` varchar(100) DEFAULT NULL, `created_at` datetime NOT NULL DEFAULT current_timestamp(), `updated_at` datetime DEFAULT NULL ON UPDATE current_timestamp(), PRIMARY KEY (`user_id`), UNIQUE KEY `uid` (`uid`) )
- {executed in 0 msec}
-[2024-06-13 12:22:14 DEBUG Test worker] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
-1. TRUNCATE TABLE user
- {executed in 6 msec}
-[2024-06-13 12:22:14 DEBUG Test worker] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
-1. CREATE TABLE IF NOT EXISTS `user_follow` ( `from_user_id` bigint(20) NOT NULL, `to_user_id` bigint(20) NOT NULL, `created_at` datetime NOT NULL DEFAULT current_timestamp(), PRIMARY KEY (`from_user_id`,`to_user_id`) )
- {executed in 1 msec}
-[2024-06-13 12:22:14 DEBUG Test worker] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
-1. TRUNCATE TABLE user_follow
- {executed in 6 msec}
-[2024-06-13 12:22:14 DEBUG Test worker] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
-1. CREATE TABLE IF NOT EXISTS `feed` ( `feed_id` bigint(20) NOT NULL AUTO_INCREMENT, `writer_id` bigint(20) NOT NULL, `contents` varchar(1000) DEFAULT NULL, `location` varchar(30) DEFAULT NULL, `created_at` datetime NOT NULL DEFAULT current_timestamp(), `updated_at` datetime DEFAULT NULL ON UPDATE current_timestamp(), PRIMARY KEY (`feed_id`) )
- {executed in 0 msec}
-[2024-06-13 12:22:14 DEBUG Test worker] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
-1. TRUNCATE TABLE feed
- {executed in 5 msec}
-[2024-06-13 12:22:14 DEBUG Test worker] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
-1. CREATE TABLE IF NOT EXISTS `feed_comment` ( `feed_comment_id` bigint(20) NOT NULL AUTO_INCREMENT, `feed_id` bigint(20) NOT NULL, `user_id` bigint(20) NOT NULL, `COMMENT` varchar(1000) NOT NULL, `created_at` datetime NOT NULL DEFAULT current_timestamp(), `updated_at` datetime DEFAULT NULL ON UPDATE current_timestamp(), PRIMARY KEY (`feed_comment_id`) )
- {executed in 0 msec}
-[2024-06-13 12:22:14 DEBUG Test worker] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
-1. TRUNCATE TABLE feed_comment
- {executed in 5 msec}
-[2024-06-13 12:22:14 DEBUG Test worker] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
-1. CREATE TABLE IF NOT EXISTS `feed_favorite` ( `feed_id` bigint(20) NOT NULL, `user_id` bigint(20) NOT NULL, `created_at` datetime NOT NULL DEFAULT current_timestamp(), PRIMARY KEY (`feed_id`,`user_id`) USING BTREE )
- {executed in 1 msec}
-[2024-06-13 12:22:14 DEBUG Test worker] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
-1. TRUNCATE TABLE feed_favorite
- {executed in 5 msec}
-[2024-06-13 12:22:14 DEBUG Test worker] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
-1. CREATE TABLE IF NOT EXISTS `feed_pics` ( `feed_pic_id` bigint(20) NOT NULL AUTO_INCREMENT, `feed_id` bigint(20) NOT NULL, `pic` varchar(50) NOT NULL, `created_at` datetime NOT NULL DEFAULT current_timestamp(), PRIMARY KEY (`feed_pic_id`) USING BTREE )
- {executed in 1 msec}
-[2024-06-13 12:22:14 DEBUG Test worker] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
-1. TRUNCATE TABLE feed_pics
- {executed in 6 msec}
-[2024-06-13 12:22:14 DEBUG Test worker] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
-1. INSERT INTO `user` (`user_id`, `uid`, `upw`, `nm`, `pic`, `created_at`, `updated_at`) VALUES (1, '사용자1', '$2a$10$ZniS9vUxLxwm/PyDyHd6DuKI8KbkQwqddPGVskiBJsu3VD1zW8WXm', '홍길동', '363403f9-8d51-4a5c-a891-abaf8b317910.jpg', '2024-05-03 14:35:08', NULL), (2, '사용자2', '$2a$10$qsItixp0DK/47.E5Fdh.oOk4YSu/zfnIS4jMjWiVtWFRSkQMg7wcy', '5월20일2', '111fad30-256c-484b-aea3-bca8e3f434aa.jpg', '2024-05-20 10:34:56', '2024-05-20 14:48:07'), (3, '사용자3', '$2a$10$CiBlbjaB/h/j583SUMw6BOLjd3On4Az6A7McHo2etRFWD0S.lorGK', '5월20일', '81695b24-7863-407c-8f40-ca0a3be511ed.jpg', '2024-05-20 10:33:48', '2024-05-20 14:48:09'), (4, '사용자4', '$2a$10$C3bd.tBbywD30PtjpXewieNCXoK9.nPgXtGg0wmY3ubPM.jVjTvMK', '5월20일3', 'fdbabf84-693f-4476-a1bd-94a8ed2136e9.gif', '2024-05-20 12:31:01', NULL), (5, '사용자5', '$2a$10$QO9guQRofPBqIUFqFtvHHejgRDs6xRxjNfI5CoODz6OzZmlR6vDhe', '', '4c0c086d-480a-453e-a527-4d445403544a.jpg', '2024-05-20 12:42:16', NULL), (6, '사용자6', '5월16일', '5월16일', '5월16일', '2024-05-20 14:36:02', NULL), (7, '사용자7', '$2a$10$mzp5gIhp8N5Kj5rRA05h9O9TaBvoIBHibcwbjm9XyWkSrDo6nYhM.', '5월21일', '28bfba96-587b-4c0a-8e3d-dc1a473350ca.jpg', '2024-05-21 11:21:10', '2024-05-22 15:39:45'), (8, '사용자8', '$2a$10$lZzlyFmUfFbjy.l.WtGXUeml0B0Sq/FMPCYo5GN7Rgrnc0VHR8.06', '5월23일', '6e02655c-86fb-405f-b7e5-35bbb9ab64a2.jpg', '2024-05-23 10:45:24', '2024-05-23 11:48:11')
- {executed in 1 msec}
-[2024-06-13 12:22:14 DEBUG Test worker] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
-1. INSERT INTO `feed` (`feed_id`, `writer_id`, `contents`, `location`, `created_at`, `updated_at`) VALUES (1, 1, '내용1', '장소1', '2024-05-07 11:16:33', NULL), (2, 2, '내용2', '장소2', '2024-05-07 14:20:25', NULL), (3, 3, '내용3', '장소3', '2024-05-07 14:20:40', NULL), (4, 4, '내용4', '장소4', '2024-05-07 14:21:04', NULL), (5, 5, '내용5', '장소5', '2024-05-07 15:18:25', NULL), (6, 6, '내용6', '장소6', '2024-05-07 15:18:45', NULL), (7, 7, '내용7', '장소7', '2024-05-07 15:25:45', NULL), (8, 8, '내용8', '장소8', '2024-05-20 10:34:01', NULL), (9, 9, '내용9', '장소9', '2024-05-20 10:35:07', NULL), (10, 10, '내용10', '장소10', '2024-05-20 12:23:26', NULL), (11, 11, '내용11', '장소11', '2024-05-20 12:28:00', NULL), (12, 12, '내용12', '장소12', '2024-05-20 12:28:30', NULL), (13, 13, '내용13', '장소13', '2024-05-20 12:31:16', NULL), (14, 14, '내용14', '장소14', '2024-05-20 12:31:29', NULL), (15, 15, '내용15', '장소15', '2024-05-20 12:42:26', NULL), (16, 16, '내용16', '장소16', '2024-05-20 12:57:01', NULL), (17, 17, '내용17', '장소17', '2024-05-21 11:21:35', NULL), (18, 18, '내용18', '장소18', '2024-05-21 11:21:53', NULL), (19, 19, '내용19', '장소19', '2024-05-21 11:25:18', NULL), (20, 20, '내용20', '장소20', '2024-05-21 12:02:04', NULL), (21, 21, '내용21', '장소21', '2024-05-21 12:08:42', NULL), (22, 22, '내용22', '장소22', '2024-05-22 14:41:27', NULL), (23, 23, '내용23', '장소23', '2024-05-22 14:43:10', NULL), (24, 24, '내용24', '장소24', '2024-05-23 13:13:41', NULL), (25, 25, '내용25', '장소25', '2024-05-23 16:54:43', NULL)
- {executed in 2 msec}
-[2024-06-13 12:22:14 DEBUG Test worker] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
-1. INSERT INTO `feed_comment` (`feed_comment_id`, `feed_id`, `user_id`, `COMMENT`, `created_at`, `updated_at`) VALUES (1, 11, 1, '댓글내용1', '2024-05-20 10:34:04', NULL), (2, 12, 2, '댓글내용2', '2024-05-20 10:34:05', NULL), (3, 13, 3, '댓글내용3', '2024-05-20 10:34:07', NULL), (4, 14, 4, '댓글내용4', '2024-05-20 10:34:09', NULL), (5, 15, 5, '댓글내용5', '2024-05-22 14:42:18', NULL), (6, 16, 6, '댓글내용6', '2024-05-22 14:42:19', NULL), (7, 17, 1, '댓글내용7', '2024-05-22 14:42:23', NULL), (8, 18, 2, '댓글내용8', '2024-05-22 14:42:24', NULL), (9, 19, 3, '댓글내용9', '2024-05-22 14:43:16', NULL), (10, 20, 4, '댓글내용10', '2024-05-22 14:43:17', NULL), (11, 21, 5, '댓글내용11', '2024-05-22 14:43:18', NULL), (12, 22, 6, '댓글내용12', '2024-05-22 14:43:19', NULL)
- {executed in 1 msec}
-[2024-06-13 12:22:14 DEBUG Test worker] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
-1. INSERT INTO `feed_favorite` (`feed_id`, `user_id`, `created_at`) VALUES (5, 1, '2024-05-20 12:57:04'), (6, 2, '2024-05-20 12:42:27'), (7, 3, '2024-05-20 12:42:37'), (8, 4, '2024-05-20 12:57:03'), (9, 5, '2024-05-21 11:24:43'), (10, 1, '2024-05-21 11:24:45'), (11, 2, '2024-05-21 11:25:28'), (12, 3, '2024-05-21 12:08:47'), (13, 4, '2024-05-23 16:56:46'), (14, 5, '2024-05-24 15:49:08')
- {executed in 2 msec}
-[2024-06-13 12:22:14 DEBUG Test worker] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
-1. INSERT INTO `feed_pics` (`feed_pic_id`, `feed_id`, `pic`, `created_at`) VALUES (2, 1, '74e663f3-c442-4dfa-acd5-d17d40bf1c95.jpg', '2024-05-07 11:16:46'), (3, 1, '27998cd5-7f48-4eab-ae4e-7a70dc66da1b.jpeg', '2024-05-07 11:16:46'), (4, 5, '876ba65a-7791-4617-b679-a6c0879d09a9.hwp', '2024-05-07 14:20:25'), (5, 6, 'ce7ef9ea-3b8c-4ce9-9d2a-23070d586501.gif', '2024-05-07 14:20:40'), (6, 7, 'adebddf0-4037-47c8-ab1a-1eed049f6ce8.gif', '2024-05-07 14:21:04'), (9, 8, 'ae5dc0aa-870e-49b3-85d1-76c9fc43fabe.jpg', '2024-05-07 15:18:25'), (10, 8, 'c2d28937-75e6-460d-a717-50640d5c8308.jpg', '2024-05-07 15:18:25'), (11, 9, '4d721b39-fbac-405d-8e99-4aa1bd20af9d.jpg', '2024-05-07 15:18:45'), (12, 9, 'f2ed5f0d-6100-4c93-84af-e1ee08c5c91f.jpg', '2024-05-07 15:18:45'), (13, 9, '7d675ef7-fc5e-4459-b585-971798a29329.jpg', '2024-05-07 15:18:45'), (14, 9, '1d29327e-0600-456e-83de-c6448efc70b1.jpg', '2024-05-07 15:18:45'), (15, 9, 'ed5e7e89-c413-46d2-b4dc-c4a64ee6ed23.jpg', '2024-05-07 15:18:45'), (16, 9, 'a33d3160-e04b-443f-9d0b-844501fecd1e.png', '2024-05-07 15:18:45'), (17, 10, '0697e778-af49-4f7f-b149-6304a9e8ba9b.gif', '2024-05-07 15:25:45'), (36, 40, 'f722248d-3e12-4d3d-b80a-403619b19889.jpg', '2024-05-20 10:34:01'), (37, 40, '5774b156-8d7d-49fd-92e9-bf75ed0bebc9.jpg', '2024-05-20 10:34:01'), (38, 41, '7546a520-e307-4a0d-ac4a-7e79c20f9346.jpg', '2024-05-20 10:35:07'), (39, 41, '71cbbed1-67e2-4290-bbb9-7f9298d4c77e.jpg', '2024-05-20 10:35:07'), (54, 50, '4a3399f3-c168-4f63-8176-327adcec4cbc.gif', '2024-05-21 11:21:53'), (55, 51, 'e24a4cd4-113c-41ec-addb-569974e92acc.gif', '2024-05-21 11:25:18'), (56, 52, 'e8ef45c2-2dbe-47a2-b31a-ea4c5d936b7e.gif', '2024-05-21 12:02:04'), (57, 53, '8dd09cef-07c7-4412-be20-c5edb9a34a2e.gif', '2024-05-21 12:08:42')
- {executed in 2 msec}
-[2024-06-13 12:22:14 DEBUG Test worker] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
-1. INSERT INTO `user_follow` (`from_user_id`, `to_user_id`, `created_at`) VALUES (1, 2, '2024-05-20 16:49:53'), (1, 3, '2024-05-20 16:49:53'), (1, 4, '2024-05-20 16:49:53'), (1, 5, '2024-05-20 16:49:53'), (2, 1, '2024-05-20 16:49:53'), (2, 3, '2024-05-20 16:49:53'), (2, 4, '2024-05-20 16:49:53'), (2, 5, '2024-05-20 16:49:53'), (3, 1, '2024-05-20 16:49:53'), (3, 2, '2024-05-20 16:49:53'), (3, 4, '2024-05-20 16:49:53'), (3, 5, '2024-05-20 16:49:53')
- {executed in 1 msec}
-[2024-06-13 12:22:15 INFO  Test worker] [org.springframework.boot.autoconfigure.web.servlet.WelcomePageHandlerMapping] Adding welcome page: class path resource [static/index.html]
-[2024-06-13 12:22:15 INFO  Test worker] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] Initializing Spring TestDispatcherServlet ''
-[2024-06-13 12:22:15 INFO  Test worker] [org.springframework.test.web.servlet.TestDispatcherServlet] Initializing Servlet ''
-[2024-06-13 12:22:15 INFO  Test worker] [org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver] Exposing 1 endpoint(s) beneath base path '/actuator'
-[2024-06-13 12:22:15 INFO  Test worker] [org.springframework.test.web.servlet.TestDispatcherServlet] Completed initialization in 14 ms
-[2024-06-13 12:22:15 INFO  Test worker] [org.apache.coyote.http11.Http11NioProtocol] Starting ProtocolHandler ["http-nio-auto-1"]
-[2024-06-13 12:22:15 INFO  Test worker] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] Tomcat started on port 53788 (http) with context path ''
-[2024-06-13 12:22:15 INFO  Test worker] [com.green.greengram.feedfavorite.FeedFavoriteIntegrationTest] Started FeedFavoriteIntegrationTest in 2.553 seconds (process running for 3.418)
-[2024-06-13 12:22:16 DEBUG Test worker] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
-1. DELETE FROM feed_favorite
-        WHERE feed_id = 20
-        AND user_id = 1
- {executed in 1 msec}
-[2024-06-13 12:22:16 DEBUG Test worker] [jdbc.sqltiming]  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
-1. INSERT INTO feed_favorite
-        SET feed_id = 20
-        , user_id = 1
- {executed in 0 msec}
-[2024-06-13 12:22:16 INFO  SpringApplicationShutdownHook] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Shutdown initiated...
-[2024-06-13 12:22:16 INFO  SpringApplicationShutdownHook] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Shutdown completed.
+ {executed in 1 msec}[0;39m
+[2024-06-18 10:19:22 [33mWARN [0;39m restartedMain] [org.springframework.boot.autoconfigure.security.servlet.UserDetailsServiceAutoConfiguration] [36m
+
+Using generated security password: 68f16b7c-bc09-42c2-afd6-dd526a0add9e
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+[0;39m
+[2024-06-18 10:19:22 [32mINFO [0;39m restartedMain] [org.springframework.boot.autoconfigure.web.servlet.WelcomePageHandlerMapping] [36mAdding welcome page: class path resource [static/index.html][0;39m
+[2024-06-18 10:19:22 [32mINFO [0;39m restartedMain] [org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver] [36mExposing 1 endpoint(s) beneath base path '/actuator'[0;39m
+[2024-06-18 10:19:22 [32mINFO [0;39m restartedMain] [org.springframework.security.web.DefaultSecurityFilterChain] [36mWill secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@18521fba, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6cbd8c76, org.springframework.security.web.context.SecurityContextHolderFilter@4034f243, org.springframework.security.web.header.HeaderWriterFilter@5ccdd102, org.springframework.web.filter.CorsFilter@54fe3db2, org.springframework.security.web.authentication.logout.LogoutFilter@2e2a76e9, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@75230fec, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6e8d9839, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@126dff, org.springframework.security.web.session.SessionManagementFilter@4f1ded1c, org.springframework.security.web.access.ExceptionTranslationFilter@2640b367, org.springframework.security.web.access.intercept.AuthorizationFilter@7f81735d][0;39m
+[2024-06-18 10:19:22 [32mINFO [0;39m restartedMain] [org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer] [36mLiveReload server is running on port 35729[0;39m
+[2024-06-18 10:19:22 [32mINFO [0;39m restartedMain] [org.apache.coyote.http11.Http11NioProtocol] [36mStarting ProtocolHandler ["http-nio-8080"][0;39m
+[2024-06-18 10:19:22 [32mINFO [0;39m restartedMain] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [36mTomcat started on port 8080 (http) with context path ''[0;39m
+[2024-06-18 10:19:22 [32mINFO [0;39m restartedMain] [com.green.greengram.GreengramApplication] [36mStarted GreengramApplication in 2.64 seconds (process running for 3.083)[0;39m
+[2024-06-18 10:19:23 [32mINFO [0;39m RMI TCP Connection(3)-192.168.0.166] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] [36mInitializing Spring DispatcherServlet 'dispatcherServlet'[0;39m
+[2024-06-18 10:19:23 [32mINFO [0;39m RMI TCP Connection(3)-192.168.0.166] [org.springframework.web.servlet.DispatcherServlet] [36mInitializing Servlet 'dispatcherServlet'[0;39m
+[2024-06-18 10:19:23 [32mINFO [0;39m RMI TCP Connection(3)-192.168.0.166] [org.springframework.web.servlet.DispatcherServlet] [36mCompleted initialization in 3 ms[0;39m
+[2024-06-18 10:51:12 [32mINFO [0;39m SpringApplicationShutdownHook] [com.zaxxer.hikari.HikariDataSource] [36mHikariPool-1 - Shutdown initiated...[0;39m
+[2024-06-18 10:51:12 [32mINFO [0;39m SpringApplicationShutdownHook] [com.zaxxer.hikari.HikariDataSource] [36mHikariPool-1 - Shutdown completed.[0;39m
