@@ -99,7 +99,7 @@ public class JwtTokenProviderV2 {
         return userDetails == null ? null : new UsernamePasswordAuthenticationToken(userDetails, null, userDetails.getAuthorities());
 
         // UsernamePasswordAuthenticationToken 객체를 SpringContextHolder에 저장하는 자체만으로도 인증완료
-        // userDetails는 로그인한 ㅅ가용자의 정보를 controller or service 단에서 빼서 사용하기 위함
+        // userDetails는 로그인한 사용자의 정보를 controller or service 단에서 빼서 사용하기 위함
         // userDetails.getAuthorities()는 인가(권한)부분 세팅, 현재는 권한은 하나만 가질 수 있음, 다수 권한 가능
     }
 
