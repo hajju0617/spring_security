@@ -8,13 +8,14 @@ import org.springframework.security.core.userdetails.UserDetails;
 
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.Collections;
 import java.util.List;
 
 @Data
 @Builder
 public class MyUserDetails implements UserDetails {
     private long userId;    // 로그인한 사용자의 pk값
-    private String role;    // 사용자 권한
+    private String role;    // 사용자 권한, ROLE_권한이름
 
     @Builder.Default
     private List<String> roles = new ArrayList<>();     // 로그인한 사용자의 권한
@@ -24,9 +25,10 @@ public class MyUserDetails implements UserDetails {
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
-        List<GrantedAuthority> list = new ArrayList<>();
-        list.add(new SimpleGrantedAuthority(role));
-        return list;
+//        List<GrantedAuthority> list = new ArrayList<>();
+//        list.add(new SimpleGrantedAuthority(role));
+//        return list;
+        return Collections.singletonList(new SimpleGrantedAuthority(role));
     }
 
     @Override

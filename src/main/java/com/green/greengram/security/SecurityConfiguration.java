@@ -1,6 +1,7 @@
 package com.green.greengram.security;
 
 
+import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.Customizer;
@@ -10,12 +11,25 @@ import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
+import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 
 import java.util.function.Function;
 import java.util.function.Supplier;
 
+/*
+JSP
+요청시 저장 공간
+PageContext : JSP 내부에서만 사용
+Request : controller -> service -> JSP 전송 (Request는 일회용)
+Session
+Application
+ */
+
 @Configuration
+@RequiredArgsConstructor
 public class SecurityConfiguration {
+    private final JwtAuthenticationFilter jwtAuthenticationFilter;  // @Component로 빈등록을 하였기 때문에 DI가 된다.
+
     /*
      메서드 빈 등록으로 주로 쓰는 케이스는 (현재 기준으로 설명하면)
      Security와 관련된 빈 등록을 여러개 하고 싶을 때 메서드 형식으로 빈 등록하면 한 곳에 모을 수가 있으니 좋다.
@@ -40,7 +54,7 @@ public class SecurityConfiguration {
 //                session.sessionCreationPolicy(SessionCreationPolicy.STATELESS);
 //            }
 //        }).build();
-        )       .httpBasic(http -> http.disable())  //(서버사이드 렌더링을 하지 않는다. 즉, html화면을 백엔드가 만들지 않는다)
+        )       .httpBasic(http -> http.disable())  //(SSR 서버사이드 렌더링을 하지 않는다. 즉, html화면을 백엔드가 만들지 않는다)
                 // 백엔드에서 화면을 만들지 않더라도 위 세팅을 끄지 않아도 괜찮다. 사용하지 않는 걸 끔으로써 리소스를 확보 하기 위해서 사용하는 개념
                 // 정리하면 Security에서 제공해주는 로그인 화면 사용하지 않겠다.
                 .formLogin(form -> form.disable())  // form 로그인 방식을 사용하지 않음을 세팅 (Security 가 제공해주는 로그인 화면 사용하지 않음) (리소스 확보)
@@ -69,8 +83,13 @@ public class SecurityConfiguration {
                         ,"/profile/*"
                         ,"/feed"
                         ).permitAll()
-                                .anyRequest().authenticated()
-                ).build();
+                                .anyRequest().authenticated()   // 위쪽 주소를 제외하고는 로그인이 되어 있어야만 허용
+
+
+                ).addFilterBefore(jwtAuthenticationFilter, UsernamePasswordAuthenticationFilter.class)
+                .build();
+
+
 
 
                 /*

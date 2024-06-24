@@ -15,4 +15,6 @@ public class SignInRes {
     @Schema(description = "유저 프로필 사진")
     private String pic;
 
+    private String accessToken;
+
 }
