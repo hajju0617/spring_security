@@ -87,6 +87,7 @@ public class SecurityConfiguration {
 
 
                 ).addFilterBefore(jwtAuthenticationFilter, UsernamePasswordAuthenticationFilter.class)
+                // UsernamePasswordAuthenticationFilter.class 이전에 jwtAuthenticationFilter 해당 필터를 위치해준다는 뜻
                 .build();
 
 

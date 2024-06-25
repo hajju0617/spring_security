@@ -24,7 +24,7 @@ public class JwtTokenProvider {
     private final AppProperties appProperties;
     private SecretKey secretKey;
 
-    @PostConstruct  // 생성자 호출 이후에 한번 실행하는 메서드
+    @PostConstruct //생성자 호출 이후에 한번 실행하는 메소드
     public void init() {
         secretKey = Keys.hmacShaKeyFor(Decoders.BASE64URL.decode(appProperties.getJwt().getSecret()));
     }
@@ -47,6 +47,7 @@ public class JwtTokenProvider {
                 .signWith(secretKey, Jwts.SIG.HS512)
                 .compact();
     }
+
 
     public Claims createClaims(UserDetails userDetails) {
         try {

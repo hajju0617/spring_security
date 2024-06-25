@@ -29,8 +29,8 @@ public class JwtTokenProviderV2 {
     public JwtTokenProviderV2(ObjectMapper om, AppProperties appProperties) {
         this.om = om;
         this.appProperties = appProperties;
-        secretKey = Keys.hmacShaKeyFor(Decoders.BASE64URL.decode(appProperties.getJwt().getSecret()));  // 암호화, 복호화할 때 사용하는 키를 생성하는 부분
-                                                                                                        // decode 메서드에 argument 값은 우리가 설정한 문자열
+        this.secretKey = Keys.hmacShaKeyFor(Decoders.BASE64URL.decode(appProperties.getJwt().getSecret()));  // 암호화, 복호화할 때 사용하는 키를 생성하는 부분
+                                                                                                             // decode 메서드에 argument 값은 우리가 설정한 문자열
     }
 
 //    @PostConstruct  // 생성자 호출 이후에 한번 실행하는 메서드
@@ -38,22 +38,22 @@ public class JwtTokenProviderV2 {
 ////        secretKey = Keys.hmacShaKeyFor(Decoders.BASE64URL.decode(appProperties.getJwt().getSecret()));
 //    }
 
-    public String generateAccessToken(UserDetails userDetails) {
-        return generateToken(userDetails, appProperties.getJwt().getAccessTokenExpiry());
+    public String generateAccessToken(MyUser myUser) {
+        return generateToken(myUser, appProperties.getJwt().getAccessTokenExpiry());
         // yaml 파일에서 app.jwt.access-token-expiry 내용을 가져오는 부분
     }
 
-    public String generateRefreshToken(UserDetails userDetails) {
-        return generateToken(userDetails, appProperties.getJwt().getRefreshTokenExpiry());
-        // yaml 파일에서 app.jwt.access-token-expiry 내용을 가져오는 부분
+    public String generateRefreshToken(MyUser myUser) {
+        return generateToken(myUser, appProperties.getJwt().getRefreshTokenExpiry());
+        // yaml 파일에서 app.jwt.refresh-token-expiry 내용을 가져오는 부분
     }
 
-    private String generateToken(UserDetails userDetails, long tokenValidMilliSecond) {
+    private String generateToken(MyUser myUser, long tokenValidMilliSecond) {
         return Jwts.builder()
                 .issuedAt(new Date(System.currentTimeMillis()))     // JWT 생성일시
                 .expiration(new Date(System.currentTimeMillis() + tokenValidMilliSecond))       // JWT 만료 일시
 
-                .claims(createClaims(userDetails))      // claims는 payload에 저장하고 싶은 내용을 저장
+                .claims(createClaims(myUser))      // claims는 payload에 저장하고 싶은 내용을 저장
 
                 .signWith(secretKey, Jwts.SIG.HS512)    // 서명 (JWT 암호화 선택, 위변조 검증)
                 .compact();                             // 토큰 생성
@@ -62,9 +62,9 @@ public class JwtTokenProviderV2 {
         // 마지막 compact()의 리턴 타입은 String 이므로 private "String" generateToken 이다. (java 수업 day 69 참고)
     }
 
-    private Claims createClaims(UserDetails userDetails) {
+    private Claims createClaims(MyUser myUser) {
         try {
-            String json = om.writeValueAsString(userDetails);   // 객체 to JSON
+            String json = om.writeValueAsString(myUser); // 객체 to JSON
             return Jwts.claims().add("signedUser", json).build();   // Claims에 JSON 저장
         } catch (Exception e) {
             e.printStackTrace();
@@ -85,7 +85,11 @@ public class JwtTokenProviderV2 {
         try {
             Claims claims = getAllClaims(token);    // JWT(인증코드(문자열))에 저장되어 있는 Claims를 얻어온다.
             String json = (String)claims.get("signedUser");     // Claims에 저장되어 있는 값을 얻어온다. (그것이 JSON(데이터(문자열))
-            return om.readValue(json, MyUserDetails.class);     // JSON -> 객체로 변환 (그것이 UserDetails, 정확히는 MyUserDetails)
+            MyUser myUser = om.readValue(json, MyUser.class);     // JSON -> 객체로 변환 (그것이 UserDetails, 정확히는 MyUserDetails)
+            MyUserDetails myUserDetails = new MyUserDetails();
+            myUserDetails.setMyUser(myUser);
+            return myUserDetails;
+
         } catch (Exception e) {
             e.printStackTrace();
             return null;
@@ -108,8 +112,10 @@ public class JwtTokenProviderV2 {
             // (Original) 만료시간이 안 지났으면 리턴 false , 지났으면 리턴 true
 //            return getAllClaims(token).getExpiration().before(new Date());  // new Date() : 현재 시간
 
-            return !getAllClaims(token).getExpiration().before(new Date());  // new Date() : 현재 시간
+            return !getAllClaims(token).getExpiration().before(new Date());  // new Date() : 현재 시간으로 데이터 객체가 만들어짐
             // (변환) 만료시간이 안 지났으면 리턴 true, 지났으면 리턴 false
+
+
 
         } catch (Exception e) {
             return false;
@@ -118,19 +124,24 @@ public class JwtTokenProviderV2 {
 
     // 요청이 오면 JWT를 열어보는 부분 -> header에서 토큰(JWT)을 꺼낸다
     public String resolveToken(HttpServletRequest req) {
-        // 프론트가 백엔드에 요청을 보낼 때 (로그인을 했다면) 항상 JWT를 보낼건데 header에 저장해서 보낸다.
-        String auth = req.getHeader(appProperties.getJwt().getHeaderSchemaName());  // yaml 파일에서 header-schema-name: authorization
+        // 프론트가 백엔드에 요청을 보낼 때 (로그인을 했다면) 항상 JWT를 보낼건데 header에 서로 약속한 key에 저장해서 보낸다.
+        String jwt = req.getHeader(appProperties.getJwt().getHeaderSchemaName());  // yaml 파일에서 header-schema-name: authorization
 //        String auth = req.getHeader("authorization"); 이렇게 적은 것과 같다.
 
-        if(auth == null) {
+        if(jwt == null) {
             return null;
         }
         // 위 if를 지나쳤다면 프론트가 header에 authorization 키에 데이터를 담아서 보냈다는 뜻.
         // auth에는 "Bearer JWT" 문자열이 있을 것이다. 문자열이 'Bearer'로 시작하는 지 체크
-        if(!(auth.startsWith(appProperties.getJwt().getTokenType()))) {        // if(auth.startsWith("Bearer")) -> yaml 파일에서 token-type: Bearer
-            return null;
+
+        // authorization : Bearer JWT 문자열
+        if(!(jwt.startsWith(appProperties.getJwt().getTokenType()))) {        // if(auth.startsWith("Bearer")) -> yaml 파일에서 token-type: Bearer
+            return null;                                                      // 프론트와 약속을 만들어야 함.
         }
-        return auth.substring(appProperties.getJwt().getTokenType().length()).trim();   // .trim : 문자열 앞뒤 공백제거 메서드
+
+        // Bearer JWT 문자열 에서 순수한 JWT 문자열만 뽑아내기 위한 문자열 자르기
+        return jwt.substring(appProperties.getJwt().getTokenType().length()).trim();   // .trim : 문자열 앞뒤 공백제거 메서드
+
 
 
 
