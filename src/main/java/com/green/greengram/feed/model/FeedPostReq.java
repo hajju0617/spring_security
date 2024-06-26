@@ -5,7 +5,9 @@ import lombok.Data;
 
 @Data
 public class FeedPostReq {
-    private String userId;
+    @JsonIgnore
+    private long userId;
+
     private String contents;
     private String location;
 

@@ -32,7 +32,25 @@ springdoc:
     disabled: true
 
 file:
-  directory: D:/2024-1/download/greengram_ver3tdd/       #    절대 주소값 저장
+  directory: D:/2024-1/download/greengram_ver3tdd       #    절대 주소값 저장
+
+# custom 속성 지정
+app:
+  jwt:
+    # JWT 만들 때 사용하는 키(암호화) -> 나중에 복호화 할때도 사용
+    secret: DaeguGreenArtAcademyClass502RoomForSpringBootFighting   # 키 값 : value 값
+
+    # front - back 간 JWT 받는 헤더 키 이름
+    header-schema-name: authorization
+
+    # 토큰의 종류: Bearer 는 JWT or OAuth2.0(소셜 로그인)를 의미
+    token-type: Bearer
+
+    # AT(Access-Token) - 만료 시간 (ms -> 2시간)
+    access-token-expiry: 1800000
+
+    # RT(Refresh-Token) - 만료시간(ms) - 15일
+    refresh-token-expiry: 1296000000
 
 ---   #  --- : 파일안에서 분리 해줌 (위쪽은 프로필 설정 x)
 spring:
@@ -46,23 +64,7 @@ spring:
       mode: always    # tdd 프로필을 쓸때 매번 data.sql, schema.sql 을 실행 하겠다는 의미
                       # edit configurations -> profile active 칸에 프로필 이름 입력 하면 됨
 
-# custom 속성 지정
-app:
-  jwt:
-    # JWT 만들 때 사용하는 키(암호화) -> 나중에 복호화 할때도 사용
-    secret: DaeguGreenArtAcademyClass502RoomForJavaSpringBootFighting   # 키 값 : value 값
 
-    # front - back 간 JWT 받는 헤더 키 이름
-    header-schema-name: authorization
-
-    # 토큰의 종류: Bearer 는 JWT or OAuth2.0(소셜 로그인)를 의미
-    token-type: Bearer
-
-    # AT(Access-Token) - 만료 시간 (ms -> 2시간)
-    access-token-expiry: 1800000
-
-    # RT(Refresh-Token) - 만료시간(ms) - 15일
-    refresh-token-expiry: 1296000000
 
 ---
 

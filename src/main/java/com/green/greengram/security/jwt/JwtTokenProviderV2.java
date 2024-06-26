@@ -1,7 +1,9 @@
-package com.green.greengram.security;
+package com.green.greengram.security.jwt;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.green.greengram.common.AppProperties;
+import com.green.greengram.security.MyUser;
+import com.green.greengram.security.MyUserDetails;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.io.Decoders;
@@ -22,6 +24,7 @@ import java.util.Date;
 @Component  // 빈 등록 + 싱글톤
 //@RequiredArgsConstructor
 public class JwtTokenProviderV2 {
+
     private final ObjectMapper om;
     private final AppProperties appProperties;
     private final SecretKey secretKey;  // final 붙은 애들은 생성자에서 초기화가 되어야 한다.
@@ -81,7 +84,7 @@ public class JwtTokenProviderV2 {
                 .getPayload();  // JWT 안에 들어있는 payload(Claims)를 리턴한다.
     }
 
-    private UserDetails getUserDetailsFromToken(String token) {
+    public UserDetails getUserDetailsFromToken(String token) {
         try {
             Claims claims = getAllClaims(token);    // JWT(인증코드(문자열))에 저장되어 있는 Claims를 얻어온다.
             String json = (String)claims.get("signedUser");     // Claims에 저장되어 있는 값을 얻어온다. (그것이 JSON(데이터(문자열))

@@ -11,16 +11,16 @@ import java.util.Collection;
 import java.util.Collections;
 import java.util.List;
 
-@JsonIgnoreProperties(ignoreUnknown = true)
+
 @NoArgsConstructor
 @Setter
 @Getter
 public class MyUserDetails implements UserDetails {
+
     private MyUser myUser;
 
-    @Builder.Default
-    private List<String> roles = new ArrayList<>();     // 로그인한 사용자의 권한
-
+//    @Builder.Default
+//    private List<String> roles = new ArrayList<>();     // 로그인한 사용자의 권한
 
 
 

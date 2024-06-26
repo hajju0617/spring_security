@@ -1,20 +1,18 @@
 package com.green.greengram.security;
 
 
+import com.green.greengram.security.jwt.JwtAuthenticationAccessDeniedHandler;
+import com.green.greengram.security.jwt.JwtAuthenticationEntryPoint;
+import com.green.greengram.security.jwt.JwtAuthenticationFilter;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.security.config.Customizer;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
-import org.springframework.security.config.annotation.web.configurers.SessionManagementConfigurer;
 import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
-
-import java.util.function.Function;
-import java.util.function.Supplier;
 
 /*
 JSP
@@ -71,6 +69,9 @@ public class SecurityConfiguration {
                         , "/swagger-ui/**"      // ** 의미 : 뒤쪽에 어떤 값이 들어와도 상관없다는 의미
                         , "/v3/api/docs/**"
 
+                        , "/pic/**"         // /pic/aaaa.jpg    /pic/aabb/abab.jpg   /pic/abcd/qwer/zxcv/ddsa.jpg
+                                              // /pic/aaa.jpg   *가 하나면 이것만 가능
+
                         , "/"                   // localhost/8080 보이게 세팅
                         , "/index.html"         // 프론트 화면이 보일 수 있게 세팅
                         , "/css/**"             // css
@@ -88,6 +89,8 @@ public class SecurityConfiguration {
 
                 ).addFilterBefore(jwtAuthenticationFilter, UsernamePasswordAuthenticationFilter.class)
                 // UsernamePasswordAuthenticationFilter.class 이전에 jwtAuthenticationFilter 해당 필터를 위치해준다는 뜻
+                .exceptionHandling(exception -> exception.authenticationEntryPoint(new JwtAuthenticationEntryPoint())
+                                                         .accessDeniedHandler(new JwtAuthenticationAccessDeniedHandler()))
                 .build();
 
 

@@ -4,6 +4,8 @@ import com.green.greengram.common.model.ResultDto;
 import com.green.greengram.user.model.*;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springdoc.core.annotations.ParameterObject;
@@ -11,13 +13,15 @@ import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
+import java.util.Map;
+
 @Slf4j
 @RequiredArgsConstructor
 @RestController
 @Tag(name = "유저 컨트롤러", description = "유저 CRUD sign-in, sign-out")
 @RequestMapping("/api/user")
 public class UserControllerImpl {
-    private final UserService service;
+    private final UserServiceImpl service;
 
     @PostMapping("sign-up")
     @Operation(summary = "회원가입", description = "프로필 사진은 필수가 아님.")
@@ -36,8 +40,8 @@ public class UserControllerImpl {
 
     @PostMapping("sign-in")
     @Operation(summary = "인증", description = "")
-    public ResultDto<SignInRes> postSignIn(@RequestBody SignInPostReq p) {
-        SignInRes result = service.postSignIn(p);
+    public ResultDto<SignInRes> postSignIn(HttpServletResponse res, @RequestBody SignInPostReq p) {
+        SignInRes result = service.postSignIn(res, p);
 
         return ResultDto.<SignInRes>builder()
                 .statusCode(HttpStatus.OK)
@@ -55,6 +59,17 @@ public class UserControllerImpl {
                 .statusCode(HttpStatus.OK)
                 .resultMsg("변경 완료")
                 .resultData(result)
+                .build();
+    }
+
+    @GetMapping("access-token")
+    public ResultDto<Map> getAccessToken(HttpServletRequest req) {
+        Map map = service.getAccessToken(req);
+
+        return ResultDto.<Map>builder()
+                .statusCode(HttpStatus.OK)
+                .resultMsg("Access Token 발급")
+                .resultData(map)
                 .build();
     }
 

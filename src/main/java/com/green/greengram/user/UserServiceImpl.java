@@ -1,30 +1,41 @@
 package com.green.greengram.user;
 
+import com.green.greengram.common.AppProperties;
 import com.green.greengram.common.CookieUtils;
 import com.green.greengram.common.CustomFileUtils;
-import com.green.greengram.security.JwtTokenProvider;
-import com.green.greengram.security.JwtTokenProviderV2;
-import com.green.greengram.security.MyUser;
-import com.green.greengram.security.MyUserDetails;
+import com.green.greengram.security.*;
+import com.green.greengram.security.jwt.JwtTokenProviderV2;
 import com.green.greengram.user.model.*;
+import jakarta.servlet.http.Cookie;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.mindrot.jbcrypt.BCrypt;
+import org.springframework.security.core.Authentication;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.multipart.MultipartFile;
 
+import java.util.HashMap;
+import java.util.Map;
+
 @Slf4j
 @RequiredArgsConstructor
 @Service
-public class UserServiceImpl implements UserService{
+public class UserServiceImpl implements UserService {
     private final UserMapper mapper;
     private final CustomFileUtils customFileUtils;
     private final PasswordEncoder passwordEncoder;
-    private final JwtTokenProvider jwtTokenProvider;
+    private final JwtTokenProviderV2 jwtTokenProvider;
     private final CookieUtils cookieUtils;
+    private final AuthenticationFacade authenticationFacade;
+    private final AppProperties appProperties;
+
+    // SecurityContextHolder -> Context -> Authentication(UsernamePasswordAuthenticationToken) -> MyUserDetails -> MyUser
+    // UsernamePasswordAuthenticationToken 여기에 값이 있어야 인증 됐다라는 의미 (JwtTokenProviderVw 103라인)
 
     @Transactional
     public int postSignUp(MultipartFile pic, SignUpPostReq p) {
@@ -59,7 +70,7 @@ public class UserServiceImpl implements UserService{
         return result;
     }
 
-    public SignInRes postSignIn(SignInPostReq p) {
+    public SignInRes postSignIn(HttpServletResponse res, SignInPostReq p) {
         log.info("p:{}", p);
         User user = mapper.getUserById(p.getUid());
         log.info("user:{}", user);
@@ -70,7 +81,7 @@ public class UserServiceImpl implements UserService{
             throw new RuntimeException("비밀번호를 확인하세요.");
         }
 
-//        UserDetails userDetails = new MyUserDetails(user.getUserId(), "ROLE_USER");
+
         MyUser myUser = MyUser.builder()
                 .userId(user.getUserId())
                 .role("ROLE_USER")
@@ -78,7 +89,11 @@ public class UserServiceImpl implements UserService{
 
         String accessToken = jwtTokenProvider.generateAccessToken(myUser);
         String refreshToken = jwtTokenProvider.generateRefreshToken(myUser);
+
         // refreshToken은 보안 쿠키를 이용해서 처리
+        int refreshTokenMaxAge = appProperties.getJwt().getRefreshTokenCookieMaxAge();
+        cookieUtils.deleteCookie(res, "refresh-token");
+        cookieUtils.setCookie(res, "refresh-token", refreshToken, refreshTokenMaxAge);
 
 
 
@@ -88,6 +103,26 @@ public class UserServiceImpl implements UserService{
                 .pic(user.getPic())
                 .accessToken(accessToken)
                 .build();
+    }
+
+    public Map getAccessToken(HttpServletRequest req) {
+        Cookie cookie = cookieUtils.getCookie(req, "refresh-token");
+        if(cookie == null) { // refresh-token 값이 쿠키에 존재 여부
+            throw new RuntimeException();
+        }
+        String refreshToken = cookie.getValue();
+        if(!jwtTokenProvider.isValidateToken(refreshToken)) { //refresh-token 만료시간 체크
+            throw new RuntimeException();
+        }
+
+        UserDetails auth = jwtTokenProvider.getUserDetailsFromToken(refreshToken);
+        MyUser myUser = ((MyUserDetails)auth).getMyUser();
+
+        String accessToken = jwtTokenProvider.generateAccessToken(myUser);
+
+        Map map = new HashMap();
+        map.put("accessToken", accessToken);
+        return map;
     }
 
     public int patchPassword(PatchPasswordReq p) {
@@ -112,6 +147,8 @@ public class UserServiceImpl implements UserService{
 
     @Transactional
     public String patchProfilePic(UserProfilePatchReq p) {  // 기존  폴더 삭제
+        p.setSignedUserId(authenticationFacade.getLoginUserId());
+
         String fileNm = customFileUtils.makeRandomFileName(p.getPic()); // 랜덤 파일명 얻어와서 fileNm에 저장
         p.setPicName(fileNm);
         mapper.updProfilePic(p);
@@ -121,7 +158,7 @@ public class UserServiceImpl implements UserService{
 //    //        String folderPath = customFileUnits.uploadPath + "/user/" + p.getSignedUserId();
 //            String folderPath = String.format("%s/user/%d", customFileUtils.uploadPath, p.getSignedUserId());
 //            // + 기호를 쓰기 싫다면 이렇게 수정
-            String delAbsoluteFolderPath = String.format("%s%s", customFileUtils.uploadPath, midPath);
+            String delAbsoluteFolderPath = String.format("%s/%s", customFileUtils.uploadPath, midPath);
             customFileUtils.deleteFolder(delAbsoluteFolderPath);
 
             customFileUtils.makeFolders(midPath);

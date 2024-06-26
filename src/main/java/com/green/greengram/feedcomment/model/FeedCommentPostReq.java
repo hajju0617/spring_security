@@ -3,8 +3,11 @@ package com.green.greengram.feedcomment.model;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
+import lombok.Getter;
+import lombok.Setter;
 
-@Data
+@Getter
+@Setter
 @EqualsAndHashCode
 public class FeedCommentPostReq {
     @JsonIgnore private long feedCommentId;
@@ -12,6 +15,9 @@ public class FeedCommentPostReq {
 
     // xml 파일에 데이터 3개 값을 주기 위해서
     private long feedId;
+
+    @JsonIgnore
     private long userId;
+
     private String comment;
 }

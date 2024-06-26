@@ -8,7 +8,6 @@ import org.springframework.web.service.annotation.GetExchange;
 @Getter
 @ConfigurationProperties(prefix = "app") // applicationl.yaml 파일(46번 라인)의 app 을 뜻함
 //ConfigurationProperties : yaml에 작성되어 있는 데이터를 객체화 시켜주는 에노테이션
-
 public class AppProperties {
     private final Jwt jwt = new Jwt();
 
