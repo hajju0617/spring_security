@@ -64,13 +64,15 @@ public class SecurityConfiguration {
                 .authorizeHttpRequests(auth ->
                         auth.requestMatchers("/api/user/sign-up"        // 회원 가입, 로그인 인증이 안 되어 있더라도
                         , "/api/user/sign-in"                           // 사용 가능 하게 세팅
+                        , "/api/user/access-token"
 
                         , "/swagger"            // swagger 사용할 수 있게 세팅
                         , "/swagger-ui/**"      // ** 의미 : 뒤쪽에 어떤 값이 들어와도 상관없다는 의미
                         , "/v3/api/docs/**"
 
-                        , "/pic/**"         // /pic/aaaa.jpg    /pic/aabb/abab.jpg   /pic/abcd/qwer/zxcv/ddsa.jpg
-                                              // /pic/aaa.jpg   *가 하나면 이것만 가능
+                        , "/pic/**"             // /pic/aaaa.jpg    /pic/aabb/abab.jpg   /pic/abcd/qwer/zxcv/ddsa.jpg
+                                                  // /pic/aaa.jpg   *가 하나면 이것만 가능
+                        , "/fimg/**"
 
                         , "/"                   // localhost/8080 보이게 세팅
                         , "/index.html"         // 프론트 화면이 보일 수 있게 세팅
