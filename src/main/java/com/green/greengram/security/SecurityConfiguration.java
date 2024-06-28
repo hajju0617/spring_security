@@ -62,13 +62,14 @@ public class SecurityConfiguration {
                                               // CSRF 공격이란 정상적인 사용자가 의도하지 않았지만, 자신도 모르게 서버를 공격하게 되는 경우임. 공격자가 만든 악성 페이지를 통해 사용자는 자신도 모르게 공격을 수행 함.
                                               // CSRF 공격은 로그인 방식이 세션일때
                 .authorizeHttpRequests(auth ->
-                        auth.requestMatchers("/api/user/sign-up"        // 회원 가입, 로그인 인증이 안 되어 있더라도
+                        auth.requestMatchers(
+                          "/api/user/sign-up"        // 회원 가입, 로그인 인증이 안 되어 있더라도
                         , "/api/user/sign-in"                           // 사용 가능 하게 세팅
                         , "/api/user/access-token"
 
                         , "/swagger"            // swagger 사용할 수 있게 세팅
                         , "/swagger-ui/**"      // ** 의미 : 뒤쪽에 어떤 값이 들어와도 상관없다는 의미
-                        , "/v3/api/docs/**"
+                        , "/v3/api-docs/**"
 
                         , "/pic/**"             // /pic/aaaa.jpg    /pic/aabb/abab.jpg   /pic/abcd/qwer/zxcv/ddsa.jpg
                                                   // /pic/aaa.jpg   *가 하나면 이것만 가능
@@ -85,6 +86,12 @@ public class SecurityConfiguration {
                         ,"/sign-up"
                         ,"/profile/*"
                         ,"/feed"
+
+                        // actuator
+                        , "/actuator"
+                        , "/actuator/*"
+
+
                         ).permitAll()
                                 .anyRequest().authenticated()   // 위쪽 주소를 제외하고는 로그인이 되어 있어야만 허용
 

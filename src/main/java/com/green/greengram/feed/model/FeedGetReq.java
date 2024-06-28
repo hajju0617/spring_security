@@ -23,10 +23,8 @@ public class FeedGetReq extends Paging {
     private Long profileUserId;     // 사용자의 프로필에 들어갔을 때 사용. 그 사용자가 쓴 피드만 보고 싶을 때( =알파 정보)
 
     public FeedGetReq(Integer page, Integer size
-            , @BindParam("signed_user_id") long signedUserId
             , @BindParam("profile_user_id") Long profileUserId) {
         super(page, size == null ? GlobalConst.FEED_PAGING_SIZE : size);
-        this.signedUserId = signedUserId;
         this.profileUserId = profileUserId;
     }
 }

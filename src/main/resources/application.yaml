@@ -12,8 +12,8 @@ spring:
   datasource:
     driver-class-name: net.sf.log4jdbc.sql.jdbcapi.DriverSpy
     url: jdbc:log4jdbc:mariadb://localhost:3306/greengram2024_v3tdd    # 데이터 베이스 이름
-    username: root
-    password: green502
+    username: root                # 아이디
+    password: green502            # 비밀번호
 
   servlet:
     multipart:
@@ -50,13 +50,39 @@ app:
     # 토큰의 종류: Bearer 는 JWT or OAuth2.0(소셜 로그인)를 의미
     token-type: Bearer
 
+
     # AT(Access-Token) - 만료 시간 (ms -> 2시간)
     access-token-expiry: 30000
+    # 1800000 : 30분
 
     # RT(Refresh-Token) - 만료시간(ms) - 15일
     refresh-token-expiry: 1296000000
 
----   #  --- : 파일안에서 분리 해줌 (위쪽은 프로필 설정 x)
+management:
+  endpoint:               # 엔드 포인트 (URL)
+    health:
+      show-details: always      # http://localhost:8080/actuator/health 정보를 추가로 더 보여줌 (디테일한 정보)
+
+  endpoints:              # 전체 엔드 포인트 세팅
+    web:
+      exposure:
+        include: "*"      # actuator의 모든 엔드 포인트를 웹에 노출  (http://localhost:8080/actuator)
+  info:                   # 엔드 포인트 이지만 endpoint 아래에 있지 않고, management 아래에 위치
+    java:
+      enabled: true       # http://localhost:8080/actuator/info 값 뜨게 해줌
+    os:
+      enabled: true
+    env:
+      enabled: true
+  server:
+    port: 8080            # 로컬로만 접속해야 접속가능
+
+
+
+
+
+
+---                       #  --- : 파일안에서 분리 해줌 (위쪽은 프로필 설정 x)
 spring:
   config:
     activate:

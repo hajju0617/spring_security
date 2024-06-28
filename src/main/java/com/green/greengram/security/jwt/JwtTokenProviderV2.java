@@ -8,9 +8,7 @@ import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.io.Decoders;
 import io.jsonwebtoken.security.Keys;
-import jakarta.annotation.PostConstruct;
 import jakarta.servlet.http.HttpServletRequest;
-import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
@@ -29,6 +27,7 @@ public class JwtTokenProviderV2 {
     private final AppProperties appProperties;
     private final SecretKey secretKey;  // final 붙은 애들은 생성자에서 초기화가 되어야 한다.
                                         // @RequiredArgsConstructor 주석처리 + 하단 생성자 추가 + secretKey 생성자 안으로 삽입
+                                        // JwtTokenProvider랑 JwtTokenProvider의 차이점 : SecretKey에 final 유무
     public JwtTokenProviderV2(ObjectMapper om, AppProperties appProperties) {
         this.om = om;
         this.appProperties = appProperties;
@@ -53,13 +52,14 @@ public class JwtTokenProviderV2 {
 
     private String generateToken(MyUser myUser, long tokenValidMilliSecond) {
         return Jwts.builder()
-                .issuedAt(new Date(System.currentTimeMillis()))     // JWT 생성일시
-                .expiration(new Date(System.currentTimeMillis() + tokenValidMilliSecond))       // JWT 만료 일시
+                .issuedAt(new Date(System.currentTimeMillis()))     // JWT 생성일시 (payload 에 저장)  (new Date(System.currentTimeMillis()) 현재 시간)
+                .expiration(new Date(System.currentTimeMillis() + tokenValidMilliSecond))       // JWT 만료 일시    (new Date(System.currentTimeMillis() + tokenValidMilliSecond) => 현재 시간을 ms로 변경 + 만료시간)
 
                 .claims(createClaims(myUser))      // claims는 payload에 저장하고 싶은 내용을 저장
 
                 .signWith(secretKey, Jwts.SIG.HS512)    // 서명 (JWT 암호화 선택, 위변조 검증)
                 .compact();                             // 토큰 생성
+
         // .메서드(호출).메서드(호출).메서드(호출) -> 체이닝 기법, 원리는 메서드 호출 시 자신의 주소값 리턴을 하기 때문
         // issuedAt, expiration, claims, signWith 리턴 타입은 JwtBuilder 이지만
         // 마지막 compact()의 리턴 타입은 String 이므로 private "String" generateToken 이다. (java 수업 day 69 참고)
@@ -75,7 +75,7 @@ public class JwtTokenProviderV2 {
         return null;
     }
 
-    public Claims getAllClaims(String token) {      // 암호화가 된 값을 token에 넣어서 payload를 추출한다.
+    public Claims getClaims(String token) {      // 암호화가 된 값을 token 에 넣어서 payload 를 추출한다.
         return Jwts
                 .parser()
                 .verifyWith(secretKey)              // 똑같은 키로 복호화
@@ -86,16 +86,20 @@ public class JwtTokenProviderV2 {
 
     public UserDetails getUserDetailsFromToken(String token) {
         try {
-            Claims claims = getAllClaims(token);    // JWT(인증코드(문자열))에 저장되어 있는 Claims를 얻어온다.
+            Claims claims = getClaims(token);    // JWT(인증코드(문자열))에 저장되어 있는 Claims를 얻어온다.
             String json = (String)claims.get("signedUser");     // Claims에 저장되어 있는 값을 얻어온다. (그것이 JSON(데이터(문자열))
-            MyUser myUser = om.readValue(json, MyUser.class);     // JSON -> 객체로 변환 (그것이 UserDetails, 정확히는 MyUserDetails)
+            MyUser myUser = om.readValue(json, MyUser.class);     // om : Object Mapper
+                                                                  // JSON -> 객체로 변환 (그것이 UserDetails, 정확히는 MyUserDetails)
+
             MyUserDetails myUserDetails = new MyUserDetails();
             myUserDetails.setMyUser(myUser);
             return myUserDetails;
 
         } catch (Exception e) {
+
             e.printStackTrace();
             return null;
+
         }
     }
 
@@ -113,9 +117,9 @@ public class JwtTokenProviderV2 {
     public boolean isValidateToken(String token) {
         try {
             // (Original) 만료시간이 안 지났으면 리턴 false , 지났으면 리턴 true
-//            return getAllClaims(token).getExpiration().before(new Date());  // new Date() : 현재 시간
+//            return getClaims(token).getExpiration().before(new Date());  // new Date() : 현재 시간
 
-            return !getAllClaims(token).getExpiration().before(new Date());  // new Date() : 현재 시간으로 데이터 객체가 만들어짐
+            return !getClaims(token).getExpiration().before(new Date());  // new Date() : 현재 시간으로 데이터 객체가 만들어짐
             // (변환) 만료시간이 안 지났으면 리턴 true, 지났으면 리턴 false
 
 
@@ -144,6 +148,12 @@ public class JwtTokenProviderV2 {
 
         // Bearer JWT 문자열 에서 순수한 JWT 문자열만 뽑아내기 위한 문자열 자르기
         return jwt.substring(appProperties.getJwt().getTokenType().length()).trim();   // .trim : 문자열 앞뒤 공백제거 메서드
+                                    // (빈칸) + JWT
+                                    // appProperties.getJwt().getTokenType() 까지 Bearer 문자열 (Bearer 은 6개 문자 index:0~5)
+                                    // Jwt() 객체 주소값
+                                    // jwt.substring(6).trim()
+//        return jwt.substring(appProperties.getJwt().getTokenType().length() + 1);
+//                  .trim() 대신 문자열 + 1로 해서 빈칸을 제외할 수도 있다. but 프론트가 앞뒤로 공백을 보낼 경우 .trim()을 써야 함
 
 
 
