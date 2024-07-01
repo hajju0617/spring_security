@@ -83,14 +83,21 @@ public class UserServiceImpl implements UserService {
 
 
         MyUser myUser = MyUser.builder()
-                .userId(user.getUserId())
-                .role("ROLE_USER")
+                .userId(user.getUserId())   // pk값 담고
+                .role("ROLE_USER")          // 권한 담음
                 .build();
+        // => 빌더 패턴으로 객체 생성
 
+
+        // access, refresh token에 myUser(유저pk, 권한 정보)를 담는다 why? -> 프론트가 accessToken을 계속 백엔드로 요청을 보낼 때, Header에 넣어서 보내준다
+        // refresh token 에 myUser정보를 넣는 이유는 access token을 재발급 받을 때 access token에 myUser를 담기 위해서 담는다.
+        // 요청이 올 때마다 request에 token이 담겨져 있는 지 체크 (JwtAuthenticationFilter 에서 체크한다)
+        // token에 담겨져 있는 myUser를 빼내서 사용하기 위해 myUser를 담았다.
         String accessToken = jwtTokenProvider.generateAccessToken(myUser);
         String refreshToken = jwtTokenProvider.generateRefreshToken(myUser);
 
-        // refreshToken은 보안 쿠키를 이용해서 처리
+        // refreshToken은 보안 쿠키를 이용해서 처리 (프론트가 따로 작업을 하지 않아도 아래 cookie 값은 항상 넘어온다.)
+        // 쿠키에 담는 부분
         int refreshTokenMaxAge = appProperties.getJwt().getRefreshTokenCookieMaxAge();
         cookieUtils.deleteCookie(res, "refresh-token");
         cookieUtils.setCookie(res, "refresh-token", refreshToken, refreshTokenMaxAge);
@@ -101,7 +108,7 @@ public class UserServiceImpl implements UserService {
                 .userId(user.getUserId())
                 .nm(user.getNm())
                 .pic(user.getPic())
-                .accessToken(accessToken)
+                .accessToken(accessToken)   // 응답으로 바로 프론트한테 보내준다
                 .build();
     }
 
@@ -110,6 +117,7 @@ public class UserServiceImpl implements UserService {
         if(cookie == null) { // refresh-token 값이 쿠키에 존재 여부
             throw new RuntimeException();
         }
+
         String refreshToken = cookie.getValue();
         if(!jwtTokenProvider.isValidateToken(refreshToken)) { //refresh-token 만료시간 체크
             throw new RuntimeException();

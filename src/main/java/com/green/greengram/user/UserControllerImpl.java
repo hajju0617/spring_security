@@ -62,6 +62,11 @@ public class UserControllerImpl {
                 .build();
     }
 
+    /*
+        프론트는 단지 get방식으로 아무런 작업없이 단순히 요청만 하면 refresh-token이 넘어온다.
+        why? -> 우리가 refresh-token을 로그인을 성공했을때 cookie에 담았기 때문 (UserServiceImpl 101번째 행) (int refreshTokenMaxAge = appProperties.getJwt().getRefreshTokenCookieMaxAge(); 포함해서 하단에 2개 행)
+        cookie는 요청마다 항상 넘어온다.
+    */
     @GetMapping("access-token")
     public ResultDto<Map> getAccessToken(HttpServletRequest req) {
         Map map = service.getAccessToken(req);

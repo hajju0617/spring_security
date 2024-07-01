@@ -18,6 +18,10 @@ import org.springframework.stereotype.Component;
 import javax.crypto.SecretKey;
 import java.util.Date;
 
+/*
+JWT 생성, Request(요청)의 Header에서 token 얻기, 확인(Validate : 토큰 변질이 없었나, 만료시간이 지났나?), Claim(데이터) 넣고 빼기
+*/
+
 @Slf4j
 @Component  // 빈 등록 + 싱글톤
 //@RequiredArgsConstructor
@@ -27,7 +31,9 @@ public class JwtTokenProviderV2 {
     private final AppProperties appProperties;
     private final SecretKey secretKey;  // final 붙은 애들은 생성자에서 초기화가 되어야 한다.
                                         // @RequiredArgsConstructor 주석처리 + 하단 생성자 추가 + secretKey 생성자 안으로 삽입
-                                        // JwtTokenProvider랑 JwtTokenProvider의 차이점 : SecretKey에 final 유무
+
+                                        // JwtTokenProvider랑 JwtTokenProviderV2의 차이점 : SecretKey에 final 유무
+
     public JwtTokenProviderV2(ObjectMapper om, AppProperties appProperties) {
         this.om = om;
         this.appProperties = appProperties;
@@ -108,6 +114,7 @@ public class JwtTokenProviderV2 {
     public Authentication getAuthentication(String token) {
         UserDetails userDetails = getUserDetailsFromToken(token);   // MyUserDetails 객체 주소값
         return userDetails == null ? null : new UsernamePasswordAuthenticationToken(userDetails, null, userDetails.getAuthorities());
+        // userDetails => AuthenticationFacade에서 getPrincipal                                                                                                                // userDetails.getAuthorities() => 인가(권한)
 
         // UsernamePasswordAuthenticationToken 객체를 SpringContextHolder에 저장하는 자체만으로도 인증완료
         // userDetails는 로그인한 사용자의 정보를 controller or service 단에서 빼서 사용하기 위함
