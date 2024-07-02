@@ -50,17 +50,7 @@ public class UserControllerImpl {
                 .build();
     }
 
-    @PatchMapping
-    @Operation(summary = "비밀번호 변경", description = "")
-    public ResultDto<Integer> patchPassword(@RequestBody PatchPasswordReq p) {
-        int result = service.patchPassword(p);
 
-        return ResultDto.<Integer>builder()
-                .statusCode(HttpStatus.OK)
-                .resultMsg("변경 완료")
-                .resultData(result)
-                .build();
-    }
 
     /*
         프론트는 단지 get방식으로 아무런 작업없이 단순히 요청만 하면 refresh-token이 넘어온다.
@@ -68,10 +58,10 @@ public class UserControllerImpl {
         cookie는 요청마다 항상 넘어온다.
     */
     @GetMapping("access-token")
-    public ResultDto<Map> getAccessToken(HttpServletRequest req) {
-        Map map = service.getAccessToken(req);
+    public ResultDto<Map<String, String>> getAccessToken(HttpServletRequest req) {
+        Map<String, String> map = service.getAccessToken(req);
 
-        return ResultDto.<Map>builder()
+        return ResultDto.<Map<String, String>>builder()
                 .statusCode(HttpStatus.OK)
                 .resultMsg("Access Token 발급")
                 .resultData(map)

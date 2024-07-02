@@ -72,7 +72,8 @@ public class UserServiceImpl implements UserService {
 
     public SignInRes postSignIn(HttpServletResponse res, SignInPostReq p) {
         log.info("p:{}", p);
-        User user = mapper.getUserById(p.getUid());
+        p.setProviderType(SignInProviderType.LOCAL.name());
+        User user = mapper.getUserById(p);
         log.info("user:{}", user);
 
         if (user == null) {
@@ -133,21 +134,6 @@ public class UserServiceImpl implements UserService {
         return map;
     }
 
-    public int patchPassword(PatchPasswordReq p) {
-        User user = mapper.getUserById(p.getUid());
-        log.info("p:{}", p);
-
-        if(user == null) {
-            throw new RuntimeException("아이디를 확인해 주세요");
-        } else if (!(BCrypt.checkpw(p.getCurrentPw(), user.getUpw()))) {
-            throw new RuntimeException("비밀번호를 확인해 주세요");
-        }
-        String newPassword = BCrypt.hashpw(p.getNewPw(), BCrypt.gensalt());
-        p.setNewPw(newPassword);
-        log.info("p:{}", p);
-        p.setUserId(user.getUserId());
-        return mapper.patchPassword(p);
-    }
 
     public UserInfoGetRes getUserInfo(UserInfoGetReq p) {
         return mapper.selProfileUserInfo(p);

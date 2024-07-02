@@ -10,6 +10,7 @@ import org.springframework.web.service.annotation.GetExchange;
 //ConfigurationProperties : yaml에 작성되어 있는 데이터를 객체화 시켜주는 에노테이션
 public class AppProperties {
     private final Jwt jwt = new Jwt();
+    private final Oauth2 oauth2 = new Oauth2();
 
     @Getter
     @Setter
@@ -26,9 +27,17 @@ public class AppProperties {
         private long refreshTokenExpiry;        // refresh-token-expiry
         private int refreshTokenCookieMaxAge;
 
+
         public void setRefreshTokenExpiry(long refreshTokenExpiry) {
             this.refreshTokenExpiry = refreshTokenExpiry;
             this.refreshTokenCookieMaxAge = (int)(refreshTokenExpiry * 0.001);      // yaml에서 시간 단위가 ms 라서 s로 변환 (ms = 1 / 1000초)
         }
+    }
+    @Getter
+    @Setter
+    public static class Oauth2 {
+        private String authorizationRequestCookieName;
+        private String redirectUriParamCookieName;
+        private int cookieExpirySeconds;
     }
 }

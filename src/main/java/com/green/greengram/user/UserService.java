@@ -16,7 +16,6 @@ public interface UserService {
     UserInfoGetRes getUserInfo(UserInfoGetReq p);
 
     String patchProfilePic(UserProfilePatchReq p);
-    int patchPassword(PatchPasswordReq p);
 
 
 

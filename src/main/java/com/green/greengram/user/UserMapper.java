@@ -9,9 +9,8 @@ import java.util.List;
 public interface UserMapper {
     int postUser(SignUpPostReq p);
 
-    User getUserById(String p);
+    User getUserById(SignInPostReq p);
 
-    int patchPassword(PatchPasswordReq p);
 
     UserInfoGetRes selProfileUserInfo(UserInfoGetReq p);
 

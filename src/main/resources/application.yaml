@@ -11,7 +11,7 @@ spring:
 
   datasource:
     driver-class-name: net.sf.log4jdbc.sql.jdbcapi.DriverSpy
-    url: jdbc:log4jdbc:mariadb://localhost:3306/greengram2024_v3tdd    # 데이터 베이스 이름
+    url: jdbc:log4jdbc:mariadb://localhost:3306/greengram2024_security    # 데이터 베이스 이름
     username: root                # 아이디
     password: green502            # 비밀번호
 
@@ -36,7 +36,7 @@ springdoc:
     disabled: true
 
 file:
-  directory: D:/2024-1/download/greengram_ver3tdd/       #    절대 주소값 저장
+  directory: D:/2024-1/download/greengram_security/       #    절대 주소값 저장
 
 # custom 속성 지정
 app:
@@ -53,10 +53,14 @@ app:
 
     # AT(Access-Token) - 만료 시간 (ms -> 2시간)
     access-token-expiry: 30000
-    # 1800000 : 30분
+    # 1800000 : 30분, 600000 : 10분
 
     # RT(Refresh-Token) - 만료시간(ms) - 15일
     refresh-token-expiry: 1296000000
+  oauth2:
+    authorization-request-cookie-name: oauth2_auth_request
+    redirect-uri-param-cookie-name: redirect_uri
+    cookie-expiry-seconds: 180
 
 management:
   endpoint:               # 엔드 포인트 (URL)
