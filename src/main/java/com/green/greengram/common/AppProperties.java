@@ -5,6 +5,8 @@ import lombok.Setter;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.web.service.annotation.GetExchange;
 
+import java.util.List;
+
 @Getter
 @ConfigurationProperties(prefix = "app") // applicationl.yaml 파일(46번 라인)의 app 을 뜻함
 //ConfigurationProperties : yaml에 작성되어 있는 데이터를 객체화 시켜주는 에노테이션
@@ -35,9 +37,10 @@ public class AppProperties {
     }
     @Getter
     @Setter
-    public static class Oauth2 {
+    public static class Oauth2 {                        // yaml 파일에 oauth2 : 와 매칭 되는 클래스 (refresh-token-expiry 밑에 위치)
         private String authorizationRequestCookieName;
         private String redirectUriParamCookieName;
         private int cookieExpirySeconds;
+        private List<String> authorizedRedirectUris;
     }
 }
