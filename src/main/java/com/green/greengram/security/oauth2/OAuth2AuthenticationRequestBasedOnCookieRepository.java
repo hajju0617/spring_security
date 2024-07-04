@@ -39,13 +39,15 @@ public class OAuth2AuthenticationRequestBasedOnCookieRepository implements Autho
                                       , authorizationRequest
                                       , appProperties.getOauth2().getCookieExpirySeconds());
 
+        // 프론트로 돌아갈 redirect 주소값 (즉, 프론트가 redirect_uri 파라미터로 백엔드에 보내준 값)
         String redirectUriAfterLogin = request.getParameter(appProperties.getOauth2().getRedirectUriParamCookieName());
         log.info("redirectUriAfterLogin : {}", redirectUriAfterLogin);
         if(StringUtils.isNotBlank(redirectUriAfterLogin)) {
             cookieUtils.setCookie(response
                                 , appProperties.getOauth2().getRedirectUriParamCookieName()
                                 , redirectUriAfterLogin
-                                , appProperties.getOauth2().getCookieExpirySeconds());
+                                , appProperties.getOauth2().getCookieExpirySeconds()
+            );
 
         }
     }

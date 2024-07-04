@@ -1,6 +1,7 @@
 package com.green.greengram.user.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.green.greengram.security.SignInProviderType;
 import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.Data;
 
@@ -16,4 +17,6 @@ public class SignUpPostReq {
     @JsonIgnore private String pic; // MultipartFile pic 로 받음.
 
     @JsonIgnore private long userId;
+
+    @JsonIgnore private SignInProviderType providerType;
 }

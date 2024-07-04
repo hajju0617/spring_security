@@ -7,7 +7,8 @@
             keyProperty="userId"
             useGeneratedKeys="true">
         INSERT INTO user
-        SET uid = #{uid}
+        SET provider_type = #{providerType}
+        , uid = #{uid}
         , upw = #{upw}
         , nm = #{nm}
         , pic = #{pic}

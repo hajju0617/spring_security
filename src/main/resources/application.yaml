@@ -101,6 +101,7 @@ app:
     # 1800000 : 30분, 600000 : 10분
 
     # RT(Refresh-Token) - 만료시간(ms) - 15일
+    refresh-token-cookie-name: refresh-token
     refresh-token-expiry: 1296000000
   oauth2:
     authorization-request-cookie-name: oauth2_auth_request

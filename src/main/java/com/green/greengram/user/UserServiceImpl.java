@@ -40,6 +40,7 @@ public class UserServiceImpl implements UserService {
     @Transactional
     public int postSignUp(MultipartFile pic, SignUpPostReq p) {
         log.info("pic : {}",pic);
+        p.setProviderType(SignInProviderType.LOCAL);
         String saveFileName = customFileUtils.makeRandomFileName(pic);
         log.info("saveFileName : {}",saveFileName);
         p.setPic(saveFileName);
@@ -72,7 +73,7 @@ public class UserServiceImpl implements UserService {
 
     public SignInRes postSignIn(HttpServletResponse res, SignInPostReq p) {
         log.info("p:{}", p);
-        p.setProviderType(SignInProviderType.LOCAL.name());
+        p.setProviderType(SignInProviderType.LOCAL);
         User user = mapper.getUserById(p);
         log.info("user:{}", user);
 
@@ -101,7 +102,7 @@ public class UserServiceImpl implements UserService {
         // 쿠키에 담는 부분
         int refreshTokenMaxAge = appProperties.getJwt().getRefreshTokenCookieMaxAge();
         cookieUtils.deleteCookie(res, "refresh-token");
-        cookieUtils.setCookie(res, "refresh-token", refreshToken, refreshTokenMaxAge);
+        cookieUtils.setCookie(res, appProperties.getJwt().getRefreshTokenCookieName(), refreshToken, refreshTokenMaxAge);
 
 
 
@@ -114,7 +115,7 @@ public class UserServiceImpl implements UserService {
     }
 
     public Map getAccessToken(HttpServletRequest req) {
-        Cookie cookie = cookieUtils.getCookie(req, "refresh-token");
+        Cookie cookie = cookieUtils.getCookie(req, appProperties.getJwt().getRefreshTokenCookieName());
         if(cookie == null) { // refresh-token 값이 쿠키에 존재 여부
             throw new RuntimeException();
         }

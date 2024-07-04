@@ -1,6 +1,7 @@
 package com.green.greengram.user.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.green.greengram.security.SignInProviderType;
 import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.Data;
 
@@ -12,7 +13,7 @@ public class SignInPostReq {
     private String upw;
 
     @JsonIgnore
-    private String providerType;
+    private SignInProviderType providerType;
 
 
 
