@@ -7,6 +7,9 @@ import lombok.Data;
 
 @Data
 public class SignUpPostReq {
+
+    @JsonIgnore private SignInProviderType providerType;
+
     @Schema(example = "abc", description = "아이디", requiredMode = Schema.RequiredMode.REQUIRED)
     private String uid;
     @Schema(example = "123", description = "비밀번호", requiredMode = Schema.RequiredMode.REQUIRED)
@@ -18,5 +21,5 @@ public class SignUpPostReq {
 
     @JsonIgnore private long userId;
 
-    @JsonIgnore private SignInProviderType providerType;
+
 }

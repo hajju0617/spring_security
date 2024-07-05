@@ -69,7 +69,7 @@ public class MyOAuth2UserService extends DefaultOAuth2UserService {
         // 기존에 회원가입이 되어 있는 가 체크
         SignInPostReq signInParam = new SignInPostReq();
         signInParam.setUid(oAuth2UserInfo.getId());   // 플랫폼에서 넘어오는 유니크값 (항상 같은 값, 다른 사용자들과 구별되는 유니크값)
-        signInParam.setProviderType(signInProviderType);   // 구글이면 구글, 네이버면 네이버, 카카오면 카카오
+        signInParam.setProviderType(signInProviderType.name());   // 구글이면 구글, 네이버면 네이버, 카카오면 카카오
         User user = mapper.getUserById(signInParam);
 
 //        MyUser myUser = new MyUser();
@@ -79,7 +79,7 @@ public class MyOAuth2UserService extends DefaultOAuth2UserService {
             SignUpPostReq signUpParam = new SignUpPostReq();
             signUpParam.setProviderType(signInProviderType);
             signUpParam.setUid(oAuth2UserInfo.getId());
-            signUpParam.setNm(oAuth2User.getName());
+            signUpParam.setNm(oAuth2UserInfo.getName());
             signUpParam.setPic(oAuth2UserInfo.getProfilePicUrl());
 
             int result = mapper.postUser(signUpParam);

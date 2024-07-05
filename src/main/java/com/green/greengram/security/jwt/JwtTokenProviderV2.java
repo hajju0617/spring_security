@@ -149,6 +149,7 @@ public class JwtTokenProviderV2 {
         // auth에는 "Bearer JWT" 문자열이 있을 것이다. 문자열이 'Bearer'로 시작하는 지 체크
 
         // authorization : Bearer JWT 문자열
+
         if(!(jwt.startsWith(appProperties.getJwt().getTokenType()))) {        // if(auth.startsWith("Bearer")) -> yaml 파일에서 token-type: Bearer
             return null;                                                      // 프론트와 약속을 만들어야 함.
         }

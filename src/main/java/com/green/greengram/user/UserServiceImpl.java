@@ -72,10 +72,8 @@ public class UserServiceImpl implements UserService {
     }
 
     public SignInRes postSignIn(HttpServletResponse res, SignInPostReq p) {
-        log.info("p:{}", p);
-        p.setProviderType(SignInProviderType.LOCAL);
+        p.setProviderType(SignInProviderType.LOCAL.name());
         User user = mapper.getUserById(p);
-        log.info("user:{}", user);
 
         if (user == null) {
             throw new RuntimeException("아이디를 확인하세요.");
@@ -103,8 +101,6 @@ public class UserServiceImpl implements UserService {
         int refreshTokenMaxAge = appProperties.getJwt().getRefreshTokenCookieMaxAge();
         cookieUtils.deleteCookie(res, "refresh-token");
         cookieUtils.setCookie(res, appProperties.getJwt().getRefreshTokenCookieName(), refreshToken, refreshTokenMaxAge);
-
-
 
         return SignInRes.builder()
                 .userId(user.getUserId())

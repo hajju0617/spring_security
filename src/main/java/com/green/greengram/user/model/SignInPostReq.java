@@ -13,7 +13,7 @@ public class SignInPostReq {
     private String upw;
 
     @JsonIgnore
-    private SignInProviderType providerType;
+    private String providerType;
 
 
 

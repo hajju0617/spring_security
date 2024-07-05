@@ -97,7 +97,7 @@ app:
 
 
     # AT(Access-Token) - 만료 시간 (ms -> 2시간)
-    access-token-expiry: 30000
+    access-token-expiry: 300000
     # 1800000 : 30분, 600000 : 10분
 
     # RT(Refresh-Token) - 만료시간(ms) - 15일
