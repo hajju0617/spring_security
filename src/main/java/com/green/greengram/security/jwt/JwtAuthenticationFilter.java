@@ -43,6 +43,4 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter {     // OnceP
                                                     // 만약 권한이 필요한 엔드포인트(url)인데 권한이 없으면 JwtAuthenticationEntryPoint에 의해서 403에러를 응답
                                                     // 엔드 포인트 세팅은 SecurityConfiguration의 securityFilterChain 메서드에서 한다 where? -> (64번 행) authorizeHttpRequests(auth -> auth.requestMatchers( 하단 부분
     }
-
-
 }

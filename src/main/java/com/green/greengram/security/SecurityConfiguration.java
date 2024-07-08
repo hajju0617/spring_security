@@ -159,4 +159,24 @@ public class SecurityConfiguration {
 }
 
 
+/* OAuth2 처리 순서
+
+    OAuth2LoginAuthenticationFilter, OAuth2AuthorizationRequestRedirectFilter
+
+    프론트가 registrationId 선택 -> http://localhost:8080/oauth2/authorization/${registrationId}?redirect_uri=${redirectUrl} 백엔드 요청
+    (registrationId : 플랫폼 이름, redirectUrl : 소셜 로그인 완료 후 프론트로 보내야하는 주소값)
+    -> #registration 에 요청을 보낼 정보를 정리해서 요청객체(OAuth2AuthorizationRequest) 생성
+    -> OAuth2AuthenticationRequestBasedOnCookieRepository - saveAuthorizationRequest 메서드 호출
+    (쿠키에 요청 정보, 프론트 Redirect URL 저장 why? 쿠키 사용은 플랫폼과 통신을 여러번 하는 동안 데이터 유지용)
+    -> OAuth2AuthenticationRequestBasedOnCookieRepository - removeAuthorizationRequest 메서드 호출
+    -> OAuth2AuthenticationRequestBasedOnCookieRepository - loadAuthorizationRequest 메서드 호출
+    (Access Token 받음)
+    -> OAuth2UserService - loadUser 호출
+
+    ( 사용자 정보 받았다 / 못 맏았다 분기)
+    받았다 -> OAuth2AuthenticationSuccessHandler - onAuthenticationSuccess 호출
+    못 맏았다 ->
+ */
+
+
 

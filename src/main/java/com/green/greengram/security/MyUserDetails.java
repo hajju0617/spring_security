@@ -13,9 +13,10 @@ import java.util.*;
 @NoArgsConstructor
 @Setter
 @Getter
+// 시큐리티에서 로그인 처리를 할 때 사용하는 객체
 public class MyUserDetails implements UserDetails, OAuth2User {
 
-    private MyUser myUser;
+    private MyUser myUser;      // jwt 만들 때 payload 에 담을 데이터를 담은 객체
 
 //    @Builder.Default
 //    private List<String> roles = new ArrayList<>();     // 로그인한 사용자의 권한

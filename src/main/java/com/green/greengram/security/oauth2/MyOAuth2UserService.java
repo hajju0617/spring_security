@@ -90,15 +90,20 @@ public class MyOAuth2UserService extends DefaultOAuth2UserService {
                             , signUpParam.getPic()
                             , null
                             , null);
-//            myUser.setUserId(signUpParam.getUserId());  // 회원가입 후 유저 pk값 담기
 
+//            myUser.setUserId(signUpParam.getUserId());  // 회원가입 후 유저 pk값 담기
 //        } else {
 //            myUser.setUserId(user.getUserId());         // 이미 회원가입 된 유저 pk값 담기
+
+        } else {    // 이미 회원가입이 되어 있음
+            if(user.getPic() == null || (user.getPic().startsWith("http") && !user.getPic().equals(oAuth2UserInfo.getProfilePicUrl()))) {   // 프로필 값이 변경이 되었다면
+                // 프로필 사진 변경처리(update)
+            }
         }
         MyUserOAuth2Vo myUserOAuth2Vo = new MyUserOAuth2Vo(user.getUserId(), "ROLE_USER", user.getNm(), user.getPic());
-
         MyUserDetails signInUser = new MyUserDetails();
         signInUser.setMyUser(myUserOAuth2Vo);
-        return signInUser;
+        return signInUser;      // SuccessHandler determineTargetUrl 메서드(HttpServletRequest request, HttpServletResponse response, Authentication authentication)
+                                                                                                                  // authentication 으로 리턴
     }
 }

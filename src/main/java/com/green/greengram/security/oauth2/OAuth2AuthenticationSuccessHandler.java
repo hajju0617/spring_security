@@ -30,21 +30,20 @@ public class OAuth2AuthenticationSuccessHandler extends SimpleUrlAuthenticationS
 
     @Override
     public void onAuthenticationSuccess(HttpServletRequest request, HttpServletResponse response, Authentication authentication) throws IOException, ServletException {
-        String targetUrl = determineTargetUrl(request, response, authentication);
-        log.info("targetUrl : {}", targetUrl);
         if(response.isCommitted()) {    // 응답 객체가 만료된 경우(다른 곳에서 응답처리를 한 경우)
             log.error("onAuthenticationSuccess - 응답이 만료됨");
             return;
-
-
         }
-        clearAuthenticationAttributes(request, response);
-        getRedirectStrategy().sendRedirect(request, response, targetUrl);
+        String targetUrl = determineTargetUrl(request, response, authentication);   // targetUrl : 리다이렉트 할 Url 얻음
+        log.info("targetUrl : {}", targetUrl);
+        clearAuthenticationAttributes(request, response);                   // 리다이렉트 전 사용 했던 자료 삭제
+        getRedirectStrategy().sendRedirect(request, response, targetUrl);   // 리다이렉트 실행하는 부분
 
     }
 
     @Override
     protected String determineTargetUrl(HttpServletRequest request, HttpServletResponse response, Authentication authentication) {
+        // 프론트가 소셜 로그인시 보내준 redirect_uri 값
         String redirectUri = cookieUtils.getCookie(request
                                                 , appProperties.getOauth2().getRedirectUriParamCookieName()
                                                 , String.class);
@@ -57,10 +56,14 @@ public class OAuth2AuthenticationSuccessHandler extends SimpleUrlAuthenticationS
         // 프론트가 원하는 redirect_url 값이 저장
         String targetUrl = redirectUri == null ? getDefaultTargetUrl() : redirectUri;
 
-        // user_id, nm, pic, access_token 이 4개의 값을 프론트에게 리턴
+        // user_id, nm, pic, access_token 이 4개의 값을 프론트에게 리턴하기 위해 쿼리스트링 만드는 작업
+        // MyOAuth2UserService 에서 보내준 MyUserDetail 를 얻는다.
         MyUserDetails myUserDetails = (MyUserDetails) authentication.getPrincipal();
-        MyUserOAuth2Vo myUserOAuth2Vo = (MyUserOAuth2Vo) myUserDetails.getMyUser();
-        MyUser myUser = MyUser.builder()
+
+
+        MyUserOAuth2Vo myUserOAuth2Vo = (MyUserOAuth2Vo) myUserDetails.getMyUser(); // MyUserDetail 로 부터 MyUserOAuth2Vo 를 얻는다.
+
+        MyUser myUser = MyUser.builder()    // JWT 를 만들기 위해서 MyUser 객체화
                                 .userId(myUserOAuth2Vo.getUserId())
                                 .role(myUserOAuth2Vo.getRole())
                                 .build();
