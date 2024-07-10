@@ -1,6 +1,7 @@
 package com.green.greengram.exception;
 
 import com.green.greengram.common.model.MyResponse;
+import jakarta.validation.constraints.NotNull;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
@@ -13,7 +14,7 @@ import java.util.List;
 @SuperBuilder   // 부모까지 빌더패턴 쓸 수 있게 해줌
 public class MyErrorResponse extends MyResponse<String> {       // <String> 이유 : return 할때 항상 resultData 타입을 지정해줬는데 그걸 String으로 해서 상속 받겠다는 의미
 
-
+    @NotNull
     private final List<ValidationError> valids;     // Validation 에러가 발생시 메세지들을 리스트에 담아주는 담당
 
     @Getter

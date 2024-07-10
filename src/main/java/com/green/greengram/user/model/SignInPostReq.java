@@ -16,7 +16,7 @@ public class SignInPostReq {
 
     @NotBlank(message = "비밀번호를 확인해 주세요.")
     @Size(min = 5, max = 20, message = "비밀번호는 5~20자로 구성해 주세요.")     // @Size 는 문자열             // @Min, @Max 는 숫자
-    @Pattern(regexp = "(?=.*[0-9])(?=.*[a-zA-Z])(?=.*\\W)(?=\\S+$).{8,16}", message = "비밀번호는 8~16자 영문 대 소문자, 숫자, 특수문자를 사용하세요.")
+//    @Pattern(regexp = "(?=.*[0-9])(?=.*[a-zA-Z])(?=.*\\W)(?=\\S+$).{8,16}", message = "비밀번호는 8~16자 영문 대 소문자, 숫자, 특수문자를 사용하세요.")
     @Schema(example = "123", description = "유저 비밀번호", requiredMode = Schema.RequiredMode.REQUIRED)
     private String upw;
 

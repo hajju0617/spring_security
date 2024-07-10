@@ -3,6 +3,8 @@ package com.green.greengram.user;
 import com.green.greengram.common.AppProperties;
 import com.green.greengram.common.CookieUtils;
 import com.green.greengram.common.CustomFileUtils;
+import com.green.greengram.exception.CustomException;
+import com.green.greengram.exception.MemberErrorCode;
 import com.green.greengram.security.*;
 import com.green.greengram.security.jwt.JwtTokenProviderV2;
 import com.green.greengram.user.model.*;
@@ -75,10 +77,8 @@ public class UserServiceImpl implements UserService {
         p.setProviderType(SignInProviderType.LOCAL.name());
         User user = mapper.getUserById(p);
 
-        if (user == null) {
-            throw new RuntimeException("(Service) 아이디를 확인하세요.");
-        } else if (!(BCrypt.checkpw(p.getUpw(), user.getUpw()))) {
-            throw new RuntimeException("(Service) 비밀번호를 확인하세요.");
+        if (user == null || !(BCrypt.checkpw(p.getUpw(), user.getUpw()))) {
+            throw new CustomException(MemberErrorCode.INCORRECT_ID_PW);
         }
 
 
