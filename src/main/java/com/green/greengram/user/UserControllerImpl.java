@@ -1,11 +1,12 @@
 package com.green.greengram.user;
 
-import com.green.greengram.common.model.ResultDto;
+import com.green.greengram.common.model.MyResponse;
 import com.green.greengram.user.model.*;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springdoc.core.annotations.ParameterObject;
@@ -25,13 +26,13 @@ public class UserControllerImpl {
 
     @PostMapping("sign-up")
     @Operation(summary = "회원가입", description = "프로필 사진은 필수가 아님.")
-    public ResultDto<Integer> postUser(@RequestPart(required = false) MultipartFile pic, @RequestPart SignUpPostReq p) {
+    public MyResponse<Integer> postUser(@RequestPart(required = false) MultipartFile pic, @RequestPart SignUpPostReq p) {
 
         log.info("p : {}",p);
         log.info("pic : {}",pic);
         int result = service.postSignUp(pic, p);
 
-        return ResultDto.<Integer>builder()
+        return MyResponse.<Integer>builder()
                 .statusCode(HttpStatus.OK)
                 .resultMsg("회원가입 완료")
                 .resultData(result)
@@ -40,10 +41,10 @@ public class UserControllerImpl {
 
     @PostMapping("sign-in")
     @Operation(summary = "인증", description = "")
-    public ResultDto<SignInRes> postSignIn(HttpServletResponse res, @RequestBody SignInPostReq p) {
+    public MyResponse<SignInRes> postSignIn(HttpServletResponse res, @Valid @RequestBody SignInPostReq p) {  // @Valid @RequestBody 순서는 상관없음
         SignInRes result = service.postSignIn(res, p);
 
-        return ResultDto.<SignInRes>builder()
+        return MyResponse.<SignInRes>builder()
                 .statusCode(HttpStatus.OK)
                 .resultMsg("인증 완료")
                 .resultData(result)
@@ -58,10 +59,10 @@ public class UserControllerImpl {
         cookie는 요청마다 항상 넘어온다.
     */
     @GetMapping("access-token")
-    public ResultDto<Map<String, String>> getAccessToken(HttpServletRequest req) {
+    public MyResponse<Map<String, String>> getAccessToken(HttpServletRequest req) {
         Map<String, String> map = service.getAccessToken(req);
 
-        return ResultDto.<Map<String, String>>builder()
+        return MyResponse.<Map<String, String>>builder()
                 .statusCode(HttpStatus.OK)
                 .resultMsg("Access Token 발급")
                 .resultData(map)
@@ -69,10 +70,10 @@ public class UserControllerImpl {
     }
 
     @GetMapping
-    public ResultDto<UserInfoGetRes> getUserInfo(@ParameterObject @ModelAttribute UserInfoGetReq p) {
+    public MyResponse<UserInfoGetRes> getUserInfo(@ParameterObject @ModelAttribute UserInfoGetReq p) {
         UserInfoGetRes result = service.getUserInfo(p);
 
-        return ResultDto.<UserInfoGetRes>builder()
+        return MyResponse.<UserInfoGetRes>builder()
                 .statusCode(HttpStatus.OK)
                 .resultMsg(HttpStatus.OK.toString())
                 .resultData(result)
@@ -80,10 +81,10 @@ public class UserControllerImpl {
     }
 
     @PatchMapping(value = "pic", consumes = "multipart/form-data")
-    public ResultDto<String> patchProfilePic(@ModelAttribute UserProfilePatchReq p) {
+    public MyResponse<String> patchProfilePic(@ModelAttribute UserProfilePatchReq p) {
         String result = service.patchProfilePic(p);
 
-        return ResultDto.<String>builder()
+        return MyResponse.<String>builder()
                 .statusCode(HttpStatus.OK)
                 .resultMsg(HttpStatus.OK.toString())
                 .resultData(result)

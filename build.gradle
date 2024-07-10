@@ -23,21 +23,22 @@ repositories {
 
 dependencies {
 
-    implementation 'org.mindrot:jbcrypt:0.4'        // 패스워드 해싱 처리 (암호화) -> Jbcrypt 라이브러리
-    implementation 'org.springdoc:springdoc-openapi-starter-webmvc-ui:2.5.0'    // swagger 추가
+    implementation 'org.mindrot:jbcrypt:0.4'                                            // 패스워드 해싱 처리 (암호화) -> Jbcrypt 라이브러리
+    implementation 'org.springdoc:springdoc-openapi-starter-webmvc-ui:2.5.0'            // swagger 추가
     implementation 'org.springframework.boot:spring-boot-starter-actuator'
-    implementation 'org.bgee.log4jdbc-log4j2:log4jdbc-log4j2-jdbc4.1:1.16'  // 로그에 쿼리 문 표시 (jdbc)
-    implementation 'org.springframework.boot:spring-boot-starter-security'  // security
-    annotationProcessor 'org.springframework.boot:spring-boot-configuration-processor' // Spring Boot 애플리케이션에서 설정 프로퍼티를 쉽게 관리하고 사용할 수 있도록 도와주는 애너테이션 프로세서
-                                                                                       // 설정 관리와 관련된 편의성을 크게 향상시켜 줌. 설정 프로퍼티의 자동 완성, 타입 안전한 바인딩, 그리고 설정 값 검증을 통해 개발자가 더 쉽게 설정을 관리하고 오류를 줄일 수 있도록 도와줌
+    implementation 'org.bgee.log4jdbc-log4j2:log4jdbc-log4j2-jdbc4.1:1.16'              // 로그에 쿼리 문 표시 (jdbc)
+    implementation 'org.springframework.boot:spring-boot-starter-security'              // security
+    implementation 'org.springframework.boot:spring-boot-starter-validation'            // validation
+    annotationProcessor 'org.springframework.boot:spring-boot-configuration-processor'  // Spring Boot 애플리케이션에서 설정 프로퍼티를 쉽게 관리하고 사용할 수 있도록 도와주는 애너테이션 프로세서
+                                                                                        // 설정 관리와 관련된 편의성을 크게 향상시켜 줌. 설정 프로퍼티의 자동 완성, 타입 안전한 바인딩, 그리고 설정 값 검증을 통해 개발자가 더 쉽게 설정을 관리하고 오류를 줄일 수 있도록 도와줌
 
     implementation 'io.jsonwebtoken:jjwt-api:0.12.5' // Json Web Token
     runtimeOnly 'io.jsonwebtoken:jjwt-impl:0.12.5'
     runtimeOnly 'io.jsonwebtoken:jjwt-gson:0.12.5'
 
-    implementation 'me.paulschwarz:spring-dotenv:4.0.0'                             // .env 파일을 사용하기 위해서
+    implementation 'me.paulschwarz:spring-dotenv:4.0.0'                                 // .env 파일을 사용하기 위해서
 
-    implementation 'org.springframework.boot:spring-boot-starter-oauth2-client'     // OAuth2
+    implementation 'org.springframework.boot:spring-boot-starter-oauth2-client'         // OAuth2
 
 
     implementation 'org.springframework.boot:spring-boot-starter-jdbc'

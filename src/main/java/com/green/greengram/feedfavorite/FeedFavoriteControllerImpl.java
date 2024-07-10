@@ -1,6 +1,6 @@
 package com.green.greengram.feedfavorite;
 
-import com.green.greengram.common.model.ResultDto;
+import com.green.greengram.common.model.MyResponse;
 import com.green.greengram.feedfavorite.model.FeedFavoriteToggleReq;
 import io.swagger.v3.oas.annotations.Operation;
 import lombok.RequiredArgsConstructor;
@@ -18,10 +18,10 @@ public class FeedFavoriteControllerImpl implements FeedFavoriteController{
 
     @GetMapping
     @Operation(summary = "좋아요", description = "toggle 처리")
-    public ResultDto<Integer> toggleFavorite(@ParameterObject @ModelAttribute FeedFavoriteToggleReq p) {
+    public MyResponse<Integer> toggleFavorite(@ParameterObject @ModelAttribute FeedFavoriteToggleReq p) {
         int result = service.toggleFavorite(p);
 
-        return ResultDto.<Integer>builder()
+        return MyResponse.<Integer>builder()
                 .statusCode(HttpStatus.OK)
                 .resultMsg(result == 0 ? "좋아요 취소" : "좋아요")
                 .resultData(result)

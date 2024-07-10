@@ -76,9 +76,9 @@ public class UserServiceImpl implements UserService {
         User user = mapper.getUserById(p);
 
         if (user == null) {
-            throw new RuntimeException("아이디를 확인하세요.");
+            throw new RuntimeException("(Service) 아이디를 확인하세요.");
         } else if (!(BCrypt.checkpw(p.getUpw(), user.getUpw()))) {
-            throw new RuntimeException("비밀번호를 확인하세요.");
+            throw new RuntimeException("(Service) 비밀번호를 확인하세요.");
         }
 
 

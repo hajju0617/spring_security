@@ -1,6 +1,6 @@
 package com.green.greengram.feed;
 
-import com.green.greengram.common.model.ResultDto;
+import com.green.greengram.common.model.MyResponse;
 import com.green.greengram.feed.model.FeedGetReq;
 import com.green.greengram.feed.model.FeedGetRes;
 import com.green.greengram.feed.model.FeedPostReq;
@@ -24,11 +24,11 @@ public class FeedControllerImpl {
 
     @PostMapping
     @Operation(summary = "Feed 등록", description = "")
-    public ResultDto<FeedPostRes> postFeed(@RequestPart List<MultipartFile> pics
+    public MyResponse<FeedPostRes> postFeed(@RequestPart List<MultipartFile> pics
                                            , @RequestPart FeedPostReq p) {
         FeedPostRes result = service.postFeed(pics, p);
 
-        return ResultDto.<FeedPostRes>builder()
+        return MyResponse.<FeedPostRes>builder()
                 .statusCode(HttpStatus.OK)
                 .resultMsg("Feed 등록 완료")
                 .resultData(result)
@@ -37,11 +37,11 @@ public class FeedControllerImpl {
 
     @GetMapping
     @Operation(summary = "Feed 리스트", description = "loginUsreId는 로그인한 사용자의 pk")
-    public ResultDto<List<FeedGetRes>> getFeed(@ParameterObject @ModelAttribute FeedGetReq p) {
+    public MyResponse<List<FeedGetRes>> getFeed(@ParameterObject @ModelAttribute FeedGetReq p) {
         List<FeedGetRes> result = service.getFeed(p);
         System.out.println(result);
 
-        return ResultDto.<List<FeedGetRes>>builder()
+        return MyResponse.<List<FeedGetRes>>builder()
                 .statusCode(HttpStatus.OK)
                 .resultMsg(HttpStatus.OK.toString())
                 .resultData(result)
