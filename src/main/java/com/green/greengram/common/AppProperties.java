@@ -38,7 +38,8 @@ public class AppProperties {
     }
     @Getter
     @Setter
-    public static class Oauth2 {                        // yaml 파일에 oauth2 : 와 매칭 되는 클래스 (refresh-token-expiry 밑에 위치)
+    public static class Oauth2 {    // yaml 파일에 oauth2 : 와 매칭 되는 클래스 (refresh-token-expiry 밑에 위치)
+        private String baseUri;
         private String authorizationRequestCookieName;
         private String redirectUriParamCookieName;
         private int cookieExpirySeconds;

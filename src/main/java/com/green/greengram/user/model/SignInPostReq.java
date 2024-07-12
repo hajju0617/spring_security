@@ -9,7 +9,7 @@ import lombok.Singular;
 
 @Data
 public class SignInPostReq {
-                                                            // 값을 입력하지 않을 시 400 에러가 발생, controller 까지 오지도 않고 그 전에 미리 막아줌
+                                                 // 값을 입력하지 않을 시 400 에러가 발생, controller 까지 오지도 않고 그 전에 미리 막아줌
     @NotBlank(message = "아이디를 확인해 주세요.")  // @NotBlank : 비어 있으면 안된다. (message : 문제가 생겼을 때 출력할 메세지)
     @Schema(example = "abc", description = "유저 아이디", requiredMode = Schema.RequiredMode.REQUIRED)
     private String uid;

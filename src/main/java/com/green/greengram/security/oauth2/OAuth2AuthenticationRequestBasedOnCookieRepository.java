@@ -23,6 +23,18 @@ import org.springframework.stereotype.Component;
     인가/인증 코드가 1회용인 것 처럼 OAuth2AuthorizationRequest 객체도 1회용으로 사용
     인가/인증 코드는 요청을 보낼때 마다 값이 달라진다)
 
+    스프링 시큐리티 OAuth 처리 때 사용하는 필터가 2개가 있음.
+    OAuth2AuthorizationRequestRedirectFilter(가), OAuth2LoginAuthenticationFilter(나)
+
+    OAuth2AuthorizationRequest(1) 는 소셜 로그인 요청할 때마다 생성되는 객체
+    1단계 인가코드(임시코드, 인증코드)를 요청할 때 (1)를 사용함
+    2단계 Access Token 을 요청한 이후에는 A를 사용할 일이 발생하지 않기 때문에 Cookie 에서 삭제
+
+    세션을 이용해서 처리하는 방식은 확장이 불리함. -> 쿠키로 해결. 그래서 이전에 세션에서 삭제를 처리를
+    removeAuthorizationRequest 메서드에서 했던 것과 같음
+
+    (가)필터에서 removeAuthorizationRequest 메서드를 호출해서 리턴받은 값을 활용한다.
+
 
     ( access-token 받았다 / 못 맏았다 분기)
     access-token 받았다 -> OAuth2AuthenticationSuccessHandler - onAuthenticationSuccess 호출

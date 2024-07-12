@@ -1,13 +1,11 @@
 package com.green.greengram.security;
 
 
+import com.green.greengram.common.AppProperties;
 import com.green.greengram.security.jwt.JwtAuthenticationAccessDeniedHandler;
 import com.green.greengram.security.jwt.JwtAuthenticationEntryPoint;
 import com.green.greengram.security.jwt.JwtAuthenticationFilter;
-import com.green.greengram.security.oauth2.MyOAuth2UserService;
-import com.green.greengram.security.oauth2.OAuth2AuthenticationFailureHandler;
-import com.green.greengram.security.oauth2.OAuth2AuthenticationRequestBasedOnCookieRepository;
-import com.green.greengram.security.oauth2.OAuth2AuthenticationSuccessHandler;
+import com.green.greengram.security.oauth2.*;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -16,6 +14,7 @@ import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.config.oauth2.client.CommonOAuth2Provider;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.security.oauth2.client.web.OAuth2AuthorizationRequestRedirectFilter;
 import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 
@@ -36,6 +35,8 @@ public class SecurityConfiguration {
     private final OAuth2AuthenticationRequestBasedOnCookieRepository repository;
     private final OAuth2AuthenticationSuccessHandler  oAuth2AuthenticationSuccessHandler;
     private final MyOAuth2UserService myOAuth2UserService;
+    private final AppProperties appProperties;
+    private final OAuth2AuthenticationCheckRedirectUriFilter oAuth2AuthenticationCheckRedirectUriFilter;
 
     /*
      메서드 빈 등록으로 주로 쓰는 케이스는 (현재 기준으로 설명하면)
@@ -126,16 +127,15 @@ public class SecurityConfiguration {
                                                          .accessDeniedHandler(new JwtAuthenticationAccessDeniedHandler())
                 )
                 .oauth2Login( oauth2 -> oauth2.authorizationEndpoint(
-                        auth -> auth.baseUri("/oauth2/authorization") // ""주소값 프론트한테 알려주기
+                        auth -> auth.baseUri( appProperties.getOauth2().getBaseUri() ) // ""주소값 프론트한테 알려주기
                                 .authorizationRequestRepository(repository)
                 ).redirectionEndpoint( redirection -> redirection.baseUri("/*/oauth2/code/*"))
                         .userInfoEndpoint(userInfo -> userInfo.userService(myOAuth2UserService))
                         .successHandler(oAuth2AuthenticationSuccessHandler)
-                        .failureHandler(oAuth2AuthenticationFailureHandler))
+                        .failureHandler(oAuth2AuthenticationFailureHandler)
+                )
+                .addFilterBefore(oAuth2AuthenticationCheckRedirectUriFilter, OAuth2AuthorizationRequestRedirectFilter.class)
                 .build();
-
-
-
 
                 /*
                 //만약, permitAll메소드가 void였다면 아래와 같이 작성을 해야함      // 람다식에서 중괄호를 안 쓸 수 있는 조건 : 안에 1문장으로 작성 돼야 함 (문장 끝 세미콜론 없어도 됨)
