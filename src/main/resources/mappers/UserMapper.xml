@@ -24,10 +24,13 @@
 <!--    </select>-->
 
     <select id="getUserById">
-        SELECT user_id AS userId, uid, upw, nm, pic, created_at AS createdAt, updated_at AS updatedAt
-        FROM user
+        SELECT A.user_id AS userId, A.uid, A.upw, A.nm, A.pic, A.created_at AS createdAt
+        , A.updated_at AS updatedAt, B.role
+        FROM user A
+        LEFT JOIN user_roles B
+        ON A.user_id = B.user_id
         WHERE uid = #{uid}
-        AND provider_type = #{providerType}
+        AND A.provider_type = #{providerType}
     </select>
 
     <update id="patchPassword">

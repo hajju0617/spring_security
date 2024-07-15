@@ -32,7 +32,23 @@ public class MyUserDetails implements UserDetails, OAuth2User {
 //        List<GrantedAuthority> list = new ArrayList<>();
 //        list.add(new SimpleGrantedAuthority(role));
 //        return list;
-        return Collections.singletonList(new SimpleGrantedAuthority(myUser.getRole()));
+
+        // 단수 -> 복수로 변경
+        //return Collections.singletonList(new SimpleGrantedAuthority(myUser.getRole()));   (1)
+
+          //(2)
+//        List<GrantedAuthority> list2 = new ArrayList<>();
+//        list2.add(new SimpleGrantedAuthority("ROLE_USER"));
+//        return list2;
+
+                // (1), (2)는 동일한 결과
+
+        // List<String> -> List<GrantedAuthority> 로 변경하는 작업
+        List<GrantedAuthority> list = new ArrayList<>();
+        for(String role : myUser.getRoles()) {
+            list.add(new SimpleGrantedAuthority(role));
+        }
+        return list;
     }
 
     @Override

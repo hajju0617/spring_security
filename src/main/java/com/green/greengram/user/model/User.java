@@ -3,7 +3,8 @@ package com.green.greengram.user.model;
 import lombok.*;
 
 @Getter
-@AllArgsConstructor
+@Setter
+
 @ToString
 @EqualsAndHashCode
 public class User {

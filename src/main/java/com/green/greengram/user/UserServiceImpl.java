@@ -3,6 +3,7 @@ package com.green.greengram.user;
 import com.green.greengram.common.AppProperties;
 import com.green.greengram.common.CookieUtils;
 import com.green.greengram.common.CustomFileUtils;
+import com.green.greengram.common.MyCommonUtils;
 import com.green.greengram.exception.CustomException;
 import com.green.greengram.exception.MemberErrorCode;
 import com.green.greengram.security.*;
@@ -22,6 +23,7 @@ import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 @Slf4j
@@ -75,16 +77,18 @@ public class UserServiceImpl implements UserService {
 
     public SignInRes postSignIn(HttpServletResponse res, SignInPostReq p) {
         p.setProviderType(SignInProviderType.LOCAL.name());
-        User user = mapper.getUserById(p);
+        List<UserInfo> userInfoList = mapper.getUserById(p);
 
-        if (user == null || !(BCrypt.checkpw(p.getUpw(), user.getUpw()))) {
+        UserInfoRoles userInfoRoles = MyCommonUtils.convertToUserInfoRoles(userInfoList);
+
+        if (userInfoRoles == null || !passwordEncoder.matches(p.getUpw(), userInfoRoles.getUpw())) {
             throw new CustomException(MemberErrorCode.INCORRECT_ID_PW);
         }
 
 
         MyUser myUser = MyUser.builder()
-                .userId(user.getUserId())   // pk값 담고
-                .role("ROLE_USER")          // 권한 담음
+                .userId(userInfoRoles.getUserId())   // pk값 담고
+                .roles(userInfoRoles.getRoles())          // 권한 담음
                 .build();
         // => 빌더 패턴으로 객체 생성
 
@@ -103,9 +107,9 @@ public class UserServiceImpl implements UserService {
         cookieUtils.setCookie(res, appProperties.getJwt().getRefreshTokenCookieName(), refreshToken, refreshTokenMaxAge);
 
         return SignInRes.builder()
-                .userId(user.getUserId())   // 프로필 사진을 띄울때 사용 (프로필 사진 주소에 pk 값이 포함 됨)
-                .nm(user.getNm())
-                .pic(user.getPic())
+                .userId(userInfoRoles.getUserId())   // 프로필 사진을 띄울때 사용 (프로필 사진 주소에 pk 값이 포함 됨)
+                .nm(userInfoRoles.getNm())
+                .pic(userInfoRoles.getPic())
                 .accessToken(accessToken)   // 응답으로 바로 프론트한테 보내준다
                 .build();
     }

@@ -15,7 +15,7 @@ import java.io.Serializable;
 import java.util.Base64;
 
 @Slf4j
-@Component
+@Component  // 빈등록
 public class CookieUtils {
 
     //요청 header에 내가 원하는 쿠키를 찾는 메소드

@@ -9,7 +9,8 @@ import java.util.List;
 public interface UserMapper {
     int postUser(SignUpPostReq p);
 
-    User getUserById(SignInPostReq p);
+//    User getUserById(SignInPostReq p);
+    List<UserInfo> getUserById(SignInPostReq p);
 
 
     UserInfoGetRes selProfileUserInfo(UserInfoGetReq p);

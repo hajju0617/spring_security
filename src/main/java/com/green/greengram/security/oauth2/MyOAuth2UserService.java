@@ -1,5 +1,6 @@
 package com.green.greengram.security.oauth2;
 
+import com.green.greengram.common.MyCommonUtils;
 import com.green.greengram.security.MyUser;
 import com.green.greengram.security.MyUserDetails;
 import com.green.greengram.security.MyUserOAuth2Vo;
@@ -7,9 +8,7 @@ import com.green.greengram.security.SignInProviderType;
 import com.green.greengram.security.oauth2.userinfo.OAuth2UserInfo;
 import com.green.greengram.security.oauth2.userinfo.OAuth2UserInfoFactory;
 import com.green.greengram.user.UserMapper;
-import com.green.greengram.user.model.SignInPostReq;
-import com.green.greengram.user.model.SignUpPostReq;
-import com.green.greengram.user.model.User;
+import com.green.greengram.user.model.*;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.security.authentication.InternalAuthenticationServiceException;
@@ -20,6 +19,8 @@ import org.springframework.security.oauth2.core.user.OAuth2User;
 import org.springframework.stereotype.Service;
 
 import javax.naming.AuthenticationException;
+import java.util.ArrayList;
+import java.util.List;
 
 /*
  MyOAuth2UserService :
@@ -70,12 +71,14 @@ public class MyOAuth2UserService extends DefaultOAuth2UserService {
         SignInPostReq signInParam = new SignInPostReq();
         signInParam.setUid(oAuth2UserInfo.getId());   // 플랫폼에서 넘어오는 유니크값 (항상 같은 값, 다른 사용자들과 구별되는 유니크값)
         signInParam.setProviderType(signInProviderType.name());   // 구글이면 구글, 네이버면 네이버, 카카오면 카카오
-        User user = mapper.getUserById(signInParam);
+        List<UserInfo> userInfoList = mapper.getUserById(signInParam);
+
+        UserInfoRoles userInfoRoles = MyCommonUtils.convertToUserInfoRoles(userInfoList);
 
 //        MyUser myUser = new MyUser();
 //        myUser.setRole("ROLE_USER");
 
-        if(user == null) {  // 회원가입 처리
+        if(userInfoRoles == null) {  // 회원가입 처리
             SignUpPostReq signUpParam = new SignUpPostReq();
             signUpParam.setProviderType(signInProviderType);
             signUpParam.setUid(oAuth2UserInfo.getId());
@@ -83,24 +86,27 @@ public class MyOAuth2UserService extends DefaultOAuth2UserService {
             signUpParam.setPic(oAuth2UserInfo.getProfilePicUrl());
 
             int result = mapper.postUser(signUpParam);
-            user = new User(signUpParam.getUserId()
-                            , signInParam.getUid()
-                            , null
-                            , signUpParam.getNm()
-                            , signUpParam.getPic()
-                            , null
-                            , null);
+
+            userInfoRoles = new UserInfoRoles();
+            userInfoRoles.setUserId(signUpParam.getUserId());
+            userInfoRoles.setNm(signUpParam.getNm());
+            userInfoRoles.setPic(signUpParam.getPic());
 
 //            myUser.setUserId(signUpParam.getUserId());  // 회원가입 후 유저 pk값 담기
 //        } else {
 //            myUser.setUserId(user.getUserId());         // 이미 회원가입 된 유저 pk값 담기
 
         } else {    // 이미 회원가입이 되어 있음
-            if(user.getPic() == null || (user.getPic().startsWith("http") && !user.getPic().equals(oAuth2UserInfo.getProfilePicUrl()))) {   // 프로필 값이 변경이 되었다면
+            if(userInfoRoles.getPic() == null
+                    || (userInfoRoles.getPic().startsWith("http")
+                    && !userInfoRoles .getPic().equals(oAuth2UserInfo.getProfilePicUrl()))) {   // 프로필 값이 변경이 되었다면
                 // 프로필 사진 변경처리(update)
             }
         }
-        MyUserOAuth2Vo myUserOAuth2Vo = new MyUserOAuth2Vo(user.getUserId(), "ROLE_USER", user.getNm(), user.getPic());
+        List<String> roles = new ArrayList<>();
+        roles.add("ROLE_USER");     // 소셜 로그인은 그냥 하드코딩으로 처리 (소셜로그인으로 관리자와 같은 권한부여 x)
+
+        MyUserOAuth2Vo myUserOAuth2Vo = new MyUserOAuth2Vo(userInfoRoles.getUserId(), roles, userInfoRoles.getNm(), userInfoRoles.getPic());
         MyUserDetails signInUser = new MyUserDetails();
         signInUser.setMyUser(myUserOAuth2Vo);
         return signInUser;      // SuccessHandler determineTargetUrl 메서드(HttpServletRequest request, HttpServletResponse response, Authentication authentication)

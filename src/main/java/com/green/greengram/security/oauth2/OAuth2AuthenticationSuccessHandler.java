@@ -75,7 +75,7 @@ public class OAuth2AuthenticationSuccessHandler extends SimpleUrlAuthenticationS
 
         MyUser myUser = MyUser.builder()    // JWT 를 만들기 위해서 MyUser 객체화
                                 .userId(myUserOAuth2Vo.getUserId())
-                                .role(myUserOAuth2Vo.getRole())
+                                .roles(myUserOAuth2Vo.getRoles())
                                 .build();
 
         String accessToken = jwtTokenProvider.generateAccessToken(myUser);
