@@ -12,9 +12,9 @@ spring:
 
   datasource:
     driver-class-name: net.sf.log4jdbc.sql.jdbcapi.DriverSpy
-    url: jdbc:log4jdbc:mariadb://localhost:3306/greengram2024_security    # 데이터 베이스 이름
-    username: root                # 아이디
-    password: green502            # 비밀번호
+    url: ${DEFAULT.DB_URL}    # 데이터 베이스 이름
+    username: ${DEFAULT.DB_USERNAME}                # 아이디
+    password: ${DEFAULT.DB_PASSWORD}            # 비밀번호
 
   security:
     oauth2:
@@ -81,7 +81,7 @@ springdoc:
     disabled: true
 
 file:
-  directory: D:/2024-1/download/greengram_security/       #    절대 주소값 저장
+  directory: ${DEFAULT.FILE_DIRECTORY}      #    절대 주소값 저장
 
 # custom 속성 지정
 app:
