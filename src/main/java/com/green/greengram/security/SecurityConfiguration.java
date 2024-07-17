@@ -77,12 +77,11 @@ public class SecurityConfiguration {
                                               // CSRF 공격이란 정상적인 사용자가 의도하지 않았지만, 자신도 모르게 서버를 공격하게 되는 경우임. 공격자가 만든 악성 페이지를 통해 사용자는 자신도 모르게 공격을 수행 함.
                                               // CSRF 공격은 로그인 방식이 세션일때
                 .authorizeHttpRequests(auth ->
-                        auth.requestMatchers("/api/admin/")     // 로그인이 안 되어 있을때 접근 할 수 없는 곳(인증된 사용자만 접근 가능.)
+                        auth.requestMatchers("/api/feed")     // 로그인이 안 되어 있을때 접근 할 수 없는 곳(인증된 사용자만 접근 가능.)
                                 .authenticated()
 
                                 .requestMatchers(
-                                "/api/feed"
-                                , "/api/feed/*"
+                                "/api/feed/*"
                                 , "/api/user/pic"
                                 , "/api/user/follow"
                                 )
