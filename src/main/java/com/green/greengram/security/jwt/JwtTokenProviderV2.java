@@ -113,8 +113,10 @@ public class JwtTokenProviderV2 {
     // SpringContextHolder에 저장할 자료를 세팅 (나중에 Service단에서 빼서 사용할 값, 로그인 처리, 인가 처리를 위해)
     public Authentication getAuthentication(String token) {
         UserDetails userDetails = getUserDetailsFromToken(token);   // MyUserDetails 객체 주소값
-        return userDetails == null ? null : new UsernamePasswordAuthenticationToken(userDetails, null, userDetails.getAuthorities());
-        // userDetails => AuthenticationFacade에서 getPrincipal                                                                                                                // userDetails.getAuthorities() => 인가(권한)
+        return userDetails == null ?
+                null : new UsernamePasswordAuthenticationToken(userDetails, null, userDetails.getAuthorities());
+        // userDetails => AuthenticationFacade에서 getPrincipal                   // userDetails : 데이터, 비밀번호(null), 인가 정보
+        // userDetails.getAuthorities() => 인가(권한)
 
         // UsernamePasswordAuthenticationToken 객체를 SpringContextHolder에 저장하는 자체만으로도 인증완료
         // userDetails는 로그인한 사용자의 정보를 controller or service 단에서 빼서 사용하기 위함

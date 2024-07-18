@@ -1,5 +1,6 @@
 package com.green.greengram.exception;
 
+import io.jsonwebtoken.MalformedJwtException;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatusCode;
@@ -12,6 +13,7 @@ import org.springframework.web.bind.annotation.RestControllerAdvice;
 import org.springframework.web.context.request.WebRequest;
 import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExceptionHandler;
 
+import java.security.SignatureException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -34,6 +36,17 @@ public class GlobalExceptionHandler extends ResponseEntityExceptionHandler {
     @Override   // Validation 예외가 발생했을 경우 잡는다
     protected ResponseEntity<Object> handleMethodArgumentNotValid(MethodArgumentNotValidException ex, HttpHeaders headers, HttpStatusCode status, WebRequest request) {
         return handleExceptionInternal(CommonErrorCode.INVALID_PARAMETER, ex);
+    }
+
+    @ExceptionHandler(SignatureException.class)
+    public ResponseEntity<Object> handleSignatureException() {
+        return handleExceptionInternal(MemberErrorCode.UNAUTHENTICATED);
+    }
+
+    @ExceptionHandler(MalformedJwtException.class)
+    public ResponseEntity<Object> handleMalformedJwtException() {
+        //올바르지 않은 토큰입니다.
+        return handleExceptionInternal(MemberErrorCode.INVALID_TOKEN);
     }
 
     @ExceptionHandler(Exception.class)  // 모든 Exception을 잡는다고 보면 됨  (CustomException 을 제외한)

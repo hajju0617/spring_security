@@ -75,7 +75,7 @@ public class UserServiceImpl implements UserService {
         return result;
     }
 
-    public SignInRes postSignIn(HttpServletResponse res, SignInPostReq p) {
+    public SignInRes postSignIn(HttpServletResponse res, SignInPostReq p) { // dispatcher servlet이 res (res 래퍼런스 변수) 를 준다 ( 어차피 servlet이 주소값을 가지고 있는 변수를 주므로 service에서 return 값으로 res를 주지 않아도 된다)
         p.setProviderType(SignInProviderType.LOCAL.name());
         List<UserInfo> userInfoList = mapper.getUserById(p);
 
@@ -112,6 +112,7 @@ public class UserServiceImpl implements UserService {
                 .pic(userInfoRoles.getPic())
                 .accessToken(accessToken)   // 응답으로 바로 프론트한테 보내준다
                 .build();
+        // servlet 이 반환값을 받아서 response (HttpServletResponse) 에 담아서 응답으로 처리된다.
     }
 
     public Map getAccessToken(HttpServletRequest req) {

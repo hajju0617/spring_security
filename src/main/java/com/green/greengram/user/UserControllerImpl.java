@@ -42,6 +42,7 @@ public class UserControllerImpl {
     @PostMapping("sign-in")
     @Operation(summary = "인증", description = "")
     public MyResponse<SignInRes> postSignIn(HttpServletResponse res, @Valid @RequestBody SignInPostReq p) {  // @Valid @RequestBody 순서는 상관없음
+
         SignInRes result = service.postSignIn(res, p);
 
         return MyResponse.<SignInRes>builder()
