@@ -1,5 +1,6 @@
 package com.green.greengram.exception;
 
+import io.jsonwebtoken.ExpiredJwtException;
 import io.jsonwebtoken.MalformedJwtException;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpHeaders;
@@ -45,8 +46,11 @@ public class GlobalExceptionHandler extends ResponseEntityExceptionHandler {
 
     @ExceptionHandler(MalformedJwtException.class)
     public ResponseEntity<Object> handleMalformedJwtException() {
-        //올바르지 않은 토큰입니다.
-        return handleExceptionInternal(MemberErrorCode.INVALID_TOKEN);
+        return handleExceptionInternal(MemberErrorCode.INVALID_TOKEN);  // 올바르지 않은 토큰입니다.
+    }
+    @ExceptionHandler(ExpiredJwtException.class)
+    public ResponseEntity<Object> handleExpiredJwtException() {
+        return handleExceptionInternal(MemberErrorCode.EXPIRED_TOKEN);  // 토큰 만료
     }
 
     @ExceptionHandler(Exception.class)  // 모든 Exception을 잡는다고 보면 됨  (CustomException 을 제외한)

@@ -25,6 +25,12 @@ JwtAuthenticationFilter doFilterInternal
 -> Controller method 호출
  */
 
+/*
+        HttpServletRequest (이하 Req), HttpServletResponse (이하 Res), Client (서버에게 요청을 보내는 EndUser)
+        Req : 요청에 관련된 모든 정보가 담겨져 있는 객체 ( Client의 IP주소, 사용하는 브라우저 엔진, OS, URL, 쿼리스트링, Body, Header 어떤 데이터가 담겨져 있는 지 등등)
+        Res : 서버가 응답을 할 때 사용할 객체
+*/
+
 @Slf4j
 @RequiredArgsConstructor
 @Component  // 빈 등록 ( 클래스 단위 )
@@ -49,8 +55,6 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter {     // OnceP
                 SecurityContextHolder.getContext().setAuthentication(auth);     // SecurityContextHolder.getContext()에 Authentication 객체 주소값을 담으면 인증(로그인) 되었다고 인식 ==> 로그인 처리
                                                 // setAuthentication(auth) : 값을 집어 넣음
             }
-        } else {
-            request.setAttribute("exception", new CustomException(MemberErrorCode.UNAUTHENTICATED));
         }
         filterChain.doFilter(request, response);    // 다음 필터로 넘긴다. 만약 로그인이 필요한 엔드 포인트(url)인데 로그인이 되어 있지 않으면
                                                     // JwtAuthenticationEntryPoint에 의해서 401에러를 응답

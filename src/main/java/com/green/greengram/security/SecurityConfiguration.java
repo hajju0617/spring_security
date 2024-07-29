@@ -39,6 +39,7 @@ public class SecurityConfiguration {
     private final AppProperties appProperties;
     private final OAuth2AuthenticationCheckRedirectUriFilter oAuth2AuthenticationCheckRedirectUriFilter;
     private final AuthenticationEntryPoint authenticationEntryPoint;
+    private final JwtAuthenticationAccessDeniedHandler jwtAuthenticationAccessDeniedHandler;
 
     /*
      메서드 빈 등록으로 주로 쓰는 케이스는 (현재 기준으로 설명하면)
@@ -134,7 +135,7 @@ public class SecurityConfiguration {
                 ).addFilterBefore(jwtAuthenticationFilter, UsernamePasswordAuthenticationFilter.class)
                 // UsernamePasswordAuthenticationFilter.class 이전에 jwtAuthenticationFilter 해당 필터를 위치해준다는 뜻
                 .exceptionHandling(exception -> exception.authenticationEntryPoint(authenticationEntryPoint)
-                                                         .accessDeniedHandler(new JwtAuthenticationAccessDeniedHandler())
+                                                         .accessDeniedHandler(jwtAuthenticationAccessDeniedHandler)
                 )
                 .oauth2Login( oauth2 -> oauth2.authorizationEndpoint(
                         auth -> auth.baseUri( appProperties.getOauth2().getBaseUri() ) // ""주소값 프론트한테 알려주기
