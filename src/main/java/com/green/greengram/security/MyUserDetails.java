@@ -34,7 +34,7 @@ public class MyUserDetails implements UserDetails, OAuth2User {
 //        return list;
 
         // 단수 -> 복수로 변경
-        //return Collections.singletonList(new SimpleGrantedAuthority(myUser.getRole()));   (1)
+        // return Collections.singletonList(new SimpleGrantedAuthority(myUser.getRole()));   (1)
 
           //(2)
 //        List<GrantedAuthority> list2 = new ArrayList<>();

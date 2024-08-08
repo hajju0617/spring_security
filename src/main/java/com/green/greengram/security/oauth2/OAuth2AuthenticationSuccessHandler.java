@@ -17,7 +17,7 @@ import org.springframework.stereotype.Component;
 import org.springframework.web.util.UriComponentsBuilder;
 
 import java.io.IOException;
-import java.net.URI;
+
 
 /*
     (프론트엔드 redirect_uri가 허용한 uri인지 체크하는 부분의 현 상태)

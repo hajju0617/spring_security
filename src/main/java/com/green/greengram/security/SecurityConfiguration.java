@@ -36,8 +36,8 @@ public class SecurityConfiguration {
     private final OAuth2AuthenticationRequestBasedOnCookieRepository repository;
     private final OAuth2AuthenticationSuccessHandler  oAuth2AuthenticationSuccessHandler;
     private final MyOAuth2UserService myOAuth2UserService;
-    private final AppProperties appProperties;
     private final OAuth2AuthenticationCheckRedirectUriFilter oAuth2AuthenticationCheckRedirectUriFilter;
+    private final AppProperties appProperties;
     private final AuthenticationEntryPoint authenticationEntryPoint;
     private final JwtAuthenticationAccessDeniedHandler jwtAuthenticationAccessDeniedHandler;
 
@@ -137,13 +137,15 @@ public class SecurityConfiguration {
                 .exceptionHandling(exception -> exception.authenticationEntryPoint(authenticationEntryPoint)
                                                          .accessDeniedHandler(jwtAuthenticationAccessDeniedHandler)
                 )
-                .oauth2Login( oauth2 -> oauth2.authorizationEndpoint(
+                .oauth2Login( oauth2 -> oauth2.authorizationEndpoint( // 액세스 토큰을 발급해주는 서버 주소
                         auth -> auth.baseUri( appProperties.getOauth2().getBaseUri() ) // ""주소값 프론트한테 알려주기
+                                //액세스 토큰을 발급 받을시 해당 리포지토리를 거쳐간다
                                 .authorizationRequestRepository(repository)
-                ).redirectionEndpoint( redirection -> redirection.baseUri("/*/oauth2/code/*"))
-                        .userInfoEndpoint(userInfo -> userInfo.userService(myOAuth2UserService))
-                        .successHandler(oAuth2AuthenticationSuccessHandler)
-                        .failureHandler(oAuth2AuthenticationFailureHandler)
+                    )
+                    .redirectionEndpoint( redirection -> redirection.baseUri("/*/oauth2/code/*"))
+                    .userInfoEndpoint(userInfo -> userInfo.userService(myOAuth2UserService))
+                    .successHandler(oAuth2AuthenticationSuccessHandler)
+                    .failureHandler(oAuth2AuthenticationFailureHandler)
                 )
                 .addFilterBefore(oAuth2AuthenticationCheckRedirectUriFilter, OAuth2AuthorizationRequestRedirectFilter.class)
                 .build();
